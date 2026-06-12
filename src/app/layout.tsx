@@ -6,8 +6,8 @@ import { cn } from "@/lib/utils";
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
-  title: "Texas Apartments Explorer",
-  description: "Browse 5,058 apartment complexes across Texas with ratings, prices, and websites.",
+  title: "Texas Rent Finder — Çok Yakında",
+  description: "Texas Rent Finder şu anda yapım aşamasındadır. Çok yakında hizmetinizde!",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

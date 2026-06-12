@@ -28,7 +28,7 @@ export function MapView({
   onPlaceClick,
 }: {
   places: Place[];
-  onPlaceClick: (slug: string) => void;
+  onPlaceClick: (place: Place) => void;
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<L.Map | null>(null);
@@ -83,7 +83,7 @@ export function MapView({
           `<b>${place.name}</b>${place.rating ? `<br>★ ${place.rating.toFixed(1)}` : ""}${place.address ? `<br><small>${place.address}</small>` : ""}`
         );
 
-      marker.on("click", () => onPlaceClick(place.slug));
+      marker.on("click", () => onPlaceClick(place));
       markersRef.current.push(marker);
       bounds.extend([lat, lng]);
     });
