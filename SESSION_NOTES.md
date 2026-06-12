@@ -41,7 +41,6 @@
 - Cache temizleme: rm -rf .next (gerektiğinde)
 
 ## Kalan İşler
-1. GitHub'a push + Vercel deploy
 2. Capacitor iOS/Android build (npx cap sync sonrası)
 3. Price scraper (scripts/scrape_prices.py)
 4. Leaflet marker cluster eklentisi (pin yoğunluğu için)
