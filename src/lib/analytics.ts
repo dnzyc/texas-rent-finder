@@ -6,12 +6,14 @@ export function initializeGA(trackingId: string) {
 }
 
 export function logPageView(path?: string) {
-  if (typeof window === "undefined") return;
-  const url = path || window.location.pathname + window.location.search;
-  ga4.send({ hitType: "pageview", page: url });
+  if (typeof window !== "undefined" && typeof document !== "undefined") {
+    const url = path || window.location.pathname + window.location.search;
+    ga4.send({ hitType: "pageview", page: url });
+  }
 }
 
 export function logEvent(event: string, params?: Record<string, unknown>) {
-  if (typeof window === "undefined") return;
-  ga4.event(event, params);
+  if (typeof window !== "undefined" && typeof document !== "undefined") {
+    ga4.event(event, params);
+  }
 }

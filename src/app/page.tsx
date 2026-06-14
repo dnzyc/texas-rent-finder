@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback, Suspense } from "react";
-import { useRouter, useSearchParams, usePathname } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import dynamic from "next/dynamic";
 import { FilterBar } from "@/components/FilterBar";
 import { ApartmentList } from "@/components/ApartmentList";
@@ -18,7 +18,6 @@ const MapView = dynamic(() => import("@/components/MapView").then(mod => ({ defa
 function HomeContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const pathname = usePathname();
 
   const [places, setPlaces] = useState<Place[]>([]);
   const [total, setTotal] = useState(0);
@@ -26,6 +25,11 @@ function HomeContent() {
   const [pages, setPages] = useState(0);
   const [loading, setLoading] = useState(true);
   const [activeSlug, setActiveSlug] = useState<string | null>(null);
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
 
   const filters: FilterState = {
     county: searchParams.get("county") || "",
@@ -60,13 +64,13 @@ function HomeContent() {
   }, [fetchPlaces, searchParams]);
 
   useEffect(() => {
-    if (pathname === "/") {
-      logPageView(pathname + (searchParams.toString() ? `?${searchParams}` : ""));
+    if (hasMounted) {
+      logPageView("/");
       if (filters.query) {
         logEvent("search_query", { query: filters.query });
       }
     }
-  }, [pathname, searchParams]);
+  }, [hasMounted, searchParams]);
 
   const handleFilterChange = (f: FilterState) => {
     if (f.query && f.query !== filters.query) {
