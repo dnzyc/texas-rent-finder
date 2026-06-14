@@ -1,0 +1,26 @@
+Loaded 5675 apartment entries
+
+Starting price scraping...
+
+
+============================================================
+PRICE STATISTICS
+============================================================
+
+------------------------------------------------------------
+OVERALL SUMMARY
+------------------------------------------------------------
+Total entries: 5675
+Prices populated: 5675
+  - From known chains/web: 0
+  - From Google Maps estimates: 0
+Still missing: 0
+
+AVERAGE PRICES
+------------------------------------------------------------
+1-Bedroom Average: $NaN/month
+2-Bedroom Average: $NaN/month
+
+============================================================
+✓ Data saved to data/places.json
+============================================================

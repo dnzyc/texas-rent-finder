@@ -3,9 +3,11 @@
 import { useEffect, useRef } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import "leaflet.markercluster/dist/MarkerCluster.css";
+import "leaflet.markercluster/dist/MarkerCluster.Default.css";
 import { Place } from "@/types";
+import { escapeHtml } from "@/lib/escapeHtml";
 
-// Fix Leaflet's default icon paths (webpack issue)
 delete (L.Icon.Default.prototype as any)._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon-2x.png",
@@ -28,11 +30,12 @@ export function MapView({
   onPlaceClick,
 }: {
   places: Place[];
-  onPlaceClick: (place: Place) => void;
+  onPlaceClick: (slug: string) => void;
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<L.Map | null>(null);
   const markersRef = useRef<L.Marker[]>([]);
+  const clusterGroupRef = useRef<L.MarkerClusterGroup | null>(null);
 
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
@@ -45,8 +48,14 @@ export function MapView({
     }).addTo(mapRef.current);
 
     return () => {
-      mapRef.current?.remove();
-      mapRef.current = null;
+      if (clusterGroupRef.current) {
+        mapRef.current?.removeLayer(clusterGroupRef.current);
+        clusterGroupRef.current = null;
+      }
+      if (mapRef.current) {
+        mapRef.current.remove();
+        mapRef.current = null;
+      }
     };
   }, []);
 
@@ -54,8 +63,9 @@ export function MapView({
     const map = mapRef.current;
     if (!map || !places.length) return;
 
-    markersRef.current.forEach((m) => m.remove());
-    markersRef.current = [];
+    if (clusterGroupRef.current) {
+      map.removeLayer(clusterGroupRef.current);
+    }
 
     const bounds = L.latLngBounds([]);
     const targetIcon = new L.DivIcon({
@@ -64,6 +74,8 @@ export function MapView({
       iconSize: [28, 28],
       iconAnchor: [14, 14],
     });
+
+    const markersArray: L.Marker[] = [];
 
     places.forEach((place) => {
       if (!place.location) return;
@@ -77,16 +89,23 @@ export function MapView({
         iconAnchor: [15, 15],
       });
 
+      const escapedName = escapeHtml(place.name);
+      const escapedAddress = place.address ? escapeHtml(place.address) : "";
+
       const marker = L.marker([lat, lng], { icon })
-        .addTo(map)
         .bindPopup(
-          `<b>${place.name}</b>${place.rating ? `<br>★ ${place.rating.toFixed(1)}` : ""}${place.address ? `<br><small>${place.address}</small>` : ""}`
+          `<b>${escapedName}</b>${place.rating ? `<br>★ ${place.rating.toFixed(1)}` : ""}${escapedAddress ? `<br><small>${escapedAddress}</small>` : ""}`
         );
 
-      marker.on("click", () => onPlaceClick(place));
-      markersRef.current.push(marker);
+      marker.on("click", () => onPlaceClick(place.slug));
+      markersArray.push(marker);
       bounds.extend([lat, lng]);
     });
+
+    const clusterGroup = L.markerClusterGroup();
+    markersArray.forEach(marker => clusterGroup.addLayer(marker));
+
+    clusterGroupRef.current = clusterGroup.addTo(map);
 
     if (bounds.isValid()) {
       map.fitBounds(bounds, { padding: [50, 50], maxZoom: 13 });

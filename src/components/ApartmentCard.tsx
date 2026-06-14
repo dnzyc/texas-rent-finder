@@ -5,6 +5,8 @@ import { Place } from "@/types";
 import { cn } from "@/lib/utils";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { escapeHtml } from "@/lib/escapeHtml";
+import { FavoritesButton } from "./FavoritesButton";
 
 export function ApartmentCard({ place, isActive = false }: { place: Place; isActive?: boolean }) {
   return (
@@ -24,23 +26,26 @@ export function ApartmentCard({ place, isActive = false }: { place: Place; isAct
         <CardHeader className="pb-2">
           <div className="flex items-start justify-between gap-3">
             <CardTitle className="text-base font-semibold leading-snug tracking-tight line-clamp-2 text-stone-800 group-hover:text-stone-900">
-              {place.name}
+              {escapeHtml(place.name)}
             </CardTitle>
-            {place.rating && (
-              <Badge variant="secondary" className="shrink-0 text-xs font-medium bg-amber-50 text-amber-700 border-amber-200/50">
-                ★ {place.rating.toFixed(1)}
-              </Badge>
-            )}
+            <div className="flex items-center gap-2">
+              <FavoritesButton placeId={place.id} />
+              {place.rating && (
+                <Badge variant="secondary" className="shrink-0 text-xs font-medium bg-amber-50 text-amber-700 border-amber-200/50">
+                  ★ {place.rating.toFixed(1)}
+                </Badge>
+              )}
+            </div>
           </div>
         </CardHeader>
         <CardContent className="space-y-2">
           {place.address && (
-            <p className="text-sm text-stone-500 truncate font-light">{place.address}</p>
+            <p className="text-sm text-stone-500 truncate font-light">{escapeHtml(place.address)}</p>
           )}
           <div className="flex items-center gap-2 text-xs text-stone-400">
-            {place.city && <span>{place.city}</span>}
-            {place.zip_code && <span>· {place.zip_code}</span>}
-            {place.county && <span>· {place.county}</span>}
+            {place.city && <span>{escapeHtml(place.city)}</span>}
+            {place.zip_code && <span>· {escapeHtml(place.zip_code)}</span>}
+            {place.county && <span>· {escapeHtml(place.county)}</span>}
           </div>
           {place.price_1br && (
             <p className="text-sm font-medium text-emerald-700 mt-2">

@@ -5,7 +5,9 @@ import { notFound } from "next/navigation";
 import { RatingStars } from "@/components/RatingStars";
 import { PriceDisplay } from "@/components/PriceDisplay";
 import { ApartmentCard } from "@/components/ApartmentCard";
+import { ContactButton } from "@/components/ContactButton";
 import { PlaceWithNearby, Place } from "@/types";
+import { logPageView } from "@/lib/analytics";
 
 async function getPlace(slug: string): Promise<PlaceWithNearby | null> {
   const base = process.env.NEXT_PUBLIC_SUPABASE_URL
@@ -16,11 +18,57 @@ async function getPlace(slug: string): Promise<PlaceWithNearby | null> {
   return res.json();
 }
 
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const place = await getPlace(slug);
+
+  if (!place) {
+    return {
+      title: "Apartment Not Found - Texas Apartments Explorer"
+    };
+  }
+
+  const price1brFormatted = place.price_1br ? `$${place.price_1br}/mo` : "N/A";
+  const price2brFormatted = place.price_2br ? `$${place.price_2br}/mo` : "N/A";
+  const city = place.city || "Texas";
+  const state = "TX";
+
+  return {
+    title: `${place.name} - ${city}, ${state} Apartments`,
+    description: `Explore ${place.name} apartments in ${city}, ${state}. Prices from ${price1brFormatted} (1BR) to ${price2brFormatted} (2BR). Ratings, amenities, and more.`,
+    openGraph: {
+      title: `${place.name} - ${city}, TX Apartments`,
+      description: `Ratings, prices from ${price1brFormatted} to ${price2brFormatted}. Find your perfect rental home today.`,
+      type: "article",
+      url: `https://texas-apartments.com/place/${slug}`,
+      images: place.photo_url
+        ? [
+            {
+              url: place.photo_url,
+              width: 800,
+              height: 600,
+              alt: `${place.name} apartment photo`
+            }
+          ]
+        : undefined
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: "@texasapartments",
+      title: `${place.name} - ${city}, TX Apartments`,
+      description: `Ratings, prices from ${price1brFormatted} to ${price2brFormatted}. Find your perfect rental home today.`,
+      images: place.photo_url ? [place.photo_url] : undefined
+    }
+  };
+}
+
 export default async function PlacePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const place = await getPlace(slug);
 
   if (!place) notFound();
+
+  logPageView(`/place/${slug}`);
 
   return (
     <main className="max-w-3xl mx-auto p-6">
@@ -62,6 +110,7 @@ export default async function PlacePage({ params }: { params: Promise<{ slug: st
               Get Directions
             </a>
           )}
+          <ContactButton placeName={place.name} />
         </div>
 
         {place.hours && (
