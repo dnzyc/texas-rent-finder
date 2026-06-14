@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { useAuth } from "@/components/SessionProvider";
+import { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { toast } from "sonner";
@@ -11,17 +10,10 @@ interface NewsletterModalProps {
 }
 
 export function NewsletterModal({ onClose }: NewsletterModalProps) {
-  const { user, loading } = useAuth();
   const [email, setEmail] = useState("");
   const [isClosed, setIsClosed] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [submitting, setSubmitting] = useState(false);
-
-  useEffect(() => {
-    if (user) {
-      setIsSubscribed(true);
-    }
-  }, [user]);
 
   const validateEmail = (email: string): boolean => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -66,7 +58,7 @@ export function NewsletterModal({ onClose }: NewsletterModalProps) {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 p-4">
       <div className="mx-auto max-w-lg rounded-xl border border-border bg-card p-4 shadow-lg">
-        {!isSubscribed && !loading ? (
+        {!isSubscribed ? (
           <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row">
             <Input
               type="email"
@@ -77,15 +69,13 @@ export function NewsletterModal({ onClose }: NewsletterModalProps) {
               required
             />
             <Button type="submit" disabled={submitting || !email}>
-              {submitting ? "Subscribing..." : "Subscribe"}
+              Subscribe
             </Button>
           </form>
         ) : (
           <div className="flex items-center justify-between">
             <p className="text-sm text-muted-foreground">
-              {user
-                ? "You're already subscribed to our newsletter!"
-                : "Subscribe to get updates about Texas apartments!"}
+              Subscribe to get updates about Texas apartments!
             </p>
             <Button variant="ghost" size="sm" onClick={() => setIsClosed(true)}>
               Close
