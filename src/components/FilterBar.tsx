@@ -6,19 +6,17 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 
-export function FilterBar({ onFilterChange }: { onFilterChange: (filters: FilterState) => void }) {
+export function FilterBar({ onFilterChange, initialFilters }: { onFilterChange: (filters: FilterState) => void; initialFilters?: FilterState }) {
   const [options, setOptions] = useState<FilterOptions>({ counties: [], cities: {}, zips: {} });
-  const [county, setCounty] = useState("");
-  const [city, setCity] = useState("");
-  const [zip, setZip] = useState("");
-  const [minRating, setMinRating] = useState(0);
-  const [query, setQuery] = useState("");
-  const [loaded, setLoaded] = useState(false);
+  const [county, setCounty] = useState(initialFilters?.county || "");
+  const [city, setCity] = useState(initialFilters?.city || "");
+  const [zip, setZip] = useState(initialFilters?.zip || "");
+  const [minRating, setMinRating] = useState(initialFilters?.minRating || 0);
+  const [query, setQuery] = useState(initialFilters?.query || "");
 
   useEffect(() => {
     fetch("/api/filters").then((r) => r.json()).then((data) => {
       setOptions(data);
-      setLoaded(true);
     });
   }, []);
 
@@ -37,8 +35,6 @@ export function FilterBar({ onFilterChange }: { onFilterChange: (filters: Filter
   return (
     <div className="sticky top-0 z-40 bg-background/80 backdrop-blur-xl border-b border-border/60">
       <div className="flex flex-wrap items-center gap-2 p-3">
-        {!loaded && <span className="text-xs text-muted-foreground">Loading...</span>}
-
         <select
           value={county}
           onChange={(e) => { setCounty(e.target.value); emit({ ...state, county: e.target.value, city: "", zip: "" }); }}
