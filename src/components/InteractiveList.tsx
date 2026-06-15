@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
 import { FilterBar } from "@/components/FilterBar";
@@ -23,7 +23,7 @@ export function InteractiveList({ initialFilters }: { initialFilters?: FilterSta
   const [loading, setLoading] = useState(true);
   const [activeSlug, setActiveSlug] = useState<string | null>(null);
 
-  const fetchData = useCallback((page: number = 1) => {
+  useEffect(() => {
     if (typeof window === "undefined") return;
 
     const params = new URLSearchParams();
@@ -32,8 +32,7 @@ export function InteractiveList({ initialFilters }: { initialFilters?: FilterSta
     if (initialFilters?.zip) params.set("zip", initialFilters.zip);
     if (initialFilters?.minRating && initialFilters.minRating > 0) params.set("min_rating", String(initialFilters.minRating));
     if (initialFilters?.query) params.set("q", initialFilters.query);
-    
-    params.set("page", String(page));
+    params.set("page", "1");
 
     fetch(`/api/places?${params.toString()}`)
       .then(res => res.json())
@@ -41,30 +40,45 @@ export function InteractiveList({ initialFilters }: { initialFilters?: FilterSta
         setPlaces(data.items || []);
         setTotal(data.total || 0);
         setPages(Math.ceil((data.total || 0) / parseInt(params.get("limit") || "20")));
-        setCurrentPage(data.page || page);
+        setCurrentPage(data.page || 1);
         setLoading(false);
       })
       .catch(err => console.error(err));
-  }, [initialFilters]);
-
-  useEffect(() => {
-    const shouldFetch = places.length === 0;
-    if (shouldFetch) fetchData();
-  }, [initialFilters]);
+  }, []);
 
   const handleFilterChange = (f: FilterState) => {
     const params = new URLSearchParams();
     if (f.county) params.set("county", f.county);
     if (f.city) params.set("city", f.city);
     if (f.zip) params.set("zip", f.zip);
-    if (f.minRating > 0) params.set("min_rating", String(f.minRating));
+    if (f.minRating && f.minRating > 0) params.set("min_rating", String(f.minRating));
     if (f.query) params.set("q", f.query);
     router.push(`/?${params.toString()}`);
   };
 
   const handlePageChange = (p: number) => {
     setCurrentPage(p);
-    fetchData(p);
+    
+    if (typeof window === "undefined") return;
+
+    const params = new URLSearchParams();
+    if (initialFilters?.county) params.set("county", initialFilters.county);
+    if (initialFilters?.city) params.set("city", initialFilters.city);
+    if (initialFilters?.zip) params.set("zip", initialFilters.zip);
+    if (initialFilters?.minRating && initialFilters.minRating > 0) params.set("min_rating", String(initialFilters.minRating));
+    if (initialFilters?.query) params.set("q", initialFilters.query);
+    params.set("page", String(p));
+
+    fetch(`/api/places?${params.toString()}`)
+      .then(res => res.json())
+      .then(data => {
+        setPlaces(data.items || []);
+        setTotal(data.total || 0);
+        setPages(Math.ceil((data.total || 0) / parseInt(params.get("limit") || "20")));
+        setCurrentPage(data.page || p);
+        setLoading(false);
+      })
+      .catch(err => console.error(err));
   };
 
   const handlePlaceClick = (slug: string) => {
