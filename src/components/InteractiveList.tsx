@@ -48,8 +48,9 @@ export function InteractiveList({ initialFilters }: { initialFilters?: FilterSta
   }, [initialFilters]);
 
   useEffect(() => {
-    fetchData();
-  }, [fetchData]);
+    const shouldFetch = places.length === 0;
+    if (shouldFetch) fetchData();
+  }, [initialFilters]);
 
   const handleFilterChange = (f: FilterState) => {
     const params = new URLSearchParams();
