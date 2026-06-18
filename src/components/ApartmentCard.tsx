@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Place } from "@/types";
 import { cn } from "@/lib/utils";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
@@ -23,6 +24,17 @@ export function ApartmentCard({ place, isActive = false }: { place: Place; isAct
           isActive && "ring-2 ring-amber-400/40 shadow-[0_0_0_4px_rgba(251,191,36,0.1)]"
         )}
       >
+        {place.photo_url && (
+          <div className="relative w-full aspect-[4/3] overflow-hidden rounded-t-lg">
+            <Image
+              src={place.photo_url}
+              alt={place.name}
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
+        )}
         <CardHeader className="pb-2">
           <div className="flex items-start justify-between gap-3">
             <CardTitle className="text-base font-semibold leading-snug tracking-tight line-clamp-2 text-stone-800 group-hover:text-stone-900">
@@ -49,7 +61,7 @@ export function ApartmentCard({ place, isActive = false }: { place: Place; isAct
           </div>
           {place.price_1br && (
             <p className="text-sm font-medium text-emerald-700 mt-2">
-              1BR from ${(place.price_1br / 100).toLocaleString()}
+              1BR from ${place.price_1br.toLocaleString()}
             </p>
           )}
         </CardContent>

@@ -88,5 +88,10 @@ export async function GET(request: NextRequest) {
     total: count || 0,
     page,
     pages: Math.ceil((count || 0) / limit),
+  }, {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, OPTIONS",
+    },
   });
 }

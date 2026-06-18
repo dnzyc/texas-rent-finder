@@ -1,6 +1,7 @@
 export const dynamic = "force-dynamic";
 
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { RatingStars } from "@/components/RatingStars";
 import { PriceDisplay } from "@/components/PriceDisplay";
@@ -8,14 +9,44 @@ import { ApartmentCard } from "@/components/ApartmentCard";
 import { ContactButton } from "@/components/ContactButton";
 import { PlaceWithNearby, Place } from "@/types";
 import { logPageView } from "@/lib/analytics";
+import { supabase } from "@/lib/supabase";
+
+function parseLocation(row: any): { lat: number; lng: number } | null {
+  const loc = row.location;
+  if (!loc) return null;
+  if (typeof loc === "object" && loc.lat !== undefined && loc.lng !== undefined) return { lat: loc.lat, lng: loc.lng };
+  if (loc.coordinates) return { lat: loc.coordinates[1], lng: loc.coordinates[0] };
+  return null;
+}
 
 async function getPlace(slug: string): Promise<PlaceWithNearby | null> {
-  const base = process.env.NEXT_PUBLIC_SUPABASE_URL
-    ? `http://localhost:${process.env.PORT || 3000}`
-    : "http://localhost:3000";
-  const res = await fetch(`${base}/api/places/${slug}`);
-  if (!res.ok) return null;
-  return res.json();
+  const { data: place, error } = await supabase
+    .from("places")
+    .select("*")
+    .eq("slug", slug)
+    .single();
+
+  if (error || !place) return null;
+
+  const parsed = { ...place, location: parseLocation(place) } as PlaceWithNearby;
+
+  if (parsed.location) {
+    const { data: nearby } = await supabase
+      .rpc("nearby_places", {
+        lat: parsed.location.lat,
+        lng: parsed.location.lng,
+        radius_m: 5000,
+        exclude_id: parsed.id,
+        limit_count: 4,
+      });
+
+    if (nearby) {
+      parsed.nearby = nearby
+        .map((p: any) => ({ ...p, location: parseLocation(p) })) as Place[];
+    }
+  }
+
+  return parsed;
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
@@ -24,7 +55,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (!place) {
     return {
-      title: "Apartment Not Found - Texas Apartments Explorer"
+      title: "Apartment Not Found - Texas Rent Finder"
     };
   }
 
@@ -40,7 +71,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: `${place.name} - ${city}, TX Apartments`,
       description: `Ratings, prices from ${price1brFormatted} to ${price2brFormatted}. Find your perfect rental home today.`,
       type: "article",
-      url: `https://texas-apartments.com/place/${slug}`,
+      url: `https://texasrentfinder.com/place/${slug}`,
       images: place.photo_url
         ? [
             {
@@ -54,7 +85,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     },
     twitter: {
       card: "summary_large_image",
-      site: "@texasapartments",
       title: `${place.name} - ${city}, TX Apartments`,
       description: `Ratings, prices from ${price1brFormatted} to ${price2brFormatted}. Find your perfect rental home today.`,
       images: place.photo_url ? [place.photo_url] : undefined
@@ -70,11 +100,57 @@ export default async function PlacePage({ params }: { params: Promise<{ slug: st
 
   logPageView(`/place/${slug}`);
 
+  const ldJson = {
+    "@context": "https://schema.org",
+    "@type": "ApartmentComplex",
+    name: place.name,
+    description: `${place.name} apartments in ${place.city || 'Texas'}, TX. Prices from $${place.price_1br || '—'} (1BR) to $${place.price_2br || '—'} (2BR).`,
+    url: `https://texasrentfinder.com/place/${slug}`,
+    image: place.photo_url || undefined,
+    address: place.address ? {
+      "@type": "PostalAddress",
+      streetAddress: place.address,
+      addressLocality: place.city || "Texas",
+      addressRegion: "TX",
+      postalCode: place.zip_code || undefined,
+      addressCountry: "US"
+    } : undefined,
+    geo: place.location ? {
+      "@type": "GeoCoordinates",
+      latitude: place.location.lat,
+      longitude: place.location.lng
+    } : undefined,
+    telephone: place.phone || undefined,
+    priceRange: place.price_1br ? `$${place.price_1br}-$${place.price_2br || place.price_1br}` : undefined,
+    aggregateRating: place.rating ? {
+      "@type": "AggregateRating",
+      ratingValue: place.rating,
+      reviewCount: place.review_count || 1,
+      bestRating: 5
+    } : undefined,
+    openingHours: place.hours || undefined,
+    url_website: place.website || undefined
+  };
+
   return (
     <main className="max-w-3xl mx-auto p-6">
       <Link href="/" className="text-blue-600 hover:underline text-sm mb-4 inline-block">← Back to search</Link>
 
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ldJson) }} />
+
       <div className="mt-4">
+        {place.photo_url && (
+          <div className="relative w-full aspect-[16/9] overflow-hidden rounded-lg mb-6">
+            <Image
+              src={place.photo_url}
+              alt={place.name}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 768px"
+              priority
+            />
+          </div>
+        )}
         <div className="flex justify-between items-start gap-4">
           <div>
             <h1 className="text-2xl font-bold text-gray-900">{place.name}</h1>
