@@ -17,11 +17,21 @@ const MapView = dynamic(() => import("@/components/MapView").then(mod => ({ defa
 export function InteractiveList({ initialFilters }: { initialFilters?: FilterState }) {
   const router = useRouter();
   const [places, setPlaces] = useState<Place[]>([]);
+  const [mapPlaces, setMapPlaces] = useState<Place[]>([]);
   const [total, setTotal] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   const [pages, setPages] = useState(0);
   const [loading, setLoading] = useState(true);
   const [activeSlug, setActiveSlug] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    fetch("/api/places/map")
+      .then(res => res.json())
+      .then(data => setMapPlaces(data.items || []))
+      .catch(err => console.error(err));
+  }, []);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -110,7 +120,7 @@ export function InteractiveList({ initialFilters }: { initialFilters?: FilterSta
           <ApartmentListComponent places={places} activeSlug={activeSlug} loading={loading} />
         </div>
         <div className="hidden md:block md:w-3/5 lg:flex-1">
-          <MapView places={places} onPlaceClick={handlePlaceClick} />
+          <MapView places={mapPlaces.length > 0 ? mapPlaces : places} onPlaceClick={handlePlaceClick} />
         </div>
       </div>
 
