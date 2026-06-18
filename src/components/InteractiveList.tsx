@@ -100,7 +100,7 @@ export function InteractiveList({ initialFilters }: { initialFilters?: FilterSta
   };
 
   return (
-    <div className="h-screen flex flex-col editorial-noise">
+    <div className="min-h-[80vh] flex flex-col editorial-noise bg-gray-50/50">
       <header className="flex-shrink-0 px-5 py-4 border-b border-border/60 bg-card/60 backdrop-blur-sm">
         <div className="flex items-center justify-between">
           <div>
