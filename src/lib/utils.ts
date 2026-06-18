@@ -5,13 +5,13 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function formatPrice(cents: number | null): string {
-  if (cents === null || cents === undefined) return "\u2014";
+export function formatPrice(price: number | null): string {
+  if (price === null || price === undefined) return "\u2014";
   return new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
     maximumFractionDigits: 0,
-  }).format(cents / 100);
+  }).format(price);
 }
 
 export function formatRating(rating: number | null): string {

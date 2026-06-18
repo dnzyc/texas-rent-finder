@@ -4,68 +4,73 @@ import Link from "next/link";
 import Image from "next/image";
 import { Place } from "@/types";
 import { cn } from "@/lib/utils";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { escapeHtml } from "@/lib/escapeHtml";
 import { FavoritesButton } from "./FavoritesButton";
 
 export function ApartmentCard({ place, isActive = false }: { place: Place; isActive?: boolean }) {
   return (
     <Link
       href={`/place/${place.slug}`}
-      className="block group focus:outline-none"
+      className={cn(
+        "block group focus:outline-none rounded-xl",
+        "transition-all duration-300",
+        "hover:bg-gray-50",
+        isActive && "bg-amber-50/60 ring-1 ring-amber-300/50"
+      )}
     >
-      <Card
-        className={cn(
-          "transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1",
-          "ring-1 ring-black/[0.04] hover:ring-amber-200/60",
-          "shadow-[0_1px_3px_rgba(0,0,0,0.03),0_8px_24px_-6px_rgba(0,0,0,0.04)]",
-          "hover:shadow-[0_2px_8px_rgba(0,0,0,0.06),0_16px_32px_-8px_rgba(0,0,0,0.08)]",
-          isActive && "ring-2 ring-amber-400/40 shadow-[0_0_0_4px_rgba(251,191,36,0.1)]"
-        )}
-      >
-        {place.photo_url && (
-          <div className="relative w-full aspect-[4/3] overflow-hidden rounded-t-lg">
+      <div className="flex gap-4 p-4">
+        <div className="relative w-20 h-20 sm:w-28 sm:h-24 flex-shrink-0 rounded-xl overflow-hidden bg-gray-100">
+          {place.photo_url ? (
             <Image
               src={place.photo_url}
               alt={place.name}
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-500"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              sizes="(max-width: 640px) 80px, 112px"
             />
-          </div>
-        )}
-        <CardHeader className="pb-2">
-          <div className="flex items-start justify-between gap-3">
-            <CardTitle className="text-base font-semibold leading-snug tracking-tight line-clamp-2 text-stone-800 group-hover:text-stone-900">
-              {escapeHtml(place.name)}
-            </CardTitle>
-            <div className="flex items-center gap-2">
+          ) : (
+            <div className="w-full h-full flex items-center justify-center text-gray-300">
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+            </div>
+          )}
+        </div>
+
+        <div className="flex-1 min-w-0">
+          <div className="flex items-start justify-between gap-2">
+            <p className="text-sm font-semibold text-gray-900 leading-snug line-clamp-2 group-hover:text-emerald-700 transition-colors">
+              {place.name}
+            </p>
+            <div className="flex items-center gap-2 flex-shrink-0">
               <FavoritesButton placeId={place.id} />
               {place.rating && (
-                <Badge variant="secondary" className="shrink-0 text-xs font-medium bg-amber-50 text-amber-700 border-amber-200/50">
-                  ★ {place.rating.toFixed(1)}
-                </Badge>
+                <span className="text-xs font-medium text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded-md">
+                  {place.rating.toFixed(1)}
+                </span>
               )}
             </div>
           </div>
-        </CardHeader>
-        <CardContent className="space-y-2">
+
           {place.address && (
-            <p className="text-sm text-stone-500 truncate font-light">{escapeHtml(place.address)}</p>
+            <p className="text-xs text-gray-400 truncate mt-1">{place.address}</p>
           )}
-          <div className="flex items-center gap-2 text-xs text-stone-400">
-            {place.city && <span>{escapeHtml(place.city)}</span>}
-            {place.zip_code && <span>· {escapeHtml(place.zip_code)}</span>}
-            {place.county && <span>· {escapeHtml(place.county)}</span>}
+
+          <div className="flex items-center gap-1.5 text-xs text-gray-400 mt-1">
+            {place.city && <span>{place.city}</span>}
+            {place.zip_code && <span>· {place.zip_code}</span>}
+            {place.county && <span>· {place.county}</span>}
           </div>
-          {place.price_1br && (
-            <p className="text-sm font-medium text-emerald-700 mt-2">
-              1BR from ${place.price_1br.toLocaleString()}
-            </p>
-          )}
-        </CardContent>
-      </Card>
+
+          <div className="flex items-center gap-4 mt-2">
+            {place.price_1br && (
+              <p className="text-sm font-semibold text-emerald-600">
+                ${place.price_1br.toLocaleString()}<span className="text-xs font-normal text-gray-400">/mo</span>
+              </p>
+            )}
+            {place.category && (
+              <span className="text-xs text-gray-400">{place.category}</span>
+            )}
+          </div>
+        </div>
+      </div>
     </Link>
   );
 }

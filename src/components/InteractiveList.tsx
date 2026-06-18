@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useState, useEffect, useCallback } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import dynamic from "next/dynamic";
 import { FilterBar } from "@/components/FilterBar";
 import { ApartmentList as ApartmentListComponent } from "@/components/ApartmentList";
@@ -11,120 +11,136 @@ import { FilterState, Place } from "@/types";
 
 const MapView = dynamic(() => import("@/components/MapView").then(mod => ({ default: mod.MapView })), {
   ssr: false,
-  loading: () => <div className="hidden md:flex md:w-3/5 lg:w-2/3 items-center justify-center bg-muted/50 text-muted-foreground text-sm">Loading map...</div>,
+  loading: () => (
+    <div className="hidden md:flex md:w-[70%] items-stretch">
+      <div className="flex-1 bg-gray-100 animate-pulse m-4 rounded-xl" />
+    </div>
+  ),
 });
+
+function filtersFromParams(params: URLSearchParams): FilterState {
+  return {
+    county: params.get("county") || "",
+    city: params.get("city") || "",
+    zip: params.get("zip") || "",
+    minRating: parseInt(params.get("min_rating") || "0") || 0,
+    query: params.get("q") || "",
+  };
+}
+
+function paramsFromFilters(filters: FilterState, page: number): URLSearchParams {
+  const params = new URLSearchParams();
+  if (filters.county) params.set("county", filters.county);
+  if (filters.city) params.set("city", filters.city);
+  if (filters.zip) params.set("zip", filters.zip);
+  if (filters.minRating && filters.minRating > 0) params.set("min_rating", String(filters.minRating));
+  if (filters.query) params.set("q", filters.query);
+  params.set("page", String(page));
+  return params;
+}
 
 export function InteractiveList({ initialFilters }: { initialFilters?: FilterState }) {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [places, setPlaces] = useState<Place[]>([]);
   const [mapPlaces, setMapPlaces] = useState<Place[]>([]);
   const [total, setTotal] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   const [pages, setPages] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [activeSlug, setActiveSlug] = useState<string | null>(null);
 
+  const filters = filtersFromParams(searchParams);
+
   useEffect(() => {
     if (typeof window === "undefined") return;
-
     fetch("/api/places/map")
-      .then(res => res.json())
-      .then(data => setMapPlaces(data.items || []))
-      .catch(err => console.error(err));
+      .then((res) => res.json())
+      .then((data) => setMapPlaces(data.items || []))
+      .catch(() => {});
+  }, []);
+
+  const fetchPlaces = useCallback(async (f: FilterState, page: number) => {
+    setLoading(true);
+    setError(null);
+    try {
+      const res = await fetch(`/api/places?${paramsFromFilters(f, page).toString()}`);
+      if (!res.ok) throw new Error("Failed to load listings");
+      const data = await res.json();
+      setPlaces(data.items || []);
+      setTotal(data.total || 0);
+      setPages(Math.ceil((data.total || 0) / 20));
+      setCurrentPage(data.page || page);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   }, []);
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    fetchPlaces(filters, parseInt(searchParams.get("page") || "1"));
+  }, [searchParams]);
 
-    const params = new URLSearchParams();
-    if (initialFilters?.county) params.set("county", initialFilters.county);
-    if (initialFilters?.city) params.set("city", initialFilters.city);
-    if (initialFilters?.zip) params.set("zip", initialFilters.zip);
-    if (initialFilters?.minRating && initialFilters.minRating > 0) params.set("min_rating", String(initialFilters.minRating));
-    if (initialFilters?.query) params.set("q", initialFilters.query);
-    params.set("page", "1");
+  const handleFilterChange = useCallback(
+    (f: FilterState) => {
+      router.push(`/?${paramsFromFilters(f, 1).toString()}`, { scroll: false });
+    },
+    [router]
+  );
 
-    fetch(`/api/places?${params.toString()}`)
-      .then(res => res.json())
-      .then(data => {
-        setPlaces(data.items || []);
-        setTotal(data.total || 0);
-        setPages(Math.ceil((data.total || 0) / parseInt(params.get("limit") || "20")));
-        setCurrentPage(data.page || 1);
-        setLoading(false);
-      })
-      .catch(err => console.error(err));
+  const handlePageChange = useCallback(
+    (p: number) => {
+      router.push(`/?${paramsFromFilters(filters, p).toString()}`, { scroll: false });
+    },
+    [filters, router]
+  );
+
+  const handlePlaceClick = useCallback((slug: string) => {
+    setActiveSlug(slug);
+    document.getElementById(`card-${slug}`)?.scrollIntoView({ behavior: "smooth", block: "center" });
   }, []);
 
-  const handleFilterChange = (f: FilterState) => {
-    const params = new URLSearchParams();
-    if (f.county) params.set("county", f.county);
-    if (f.city) params.set("city", f.city);
-    if (f.zip) params.set("zip", f.zip);
-    if (f.minRating && f.minRating > 0) params.set("min_rating", String(f.minRating));
-    if (f.query) params.set("q", f.query);
-    router.push(`/?${params.toString()}`);
-  };
-
-  const handlePageChange = (p: number) => {
-    setCurrentPage(p);
-    
-    if (typeof window === "undefined") return;
-
-    const params = new URLSearchParams();
-    if (initialFilters?.county) params.set("county", initialFilters.county);
-    if (initialFilters?.city) params.set("city", initialFilters.city);
-    if (initialFilters?.zip) params.set("zip", initialFilters.zip);
-    if (initialFilters?.minRating && initialFilters.minRating > 0) params.set("min_rating", String(initialFilters.minRating));
-    if (initialFilters?.query) params.set("q", initialFilters.query);
-    params.set("page", String(p));
-
-    fetch(`/api/places?${params.toString()}`)
-      .then(res => res.json())
-      .then(data => {
-        setPlaces(data.items || []);
-        setTotal(data.total || 0);
-        setPages(Math.ceil((data.total || 0) / parseInt(params.get("limit") || "20")));
-        setCurrentPage(data.page || p);
-        setLoading(false);
-      })
-      .catch(err => console.error(err));
-  };
-
-  const handlePlaceClick = (slug: string) => {
-    setActiveSlug(slug);
-    if (typeof window !== "undefined") {
-      const el = document.getElementById(`card-${slug}`);
-      el?.scrollIntoView({ behavior: "smooth", block: "center" });
-    }
-  };
+  const handleRetry = useCallback(() => {
+    fetchPlaces(filters, currentPage);
+  }, [filters, currentPage, fetchPlaces]);
 
   return (
-    <div className="min-h-[80vh] flex flex-col editorial-noise bg-gray-50/50">
-      <header className="flex-shrink-0 px-5 py-4 border-b border-border/60 bg-card/60 backdrop-blur-sm">
+    <div className="flex flex-col bg-gray-50/50" style={{ height: "calc(100vh - 56px)", overflow: "hidden" }}>
+      <header className="flex-shrink-0 px-6 py-5 border-b border-gray-100 bg-white">
         <div className="flex items-center justify-between">
-          <div>
-            <h1 className="text-xl font-heading font-semibold tracking-tight text-foreground">Texas Apartments</h1>
-            <p className="text-xs text-muted-foreground mt-0.5 font-light">Discover your next home</p>
+          <div className="flex items-center gap-3">
+            <h1 className="text-lg font-semibold text-gray-900">Texas Apartments</h1>
+            <span className="text-sm text-gray-400 bg-gray-100 px-2.5 py-0.5 rounded-full">{total.toLocaleString()} listings</span>
           </div>
-          <span className="text-sm text-muted-foreground font-light">{total.toLocaleString()} listings</span>
         </div>
       </header>
 
-      <div className="flex-shrink-0">
+      <div className="flex-shrink-0 border-b border-gray-100">
         <FilterBar onFilterChange={handleFilterChange} initialFilters={initialFilters} />
       </div>
 
-      <div className="flex-1 flex overflow-hidden">
-        <div className="w-full md:w-2/5 lg:w-[420px] overflow-y-auto border-r border-border/40 bg-card/40">
-          <ApartmentListComponent places={places} activeSlug={activeSlug} loading={loading} />
+      <div className="flex-1 grid grid-cols-1 md:grid-cols-[30%_70%]" style={{ minHeight: 0, overflow: "hidden" }}>
+        <div className="overflow-y-auto bg-white" style={{ minHeight: 0 }}>
+          {error ? (
+            <div className="p-10 text-center">
+              <p className="text-red-600 font-medium mb-2">Failed to load listings</p>
+              <p className="text-sm text-gray-500 mb-4">{error}</p>
+              <button onClick={handleRetry} className="px-4 py-2 bg-emerald-600 text-white text-sm rounded-lg hover:bg-emerald-700 transition-colors">
+                Try Again
+              </button>
+            </div>
+          ) : (
+            <ApartmentListComponent places={places} activeSlug={activeSlug} loading={loading} />
+          )}
         </div>
-        <div className="hidden md:block md:w-3/5 lg:flex-1">
+        <div className="hidden md:block relative border-l border-gray-200" style={{ minHeight: 0, overflow: "hidden" }}>
           <MapView places={mapPlaces.length > 0 ? mapPlaces : places} onPlaceClick={handlePlaceClick} />
         </div>
       </div>
 
-      <div className="flex-shrink-0 border-t border-border/40 bg-card/60 backdrop-blur-sm">
+      <div className="flex-shrink-0 border-t border-gray-200 bg-white">
         <Pagination page={currentPage} pages={pages} onPageChange={handlePageChange} />
       </div>
 

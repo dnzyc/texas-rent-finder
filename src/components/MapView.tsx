@@ -41,11 +41,22 @@ export function MapView({
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
 
-    mapRef.current = L.map(containerRef.current).setView([31.4, -99.5], 6);
+    const texasBounds = L.latLngBounds(
+      [25.8, -106.6], // SW
+      [36.5, -93.5]   // NE
+    );
+
+    mapRef.current = L.map(containerRef.current, {
+      center: [31.4, -99.5],
+      zoom: 6,
+      minZoom: 6,
+      maxBounds: texasBounds.pad(0.2),
+      maxBoundsViscosity: 1.0,
+    });
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a>',
-      maxZoom: 18,
+      maxZoom: 16,
     }).addTo(mapRef.current);
 
     return () => {
@@ -111,9 +122,10 @@ export function MapView({
     if (bounds.isValid()) {
       map.fitBounds(bounds, { padding: [50, 50], maxZoom: 13 });
     }
+    map.invalidateSize();
   }, [places, onPlaceClick]);
 
   return (
-    <div ref={containerRef} className="h-full w-full" style={{ minHeight: "300px" }} />
+    <div ref={containerRef} className="absolute inset-0" style={{ minHeight: "400px" }} />
   );
 }

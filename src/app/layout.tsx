@@ -3,19 +3,21 @@ import "./globals.css";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { Providers } from "@/components/Providers";
+import { Navbar } from "@/components/Navbar";
+import { SiteFooter } from "@/components/SiteFooter";
+import { Analytics } from "@vercel/analytics/react";
 
-const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 
 export const metadata: Metadata = {
   title: {
-    default: "Texas Rent Finder — 5,600+ Apartments Across Texas | Prices, Ratings & Photos",
+    default: "Texas Rent Finder — 5,600+ TX Apartments | Prices & Ratings",
     template: "%s | Texas Rent Finder"
   },
-  description: "Search 5,600+ apartment complexes across Texas with real photos, ratings, prices, and websites. Find your perfect rental home in Houston, Dallas, San Antonio, Austin and more.",
-  keywords: ["Texas apartments", "apartments for rent Texas", "Texas rental homes", "apartment search Texas", "Houston apartments", "Dallas apartments", "San Antonio apartments", "Austin apartments", "Texas rent finder", "apartment finder Texas"],
+  description: "Browse 5,600+ verified apartments across Texas with real photos, ratings & prices. Find your rental in Houston, Dallas, Austin, San Antonio & more.",
   openGraph: {
-    title: "Texas Rent Finder — 5,600+ Apartments with Real Photos & Ratings",
-    description: "Search 5,600+ apartment complexes across Texas with real photos, ratings, prices, and websites. Your complete Texas rental search.",
+    title: "Texas Rent Finder — 5,600+ TX Apartments | Real Photos & Ratings",
+    description: "Browse 5,600+ verified apartments across Texas with real photos, ratings & prices. Your complete Texas rental search.",
     type: "website",
     url: "https://texasrentfinder.com",
     siteName: "Texas Rent Finder",
@@ -30,8 +32,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Texas Rent Finder — 5,600+ Apartments with Real Photos & Ratings",
-    description: "Search 5,600+ apartment complexes across Texas with real photos, ratings, prices, and websites.",
+    title: "Texas Rent Finder — 5,600+ TX Apartments | Real Photos & Ratings",
+    description: "Browse 5,600+ verified apartments across Texas with real photos, ratings & prices.",
     images: ["/og-image.png"]
   },
   metadataBase: new URL("https://texasrentfinder.com"),
@@ -41,14 +43,24 @@ export const metadata: Metadata = {
 };
 
 export const viewport = {
-  themeColor: "#3b82f6"
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f0fdfa" },
+    { media: "(prefers-color-scheme: dark)", color: "#0f172a" },
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={cn("font-sans", geist.variable)}>
+      <head>
+        <meta name="google-site-verification" content="12UogC2fhWpPl6q169t94hQIFRjlgMTkJ-87PTBzdBA" />
+        <link rel="preconnect" href="https://tile.openstreetmap.org" crossOrigin="anonymous" />
+      </head>
       <body className="bg-gray-50 text-gray-900 antialiased">
+        <Navbar />
         <Providers>{children}</Providers>
+        <SiteFooter />
+        <Analytics />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

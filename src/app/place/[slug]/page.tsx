@@ -11,13 +11,7 @@ import { PlaceWithNearby, Place } from "@/types";
 import { logPageView } from "@/lib/analytics";
 import { supabase } from "@/lib/supabase";
 
-function parseLocation(row: any): { lat: number; lng: number } | null {
-  const loc = row.location;
-  if (!loc) return null;
-  if (typeof loc === "object" && loc.lat !== undefined && loc.lng !== undefined) return { lat: loc.lat, lng: loc.lng };
-  if (loc.coordinates) return { lat: loc.coordinates[1], lng: loc.coordinates[0] };
-  return null;
-}
+import { parseLocation, SupabasePlaceRow } from "@/lib/parseLocation";
 
 async function getPlace(slug: string): Promise<PlaceWithNearby | null> {
   const { data: place, error } = await supabase
@@ -28,7 +22,7 @@ async function getPlace(slug: string): Promise<PlaceWithNearby | null> {
 
   if (error || !place) return null;
 
-  const parsed = { ...place, location: parseLocation(place) } as PlaceWithNearby;
+  const parsed = { ...place, location: parseLocation(place as SupabasePlaceRow) } as PlaceWithNearby;
 
   if (parsed.location) {
     const { data: nearby } = await supabase
@@ -41,8 +35,8 @@ async function getPlace(slug: string): Promise<PlaceWithNearby | null> {
       });
 
     if (nearby) {
-      parsed.nearby = nearby
-        .map((p: any) => ({ ...p, location: parseLocation(p) })) as Place[];
+      parsed.nearby = (nearby as any[])
+        .map((p) => ({ ...p, location: parseLocation(p as SupabasePlaceRow) })) as Place[];
     }
   }
 
@@ -100,6 +94,17 @@ export default async function PlacePage({ params }: { params: Promise<{ slug: st
 
   logPageView(`/place/${slug}`);
 
+  const breadcrumbJson = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://texasrentfinder.com" },
+      { "@type": "ListItem", position: 2, name: "Texas Apartments", item: "https://texasrentfinder.com/texas" },
+      ...(place.city ? [{ "@type": "ListItem" as const, position: 3, name: `${place.city}, TX Apartments`, item: `https://texasrentfinder.com/texas/${place.city.toLowerCase().replace(/\s+/g, "-")}` }] : []),
+      { "@type": "ListItem", position: place.city ? 4 : 3, name: place.name, item: `https://texasrentfinder.com/place/${slug}` },
+    ],
+  };
+
   const ldJson = {
     "@context": "https://schema.org",
     "@type": "ApartmentComplex",
@@ -136,6 +141,7 @@ export default async function PlacePage({ params }: { params: Promise<{ slug: st
     <main className="max-w-3xl mx-auto p-6">
       <Link href="/" className="text-blue-600 hover:underline text-sm mb-4 inline-block">← Back to search</Link>
 
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJson) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ldJson) }} />
 
       <div className="mt-4">
