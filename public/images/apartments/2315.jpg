@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="author" content="Phaneswar Kota">
+    <title></title>
+    <link rel="stylesheet" href="https://ipiapts.com/includes/assets/css/site.min.css">
+    <script>
+        const baseUrl = 'https://ipiapts.com/';
+    </script>
+</head>
+
+<body class="layout-row bg-black text-color">
+    <div id="main" class="layout-column flex">
+        <!-- ############ Header START-->
+        <div class="d-flex flex align-items-center h-v info theme bg-white">
+    <div class="text-center p-5 w-100">
+        <h1 class="display-5 my-5">Sorry! the page you are looking for doesn't exist.</h1>
+        <p>Go back to <a href="https://ipiapts.com/" class="b-b b-white">home</a> or <a href="#" class="b-b b-white">contact us</a> about a problem.</p>
+        <p class="my-5 text-muted h4">-- 404 --</p></div>
+</div>
+<script src="https://ipiapts.com/includes/assets/js/site.min.js"></script>
+<script>
+    function getApartmentUrl() {
+        var name = $("#apart_name").val();
+        if (name.length > 0) {
+            $.ajax({
+                type: 'post',
+                url: baseUrl + 'admin/apartment-link',
+                data: {
+                    link: name
+                },
+                success: function (data) {
+                    console.log(data);
+                    $("#apart_url").val(data);
+                }
+            });
+        }
+    }
+
+    $(".add_row").off('click').on('click', function () {
+        var i = $(".add_gallery .row").length;
+        i++;
+        var html = '<div class="row"> <div class="form-group col-md-6">' +
+            '<label>Gallery Image Title</label>' +
+            '<input type="text" class="form-control" name="g_title[]" id="g_title' + i + '" required>' +
+            '</div>' +
+            '<div class="form-group col-md-6">' +
+            '<label>Gallery Image</label>' +
+            '<input type="file" class="form-control" name="g_img[]" id="g_img' + i + '" required>' +
+            '</div></div>';
+        $(".add_gallery").append(html);
+    });
+    $(".del_row").off('click').on('click', function () {
+        var i = $(".add_gallery .row").length;
+        console.log(i);
+        if (i > 1) {
+            //alert(1);
+            console.log(i);
+            $(".add_gallery .row:last-child").remove();
+        }
+    });
+    $(".add_row1").off('click').on('click', function () {
+        var i = $(".add_property .row").length;
+        i++;
+        var html = '<div class="row">' +
+            '<div class="form-group col-md-6">' +
+            '<label>Unit Type</label>' +
+            '<input type="text" class="form-control" placeholder="1 Bed Room / 2 Bed Room" name="unit_type[]" id="unit' + i + '" required>' +
+            '</div>' +
+            '<div class="form-group col-md-6">' +
+            '<label>Vacancies</label>' +
+            '<input type="text" class="form-control" placeholder="25 / 35..." name="vacancy[]" id="vacancy' + i + '" required>' +
+            '</div>' +
+            '</div>';
+        $(".add_property").append(html);
+    });
+    $(".del_row1").off('click').on('click', function () {
+        var i = $(".add_property .row").length;
+        console.log(i);
+        if (i > 1) {
+            //alert(1);
+            console.log(i);
+            $(".add_property .row:last-child").remove();
+        }
+    });
+
+    function getSummerNoteText() {
+        $('.note-editor-inline').each(function () {
+            $(this).html($(this).summernote('code'));
+        });
+        return true;
+    }
+</script>
+</div>
+</body>
+</html>

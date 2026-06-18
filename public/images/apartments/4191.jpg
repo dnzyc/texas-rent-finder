@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js"><!-- start : Framework/Sequoia -->
+<!-- start : ocom/common/global/components/framework/head -->
+<head>
+<!-- start : ocom/common/global/components/head -->
+<title>Oracle Cloud for Retail</title>
+<meta name="Title" content="Oracle Cloud for Retail">
+<meta name="Description" content="Unleash your retail business agility with Oracle Cloud for Retail, an integrated suite of retail solutions that take advantage of embedded AI and machine learning.
+">
+<meta name="Keywords" content="retail solutions, retail cloud, retail solutions software, retail, retail solution, retail software, retail business, retail technology">
+<meta name="resgen" content="No">
+<meta name="siteid" content="us">
+<meta name="countryid" content="US">
+<meta name="robots" content="index, follow">
+<meta name="country" content="United States">
+<meta name="region" content="americas">
+<meta name="Language" content="en">
+<meta name="Updated Date" content="2024-10-16T20:51:34Z">
+<meta name="page_type" content="Industry-Overview">
+<script type="text/javascript">
+var pageData = pageData || {};
+//page info
+pageData.pageInfo = pageData.pageInfo || {};
+pageData.pageInfo.language = "en";
+pageData.pageInfo.country = "United States";
+pageData.pageInfo.region = "americas";
+pageData.pageInfo.pageTitle = "Oracle Cloud for Retail";
+pageData.pageInfo.description = "Unleash your retail business agility with Oracle Cloud for Retail, an integrated suite of retail solutions that take advantage of embedded AI and machine learning.";
+pageData.pageInfo.keywords = "retail solutions, retail cloud, retail solutions software, retail, retail solution, retail software, retail business, retail technology";
+pageData.pageInfo.siteId = "us";
+pageData.pageInfo.countryId = "US";
+pageData.pageInfo.updatedDate = "2024-10-16T20:51:34Z";
+</script>
+<!-- start : ocom/common/global/components/seo-taxonomy-meta-data-->
+<script type="text/javascript">
+var pageData = pageData || {};
+//taxonmy
+pageData.taxonomy = pageData.taxonomy || {};
+pageData.taxonomy.productServices = [];
+pageData.taxonomy.industry = ["WM148060"];
+pageData.taxonomy.region = [];
+pageData.taxonomy.contentType = ["WM178751"];
+pageData.taxonomy.buyersJourney = [];
+pageData.taxonomy.revenue = [];
+pageData.taxonomy.title = [];
+pageData.taxonomy.audience = [];
+pageData.taxonomy.persona = [];
+</script>
+<!-- end : ocom/common/global/components/seo-taxonomy-meta-data-->
+<!-- start : ocom/common/global/components/social-media-meta-tags --><!-- F13v0 -->
+<meta property="og:title" content="Oracle Cloud for Retail"/>
+<meta property="og:description" content="Unleash your retail business agility with Oracle Cloud for Retail, an integrated suite of retail solutions that take advantage of embedded AI and machine learning."/>
+<meta property="og:image" content="https://www.oracle.com/a/ocom/img/social-retail-overview-hero-1200x630.jpg"/>
+<!-- /F13v0 -->
+<!-- F13v1 -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Oracle Cloud for Retail">
+<meta name="twitter:description" content="Unleash your retail business agility with Oracle Cloud for Retail, an integrated suite of retail solutions that take advantage of embedded AI and machine learning.">
+<meta name="twitter:image" content="https://www.oracle.com/a/ocom/img/social-retail-overview-hero-800x800.jpg">
+<!-- /F13v1 -->
+<!-- end : ocom/common/global/components/social-media-meta-tags -->
+<!-- start : ocom/common/global/components/seo-hreflang-meta-tags --><link rel="canonical" href="https://www.oracle.com/retail/" />
+<link rel="alternate" hreflang="en-US" href="https://www.oracle.com/retail/" />
+<link rel="alternate" hreflang="pt-BR" href="https://www.oracle.com/br/retail/" />
+<link rel="alternate" hreflang="zh-CN" href="https://www.oracle.com/cn/retail/" />
+<link rel="alternate" hreflang="de-DE" href="https://www.oracle.com/de/retail/" />
+<link rel="alternate" hreflang="fr-FR" href="https://www.oracle.com/fr/retail/" />
+<link rel="alternate" hreflang="en-IN" href="https://www.oracle.com/in/retail/" />
+<link rel="alternate" hreflang="ja-JP" href="https://www.oracle.com/jp/retail/" />
+<link rel="alternate" hreflang="en-GB" href="https://www.oracle.com/uk/retail/" />
+<link rel="alternate" hreflang="en-AE" href="https://www.oracle.com/ae/retail/" />
+<link rel="alternate" hreflang="ar-AE" href="https://www.oracle.com/ae-ar/retail/" />
+<link rel="alternate" hreflang="es-AR" href="https://www.oracle.com/latam/retail/"/>
+<link rel="alternate" hreflang="en-AU" href="https://www.oracle.com/anz/retail/"/>
+<link rel="alternate" hreflang="en-CA" href="https://www.oracle.com/ca-en/retail/" />
+<link rel="alternate" hreflang="fr-CA" href="https://www.oracle.com/ca-fr/retail/" />
+<link rel="alternate" hreflang="de-CH" href="https://www.oracle.com/de/retail/"/>
+<link rel="alternate" hreflang="fr-CH" href="https://www.oracle.com/fr/retail/"/>
+<link rel="alternate" hreflang="es-CL" href="https://www.oracle.com/latam/retail/"/>
+<link rel="alternate" hreflang="es-CO" href="https://www.oracle.com/latam/retail/"/>
+<link rel="alternate" hreflang="es-ES" href="https://www.oracle.com/es/retail/" />
+<link rel="alternate" hreflang="en-HK" href="https://www.oracle.com/apac/retail/"/>
+<link rel="alternate" hreflang="it-IT" href="https://www.oracle.com/it/retail/" />
+<link rel="alternate" hreflang="ko-KR" href="https://www.oracle.com/kr/retail/" />
+<link rel="alternate" hreflang="es-MX" href="https://www.oracle.com/latam/retail/"/>
+<link rel="alternate" hreflang="nl-NL" href="https://www.oracle.com/nl/retail/" />
+<link rel="alternate" hreflang="en-SA" href="https://www.oracle.com/sa/retail/" />
+<link rel="alternate" hreflang="ar-SA" href="https://www.oracle.com/sa-ar/retail/" />
+<link rel="alternate" hreflang="en-SG" href="https://www.oracle.com/asean/retail/"/>
+<link rel="alternate" hreflang="zh-TW" href="https://www.oracle.com/tw/retail/" />
+<link rel="alternate" hreflang="cs-CZ" href="https://www.oracle.com/europe/retail/"/>
+<link rel="alternate" hreflang="en-ID" href="https://www.oracle.com/asean/retail/"/>
+<link rel="alternate" hreflang="en-IE" href="https://www.oracle.com/europe/retail/"/>
+<link rel="alternate" hreflang="he-IL" href="https://www.oracle.com/il/retail/" />
+<link rel="alternate" hreflang="en-IL" href="https://www.oracle.com/il-en/retail/" />
+<link rel="alternate" hreflang="en-MY" href="https://www.oracle.com/asean/retail/"/>
+<link rel="alternate" hreflang="es-PE" href="https://www.oracle.com/latam/retail/"/>
+<link rel="alternate" hreflang="en-PH" href="https://www.oracle.com/asean/retail/"/>
+<link rel="alternate" hreflang="pl-PL" href="https://www.oracle.com/pl/retail/" />
+<link rel="alternate" hreflang="pt-PT" href="https://www.oracle.com/europe/retail/"/>
+<link rel="alternate" hreflang="ro-RO" href="https://www.oracle.com/europe/retail/"/>
+<link rel="alternate" hreflang="sv-SE" href="https://www.oracle.com/se/retail/" />
+<link rel="alternate" hreflang="tr-TR" href="https://www.oracle.com/tr/retail/" />
+<link rel="alternate" hreflang="en-ZA" href="https://www.oracle.com/africa/retail/"/>
+<link rel="alternate" hreflang="de-AT" href="https://www.oracle.com/de/retail/"/>
+<link rel="alternate" hreflang="en-BA" href="https://www.oracle.com/europe/retail/"/>
+<link rel="alternate" hreflang="en-BD" href="https://www.oracle.com/apac/retail/"/>
+<link rel="alternate" hreflang="en-BE" href="https://www.oracle.com/europe/retail/"/>
+<link rel="alternate" hreflang="bg-BG" href="https://www.oracle.com/europe/retail/"/>
+<link rel="alternate" hreflang="en-BH" href="https://www.oracle.com/middleeast/retail/"/>
+<link rel="alternate" hreflang="ar-BH" href="https://www.oracle.com/middleeast-ar/retail/"/>
+<link rel="alternate" hreflang="en-BZ" href="https://www.oracle.com/bz/retail/" />
+<link rel="alternate" hreflang="es-CR" href="https://www.oracle.com/latam/retail/"/>
+<link rel="alternate" hreflang="en-CY" href="https://www.oracle.com/europe/retail/"/>
+<link rel="alternate" hreflang="da-DK" href="https://www.oracle.com/europe/retail/"/>
+<link rel="alternate" hreflang="fr-DZ" href="https://www.oracle.com/africa-fr/retail/"/>
+<link rel="alternate" hreflang="en-EE" href="https://www.oracle.com/europe/retail/"/>
+<link rel="alternate" hreflang="en-EG" href="https://www.oracle.com/middleeast/retail/"/>
+<link rel="alternate" hreflang="ar-EG" href="https://www.oracle.com/middleeast-ar/retail/"/>
+<link rel="alternate" hreflang="fi-FI" href="https://www.oracle.com/europe/retail/"/>
+<link rel="alternate" hreflang="en-GH" href="https://www.oracle.com/africa/retail/"/>
+<link rel="alternate" hreflang="el-GR" href="https://www.oracle.com/europe/retail/"/>
+<link rel="alternate" hreflang="hr-HR" href="https://www.oracle.com/europe/retail/"/>
+<link rel="alternate" hreflang="hu-HU" href="https://www.oracle.com/europe/retail/"/>
+<link rel="alternate" hreflang="en-JO" href="https://www.oracle.com/middleeast/retail/"/>
+<link rel="alternate" hreflang="ar-JO" href="https://www.oracle.com/middleeast-ar/retail/"/>
+<link rel="alternate" hreflang="en-KE" href="https://www.oracle.com/africa/retail/"/>
+<link rel="alternate" hreflang="en-KW" href="https://www.oracle.com/middleeast/retail/"/>
+<link rel="alternate" hreflang="ar-KW" href="https://www.oracle.com/middleeast-ar/retail/"/>
+<link rel="alternate" hreflang="en-LK" href="https://www.oracle.com/apac/retail/"/>
+<link rel="alternate" hreflang="en-LU" href="https://www.oracle.com/europe/retail/"/>
+<link rel="alternate" hreflang="lv-LV" href="https://www.oracle.com/europe/retail/"/>
+<link rel="alternate" hreflang="fr-MA" href="https://www.oracle.com/africa-fr/retail/"/>
+<link rel="alternate" hreflang="en-NG" href="https://www.oracle.com/africa/retail/"/>
+<link rel="alternate" hreflang="no-NO" href="https://www.oracle.com/europe/retail/"/>
+<link rel="alternate" hreflang="en-NZ" href="https://www.oracle.com/anz/retail/"/>
+<link rel="alternate" hreflang="en-QA" href="https://www.oracle.com/middleeast/retail/"/>
+<link rel="alternate" hreflang="ar-QA" href="https://www.oracle.com/middleeast-ar/retail/"/>
+<link rel="alternate" hreflang="sr-RS" href="https://www.oracle.com/europe/retail/"/>
+<link rel="alternate" hreflang="sl-SI" href="https://www.oracle.com/europe/retail/"/>
+<link rel="alternate" hreflang="sk-SK" href="https://www.oracle.com/europe/retail/"/>
+<link rel="alternate" hreflang="fr-SN" href="https://www.oracle.com/africa-fr/retail/"/>
+<link rel="alternate" hreflang="en-TH" href="https://www.oracle.com/asean/retail/"/>
+<link rel="alternate" hreflang="uk-UA" href="https://www.oracle.com/ua/retail/" />
+<link rel="alternate" hreflang="es-UY" href="https://www.oracle.com/latam/retail/"/>
+<link rel="alternate" hreflang="en-VN" href="https://www.oracle.com/asean/retail/"/>
+<link rel="alternate" hreflang="lt-LT" href="https://www.oracle.com/lt/retail/" />
+<meta name="altpages" content="br,cn,de,fr,in,jp,uk,ae,ae-ar,ar,au,ca-en,ca-fr,ch-de,ch-fr,cl,co,es,hk,it,kr,mx,nl,sa,sa-ar,sg,tw,cz,id,ie,il,il-en,my,pe,ph,pl,pt,ro,se,tr,za,at,ba,bd,be,bg,bh,bh-ar,bz,cr,cy,dk,dz,ee,eg,eg-ar,fi,gh,gr,hr,hu,jo,jo-ar,ke,kw,kw-ar,lk,lu,lv,ma,ng,no,nz,qa,qa-ar,rs,si,sk,sn,th,ua,uy,vn,lt">
+<script type="text/javascript">
+var pageData = pageData || {};
+//page info
+pageData.pageInfo = pageData.pageInfo || {};
+pageData.pageInfo.altPages = "br,cn,de,fr,in,jp,uk,ae,ae-ar,ar,au,ca-en,ca-fr,ch-de,ch-fr,cl,co,es,hk,it,kr,mx,nl,sa,sa-ar,sg,tw,cz,id,ie,il,il-en,my,pe,ph,pl,pt,ro,se,tr,za,at,ba,bd,be,bg,bh,bh-ar,bz,cr,cy,dk,dz,ee,eg,eg-ar,fi,gh,gr,hr,hu,jo,jo-ar,ke,kw,kw-ar,lk,lu,lv,ma,ng,no,nz,qa,qa-ar,rs,si,sk,sn,th,ua,uy,vn,lt";
+</script>
+<!-- end : ocom/common/global/components/seo-hreflang-meta-tags -->
+<!-- end : ocom/common/global/components/head -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- start : ocom/common/global/components/framework/layoutAssetHeadInfo -->
+<!-- Container/Display Start -->
+<!-- BEGIN: oWidget_C/_Raw-Text/Display replaceOCOM: null -->
+<!-- BEGIN CSS/JS -->
+<link rel="shortcut icon" href="/asset/web/favicons/favicon.ico" type="image/x-icon" />
+<link rel="preload" href="/asset/web/fonts/oraclesansvf.woff2" as="font" crossorigin="anonymous" type="font/woff2"/>
+<link href="/asset/sequoia/css/sequoia-core.css" rel="preload" as="style" onload="this.rel='stylesheet';this.removeAttribute('onload');" onerror="this.rel='stylesheet'">
+<script defer src="/asset/sequoia/js/sequoia-core.js"></script>
+<script defer src="/asset/sequoia/js/sequoia-framework.js"></script>
+<style>
+body{margin:0}
+*[data-ocomid]{opacity:0;visibility:hidden}
+img, video, svg {display: block;max-width: 100%;}
+</style>
+<!-- END CSS/JS -->
+<!-- END: oWidget_C/_Raw-Text/Display -->
+<!-- Container/Display end -->
+<!-- Container/Display Start -->
+<!-- BEGIN: oWidget_C/_Raw-Text/Display replaceOCOM: null -->
+<!--Tealium embed code Start -->
+<script src="https://tms.oracle.com/main/prod/utag.sync.js"></script>
+<!-- Loading script asynchronously -->
+<script type="text/javascript">
+(function(a,b,c,d){
+if(location.href.indexOf("tealium=dev") == -1) {
+a='https://tms.oracle.com/main/prod/utag.js';
+} else {
+a='https://tms.oracle.com/main/dev/utag.js';
+}
+b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+})();
+</script>
+<!--Tealium embed code End-->
+<!-- END: oWidget_C/_Raw-Text/Display -->
+<!-- Container/Display end -->
+<!-- end : ocom/common/global/components/framework/layoutAssetHeadInfo -->
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                                <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="DXNLE-YBWWY-AR74T-WMD99-77VRA",function(){function e(){if(!i){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.parentNode.appendChild(e),i=!0}}function t(e){i=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",o.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"DXNLE-YBWWY-AR74T-WMD99-77VRA";var o=document.currentScript||document.getElementsByTagName("script")[0],i=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!i)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="ndfmjzix2uweo2rubl6q-f-09b97175d-clientnsv4-s.akamaihd.net",o="false"=="true"?2:1,i={"ak.v":"41","ak.cp":"82485","ak.ai":parseInt("604074",10),"ak.ol":"0","ak.cr":24,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"29e8c44a","ak.r":50172,"ak.a2":n,"ak.m":"dscx","ak.n":"essl","ak.cport":52795,"ak.gh":"23.192.37.209","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1781795581","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==liDtiT3ru3ksUK/bL2qrE1le3YNt/2J1O/9zI1Rf5RqOWdzpcWRE0N6h8nxhEkKXtxB0Um0XV8ktd9HQ5uFM/w4+aWIj+BUkZFk0jNtroiBBtcuAY8SHcL8ZXNiiPRqBfpRYL906eR+zMJ+pVuncLrw+tO1ts0d/YEvccJu/n1WSkWQgxMPjZ7cPrz3vpQOR3d5O51oT/vlk5yTSAm+9lh9JhBdM/8HZ7MZ4deySw8RzBaTEeidIrfRyan2zrPmJ7+2jAwwsAd7Xm/hE6RVvsJuzNRutzsCbkMv+tUsp/Q601uRVGBfVrwn+rkXMUucvkvaoX7PVbA7d3IdOcwLE4VF+2+hgrqNvEVbj+FGBLoiHXl5z2mes3ZB+44r1WCq35n4fQZ8olxQiT0RDel5sxx5iSTXndnRf3VTxVIOThi0=","ak.pv":"542","ak.dpoabenc":"","ak.tf":o};if(""!==t)i["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head><!-- end : ocom/common/global/components/framework/head -->
+<!-- start : ocom/common/global/components/sequoia/layoutAssetStartBodyInfo -->
+<body class="f00 f00-sequoia thm-default">
+<!-- Container/Display Start -->
+<!-- BEGIN: oWidget_C/_Raw-Text/Display replaceOCOM: null -->
+<div class="f00-top" id="top"></div>
+<!-- END: oWidget_C/_Raw-Text/Display -->
+<!-- Container/Display end -->
+<!-- Dispatcher:null default -->
+<!-- widgetType: _Raw-Text -->
+<!-- SUBTYPETEMPLATE: _Raw-Text/Display -->
+<!-- BEGIN: oWidget_C/_Raw-Text/Display replaceOCOM: null -->
+<!-- U38v0 -->
+<header id="u38" class="u38 u38v0" data-trackas="header" data-ocomid="u38">
+<!-- Skip Links -->
+<div id="u38skip2">
+<ul>
+<li><a id="u38skip2c" href="#maincontent">Skip to content</a></li>
+<li>
+<a id="u38acc" href="https://www.oracle.com/corporate/accessibility/"
+>Accessibility Policy</a
+>
+</li>
+</ul>
+</div>
+<div class="u38w1" id="u38w1">
+<!-- Left Section: Hamburger + Logo -->
+<div class="u38brand" id="u38brand">
+<!-- Menu Trigger Button (Hamburger) -->
+<nav aria-label="Main Menu">
+<a
+id="u38trigger"
+href="/u38-global-menu/"
+data-trackas="menu"
+data-trackas-noexpand
+role="button"
+aria-controls="u38panels"
+aria-expanded="false"
+aria-haspopup="menu"
+>
+<svg
+width="24"
+height="24"
+viewBox="0 0 24 24"
+aria-hidden="true"
+xmlns="http://www.w3.org/2000/svg"
+preserveAspectRatio="none"
+>
+<path d="M22,4 L2,4" class="p1"></path>
+<path d="M2,12 L22,12" class="p2"></path>
+<path d="M2,20 L22,20" class="p3"></path>
+<path d="M0,12 L24,12" class="p4"></path>
+<path d="M0,12 L24,12" class="p5"></path>
+</svg>
+<span class="u38visually-hidden">Menu</span>
+</a>
+</nav>
+<!-- Oracle Logo (136x18 per Figma) - visible on tablet/desktop -->
+<a
+id="u38logolink"
+href="https://www.oracle.com/"
+data-lbl="logo"
+aria-label="Oracle Home"
+>
+<svg
+class="u38-oicn"
+width="136"
+height="18"
+viewBox="0 0 231 30"
+xmlns="http://www.w3.org/2000/svg"
+preserveAspectRatio="xMinYMid"
+>
+<path
+fill="#C74634"
+d="M99.61,19.52h15.24l-8.05-13L92,30H85.27l18-28.17a4.29,4.29,0,0,1,7-.05L128.32,30h-6.73l-3.17-5.25H103l-3.36-5.23m69.93,5.23V0.28h-5.72V27.16a2.76,2.76,0,0,0,.85,2,2.89,2.89,0,0,0,2.08.87h26l3.39-5.25H169.54M75,20.38A10,10,0,0,0,75,.28H50V30h5.71V5.54H74.65a4.81,4.81,0,0,1,0,9.62H58.54L75.6,30h8.29L72.43,20.38H75M14.88,30H32.15a14.86,14.86,0,0,0,0-29.71H14.88a14.86,14.86,0,1,0,0,29.71m16.88-5.23H15.26a9.62,9.62,0,0,1,0-19.23h16.5a9.62,9.62,0,1,1,0,19.23M140.25,30h17.63l3.34-5.23H140.64a9.62,9.62,0,1,1,0-19.23h16.75l3.38-5.25H140.25a14.86,14.86,0,1,0,0,29.71m69.87-5.23a9.62,9.62,0,0,1-9.26-7h24.42l3.36-5.24H200.86a9.61,9.61,0,0,1,9.26-7h16.76l3.35-5.25h-20.5a14.86,14.86,0,0,0,0,29.71h17.63l3.35-5.23h-20.6"
+transform="translate(-0.02 0)"
+/>
+</svg>
+<!-- Small Oracle Logo (32x21 for small tablet 600-759px) - from su01 -->
+<svg
+class="u38-oicn-small"
+width="32"
+height="21"
+viewBox="0 0 32 21"
+xmlns="http://www.w3.org/2000/svg"
+>
+<path
+fill="#C74634"
+d="M9.9,20.1c-5.5,0-9.9-4.4-9.9-9.9c0-5.5,4.4-9.9,9.9-9.9h11.6c5.5,0,9.9,4.4,9.9,9.9c0,5.5-4.4,9.9-9.9,9.9H9.9 M21.2,16.6c3.6,0,6.4-2.9,6.4-6.4c0-3.6-2.9-6.4-6.4-6.4h-11c-3.6,0-6.4,2.9-6.4,6.4s2.9,6.4,6.4,6.4H21.2"
+/>
+</svg>
+</a>
+</div>
+<!-- Center Section: Search Field -->
+<div id="u38nav" data-closetxt="Close menu" data-backtxt="Go back to">
+<!-- Search Form -->
+<form
+role="search"
+name="u38searchForm"
+id="u38searchForm"
+data-contentpaths="/content/Web/Shared/Auto-Suggest Panel Event"
+method="get"
+action="https://search.oracle.com/results"
+>
+<div class="u38searchfield">
+<!-- Search Icon -->
+<svg
+class="u38searchfield-icon"
+width="24"
+height="24"
+viewBox="0 0 24 24"
+aria-hidden="true"
+xmlns="http://www.w3.org/2000/svg"
+>
+<path d="M15,15l6,6M17,10a7,7,0,1,1-7-7A7,7,0,0,1,17,10Z" />
+</svg>
+<!-- Search Input -->
+<input
+id="u38searchinput"
+name="q"
+value=""
+type="text"
+data-autosuggest-url="https://search-api.oracle.com/api/latest/autosuggest"
+placeholder="Search"
+autocomplete="off"
+aria-autocomplete="both"
+aria-label="Search Oracle.com"
+role="combobox"
+aria-expanded="false"
+aria-haspopup="listbox"
+aria-controls="u38searchresults"
+/>
+<!-- Hidden Parameters -->
+<input type="hidden" name="experience" value="site" />
+<input type="hidden" name="size" value="10" />
+<input type="hidden" name="app" value="ocom" />
+<input type="hidden" name="include_questions" value="true" />
+<!-- Clear Button -->
+<button
+type="button"
+id="u38clear"
+class="u38searchclear"
+aria-label="Clear search"
+>
+<svg
+width="16"
+height="16"
+viewBox="0 0 16 16"
+aria-hidden="true"
+xmlns="http://www.w3.org/2000/svg"
+>
+<path
+d="M12 4L4 12M4 4l8 8"
+stroke="currentColor"
+stroke-width="2"
+fill="none"
+/>
+</svg>
+</button>
+</div>
+<!-- Close Search Button (visible at 600-759px when search expanded) -->
+<button
+type="button"
+id="u38closesearch"
+class="u38closesearch"
+aria-label="Close search"
+>
+<svg
+width="24"
+height="24"
+viewBox="0 0 24 24"
+aria-hidden="true"
+xmlns="http://www.w3.org/2000/svg"
+>
+<path
+d="M7,7 L17,17M17,7 L7,17"
+stroke="currentColor"
+stroke-width="2"
+fill="none"
+/>
+</svg>
+</button>
+<!-- Search Results Container -->
+<div
+id="u38searchresults"
+class="u38searchresults"
+role="listbox"
+aria-labelledby="u38searchresultstitle"
+aria-hidden="true"
+data-pagestitle="SUGGESTED LINKS"
+data-autosuggesttitle="SUGGESTED SEARCHES"
+data-allresultstxt="All results for"
+data-allsearchpath="https://search.oracle.com/results?q=SEARCHTERM&amp;size=10&amp;page=1&amp;tab=all&amp;app=ocom"
+>
+<!-- Quick Links (shown on focus when empty) -->
+<div id="u38quicklinks" class="u38quicklinks" aria-hidden="true">
+<span class="u38searchresultstitle" role="presentation"
+>QUICK LINKS</span
+>
+<ul role="presentation">
+<li role="option">
+<a href="/cloud/" data-lbl="oci">Cloud</a>
+</li>
+<li role="option">
+<a href="/database/" data-lbl="database"
+>Database</a
+>
+</li>
+<li role="option">
+<a href="/java/" data-lbl="java">Java</a>
+</li>
+<li role="option">
+<a href="/artificial-intelligence/" data-lbl="ai">AI</a
+>
+</li>
+</ul>
+</div>
+<!-- Suggested Pages (from API) -->
+<div id="u38pages" aria-hidden="true">
+<span class="u38searchresultstitle" role="presentation"
+>SUGGESTED LINKS</span
+>
+<ul id="u38pagesul" role="presentation"></ul>
+</div>
+<!-- Suggested Searches (from API) -->
+<div id="u38autocomplete" aria-hidden="true">
+<span class="u38searchresultstitle" role="presentation"
+>SUGGESTED SEARCHES</span
+>
+<ul id="u38autocompleteul" role="presentation"></ul>
+</div>
+<!-- All Results Link -->
+<div id="u38searchall" aria-hidden="true">
+<ul id="u38searchallul" role="presentation"></ul>
+</div>
+</div>
+<!-- Aria Live Region -->
+<div
+id="u38searchannounce"
+class="u38visually-hidden"
+aria-live="polite"
+aria-atomic="true"
+></div>
+</form>
+<!-- Panel Container (populated by JS from external content) -->
+<div
+id="u38panels"
+data-trackas="menu"
+data-trackas-noexpand
+class="u38panels"
+aria-hidden="true"
+>
+<!-- Panels will be built dynamically from menu content file -->
+</div>
+</div>
+<!-- Right Section: Tools (Icons only per Figma) -->
+<div class="u38tools" id="u38tools">
+<!-- Search Icon (24x24) - visible at 600-759px only, expands search input -->
+<button
+id="u38searchbtn"
+type="button"
+class="u38toolbtn u38searchbtn"
+aria-label="Search"
+aria-expanded="false"
+>
+<svg
+width="24"
+height="24"
+viewBox="0 0 24 24"
+aria-hidden="true"
+xmlns="http://www.w3.org/2000/svg"
+>
+<path
+d="M15,15l6,6M17,10a7,7,0,1,1-7-7A7,7,0,0,1,17,10Z"
+fill="none"
+stroke="currentColor"
+stroke-width="1.5"
+/>
+</svg>
+</button>
+<!-- Country Selector (20x20 flag) - uses #ac-flag for ACS compatibility -->
+<span id="ac-flag">
+<button
+class="flag-focus lightbox"
+data-target="/countries-list.html#countries"
+data-size="md"
+aria-label="Select country"
+>
+<span class="u38visually-hidden">Country</span>
+<img class="flag-image" src="" alt="" />
+</button>
+</span>
+<!-- User/Account Icon (24x24) -->
+<div class="u38signinw1" data-trackas="header">
+<button
+id="u38signin"
+class="u38toolbtn"
+aria-expanded="false"
+aria-controls="u38signinmodal"
+aria-label="Sign in"
+data-lbl="sign-in"
+>
+<svg
+width="24"
+height="24"
+viewBox="0 0 24 24"
+aria-hidden="true"
+xmlns="http://www.w3.org/2000/svg"
+>
+<path
+d="M12,12c2.21,0,4-1.79,4-4s-1.79-4-4-4-4,1.79-4,4,1.79,4,4,4Zm0,2c-2.67,0-8,1.34-8,4v2h16v-2c0-2.66-5.33-4-8-4Z"
+fill="none"
+stroke="currentColor"
+stroke-width="1.5"
+/>
+</svg>
+</button>
+<div id="u38signinmodal" aria-hidden="true">
+<button id="u38actbck" aria-label="Close sign in panel">
+<span class="u38actbcktxt">Back</span>
+</button>
+<div class="u38-profilew2">
+<span class="u38acttitle">Cloud Account</span>
+<a
+href="/cloud/sign-in.html"
+class="u38darkcta u38cloudbg"
+data-lbl="sign-in-to-cloud"
+>Sign in to Cloud</a
+>
+<a
+href="/cloud/free/"
+class="u38lightcta"
+data-lbl="try-free-cloud-trial"
+>Sign Up for Free Cloud Tier</a
+>
+</div>
+<span class="u38acttitle">Oracle Account</span>
+<ul class="u38l-out">
+<li>
+<a
+href="https://www.oracle.com/webapps/redirect/signon?nexturl="
+data-lbl="profile:sign-in-account"
+class="u38darkcta"
+>Sign-In</a
+>
+</li>
+<li>
+<a
+href="https://profile.oracle.com/myprofile/account/create-account.jspx"
+data-lbl="profile:create-account"
+class="u38lightcta"
+>Create an Account</a
+>
+</li>
+</ul>
+<ul class="u38l-in">
+<li>
+<a href="/corporate/contact/help.html" data-lbl="help">Help</a>
+</li>
+<li>
+<a
+href="javascript:sso_sign_out();"
+id="u38pfile-sout"
+data-lbl="signout"
+>Sign Out</a
+>
+</li>
+</ul>
+</div>
+</div>
+<!-- Contact/Chat Icon (24x24) -->
+<a
+id="u38contact"
+class="u38toolbtn"
+href="/corporate/contact/"
+aria-label="Contact us"
+data-lbl="contact"
+>
+<svg
+width="24"
+height="24"
+viewBox="0 0 24 24"
+aria-hidden="true"
+xmlns="http://www.w3.org/2000/svg"
+>
+<path
+d="M20,2H4c-1.1,0-2,.9-2,2v18l4-4h14c1.1,0,2-.9,2-2V4c0-1.1-.9-2-2-2Z"
+fill="none"
+stroke="currentColor"
+stroke-width="1.5"
+/>
+</svg>
+</a>
+</div>
+</div>
+<!-- Background Overlay -->
+<div id="u38overlay" aria-hidden="true"></div>
+<!-- Announcement Region for Screen Readers -->
+<div
+id="u38announce"
+class="u38visually-hidden"
+aria-live="polite"
+aria-atomic="true"
+></div>
+</header>
+<!-- /U38v0 -->
+<!-- END: oWidget_C/_Raw-Text/Display -->
+<!-- end : ocom/common/global/components/sequoia/layoutAssetStartBodyInfo -->
+<main class="f00w1" id="maincontent">
+<!-- widgetType = _Raw-Text -->
+<!-- ptbWidget = false -->
+<!-- ptbWidget = false -->
+<!-- displayBreadcrumb = Yes -->
+<!-- start : ocom/common/global/components/u03v6-breadcrumb_NOHTML -->
+<script type="text/javascript">
+var pageData = pageData || {};
+//page info
+pageData.pageInfo = pageData.pageInfo || {};
+pageData.pageInfo.breadCrumbs = "Industries";
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "BreadcrumbList",
+"itemListElement":
+[
+{ "@type": "ListItem", "position": 1, "name": "Industries", "item": "https://www.oracle.com/industries/"},
+{ "@type": "ListItem", "position": 2, "name": "Retail", "item": "https://www.oracle.com/retail/"}
+]
+}
+</script>
+<!-- end : ocom/common/global/components/u03v6-breadcrumb_NOHTML -->
+<!-- Dispatcher:null default -->
+<!-- widgetType: _Raw-Text -->
+<!-- SUBTYPETEMPLATE: _Raw-Text/Display -->
+<!-- BEGIN: oWidget_C/_Raw-Text/Display replaceOCOM: null -->
+<!-- SH02v1 -->
+<section class="sh02 sh02v1 sh02short cpad" data-ocomid="sh02" data-trackas="sh02">
+<div class="cbg">
+<div class="bgimg-sm bg-w bgpos-end bg-gw5 bg-pin bgsize-cover bghide-mobile">
+<img src="/a/ocom/img/industries-retail-cbgmd-sh02-photo-light1.webp" alt="" fetchpriority="high" loading="eager" />
+</div>
+</div>
+<div class="cwidth">
+<div class="cgrid">
+<ws-breadcrumb class="wsbc cgrid-8" role="navigation" aria-label="Breadcrumbs"></ws-breadcrumb>
+<header class="cgrid-8">
+<h1 class="hdg-xl">Oracle Cloud for Retail</h1>
+<p>Put your customers at the heart of your retail business. With a complete set of mission-critical retail solutions, cloud services, and hardware from Oracle, you’ll gain the insights and agility you need to delight customers at every touchpoint.</p>
+<div class="cta">
+<a href="/retail/contact-us/" target="_blank" class="obttn1" data-lbl="retail-contact-ctabttn">Contact Sales</a>
+<a href="/retail/demo/" target="_blank" class="obttn2" data-lbl="retail-demo-ctabttn">Request a demo</a>
+</div>
+</header>
+</div>
+</div>
+</section>
+<!-- /SH02v1 -->
+<!-- END: oWidget_C/_Raw-Text/Display -->
+<!-- start : ocom/common/global/components/compass/related-widgets -->
+<!-- Dispatcher:null default -->
+<!-- widgetType: _Raw-Text -->
+<!-- SUBTYPETEMPLATE: _Raw-Text/Display -->
+<!-- BEGIN: oWidget_C/_Raw-Text/Display replaceOCOM: null -->
+<!-- SN02v0 -->
+<nav class="sn02 sn02v0 ws-sticky" data-trackas="sn02" data-ocomid="sn02" role="navigation" aria-label="Main Navigation">
+<ul class="sn02nav-list cwidth">
+<li><a href="#industryspotlight" data-lbl="industryspotlight-anchor">Industry Spotlight</a></li>
+<li><a href="#solutions" data-lbl="solutions-anchor">Solutions</a></li>
+<li><a href="#sectors" data-lbl=sectors-anchor">Sectors</a></li>
+<li><a href="#customers" data-lbl="customers-anchor">Customers</a></li>
+<li><a href="#resources" data-lbl="resources-anchor">Resources</a></li>
+<li><a href="#getstarted" data-lbl="getstarted-anchor">Get Started</a></li>
+<li class="sn02more-menu">
+<button aria-haspopup="true" aria-expanded="false" aria-controls="sn02more-menu-list" aria-label="View More Options">
+<span>View More</span>
+</button>
+<ul id="sn02more-menu-list" class="sn02more-menu-list" aria-hidden="true"></ul>
+</li>
+</ul>
+</nav>
+<!-- /SN02v0 -->
+<!-- END: oWidget_C/_Raw-Text/Display -->
+<!-- Dispatcher:null default -->
+<!-- widgetType: _Raw-Text -->
+<!-- SUBTYPETEMPLATE: _Raw-Text/Display -->
+<!-- BEGIN: oWidget_C/_Raw-Text/Display replaceOCOM: null -->
+<!-- SC04v1 -->
+<section class="sc04 sc04v1 cpad" data-trackas="sc04" data-ocomid="sc04">
+<div class="sc04w1 cwidth">
+<div class="ctitle">
+<header>
+<h2 id="industryspotlight">Oracle Retail industry spotlight</h2>
+</header>
+</div>
+<ul class="sc04cards cgrid col3 cta-bottom" aria-labelledby="label10">
+<li class="sc04card citem mode-light">
+<h3 class="hdg-xsm">Ready to unlock faster, data-driven insights?</h3>
+<p>Discover lessons from Kroger's retail transformation that you can apply to your own journey.</p>
+<div class="cta">
+<a class="obttn2" href="https://go.oracle.com/LP=152883?elqCampaignId=664247" target="_blank" data-cxdtrack=":ow:o:h:feb:::" data-adbtrack="CORP260326P00047:ow:o:h:feb:::" data-lbl="kroger-operations-webinar-ctabttn">Access the webinar</a>
+</div>
+</li>
+<li class="sc04card citem mode-light">
+<h3 class="hdg-xsm">Oracle named a Leader</h3>
+<p>Learn why Oracle was named a Leader in the IDC MarketScape Worldwide Retail AI-Driven Assortment Planning Solutions 2025 Vendor Assessment.</p>
+<div class="cta">
+<button class="obttn2 lightbox" data-target="/retail/idc-marketscape-worldwide-retail-assortment-planing-solutions-form/" title="Oracle named a Leader" data-lbl="lightbox-open-oracle-named-leader-ctabttn" data-trackas="sc04-lightbox">Access the report</button>
+</div>
+</li>
+<li class="sc04card citem mode-light">
+<h3 class="hdg-xsm">Five questions for retail leaders</h3>
+<p>To stay ahead, leading retailers must be agile. Consider these five questions to drive resilience in your organization.</p>
+<div class="cta">
+<a class="obttn2" href="/a/ocom/docs/industries/retail/retail-5-questions-leaders-ask.pdf" target="_blank" data-lbl="retail-5-questions-leaders-ask-ctabttn">See the questions (PDF)</a>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<!-- /SC04v1 -->
+<!-- END: oWidget_C/_Raw-Text/Display -->
+<!-- Dispatcher:null default -->
+<!-- widgetType: _Raw-Text -->
+<!-- SUBTYPETEMPLATE: _Raw-Text/Display -->
+<!-- BEGIN: oWidget_C/_Raw-Text/Display replaceOCOM: null -->
+<!-- SC20v0 -->
+<section class="sc20 sc20v0 cpad mode-light bg-texture-4" data-ocomid="sc20" data-trackas="sc20" data-closetxt="Close Panel">
+<div class="cwidth">
+<div class="ctitle">
+<header>
+<h2 id="solutions">Change how your customers experience retail</h2>
+</header>
+</div>
+<div class="cgrid sc20-panels sc20-close-all" aria-labelledby="sc20-ttl-1">
+<button class="sc20-bttn cgrid-3" aria-controls="omnichannel-panel">
+<ws-icon ico="store"></ws-icon>
+<h3>Stores and omnichannel</h3>
+</button>
+<!-- SC01v2 -->
+<!-- SC01v2 -->
+<section class="sc01 sc01v2 panelcontent cpad" data-ocomid="sc01" id="omnichannel-panel">
+<div class="cwidth">
+<div class="sc01-3col">
+<div class="sc01-citem">
+<h5>Xstore Point of Service</h5>
+<p>Give your store associates a deeper understanding of customers and greater visibility with robust point-of-service (POS) functionality.</p>
+<p><a href="/retail/omnichannel/#rc30p1" data-lbl="xstore-xlnk">Explore Xstore point of service</a></p>
+<br />
+<h5>Payment</h5>
+<p>Provide a fixed rate and competitive pricing model that enables retailers to anticipate exactly how much they’ll pay for each transaction—regardless of the payment method. There are no additional service or convenience fees or monthly minimums.</p>
+<p><a href="/retail/omnichannel/#rc30p7" data-lbl="payment-xlnk">Explore payment</a></p>
+<br />
+<h5>CX Commerce</h5>
+<p>Provide a frictionless customer experience while boosting conversion rates with integrated POS and ecommerce systems.</p>
+<p><a href="/retail/omnichannel/#rc30p5" data-lbl="cx-commerce-xlnk">Explore CX commerce</a></p>
+</div>
+<div class="sc01-citem">
+<h5>Customer Engagement</h5>
+<p>Craft meaningful physical and digital shopping experiences with a real-time view of your customers’ actions and needs at every step of their journey.</p>
+<p><a href="/retail/omnichannel/#rc30p2" data-lbl="customer-engagement-xlnk">Explore customer engagement</a></p>
+<br />
+<h5>Order Management Suite</h5>
+<p>Deliver exceptional customer service while maintaining visibility into order shipments and status. Empower associates with customer appeasement capabilities before and after the sale.</p>
+<p><a href="/retail/omnichannel/#rc30p3" data-lbl="order-management-suite-xlnk">Explore order management suite</a></p>
+<br />
+<h5>Store Inventory Operations Cloud</h5>
+<p>Instantly access accurate inventory data to execute efficient and consistent in-store processes and procedures.</p>
+<p><a href="/retail/omnichannel/#rc30p4" data-lbl="store-inventory-xlnk">Explore store inventory operations cloud</a></p>
+</div>
+<div class="sc01-citem">
+<h5>Collect and Receive</h5>
+<p>Gain agility by moving and placing assets, including customers, inventory, and fixtures, across the last mile of the estate that's closest to the point of purchase.</p>
+<p><a href="/retail/omnichannel/#rc30p6" data-lbl="collect-receive-xlnk">Explore collect and receive</a></p>
+<br />
+<h5>Resources</h5>
+<ul class="nobullets">
+<li><a href="/retail/idc-marketscape-worldwide-retail-crm-software-form/" role="button" rel="lightbox" data-width="640" title="Oracle named a Leader" data-lbl="lightbox-open-oracle-named-leader-xlnk-lightbox-open-lightbox-open" data-trackas="lightbox">IDC MarketScape: Worldwide Retail Customer Relationship Management Software 2024 Vendor Assessment</a></li>
+<li><a href="/a/ocom/docs/industries/retail/3-reasons-retail-store-inventory-operations-cloud.pdf" target="_blank" data-lbl="3-reasons-retail-store-inventory-operations-cloud-xlnk">3 Reasons to Move Retail Store Inventory Operations to the Cloud (PDF)</a></li>
+<li><a href="/a/ocom/docs/industries/retail/xstore-point-of-service.pdf" target="_blank" data-lbl="xstore-point-of-service-ds-xlnk">Datasheet: Xstore Point of Service (PDF)</a></li>
+<li><a href="https://go.oracle.com/CrossTalk2023#createflexiblestore" data-lbl="flexible-store-layout-xlnk" target="_blank">Video: Create an Agile, Flexible Store Layout</a></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- /SC01v2 -->
+<button class="sc20-bttn cgrid-3" aria-controls="pos-hardware-panel">
+<ws-icon ico="calculator"></ws-icon>
+<h3>POS hardware systems</h3>
+</button>
+<!-- SC01v2 -->
+<section class="sc01 sc01v2 panelcontent cpad" data-ocomid="sc01" id="pos-hardware-panel">
+<div class="cwidth">
+<div class="sc01-3col">
+<div class="sc01-citem">
+<h5>MICROS Workstation 8 Series</h5>
+<p>Featuring a slim, 14-inch touch screen display and warm platinum finish, Oracle MICROS Workstation 8 Series fuses a modern, sophisticated look with reliability and dependability.</p>
+<p><a href="/retail/pos-systems/#rc30p1" data-lbl="micros-workstation-8-xlnk">Explore MICROS Workstation 8 Series</a></p>
+<br />
+<h5>Xstore Point of Service</h5>
+<p>Give your store associates a deeper understanding of customers and greater visibility with robust POS functionality.</p>
+<p><a href="/retail/pos-systems/#rc30p5" data-lbl="micros-workstation-6-xlnk">Explore Xstore point of service</a></p>
+</div>
+<div class="sc01-citem">
+<h5>MICROS Workstation 6 Series</h5>
+<p>The retail environment is demanding, and you need a POS system with modern features that can withstand hard day-to-day use.</p>
+<p><a href="/retail/pos-systems/#rc30p2" data-lbl="micros-workstation-6-xlnk">Explore MICROS Workstation 6 Series</a></p>
+</div>
+<div class="sc01-citem">
+<h5>Resources</h5>
+<ws-video thumbnail="true" videoid="OpUM6IlVWjw" aria="Introducing Oracle MICROS Workstation 8: Low Profile" data-lbl="yt-OpUM6IlVWjw"></ws-video>
+</div>
+</div>
+</div>
+</section>
+<!-- /SC01v2 -->
+<button class="sc20-bttn cgrid-3" aria-controls="marketing">
+<ws-icon ico="tag"></ws-icon>
+<h3>Marketing solutions</h3>
+</button>
+<!-- SC01v2 -->
+<section class="sc01 sc01v2 panelcontent cpad" data-ocomid="sc01" id="marketing">
+<div class="cwidth">
+<div class="sc01-3col">
+<div class="sc01-citem">
+<h5>Consumer Insights</h5>
+<p>Get customer-specific insights derived from analysis of segmentation, demographics, market basket, product affinity, and promotion performance to design marketing programs that convert to transactions.</p>
+<p><a href="/retail/ai-analytics/#rc30p3" data-lbl="consumer-insights-xlnk">Explore consumer insights</a></p>
+<br />
+<h5>Content Management</h5>
+<p>Create and deliver personalized content using the power of AI across all applications and marketing, commerce, and customer service channels.</p>
+<p><a href="/content-management/" data-lbl="content-management-xlnk">Explore content management</a></p>
+</div>
+<div class="sc01-citem">
+<h5>Customer Loyalty</h5>
+<p>Build relationships with your largest and most valuable customers through targeted loyalty and reward programs. Integrate your loyalty program across your entire ecosystem to deliver personalized experiences at every touchpoint.</p>
+<p><a href="/cx/marketing/customer-loyalty/retail/" data-lbl="customer-loyalty-xlnk">Explore customer loyalty</a></p>
+<br />
+<h5>Campaign Management</h5>
+<p>Design, manage, execute, and analyze omnichannel marketing campaigns with targeted, personalized messaging at scale.</p>
+<p><a href="/cx/marketing/campaign-management/retail/" data-lbl="campaign-management-xlnk">Explore campaign management</a></p>
+</div>
+<div class="sc01-citem">
+<h5>Infinity Behavioral Intelligence</h5>
+<p>Optimize your shoppers’ journey in real time using online behavioral data, applied intelligence, and dynamic recommendations.</p>
+<p><a href="/cx/marketing/digital-intelligence/retail/" data-lbl="infinity-behavioral-xlnk">Explore infinity behavioral intelligence</a></p>
+<br />
+<h5>Resources</h5>
+<ul class="nobullets">
+<li><a href="/cx/marketing/digital-marketing/" data-lbl="digital-marketing-xlnk">What is digital marketing?</a></li>
+<li><a href="/cx/what-is-cx/" data-lbl="what-is-cx-xlnk">What is CX?</a></li>
+<li><a href="/cx/marketing/customer-loyalty/what-is-customer-loyalty/" data-lbl="what-is-customer-loyalty-xlnk">What is customer loyalty?</a></li>
+<li><a href="/cx/service/what-is-customer-service/" data-lbl="what-is-customer-service-xlnk">What is customer service?</a></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- /SC01v2 -->
+<button class="sc20-bttn cgrid-3" aria-controls="planning-pricing">
+<ws-icon ico="money-investment"></ws-icon>
+<h3>Planning, pricing, and optimization</h3>
+</button>
+<!-- SC01v2 -->
+<section class="sc01 sc01v2 panelcontent cpad" data-ocomid="sc01" id="planning-pricing">
+<div class="cwidth">
+<div class="sc01-3col">
+<div class="sc01-citem">
+<h5>Merchandise Financial Planning</h5>
+<p>Coordinate plans across multiple teams. Invest in the right inventory using science, actualized weekly sales, location views, and unconstrained forecasts.</p>
+<p><a href="/retail/planning-optimization/#rc30p2" data-lbl="merchandise-planning-xlnk">Explore merchandise financial planning</a></p>
+<br />
+<h5>Assortment Planning</h5>
+<p>Define and execute local assortments, improve traffic conversion into higher sales and margins, and increase customer satisfaction. Leverage advanced clustering and size profile optimization to ensure the right mix.</p>
+<p><a href="/retail/planning-optimization/#rc30p3" data-lbl="assortment-planning-xlnk">Explore assortment planning</a></p>
+<br />
+<h5>Data Store</h5>
+<p>Oracle Retail Data Store is a low-cost, low-code environment that enables retailers to innovate, take control of their data, and extend the capabilities of their Oracle Retail cloud services.</p>
+<p><a href="/retail/planning-optimization/#rc30p6" data-lbl="data-store-xlnk">Explore Data Store</a></p>
+</div>
+<div class="sc01-citem">
+<h5>Category Management</h5>
+<p>Consolidate multiple data sources into an easy-to-consume format and gain actionable insights and recommendations to drive targeted customer-centric assortments.</p>
+<p><a href="/retail/planning-optimization/#rc30p4" data-lbl="category-management-xlnk">Explore category management</a></p>
+<br />
+<h5>Science Platform Cloud</h5>
+<p>Use our embedded, retail-specific AI and machine learning to improve every aspect of merchandise planning, leveraging customer segment decision trees, demand transference analysis, size profile optimization, space allocation optimization, and planogram performance data.</p>
+<p><a href="/retail/ai-analytics/" data-lbl="science-platform-xlnk">Explore science platform cloud</a></p>
+<br />
+<h5>Enterprise Performance Management</h5>
+<p>Understand the impact of strategic decisions across your bottom line, balance sheet, cash flow, and shareholder value before including them in your operational plan.</p>
+<p><a href="/performance-management/" data-lbl="enterprise-performance-management-xlnk">Explore enterprise performance management</a></p>
+</div>
+<div class="sc01-citem">
+<h5>Assortment and Space Optimization</h5>
+<p>Optimize assortments to available space to maximize planogram performance, return on space, sales, revenue, and profits.</p>
+<p><a href="/retail/planning-optimization/#rc30p5" data-lbl="assortment-space-xlnk">Explore assortment and space optimization</a></p>
+<br />
+<h5>Resources</h5>
+<ul class="nobullets">
+<li><a href="/retail/assortment-planning/" data-lbl="assortment-planning-xlnk">Article: What Is Assortment Planning in Retail? 9 Ways to Optimize</a></li>
+<li><a href="https://go.oracle.com/CrossTalk2023#hibbettretail" data-lbl="hibbettretail-xlnk" target="_blank">Video: Hibbett Retail: A Connected View of Inventory Planning</a></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- /SC01v2 -->
+<button class="sc20-bttn cgrid-3" aria-controls="merchandise-operations">
+<ws-icon ico="money-analytics"></ws-icon>
+<h3>Merchandise operations management</h3>
+</button>
+<!-- SC01v2 -->
+<section class="sc01 sc01v2 panelcontent cpad" data-ocomid="sc01" id="merchandise-operations">
+<div class="cwidth">
+<div class="sc01-3col">
+<div class="sc01-citem">
+<h5>Merchandising System</h5>
+<p>Manage, control, and perform seamless execution of day-to-day merchandising activities, including purchasing, distribution, order fulfillment, and financial close.</p>
+<p><a href="/retail/merchandising/cloud/#rc30p1" data-lbl="merchandising-system-xlnk">Explore merchandising system</a></p>
+<br />
+<h5>Invoice Matching</h5>
+<p>Manage the matching, reconciliation, and payment of supplier invoices with a configurable, automated solution. Resolve identified exceptions using workflows that are aligned with business policies.</p>
+<p><a href="/retail/merchandising/cloud/#rc30p2" data-lbl="invoice-matching-xlnk">Explore invoice matching</a></p>
+<br />
+<h5>Sales Audit</h5>
+<p>Process and validate sales transactions from all channels. Ensure clean and consistent sales information while managing discrepancies by exception.</p>
+<p><a href="/retail/merchandising/cloud/#rc30p1" data-lbl="sales-audit-xlnk">Explore sales audit</a></p>
+<br />
+<h5>Retail Pricing</h5>
+<p>Implement a complete, rules-based pricing engine that supports regular, promotional, and clearance pricing across all touchpoints.</p>
+<p><a href="/retail/merchandising/cloud/#rc30p4" data-lbl="price-management-xlnk">Explore retail pricing</a></p>
+</div>
+<div class="sc01-citem">
+<h5>Allocation</h5>
+<p>Deliver products to the right place at the right time with a powerful, accurate, and easy-to-use method of allocating merchandise. Effectively allocate products through their lifecycle to get them in front of the right shoppers.</p>
+<p><a href="/retail/merchandising/cloud/#rc30p3" data-lbl="allocation-xlnk">Explore allocation</a></p>
+<br />
+<h5>Supplier Evaluation</h5>
+<p>Evaluate merchandising suppliers and enable the assessment and governance of ethical, environmental, safety, and quality performance to protect your brand from supply chain risks and improve sustainability.</p>
+<p><a href="/retail/merchandising/cloud/#rc30p6" data-lbl="supplier-evaluation-xlnk">Explore supplier evaluation</a></p>
+<br />
+<h5>Store Inventory Operations Cloud</h5>
+<p>Access accurate store-stock data to execute seamless commerce anywhere through consistent, efficient, and effective in-store processes and procedures.</p>
+<p><a href="/retail/omnichannel/#rc30p4" data-lbl="store-inventory-operations-xlnk">Explore store inventory operations cloud</a></p>
+</div>
+<div class="sc01-citem">
+<h5>Merchandising Insights</h5>
+<p>Identify actionable merchandising opportunities across touchpoints, including back orders and returns, top/bottom sellers, demand, fulfillment, and price and promotion analysis.</p>
+<p><a href="/retail/merchandising/cloud/#rc30p5" data-lbl="merchandising-cloud-xlnk">Explore merchandising insights</a></p>
+<br />
+<h5>Data Store</h5>
+<p>Oracle Retail Data Store is a low-cost, low-code environment that enables retailers to innovate, take control of their data, and extend the capabilities of their Oracle Retail cloud services.</p>
+<p><a href="/retail/merchandising/cloud/#rc30p7" data-lbl="data-store-xlnk">Explore Data Store</a></p>
+<br />
+<h5>Resources</h5>
+<ul class="nobullets">
+<li><a href="https://go.oracle.com/CrossTalk2023#abercrombie" data-lbl="abercrombie-xlnk" target="_blank">Video: Abercrombie &amp; Fitch Co.: Zero Downtime on the Path to Innovation</a></li>
+<li><a href="https://go.oracle.com/CrossTalk2023#flink" data-lbl="crosstalk2023-xlnk" target="_blank">Video: Flink: Online Grocery Takes the Fast Lane to Digital Transformation</a></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- /SC01v2 -->
+<button class="sc20-bttn cgrid-3" aria-controls="scm">
+<ws-icon ico="inventory-cost-revaluation"></ws-icon>
+<h3>Supply chain management</h3>
+</button>
+<!-- SC01v2 -->
+<section class="sc01 sc01v2 panelcontent cpad" data-ocomid="sc01" id="scm">
+<div class="cwidth">
+<div class="sc01-3col">
+<div class="sc01-citem">
+<h5>Demand Forecasting</h5>
+<p>Maximize forecast accuracy for the entire product lifecycle with next-generation retail science paired with exception-driven processes and delivered on our platform for modern retailing.</p>
+<p><a href="/retail/supply-chain/#rc30p1" data-lbl="demand-forecasting-xlnk">Explore demand forecasting</a></p>
+<br />
+<h5>Inventory Planning Optimization Cloud</h5>
+<p>Get better visibility into supply chains and leverage AI and machine learning to manage inventory levels, improve demand forecasting, identify risks, and provide recommendations to guard against inventory shortages or delays.</p>
+<p><a href="/retail/supply-chain/#rc30p3" data-lbl="store-inventory-xlnk">Explore inventory planning optimization cloud</a></p>
+<br />
+<h5>Inventory Optimization Cloud</h5>
+<p>Instantly access accurate store-stock data to execute consistent, efficient, and effective in-store processes and procedures.</p>
+<p><a href="/retail/supply-chain/#rc30p2" data-lbl="inventory-optimization-xlnk">Explore inventory optimization cloud</a></p>
+</div>
+<div class="sc01-citem">
+<h5>Allocation</h5>
+<p>Deliver products to the right place at the right time with a powerful, accurate, and easy-to-use method of allocating merchandise. Effectively allocate products through their lifecycle to get them in front of the right shoppers.</p>
+<p><a href="/retail/merchandising/cloud/#rc30p3" data-lbl="allocation-xlnk">Explore allocation</a></p>
+<br />
+<h5>Logistics</h5>
+<p>Seamlessly manage transportation, global trade, and distribution to maximize order fulfillment and minimize logistics costs while adapting to business disruptions and changes in your supply chain.</p>
+<p><a href="/scm/logistics/" data-lbl="logistic-xlnk">Explore logistics</a></p>
+<br />
+<h5>Warehouse Management</h5>
+<p>Manage and optimize essential supply chain processes for omnichannel fulfillment, with complete visibility and control of orders and inventory throughout the distribution process.</p>
+<p><a href="/scm/logistics/warehouse-management/" data-lbl="warehouse-management-xlnk">Explore warehouse management</a></p>
+</div>
+<div class="sc01-citem">
+<h5>Supply Chain Collaboration</h5>
+<p>Streamline collaboration between retailers and suppliers, simplifying the management and analysis of critical supply chain information. This helps lead to more efficient and effective merchandising strategies.</p>
+<p><a href="/retail/supply-chain/#rc30p7" data-lbl="supply-chain-xlnk">Explore supply chain collaboration</a></p>
+<h5>Resources</h5>
+<ul class="nobullets">
+<li><a href="/retail/fashion/fashion-supply-chain/" data-lbl="fashion-supply-chain-xlnk">Article: Fashion Supply Chain: Everything You Need to Know</a></li>
+<li><a href="/retail/3-steps-to-simplifying-demand-forecasting-for-fashion/" data-lbl="3-steps-to-simplifying-demand-forecasting-for-fashion-xlnk">Report: 3 Steps to Simplifying Demand Forecasting for Fashion Retailers</a></li>
+<li><ws-video thumbnail="true" videoid="ZUUAu1mN2WE" aria="The Platform for Modern Retail Inventory Management" data-lbl="yt-ZUUAu1mN2WE"></ws-video></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- /SC01v2 -->
+<button class="sc20-bttn cgrid-3" aria-controls="ai">
+<ws-icon ico="artificial-intelligence"></ws-icon>
+<h3>AI and analytics</h3>
+</button>
+<!-- SC01v2 -->
+<section class="sc01 sc01v2 panelcontent cpad" data-ocomid="sc01" id="ai">
+<div class="cwidth">
+<div class="sc01-3col">
+<div class="sc01-citem">
+<h5>Inventory Planning Optimization Cloud</h5>
+<p>Get better visibility into supply chains and leverage AI and machine learning to manage inventory levels, improve demand forecasting, identify risks, and provide recommendations to guard against inventory shortages or delays.</p>
+<p><a href="/retail/ai-analytics/#rc30p4" data-lbl="inventory-optimization-xlnk">Explore inventory planning optimization cloud</a></p>
+<br />
+<h5>Merchandising Insights</h5>
+<p>Identify actionable merchandising opportunities across touchpoints, including back orders and returns, top/bottom sellers, demand, fulfillment, and price and promotion analysis.</p>
+<p><a href="/retail/merchandising/cloud/#rc30p5" data-lbl="merchandising-insights-xlnk">Explore merchandising insights</a></p>
+<br />
+<h5>Lifecycle Pricing Optimization Cloud</h5>
+<p>Analytical insights provide recommendations for optimal promotions, markdowns, and targeted offers that maximize profits and sell-through.</p>
+<p><a href="/retail/ai-analytics/#rc30p2" data-lbl="lifecycle-optimization-cloud-xlnk">Explore lifecycle pricing optimization cloud</a></p>
+</div>
+<div class="sc01-citem">
+<h5>Consumer Insights Cloud</h5>
+<p>Get customer-specific insights derived from analysis of segmentation, demographics, market basket, product affinity, and promotion performance to design marketing programs that convert to transactions.</p>
+<p><a href="/retail/ai-analytics/#rc30p3" data-lbl="consumer-insights-cloud-xlnk">Explore consumer insights cloud</a></p>
+<br />
+<h5>Assortment and Space Optimization</h5>
+<p>Optimize assortments to available space for each store to maximize planogram performance, return on space, sales, revenue, and profits while improving customer satisfaction.</p>
+<p><a href="/retail/ai-analytics/#rc30p5" data-lbl="assortment-space-xlnk">Explore assortment and space optimization</a></p>
+</div>
+<div class="sc01-citem">
+<h5>Science Platform Cloud</h5>
+<p>Use embedded, retail-specific AI and machine learning to improve every aspect of merchandise planning, leveraging customer segment decision trees, demand transference analysis, size profile optimization, space allocation optimization, and planogram performance data.</p>
+<p><a href="/retail/ai-analytics/" data-lbl="science-platform-cloud-xlnk">Explore science platform cloud</a></p>
+<br />
+<h5>Resources</h5>
+<ul class="nobullets">
+<li><a href="https://go.oracle.com/LP=139389?elqCampaignid=515586" data-lbl="guide-ai-analytics-xlnk" target="_blank">Ebook: The Retailer’s Guide to AI Analytics</a></li>
+<li><a href="https://go.oracle.com/CrossTalk2023#innovationandinsights" data-lbl="innovationandinsights-xlnk" target="_blank">Video: Applying AI to Retail</a></li>
+<li><a href="/retail/what-is-retail-analytics/" data-lbl="what-is-retail-analytics-xlnk">Article: What Is Retail Analytics?</a></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<button class="sc20-bttn cgrid-3" aria-controls="brand-compliance">
+<ws-icon ico="retail"></ws-icon>
+<h3>Brand compliance</h3>
+</button>
+<!-- SC01v2 -->
+<section class="sc01 sc01v2 panelcontent cpad" data-ocomid="sc01" id="brand-compliance">
+<div class="cwidth">
+<div class="sc01-3col">
+<div class="sc01-citem">
+<h5>Brand Compliance Management</h5>
+<p>Ethically manage your product lifecycle, maintaining compliance while improving financial performance.</p>
+<p><a href="/retail/brand-compliance/" data-lbl="brand-compliance-xlnk">Explore brand compliance management</a></p>
+</div>
+<div class="sc01-citem">
+<h5>Resources</h5>
+<ul class="nobullets">
+<li><a href="https://go.oracle.com/LP=135824?elqCampaignId=415413" data-lbl="7-steps-grocery-profitable-xlnk" target="_blank">Ebook: 7 Steps to Make Grocery Stores Profitable</a></li>
+<li><a href="https://go.oracle.com/CrossTalk2023#maximizingmargins" data-lbl="maximizingmargins-xlnk" target="_blank">Video: Maximizing Margins in Grocery</a></li>
+</ul>
+</div>
+<div class="sc01-citem">
+</div>
+</div>
+</div>
+</section>
+<!-- /SC01v2 -->
+<button class="sc20-bttn cgrid-3" aria-controls="erp">
+<ws-icon ico="site-plan"></ws-icon>
+<h3>Enterprise resource planning</h3>
+</button>
+<!-- SC01v2 -->
+<section class="sc01 sc01v2 panelcontent cpad" data-ocomid="sc01" id="erp">
+<div class="cwidth">
+<div class="sc01-3col">
+<div class="sc01-citem">
+<h5>Financials</h5>
+<p>Gain a complete view of real-time financial data and adopt a multidimensional reporting platform from stores to the central office. Simplify the process of transferring data from dispersed stores to the general ledger.</p>
+<p><a href="/erp/financials/" data-lbl="Financials-xlnk">Explore financials</a></p>
+<br />
+<h5>Procurement</h5>
+<p>Improve supplier performance and value by systematically qualifying and managing suppliers, collaborating with them, and swiftly completing contracts and payments.</p>
+<p><a href="/erp/procurement/" data-lbl="-xlnk">Explore procurement</a></p>
+</div>
+<div class="sc01-citem">
+<h5>Enterprise Performance Management</h5>
+<p>Optimize your omnichannel retail strategies. Use enterprise planning capital and strategic modeling solutions to determine how to allocate limited CapEx funds.</p>
+<p><a href="/performance-management/" data-lbl="performance-management-xlnk">Explore enterprise performance management</a></p>
+<br />
+<h5>ERP Analytics</h5>
+<p>Evaluate your channels’ profitability by various performance metrics, including revenue, cost of goods sold, gross margin, and net margin.</p>
+<p><a href="/business-analytics/" data-lbl="erp-analytics-xlnk">Explore ERP analytics</a></p>
+</div>
+<div class="sc01-citem">
+<h5>Merchandise Operations Management</h5>
+<p>Manage, control, and easily perform day-to-day merchandising activities, including purchasing, distribution, order fulfillment, and financial close. Manage inventory across every shopping journey, not just a single store or channel.</p>
+<p><a href="/retail/merchandising/" data-lbl="merchandising-xlnk">Explore merchandise operations management</a></p>
+<br />
+<h5>Resources</h5>
+<ul class="nobullets">
+<li><a href="/erp/product-tours/?source=mm-v1#financials" data-lbl="financial-product-tours-xlnk">Take an Oracle Financials product tour</a></li>
+<li><a href="/erp/product-tours/?source=mm-v1#epm" data-lbl="epm-product-tours-xlnk">Take an Oracle Enterprise Performance Management product tour</a></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- /SC01v2 -->
+<button class="sc20-bttn cgrid-3" aria-controls="hcm">
+<ws-icon ico="partners"></ws-icon>
+<h3>Human capital management</h3>
+</button>
+<!-- SC01v2 -->
+<section class="sc01 sc01v2 panelcontent cpad" data-ocomid="sc01" id="hcm">
+<div class="cwidth">
+<div class="sc01-3col">
+<div class="sc01-citem">
+<h5>Recruiting</h5>
+<p>Simplify candidates’ experiences by eliminating the need to create an account and enabling a digital assistant to instantly answer questions.</p>
+<p><a href="/human-capital-management/recruiting/" data-lbl="recruiting-xlnk">Explore recruiting</a></p>
+<br />
+<h5>Talent Management</h5>
+<p>Give new store associates a personalized to-do list and easy-to-follow onboarding process all in one place that they can complete from any device.</p>
+<p><a href="/human-capital-management/talent-management/" data-lbl="talent-management-xlnk">Explore talent management</a></p>
+</div>
+<div class="sc01-citem">
+<h5>Workforce Management</h5>
+<p>Create flexible workforce plans and “what-if” modeling to adapt to changing store environments and understand the impact of staffing decisions.</p>
+<p><a href="/human-capital-management/workforce-management/" data-lbl="workforce-management-xlnk">Explore workforce management</a></p>
+<br />
+<h5>Payroll</h5>
+<p>Support global payroll with accuracy and leverage predefined integrations with your payroll providers, reducing complexity and cost.</p>
+<p><a href="/human-capital-management/payroll/" data-lbl="Financials-xlnk">Explore payroll</a></p>
+</div>
+<div class="sc01-citem">
+<h5>Resources</h5>
+<ul class="nobullets">
+<li><a href="https://www.oracle.com/webfolder/s/quicktours/hcm/gqt-hcm-ghr-globalhr/index.html" target="_blank" data-lbl="oracle-hcm-tour-xlnk">Take a tour of Oracle Human Capital Management</a></li>
+<li><a href="/human-capital-management/oracle-vs-workday/" target="_blank" data-lbl="hcm-workday-xlnk">Why choose Oracle HCM over Workday?</a></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- /SC01v2 -->
+<button class="sc20-bttn cgrid-3" aria-controls="cloud">
+<ws-icon ico="cloud"></ws-icon>
+<h3>Cloud infrastructure</h3>
+</button>
+<!-- SC01v2 -->
+<section class="sc01 sc01v2 panelcontent cpad" data-ocomid="sc01" id="cloud">
+<div class="cwidth">
+<div class="sc01-3col">
+<div class="sc01-citem">
+<h5>Migrating applications</h5>
+<p>Merchandising is essential to business growth and daily operations. Bring enterprise applications, including Oracle Retail Merchandising System, to the cloud to improve performance, reliability, speed, and security. With full production in the cloud, retailers can maintain real-time inventory visibility and expedite intraday sales batch performance.</p>
+<p><a href="/cloud/migrate-applications-to-oracle-cloud/" data-lbl="migrating-applications-xlnk">Explore migrating applications</a></p>
+<br />
+<h5>Supply chain management</h5>
+<p>Retailers must move with agility and speed to meet increasingly complex omnichannel demands. Warehouse management software in the cloud maximizes resilience and scalability.</p>
+<p><a href="/retail/supply-chain/" data-lbl="scm-xlnk">Explore supply chain management</a></p>
+</div>
+<div class="sc01-citem">
+<h5>Migrating databases</h5>
+<p>Retailers require resilient, scalable databases to consistently process transactions and support highly available applications. Deliver an always-on, low-latency customer experience during peak shopping with Oracle Exadata Database Cloud Service. Or run Oracle Autonomous Database for transaction processing, data warehousing, and JSON. Seamlessly move the most demanding databases to the cloud with no changes to applications.</p>
+<p><a href="/database/cloud-migration/" data-lbl="migrate-database-xlnk">Explore migrating databases</a></p>
+</div>
+<div class="sc01-citem">
+<h5>Cloud deployment models</h5>
+<p>Retailers can support distributed application workloads using OCI FastConnect to connect on-premises locations or other public clouds directly to OCI through dedicated, private, low-latency connections. Data residency requirements can be addressed with OCI Dedicated Region.</p>
+<p><a href="/cloud/multicloud/" data-lbl="cloud-deployment-xlnk">Explore cloud deployment models</a></p>
+<br />
+<h5>Resources</h5>
+<ul class="nobullets">
+<li><a href="/partnernetwork/isv/" data-lbl="isv-partners-xlnk">Learn about ISV partners running on OCI</a></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- /SC01v2 -->
+</div>
+</div>
+</section>
+<!-- /SC20v0 -->
+<!-- END: oWidget_C/_Raw-Text/Display -->
+<!-- Dispatcher:null default -->
+<!-- widgetType: _Raw-Text -->
+<!-- SUBTYPETEMPLATE: _Raw-Text/Display -->
+<!-- BEGIN: oWidget_C/_Raw-Text/Display replaceOCOM: null -->
+<!-- SC09v0 --> <section class="sc09 sc09v0 cpad" data-ocomid="sc09" data-trackas="sc09" id="sectors"> <div class="cwidth"> <div class="ctitle"> <header> <h2 id="sc09labelledby2">Find retail solutions by sector</h2> </header> </div> <ul class="sc09w1 cgrid cta-bottom col3-2" aria-labelledby="sc09labelledby2"> <li class="citem"> <h3 class="hdg-xsm">Fashion</h3> <p>Fashion retail customers want the latest trend styles to be readily available and expect a seamless experience across channels. Achieve real-time, accurate inventory planning that helps enable growth, improve margins, and optimize customer experiences.</p> <div class="cta"> <a href="/retail/fashion" data-lbl="explore-retail-fashion-lnk">Explore fashion retail solutions</a> </div> </li> <li class="citem"> <h3 class="hdg-xsm">Specialty and hardlines</h3> <p>Retailers must have the right inventory available in the right place to quickly fulfill customer demand. Leveraging specialty and hardline software with embedded data science can help optimize operations, profitably fulfill demand, and cultivate brand loyalty while gathering consumer insights.</p> <div class="cta"> <a href="/retail/hardlines/" data-lbl="explore-retail-hardlines-lnk">Explore specialty and hardlines retail solutions</a> </div> </li> <li class="citem"> <h3 class="hdg-xsm">Grocery</h3> <p>Evolving consumer behaviors, competitive pressures, and technological advances are forcing grocery retailers to rethink their delivery models, customer experience, inventory management, and supply chain strategies to meet demand while protecting profit margins.</p> <div class="cta"> <a href="/retail/grocery/" data-lbl="explore-retail-grocery-lnk" >Explore grocery retail solutions</a> </div> </li> </ul> </div> </section> <!-- /SC09v0 -->
+<!-- END: oWidget_C/_Raw-Text/Display -->
+<!-- Dispatcher:null default -->
+<!-- widgetType: _Raw-Text -->
+<!-- SUBTYPETEMPLATE: _Raw-Text/Display -->
+<!-- BEGIN: oWidget_C/_Raw-Text/Display replaceOCOM: null -->
+<!-- SC08v3 -->
+<section class="sc08 sc08v3 cpad" data-trackas="sc08" data-ocomid="sc08">
+<div class="sc08w1 cwidth">
+<div class="ctitle">
+<header>
+<h2 id="customers">Customer success stories</h2>
+</header>
+</div>
+<ul class="sc08logos cgrid cgrid-center cgrid-sameheight col4" aria-labelledby="sc08label24">
+<li class="citem sc08logo">
+<a href="https://go.oracle.com/LP=137937?elqCampaignId=468141&src1=:ow:o:p:po:::&intcmp=CORP230612P00070:ow:o:p:po" class="wslogo wslogo-wide wslogo-center" target="_blank" data-lbl="cape-union-logo-imglnk">
+<img src="/a/ocom/img/customerlogo-cape-union-clr.png" alt="cape-union" loading="lazy">
+</a>
+</li>
+<li class="citem sc08logo">
+<div class="wslogo wslogo-wide wslogo-center">
+<button class="wslogo wslogo-wide wslogo-center lightbox" data-videoid="WUDLUknI-c8" loopvideo="false" autoplay="false" data-aria="Flink Transforms Online Grocery Business with Oracle Cloud video" class="wslogo wslogo-wide wslogo-center" title="Flink Transforms Online Grocery Business with Oracle Cloud video" data-lbl="yt-play-WUDLUknI-c8">
+<img src="/a/ocom/img/customerlogo-flink-clr.png" alt="flink" loading="lazy">
+</button>
+</div>
+</li>
+<li class="citem sc08logo">
+<button class="wslogo wslogo-wide wslogo-center lightbox" data-videoid="vEY5s_cqBL4" loopvideo="false" autoplay="false" data-aria="Helzberg Diamonds Leverages Oracle for Lean Inventory" title="Helzberg Diamonds Leverages Oracle for Lean Inventory" data-lbl="yt-play-?ytid=vEY5s_cqBL4">
+<img src="/a/ocom/img/customerlogo-helzbergdiamonds-blk.svg" alt="cape" loading="lazy">
+</button>
+</li>
+<li class="citem sc08logo">
+<div class="wslogo wslogo-wide wslogo-center">
+<img src="/a/ocom/img/customerlogo-prada-blk.png" alt="prada" loading="lazy">
+</div>
+</li>
+</ul>
+</div>
+</section>
+<!-- /SC08v3 -->
+<!-- END: oWidget_C/_Raw-Text/Display -->
+<!-- Dispatcher:null default -->
+<!-- widgetType: _Raw-Text -->
+<!-- SUBTYPETEMPLATE: _Raw-Text/Display -->
+<!-- BEGIN: oWidget_C/_Raw-Text/Display replaceOCOM: null -->
+<!-- SC37v0 -->
+<section class="sc37 sc37v0 cpad" data-trackas="sc37" data-ocomid="sc37">
+<div class="sc37w1 cwidth">
+<div class="ctitle">
+<header>
+<h2 id="resources">Find resources and more</h2>
+</header>
+</div>
+<ul class="cgrid col2" aria-labelledby="sc37label2">
+<li class="citem">
+<ul class="nobullets">
+<li><a href="https://education.oracle.com/oracle-retail-learning-subscription/ls_43579" data-lbl="retail-learning-subscriptions-xlnk">Expand your cloud skills with the Retail Learning Subscription</a></li>
+<li><a href="/corporate/analyst-reports/industries/#retail" data-lbl="retail-analyst-reports-xlnk">Access the analyst reports</a></li>
+<li><a href="https://go.oracle.com/retailrack?src1=:ow:ms:pt::OracleRetailRACK&amp;intcmp=BUMK180904P00055:ow:ms:pt::OracleRetailRACK" data-cxdtrack=":ow:ms:pt::OracleRetailRACK" data-adbtrack="BUMK180904P00055:ow:ms:pt::OracleRetailRACK" data-lbl="rack-join-the-community-ctabttn">Oracle's Retail Asset Community Knowledge (RACK) portal</a></li>
+</ul>
+</li>
+<li class="citem">
+<ul class="nobullets">
+<li><a href="/retail/insights/" data-lbl="retail-insights-xlnk">Explore Retail—Business Insights</a></li>
+<li><a href="/industries/payg-services-price-list/#retail" data-lbl="payg-services-price-list-xlnk">Explore the Pay As You Go Price List for Retail</a></li>
+<li><a href="/retail/products/reference-model/" data-lbl="retail-reference-model-xlnk"> Oracle Retail Reference Model</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<!-- /SC37v0 -->
+<!-- END: oWidget_C/_Raw-Text/Display -->
+<!-- Dispatcher:null default -->
+<!-- widgetType: _Raw-Text -->
+<!-- SUBTYPETEMPLATE: _Raw-Text/Display -->
+<!-- BEGIN: oWidget_C/_Raw-Text/Display replaceOCOM: null -->
+<!-- SC34v0 -->
+<section class="sc34 sc34v0 cpad mode-light" data-trackas="sc34" data-ocomid="sc34">
+<div class="cbg">
+<div class="bgimg-sm bgsize-cover bg-e bgpos-right bg-gw3 bg-pin bghide-tablet">
+<img src="/a/ocom/img/industries-cbgsm-sc34-1.webp" alt="" loading="lazy">
+</div>
+</div>
+<div class="cwidth">
+<div class="ctitle-center">
+<header>
+<h2 id="getstarted">Get started with Oracle Retail</h2>
+</header>
+</div>
+<ul class="cgrid col3" aria-labelledby="sc34label1">
+<li class="citem"><a class="mode-tint" href="https://go.oracle.com/LP=25600?elqCampaignId=38358&amp;bn=retail&amp;src1=:em:nw:mt:::RC_BUMK200630P00007:NSL400113139" data-cxdtrack=":em:nw:mt:::RC_BUMK200630P00007:NSL400113139" data-lbl="subscribe-newsletter-ctabttn" target="_blank">Retail newsletter</a></li>
+<li class="citem"><a href="/retail/demo/" class="mode-tint" target="_blank" class="obttn2" data-lbl="retail-demo-ctabttn">Request a demo</a></li>
+<li class="citem"><a class="mode-tint" href="https://community.oracle.com/gbu/rgbu/" data-lbl="get-in-touch-ctabttn" target="_blank">Oracle Retail community</a></li>
+</ul>
+</div>
+</section>
+<!-- /SC34v0 -->
+<!-- END: oWidget_C/_Raw-Text/Display -->
+<!-- end : ocom/common/global/components/compass/related-widgets -->
+</main>
+<!-- start : ocom/common/global/components/sequoia/layoutAssetEndBodyInfo -->
+<!-- Dispatcher:null default -->
+<!-- widgetType: _Raw-Text -->
+<!-- SUBTYPETEMPLATE: _Raw-Text/Display -->
+<!-- BEGIN: oWidget_C/_Raw-Text/Display replaceOCOM: null -->
+<!-- SU02v1 -->
+<footer
+id="su02"
+class="su02 su02v1"
+data-trackas="footer"
+data-ocomid="su02"
+>
+<div class="su02w1 cwidth">
+<div class="su02w3">
+<ul class="su02legal">
+<li class="su02copy">
+<a data-lbl="copyright" href="/legal/copyright.html">&copy; 2026 Oracle</a>
+</li>
+<li>
+<a data-lbl="privacy" href="/legal/privacy/">Privacy</a>
+<span>/</span>
+<a data-lbl="do-not-sell-my-info" href="/legal/privacy/privacy-choices.html">Do Not Sell My Info</a>
+</li>
+<li>
+<div id="teconsent"></div>
+</li>
+<li>
+<a data-lbl="ad-choices" href="/legal/privacy/privacy-policy/#adchoices">Ad Choices</a>
+</li>
+<li>
+<a data-lbl="careers" href="/corporate/careers/">Careers</a>
+</li>
+<li>
+<a data-lbl="subscribe-to-emails" href="https://go.oracle.com/subscribe/?l_code=en&src1=OW:O:FO">Subscribe to emails</a>
+</li>
+<li>
+<a data-lbl="integrity-helpline" href="https://secure.ethicspoint.com/domain/media/en/gui/31053/index.html">Integrity Helpline</a>
+</li>
+<li>
+<a data-lbl="contact-us" href="/corporate/contact/">Contact Us</a>
+</li>
+</ul>
+<ul class="su02social">
+<li>
+<a
+data-lbl="scl-icon:facebook"
+href="https://www.facebook.com/Oracle/"
+target="_blank"
+title="Oracle on Facebook"
+>
+<span>Facebook</span>
+<ws-icon ico="facebook"></ws-icon>
+</a>
+</li>
+<li>
+<a
+data-lbl="scl-icon:twitter"
+href="https://x.com/oracle"
+target="_blank"
+aria-label="Follow Oracle on X"
+>
+<span>X</span>
+<ws-icon ico="x"></ws-icon>
+</a>
+</li>
+<li>
+<a
+data-lbl="scl-icon:linkedin"
+href="https://www.linkedin.com/company/oracle/"
+target="_blank"
+aria-label="Oracle on LinkedIn"
+>
+<span>LinkedIn</span>
+<ws-icon ico="linkedin"></ws-icon>
+</a>
+</li>
+<li>
+<a
+data-lbl="scl-icon:youtube"
+href="https://www.youtube.com/oracle/"
+target="_blank"
+aria-label="Watch Oracle on YouTube"
+>
+<span>YouTube</span>
+<ws-icon ico="youtube"></ws-icon>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</footer>
+<!-- /SU02v1 -->
+<!-- END: oWidget_C/_Raw-Text/Display -->
+<!-- Container/Display Start -->
+<!-- BEGIN: oWidget_C/_Raw-Text/Display replaceOCOM: null -->
+<!-- Start SiteCatalyst code -->
+<script type="text/javascript" src="https://www.oracle.com/asset/web/analytics/ora_sequoia.js"></script>
+<!-- End SiteCatalyst code -->
+<!-- END: oWidget_C/_Raw-Text/Display -->
+<!-- Container/Display end -->
+<!-- end : ocom/common/global/components/sequoia/layoutAssetEndBodyInfo -->
+</body>
+<!-- end : Framework/Sequoia -->
+</html>
+

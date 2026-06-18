@@ -1,0 +1,2982 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- not currently using google optimize
+<script async src="https://www.googleoptimize.com/optimize.js?id=OPT-ND7HP3S"></script>
+-->
+    <meta charset="utf-8">
+    <title>Rentec Direct® Official Site | Property Management &amp; Payment Solutions</title>
+    <meta name="description" content="The highest-rated software for landlords & property managers. Rentec Direct® includes free ACH payments, wholesale tenant screening, and 5-star US-based support." />
+    <meta name="Robots" content="index,follow" />
+    <link rel="canonical" href="https://www.rentecdirect.com/" />
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Property Management Software | Rentec Direct®" />
+    <meta property="og:description" content="Rentec Direct property management software has the highest customer service rating, free online tenant payments, and discounted tenant screening." />
+    <meta property="og:url" content="https://www.rentecdirect.com/" />
+    <meta property="og:image" content="https://www.rentecdirect.com/assets/images/rentec-og-image.png" />
+    <meta property="og:site_name" content="Rentec Direct" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.rentecdirect.com/">
+    <meta name="twitter:title" content="Property Management Software | Rentec Direct®">
+    <meta name="twitter:description" content="Rentec Direct property management software has the highest customer service rating, free online tenant payments, and discounted tenant screening.">
+    <meta name="twitter:image" content="https://www.rentecdirect.com/assets/images/rentec-og-image.png">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=kP3OzO4eq0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=kP3OzO4eq0">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=kP3OzO4eq0">
+    <link rel="manifest" href="/site.webmanifest?v=kP3OzO4eq0">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=kP3OzO4eq0" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon.ico?v=kP3OzO4eq0">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--CSS links-->
+    <!-- using locally hosted boostrap is faster with pagespeed insights -->
+    <!--	<link rel="stylesheet" href="/assets/css/bootstrap.4.1.3.min.css?cf_cache=true" />-->
+
+    <!-- just what we need from bootstrap -->
+    <link rel="stylesheet" href="/assets/css/core_bootstrap_4.1.3.css?cf_cache=true">
+    <link rel="stylesheet" href="./assets/css/style.min.css?v=1776206421&cf_cache=true" />
+    <link rel="stylesheet" href="./assets/css/pages/index.min.css?v=1775236530&cf_cache=true" />
+
+    <!-- Deferring load of below the fold css -->
+    <link rel="preload" href="./assets/css/blocks/video.css?v=1713223834&cf_cache=true" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="./assets/css/blocks/video.css?v=1713223834&cf_cache=true"></noscript>
+
+    <link rel="preload" href="./assets/css/faq.css?v=1696718037&cf_cache=true" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="./assets/css/faq.css?v=1696718037&cf_cache=true"></noscript>
+
+    <link rel="preload" href="./plugins/slick-1.8.1/slick/slick.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="./plugins/slick-1.8.1/slick/slick.css"></noscript>
+
+    <link rel="preload" href="./plugins/slick-1.8.1/slick/slick-theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="./plugins/slick-1.8.1/slick/slick-theme.css"></noscript>
+
+    <!-- Preload above the fold images -->
+    <link rel="preload" as="image" fetchpriority="high" href="./assets/images/suburban_neighborhood_sm.avif">
+    <link rel="preload" as="image" fetchpriority="high" href="./assets/images/suburban_neighborhood_md.avif">
+    <link rel="preload" as="image" fetchpriority="high" href="./assets/images/suburban_neighborhood_lg.avif">
+
+    <style>
+        @media (min-width: 200px) {
+            .main-header{
+                height:60px;
+            }
+        }
+        @media (min-width: 992px) {
+            .main-header{
+                height:120px;
+            }
+        }
+
+        @media only screen and (min-width: 1px)
+        .rd-hero--content {
+            padding-top: 35px;
+        }
+    </style>
+
+
+</head>
+<body class="">
+
+
+<style>
+
+    .two-column {
+        width: 768px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 20px;
+    }
+    .three-column {
+        width: 1140px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px 20px;
+    }
+    .item {
+        display: flex;
+        align-items: start;
+        padding: 10px 10px 10px 20px;
+        border-radius: 6px;
+        cursor:pointer;
+        position: relative;
+    }
+    .item::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 10px;
+        bottom: 10px;
+        width: 3px;
+        background-color: #f1f1f1;
+        border-radius: 2px;
+        margin-left: 4px;
+    }
+    .item:hover {
+        background-color: #eeeeee;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .item:hover::before {
+        background-color: #49bb87;
+    }
+    .icon {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+    .content {
+        flex: 1;
+    }
+    .submenu .title {
+        margin: 0 0 5px 0;
+        font-size: 16px;
+        color: #333;
+    }
+    .description {
+        margin: 0;
+        font-size: .8rem;
+        line-height:1rem;
+        color: #666;
+    }
+
+    .menu-icon-drk-blue{
+        fill:#0c2a4a;
+    }
+
+    .menu-icon-med-blue{
+        fill:#007eb1;
+    }
+
+    .menu-icon-white{
+        fill:#fff;
+    }
+    
+    .menu-icon-green{
+        fill: #49bb87;
+    }
+
+    .menu-icon-yellow{
+        fill: #eead22;
+    }
+
+    .menu-icon-teal{
+        fill: #0D436B;
+    }
+
+    .menu-icon-gray-blue{
+        fill: #314F5E;
+    }
+
+    nav#main-menu{
+        font-family: "Roboto", sans-serif;
+        display:grid;
+        width:100%;
+    }
+
+    .nav-hamburger{
+        grid-area:n-hamburger;
+        text-align:right;
+        font-size:1.7rem;
+    }
+    .nav-mitem-1{grid-area:n-mitem-1;}
+    .nav-mitem-2{grid-area:n-mitem-2;}
+    .nav-mitem-3{grid-area:n-mitem-3;}
+    .nav-mitem-4{grid-area:n-mitem-4;}
+    .nav-mitem-5{grid-area:n-mitem-5;}
+    .nav-mitem-6{grid-area:n-mitem-6;}
+    .nav-button-1{grid-area:n-button-1;}
+    .nav-button-2{grid-area:n-button-2;}
+    .nav-link-1{grid-area:n-link-1;text-align:right;}
+
+    .main-header{
+        min-height:120px;
+        padding:10px 0;
+        max-width:100vw;
+    }
+    .bg-white,
+    .navbar-collapse{
+        background-color: #fff !important;
+    }
+    .nav-item{
+        margin-right: 6px;
+        font-size: 15px;
+        font-weight: 400;
+        padding-top:5px;
+        color:#0F426B;
+        position: relative;
+        text-align:left;
+    }
+
+    .nav-item > a{
+        padding:5px 0;
+        border-radius:20px;
+        color: #0F426B;
+        font-size: 1.1rem;
+    }
+
+    .nav-item:hover > a{
+        color: #34C88A;
+    }
+    
+    .nav-item > a {
+        transition: color 0.3s;
+    }
+
+
+    .btn-primary {
+        background: #34C88A;
+        border: 2px solid #34C88A;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:not(:disabled):not(.disabled).active,
+    .btn-primary:not(:disabled):not(.disabled):active,
+    .show > .btn-primary.dropdown-toggle {
+        background-color: #37a87a;
+        border-color: #37a87a;
+    }
+
+    .btn-capsule {
+        border-radius: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-shadow: none;
+    }
+    .btn-outline-primary {
+        color: #2aa600;
+        border: 2px solid #37A87A;
+    }
+
+    .btn-outline-primary:hover,
+    .btn-outline-primary:not(:disabled):not(.disabled).active,
+    .btn-outline-primary:not(:disabled):not(.disabled):active,
+    .show > .btn-outline-primary.dropdown-toggle {
+        background-color: #006899;
+        border-color: #006899;
+        color: #fff !important;
+    }
+
+    .nav-link{
+        font-size:1.1rem;
+    }
+
+    .submenu {
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+        position:absolute;
+        top: 50px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: opacity 0.2s ease, transform 0.3s ease, visibility 0.2s;
+    }
+
+    .nav-item:hover .submenu {
+        opacity: 1;
+        visibility: visible;
+        top:40px;
+        display:grid;
+        transform: translateY(0);
+    }
+
+    .submenu::before {
+        content: '';
+        position: absolute;
+        top: -10px;  /* Height of the triangle */
+        left: 20px;  /* Position from left, adjust as needed */
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid #fff;  /* Color of the triangle */
+    }
+
+    .submenu.menu-solutions{
+        border-bottom:3px solid #0c2a4a;
+    }
+
+    .submenu.menu-features{
+        left:-215px;
+        border-bottom:3px solid #007eb1;
+    }
+
+    .submenu.menu-company{
+        left:-265px;
+        border-bottom:3px solid #49bb87;
+    }
+
+    .submenu.menu-resources{
+        left:-515px;
+        border-bottom:3px solid #eead22;
+    }
+
+    .submenu.menu-pricing{
+        left:-200px;
+        border-bottom:3px solid #314F5E;
+    }
+
+    .submenu.menu-contact{
+        left:-615px;
+        border-bottom:3px solid #0D436B;
+    }
+
+    .submenu.menu-features::before{
+        left:230px;
+    }
+
+    .submenu.menu-company::before{
+        left:285px;
+    }
+
+    .submenu.menu-resources::before{
+        left:535px;
+    }
+
+    .submenu.menu-pricing::before{
+        left:215px;
+    }
+
+    .submenu.menu-contact::before{
+        left:630px;
+    }
+
+    .submenu .content{
+        text-align:left;
+    }
+
+    .nav-mitem-3{
+        padding-left:10px;
+    }
+
+    .submenu a.menu-mail-link{
+        color: #007eb1;
+        font-size:1rem;
+        padding: 5px 0 15px 0;
+        display:block;
+    }
+
+    .submenu a.menu-mail-link:hover{
+        color: #229fd3;
+    }
+
+    @media (min-width: 200px) {
+        .main-header{
+            min-height:50px;
+            padding:10px 0;
+        }
+
+        nav#main-menu{
+            grid-template-columns: 1fr 40px;
+            grid-template-areas:"n-logo  n-hamburger";
+            grid-row-gap: 0;
+            max-width:100vw;
+        }
+
+        .nav-mitem-1,
+        .nav-mitem-2,
+        .nav-mitem-3,
+        .nav-mitem-4,
+        .nav-mitem-5,
+        .nav-mitem-6,
+        .nav-button-1,
+        .nav-button-2{
+            display:none;
+        }
+
+        .nav-hamburger{
+            display:block;
+        }
+
+        .nav-logo{
+            grid-area:n-logo;
+            padding-top:5px;
+            padding-left:20px;
+        }
+
+        .nav-link-1{
+            display:none;
+        }
+    }
+
+    @media (min-width: 992px) {
+        nav#main-menu {
+            grid-template-columns: repeat(6, 110px) 1fr 125px 155px;
+            grid-template-areas:"n-logo n-logo n-logo . . . . . n-link-1" "n-mitem-1 n-mitem-2 n-mitem-3 n-mitem-4 n-mitem-5 n-mitem-6 . n-button-1 n-button-2";
+            grid-row-gap: 15px;
+        }
+
+        .nav-mitem-1,
+        .nav-mitem-2,
+        .nav-mitem-3,
+        .nav-mitem-4,
+        .nav-mitem-5,
+        .nav-mitem-6,
+        .nav-button-1,
+        .nav-button-2 {
+            display: block;
+        }
+
+        .nav-hamburger{
+            display:none;
+        }
+
+        .container {
+            max-width: 980px;
+        }
+
+        .nav-logo{
+            padding-left:0;
+        }
+
+        .nav-link-1{
+            display:block;
+        }
+
+        .three-column {
+            width: 980px;
+        }
+
+        .submenu.menu-features{
+            left:-125px;
+        }
+
+        .submenu.menu-features::before{
+            left:145px;
+        }
+
+        .submenu.menu-resources{
+            left:-445px;
+        }
+
+        .submenu.menu-resources::before{
+            left:465px;
+        }
+
+        .submenu.menu-contact{
+            left:-565px;
+        }
+
+        .submenu.menu-contact::before{
+            left:580px;
+        }
+
+    }
+
+
+    @media (min-width: 1200px) {
+        .three-column {
+            width: 1140px;
+        }
+
+        .submenu.menu-features{
+            left:-215px;
+            border-bottom:3px solid #007eb1;
+        }
+
+        .submenu.menu-features::before{
+            left:230px;
+        }
+
+        .submenu.menu-resources{
+            left:-515px;
+            border-bottom:3px solid #eead22;
+        }
+
+        .submenu.menu-resources::before{
+            left:535px;
+        }
+
+        .submenu.menu-contact{
+            left:-615px;
+        }
+
+        .submenu.menu-contact::before{
+            left:630px;
+        }
+        .container {
+            max-width: 1140px;
+        }
+
+    }
+
+
+    /* START MOBILE MENU */
+    body.menu-open {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
+
+    .hamburger {
+        z-index: 100;
+        cursor: pointer;
+        background: none;
+        border: none;
+    }
+
+    .hamburger svg {
+        width: 30px;
+        height: 30px;
+        fill: #333;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: -400px;
+        height: 100vh;
+        width: 100%;
+        max-width: 400px;
+        background: #0F426B;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+        transition: left 0.3s ease;
+        z-index: 1000;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: none;
+        overscroll-behavior-y: none;
+        padding-bottom: 50px;
+        transform: translateZ(0);
+        will-change: transform;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .close-btn svg {
+        width: 24px;
+        height: 24px;
+        fill: #333;
+    }
+
+    .menu-items {
+        padding: 100px 20px 20px;
+        list-style: none;
+        min-height: min-content;
+    }
+
+    .menu-item {
+        margin-bottom: 15px;
+    }
+
+    .menu-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px;
+        font-size: 18px;
+        transition: background 0.3s;
+    }
+
+    .menu-link:hover {
+        background: #eeeeee;
+        color: #34C88A;
+        border-radius:5px;
+    }
+
+    .menu-link svg{
+        fill: #FFF;
+    }
+
+    .menu-link:hover svg{
+        fill: #34C88A;
+    }
+
+    .mobile-submenu {
+        list-style: none;
+        padding-left: 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.8s ease-in-out;
+    }
+
+    .mobile-submenu.active {
+        max-height: 600px;
+    }
+
+    ul.mobile-submenu.active li {
+        margin-bottom:0 !important;
+    }
+
+    .submenu-link {
+        display: block;
+        color: #D5E1EC;
+        text-decoration: none;
+        padding: 8px 10px;
+        font-size: 16px;
+        max-height:40px;
+    }
+
+    .submenu-link:hover {
+        background: #eeeeee;
+        border-radius:5px;
+        color: #0F426B;
+    }
+
+    .arrow {
+        transition: transform 0.3s;
+    }
+
+    .menu-link.active .arrow {
+        transform: rotate(180deg);
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+        z-index: 999;
+    }
+
+    .overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .mobile-action-btn{
+        padding:10px 0;
+        margin-bottom:0 !important;
+    }
+
+    #first-action-btn{
+        padding-top:20px;
+        border-top:1px solid #ccc;
+    }
+
+    .rdLogo{
+        fill:#fff;
+    }
+
+    .nav-link-1 .nav-link{
+            font-weight:400;
+            color:#0d436b;
+            font-size:.9rem;
+    }
+
+    .nav-link-1 .nav-link:hover{
+            color:#ababab;
+        }
+    }
+
+    /* END MOBILE MENU */
+</style>
+
+<header class="main-header shadow-sm bg-white fixed-top">
+    <div class="container">
+        <div class="row">
+
+<!-- START DESKTOP NAV -->
+            <nav class="menu" id="main-menu">
+                <div class="nav-logo"><a href="https://www.rentecdirect.com"><img src="https://www.rentecdirect.com/assets/images/logo-flat.png" alt="Rentec Direct Logo"></a></div>
+                <div class="nav-hamburger ">
+                    <button class="hamburger" >
+                        <svg viewBox="0 0 100 80" width="40" height="40">
+                            <rect width="100" height="12" rx="6"></rect>
+                            <rect y="30" width="100" height="12" rx="6"></rect>
+                            <rect y="60" width="100" height="12" rx="6"></rect>
+                        </svg>
+                    </button>
+                </div>
+                <div class="nav-mitem-1 nav-item">
+                    <a href="#">Solutions</a>
+                <div class="submenu two-column menu-solutions">
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/landlord-software'">
+                        
+                        <div class="content">
+                            <h3 class="title">Rentec PRO</h3>
+                            <p class="description">For landlords and real estate investors</p>
+                        </div>
+                    </div>
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/property-managers'">
+                        
+                        <div class="content">
+                            <h3 class="title">Rentec PM</h3>
+                            <p class="description">For property managers who need trust accounting.</p>
+                        </div>
+                    </div>
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/pricing'">
+                        
+                        <div class="content">
+                            <h3 class="title">Pricing</h3>
+                            <p class="description">Compare the cost and see options for using Rentec Direct software</p>
+                        </div>
+                    </div>
+
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/tenant-screening'">
+                        
+                        <div class="content">
+                            <h3 class="title">Tenant Screening</h3>
+                            <p class="description">Instantly order credit, criminal, and eviction reports on tenants.</p>
+                        </div>
+                    </div>
+
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/features'">
+                        
+                        <div class="content">
+                            <h3 class="title">Product Features</h3>
+                            <p class="description">Discover the features of Rentec Direct software</p>
+                        </div>
+                    </div>
+
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/integration-partners'">
+                        
+                        <div class="content">
+                            <h3 class="title">Integration Partners</h3>
+                            <p class="description">Rentec Direct partners and integrates with leading service providers
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/steadily_ins'">
+                        
+                        <div class="content">
+                            <h3 class="title">Landlord Insurance</h3>
+                            <p class="description">Protect Your Rental With Landlord Insurance</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+        </div>
+                <div class="nav-mitem-2 nav-item">
+                    <a href="#">Features</a>
+
+                <div class="submenu three-column menu-features">
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/details/property-tenant-accounting'">
+                        
+                        <div class="content">
+                            <h3 class="title">Ledger Accounting</h3>
+                            <p class="description">Full general ledger accounting for properties, tenants, and owners</p>
+                        </div>
+                    </div>
+<!--                    <div class="item">-->
+<!--                        -->
+<!--                        <div class="content">-->
+<!--                            <h3 class="title">Trust Account Certified</h3>-->
+<!--                            <p class="description">Trust account certified software that complies with your state’s real estate board</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="item">-->
+<!--                        -->
+<!--                        <div class="content">-->
+<!--                            <h3 class="title">Reporting System</h3>-->
+<!--                            <p class="description">An extremely robust reporting system to track and manage your portfolio performance</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/details/online-payments'">
+                        
+                        <div class="content">
+                            <h3 class="title">Online Rent Payments</h3>
+                            <p class="description">Collect rent online via ACH, credit card, or with electronic cash payments</p>
+                        </div>
+                    </div>
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/details/property-management-website'">
+                        
+                        <div class="content">
+                            <h3 class="title">Professional Website</h3>
+                            <p class="description">Showcase your properties and your business to all your tenants and owners online</p>
+                        </div>
+                    </div>
+<!--                    <div class="item">-->
+<!--                        -->
+<!--                        <div class="content">-->
+<!--                            <h3 class="title">Electronic Signatures</h3>-->
+<!--                            <p class="description">Create, share, and store custom forms and accept electronic signatures</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="item">-->
+<!--                        -->
+<!--                        <div class="content">-->
+<!--                            <h3 class="title">Insurance Protection</h3>-->
+<!--                            <p class="description">Find integrated options for renters insurance, landlord insurance, and security deposit insurance.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="item">-->
+<!--                        -->
+<!--                        <div class="content">-->
+<!--                            <h3 class="title">Owner Portal</h3>-->
+<!--                            <p class="description">Give your owners access to valuable property data through your Owner Portal.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/details/tenant-portal'">
+                        
+                        <div class="content">
+                            <h3 class="title">Tenant Portal</h3>
+                            <p class="description">Receive rent payments and take maintenance requests via the Tenant Portal</p>
+                        </div>
+                    </div>
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/integration-partners'">
+                        
+                        <div class="content">
+                            <h3 class="title">Integration Partners</h3>
+                            <p class="description">Integrations with leading service providers to make your time as efficient as possible</p>
+                        </div>
+                    </div>
+<!--                    <div class="item">-->
+<!--                        -->
+<!--                        <div class="content">-->
+<!--                            <h3 class="title">Work Order Management System</h3>-->
+<!--                            <p class="description">Keep track of maintenance and repairs with the work order management system</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="item">-->
+<!--                        -->
+<!--                        <div class="content">-->
+<!--                            <h3 class="title">Electronic Vendor Payments</h3>-->
+<!--                            <p class="description">Use the vendor ACH payments tool to eliminate the need to print or fill out a check to send the payment</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="item">-->
+<!--                        -->
+<!--                        <div class="content">-->
+<!--                            <h3 class="title">Lead Tracking</h3>-->
+<!--                            <p class="description">Your own website with an advanced lead tracking tool for prospective tenants</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="item">-->
+<!--                        -->
+<!--                        <div class="content">-->
+<!--                            <h3 class="title">Rental Property Marketing</h3>-->
+<!--                            <p class="description">Easy-to-use tools to professionally market your vacant rental properties to find qualified renters quickly</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/details/publish-vacancies'">
+                        
+                        <div class="content">
+                            <h3 class="title">Publish Vacancies Online</h3>
+                            <p class="description">Publish vacancies to popular rental listing platforms and accept rental applications</p>
+                        </div>
+                    </div>
+
+
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/accounting-features'">
+                        
+                        <div class="content">
+                            <h3 class="title">Accounting Features</h3>
+                            <p class="description">Accounting software designed to help you manage your properties and tenants</p>
+                        </div>
+                    </div>
+
+
+
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/operations-features'">
+                        
+                        <div class="content">
+                            <h3 class="title">Operations Features</h3>
+                            <p class="description">Provide your owners and tenants tools to stand out as the best in your area</p>
+                        </div>
+                    </div>
+
+
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/leasing-features'">
+                        
+                        <div class="content">
+                            <h3 class="title">Lease & Management Features</h3>
+                            <p class="description">Managing leases, tenants, and vacancies is easier than ever.</p>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/more-features'">
+                        
+                        <div class="content">
+                            <h3 class="title">More Features</h3>
+                            <p class="description">Learn about more features that Rentec Direct software has to offer</p>
+                        </div>
+                    </div>
+
+
+
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/features'">
+                        
+                        <div class="content">
+                            <h3 class="title">All Product Features</h3>
+                            <p class="description">Discover all the features of Rentec Direct software</p>
+                        </div>
+                    </div>
+
+
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/mobile-app'">
+                        
+                        <div class="content">
+                            <h3 class="title">Mobile App</h3>
+                            <p class="description">Convenient access on any mobile device</p>
+                        </div>
+                    </div>
+
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/details/open-api'">
+                        
+                        <div class="content">
+                            <h3 class="title">Open API</h3>
+                            <p class="description">Seamlessly connect your data with other software tools</p>
+                        </div>
+                    </div>
+
+                </div>
+        </div>
+
+        <div class="nav-mitem-3 nav-item">
+            <a class="menu-main-item" href="https://www.rentecdirect.com/pricing">Pricing</a>
+            <div class="submenu two-column menu-pricing">
+                <div class="item" onclick="window.location.href='https://www.rentecdirect.com/pricing'">
+                    
+                    <div class="content">
+                        <h3 class="title">Pricing Calculator</h3>
+                        <p class="description">See what the cost will be of Rentec PRO and Rentec PM</p>
+                    </div>
+                </div>
+
+                <div class="item" onclick="window.location.href='https://www.rentecdirect.com/pricing#difference-pro-pm'">
+                    
+                    <div class="content">
+                        <h3 class="title">Compare Product Features</h3>
+                        <p class="description">Compare the difference between Rentec PRO and Rentec PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-mitem-4 nav-item">
+            <a href="#">Company</a>
+                <div class="submenu two-column menu-company">
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/about-us'">
+                        
+                        <div class="content">
+                            <h3 class="title">About Us</h3>
+                            <p class="description">Learn about the Rentec Direct company and philosophy</p>
+                        </div>
+                    </div>
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/about-us#staff'">
+                        
+                        <div class="content">
+                            <h3 class="title">Staff</h3>
+                            <p class="description">Learn more about the Rentec Direct team that supports your growth</p>
+                        </div>
+                    </div>
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/reviews'">
+                        
+                        <div class="content">
+                            <h3 class="title">Reviews</h3>
+                            <p class="description">Client verified reviews from third party review sites</p>
+                        </div>
+                    </div>
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/jobs/'">
+                        
+                        <div class="content">
+                            <h3 class="title">Careers</h3>
+                            <p class="description">Opportunities to join Rentec Direct and become part of our team</p>
+                        </div>
+                    </div>
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/press'">
+                        
+                        <div class="content">
+                            <h3 class="title">Press</h3>
+                            <p class="description">Read articles Rentec Direct has contributed to or been written about</p>
+                        </div>
+                    </div>
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/awards'">
+                        
+                        <div class="content">
+                            <h3 class="title">Awards</h3>
+                            <p class="description">Awards that demonstrate our commitment to our clients, our community, and our growth</p>
+                        </div>
+                    </div>
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/customer-service'">
+                        
+                        <div class="content">
+                            <h3 class="title">Customer Service</h3>
+                            <p class="description">Learn about our exceptional customer service department</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="nav-mitem-5 nav-item">
+            <a href="#">Resources</a>
+                <div class="submenu three-column menu-resources">
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/blog/'">
+                        
+                        <div class="content">
+                            <h3 class="title">Blog</h3>
+                            <p class="description">Articles about the real estate and rental markets for landlords</p>
+                        </div>
+                    </div>
+                    <div class="item" onclick="window.location.href='https://help.rentecdirect.com/'">
+                        
+                        <div class="content">
+                            <h3 class="title">Knowledge Base</h3>
+                            <p class="description">A repository of information about how to use Rentec Direct’s software</p>
+                        </div>
+                    </div>
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/video-demo'">
+                        
+                        <div class="content">
+                            <h3 class="title">Video Demos</h3>
+                            <p class="description">Videos to help you learn more about Rentec Direct property management software</p>
+                        </div>
+                    </div>
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/learn/'">
+                        
+                        <div class="content">
+                            <h3 class="title">Learning Center</h3>
+                            <p class="description">Learn more about property management software and property management</p>
+                        </div>
+                    </div>
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/faq'">
+                        
+                        <div class="content">
+                            <h3 class="title">FAQs</h3>
+                            <p class="description">Find a list of commonly asked questions about Rentec products.</p>
+                        </div>
+                    </div>
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/blog/category/news/'">
+                        
+                        <div class="content">
+                            <h3 class="title">News</h3>
+                            <p class="description">Latest news about Rentec Direct and topics related to landlords and property managers</p>
+                        </div>
+                    </div>
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/blog/category/education/'">
+                        
+                        <div class="content">
+                            <h3 class="title">Education Blog</h3>
+                            <p class="description">Free education topics for property managers, landlords, and tenants.</p>
+                        </div>
+                    </div>
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/blog/webinar-series/'">
+                        
+                        <div class="content">
+                            <h3 class="title">Live Training Webinar Series</h3>
+                            <p class="description">Free training sessions give you direct access to Rentec Direct experts</p>
+                        </div>
+                    </div>
+                    <div class="item" onclick="window.location.href='https://www.rentecdirect.com/blog/state-rental-laws-resource-guides-state/'">
+                        
+                        <div class="content">
+                            <h3 class="title">State Rental Laws Resource Guides</h3>
+                            <p class="description">Learn the rules and statutes that affect landlord-tenant laws vary by state</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="nav-mitem-6 nav-item">
+            <a class="menu-main-item" href="https://www.rentecdirect.com/contact">Contact</a>
+            <div class="submenu three-column menu-contact">
+                <div class="item" onclick="window.location.href='https://www.rentecdirect.com/contact'">
+                    
+                    <div class="content">
+                        <h6 class="m-0">Rentec Direct</h6>
+                        <p class="m-0">231 SW I St</p>
+                        <p class="main-0">Grants Pass, OR 97526</p>
+                    </div>
+                </div>
+                <div class="item" onclick="window.location.href='https://www.rentecdirect.com/contact'">
+                    
+                    <div class="content">
+                            <p class="m-0 text-muted">USA Direct &amp; International</p>
+                            <h6 class="mt-1 mb-3 font-weight-bold">(541) 216-6000</h6>
+                            <p class="m-0 text-muted">USA Toll-Free</p>
+                            <h6 class="mt-1 mb-3 font-weight-bold">(800) 881-5139</h6>
+                            <p class="m-0 text-muted">Fax Toll-Free</p>
+                            <h6 class="mt-1 mb-3 font-weight-bold">(888) 882-1062</h6>
+                    </div>
+                </div>
+                <div class="item">
+                    
+                    <div class="content">
+                        <p class="m-0 text-muted">Reach a Product Advisor</p>
+                        <a href="/cdn-cgi/l/email-protection#3142505d54427143545f4554525558435452451f525e5c" class="menu-mail-link"><span class="__cf_email__" data-cfemail="6e1d0f020b1d2e1c0b001a0b0d0a071c0b0d1a400d0103">[email&#160;protected]</span></a>
+                        <p class="m-0 text-muted">Product Support</p>
+                        <a href="/cdn-cgi/l/email-protection#097a7c6a6a6c7a7a497b6c677d6c6a6d607b6c6a7d276a6664" class="menu-mail-link"><span class="__cf_email__" data-cfemail="ddaea8bebeb8aeae9dafb8b3a9b8beb9b4afb8bea9f3beb2b0">[email&#160;protected]</span></a>
+                        <p class="m-0 text-muted">Press/Media Inquiries</p>
+                        <a href="/cdn-cgi/l/email-protection#e29290879191a290878c968781868b90878196cc818d8f" class="menu-mail-link"><span class="__cf_email__" data-cfemail="b2c2c0d7c1c1f2c0d7dcc6d7d1d6dbc0d7d1c69cd1dddf">[email&#160;protected]</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-link-1"><a class="nav-link ml-2" href="https://www.rentecdirect.com/login" id="btn-login-mobile" title="Login to your Rentec Direct account"><i class="fas fa-lock" style="font-size:0.80rem;margin-right:5px;"></i>LOGIN</a></div>
+        <div class="nav-button-1"> <a class="nav-link btn btn-sm btn-primary btn-capsule ml-2" href="https://www.rentecdirect.com/signup/" style="margin-right:0;font-weight:400;">Free Trial</a></div>
+        <div class="nav-button-2">
+            <a data-fancybox data-type="ajax" data-src="https://www.rentecdirect.com/misc/product-demo" href="javascript:" onclick="trackModalLink('https://www.rentecdirect.com/misc/product-demo')"
+               class="nav-link btn btn-sm btn-outline-primary btn-capsule ml-2">
+                Book A Demo
+            </a>
+            <a id="demo-request-btn" data-fancybox data-type="ajax" data-src="https://www.rentecdirect.com/misc/schedule-demo" href="javascript:" style="display:none;"></a>
+        </div>
+
+    </nav>
+<!-- END DESKTOP NAV -->
+
+<!-- START MOBILE NAV -->
+            <nav class="nav-menu">
+                
+                <div style="width:50px;height:auto;position:absolute;top:20px;left:30px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 417.86 288.4" style="width:100%;">
+                        <g id="Layer_1-2">
+                            <path class="rdLogo" d="M398.13,69.1c-13.15-21.79-31.65-38.64-55.49-50.56C318.8,6.61,291.53.65,260.84.65h-57.84c13.84,8.15,25.18,18.48,33.78,30.9,3.15,4.55,5.86,9.33,8.19,14.32h13.41c21.1,0,39.67,4.05,55.7,12.13,16.03,8.09,28.36,19.6,36.99,34.53,8.63,14.94,12.95,32.27,12.95,52s-4.32,37.06-12.95,52c-8.63,14.94-20.96,26.45-36.99,34.53-16.03,8.09-34.6,12.13-55.7,12.13h-19.4l33.04,44.94c26.17-1.29,49.72-7.15,70.62-17.61,23.84-11.92,42.34-28.77,55.49-50.56,13.15-21.79,19.73-46.93,19.73-75.43s-6.58-53.65-19.73-75.43Z" />
+                            <path class="rdLogo" d="M185.04,288.4l61.75-.36-79.05-107.52.05-.56,11.45-5.45c20.8-10.87,29.6-17.36,39.87-31.48,10.27-14.12,15.41-30.96,15.41-50.53s-4.8-35.54-14.41-49.41c-9.61-13.87-23.41-24.52-41.42-31.95C160.68,3.72,139.53,0,115.26,0H0v288.22h50.12v-101.12h63.23l71.7,101.3ZM52.03,40.87h60.83c22.67,0,39.88,4.46,51.63,13.38,11.74,8.92,17.61,21.67,17.61,38.27s-5.87,29.42-17.61,38.45c-11.74,9.05-28.95,13.56-51.63,13.56h-60.83V40.87Z" />
+                            <rect class="rdLogo" x="261.82" y="115.42" width="24.27" height="24.27" />
+                            <rect class="rdLogo" x="295.8" y="115.42" width="24.27" height="24.27" />
+                            <rect class="rdLogo" x="261.82" y="149.6" width="24.27" height="24.27" />
+                            <rect class="rdLogo" x="295.8" y="149.6" width="24.27" height="24.27" />
+                        </g>
+                    </svg>
+                </div>
+                
+                <button class="close-btn">
+                    <svg viewBox="0 0 24 24" style="fill:#fff;">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                    </svg>
+                </button>
+
+                <ul class="menu-items">
+                    <li class="menu-item">
+                        <a href="https://www.rentecdirect.com" class="menu-link">Home</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            Solutions
+                            <svg class="arrow" width="36" height="36" viewBox="0 0 24 24">
+                                <path d="M7 10l5 5 5-5z"/>
+                            </svg>
+                        </a>
+                        <ul class="mobile-submenu">
+                            <li><a href="https://www.rentecdirect.com/landlord-software" class="submenu-link">Rentec Pro</a></li>
+                            <li><a href="https://www.rentecdirect.com/property-managers" class="submenu-link">Rente PM</a></li>
+                            <li><a href="https://www.rentecdirect.com/pricing" class="submenu-link">Pricing</a></li>
+                            <li><a href="https://www.rentecdirect.com/tenant-screening" class="submenu-link">Tenant Screening</a></li>
+                            <li><a href="https://www.rentecdirect.com/features" class="submenu-link">Product Features</a></li>
+                            <li><a href="https://www.rentecdirect.com/integration-partners" class="submenu-link">Integration Partners</a></li>
+                            <li><a href="https://www.rentecdirect.com/steadily_ins" class="submenu-link">Landlord Insurance</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            Features
+                            <svg class="arrow" width="36" height="36" viewBox="0 0 24 24">
+                                <path d="M7 10l5 5 5-5z"/>
+                            </svg>
+                        </a>
+                        <ul class="mobile-submenu">
+                            <li><a href="https://www.rentecdirect.com/details/property-tenant-accounting" class="submenu-link">Ledger Accounting</a></li>
+                            <li><a href="https://www.rentecdirect.com/details/online-payments" class="submenu-link">Online Rent Payments</a></li>
+                            <li><a href="https://www.rentecdirect.com/details/property-management-website" class="submenu-link">Professional Website</a></li>
+                            <li><a href="https://www.rentecdirect.com/details/tenant-portal" class="submenu-link">Tenant Portal</a></li>
+                            <li><a href="https://www.rentecdirect.com/integration-partners" class="submenu-link">Integration Partners</a></li>
+                            <li><a href="https://www.rentecdirect.com/details/publish-vacancies" class="submenu-link">Publish Vacancies Online</a></li>
+                            <li><a href="https://www.rentecdirect.com/operations-features" class="submenu-link">Operations Features</a></li>
+                            <li><a href="https://www.rentecdirect.com/accounting-features" class="submenu-link">Accounting Features</a></li>
+                            <li><a href="https://www.rentecdirect.com/leasing-features" class="submenu-link">Lease Management Features</a></li>
+                            <li><a href="https://www.rentecdirect.com/more-features" class="submenu-link">More Features</a></li>
+                            <li><a href="https://www.rentecdirect.com/features" class="submenu-link">All Product Features</a></li>
+                            <li><a href="https://www.rentecdirect.com/mobile-app" class="submenu-link">Mobile App</a></li>
+                            <li><a href="https://www.rentecdirect.com/details/open-api" class="submenu-link">Open API</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="https://www.rentecdirect.com/pricing" class="menu-link">Pricing</a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            Company
+                            <svg class="arrow" width="36" height="36" viewBox="0 0 24 24">
+                                <path d="M7 10l5 5 5-5z"/>
+                            </svg>
+                        </a>
+                        <ul class="mobile-submenu">
+                            <li><a href="https://www.rentecdirect.com/about-us" class="submenu-link">About Us</a></li>
+                            <li><a href="https://www.rentecdirect.com/about-us#staff" class="submenu-link">Staff</a></li>
+                            <li><a href="https://www.rentecdirect.com/reviews" class="submenu-link">Reviews</a></li>
+                            <li><a href="https://www.rentecdirect.com/jobs/" class="submenu-link">Careers</a></li>
+                            <li><a href="https://www.rentecdirect.com/press" class="submenu-link">Press</a></li>
+                            <li><a href="https://www.rentecdirect.com/awards" class="submenu-link">Awards</a></li>
+                            <li><a href="https://www.rentecdirect.com/customer-service" class="submenu-link">Customer Service</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            Resources
+                            <svg class="arrow" width="36" height="36" viewBox="0 0 24 24">
+                                <path d="M7 10l5 5 5-5z"/>
+                            </svg>
+                        </a>
+                        <ul class="mobile-submenu">
+                            <li><a href="https://www.rentecdirect.com/blog/" class="submenu-link">Blog</a></li>
+                            <li><a href="https://help.rentecdirect.com/" class="submenu-link">Knowledge Base</a></li>
+                            <li><a href="https://www.rentecdirect.com/video-demo" class="submenu-link">Video Demos</a></li>
+                            <li><a href="https://www.rentecdirect.com/learn/" class="submenu-link">Learning Center</a></li>
+                            <li><a href="https://www.rentecdirect.com/faq" class="submenu-link">FAQs</a></li>
+                            <li><a href="https://www.rentecdirect.com/blog/category/news/" class="submenu-link">News</a></li>
+                            <li><a href="https://www.rentecdirect.com/blog/category/education/" class="submenu-link">Education Blog</a></li>
+                            <li><a href="https://www.rentecdirect.com/blog/webinar-series/" class="submenu-link">Live Training Webinar Series</a></li>
+                            <li><a href="https://www.rentecdirect.com/blog/state-rental-laws-resource-guides-state/" class="submenu-link">State Rental Laws Resource Guides</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="https://www.rentecdirect.com/contact" class="menu-link">Contact</a>
+                    </li>
+
+                    <li class="mobile-action-btn" id="first-action-btn" style="width:48%;display: inline-block;">
+                        <a class="nav-link btn btn-sm btn-primary btn-capsule ml-2" href="https://www.rentecdirect.com/signup/" style="margin-right:0;font-weight:400;color:#0F426B;">Free Trial</a>
+                    </li>
+
+                    <li class="mobile-action-btn" style="width:48%;display: inline-block;">
+                        <a data-fancybox data-type="ajax" data-src="https://www.rentecdirect.com/misc/product-demo" href="javascript:" onclick="trackModalLink('https://www.rentecdirect.com/misc/product-demo')"
+                           class="nav-link btn btn-sm btn-outline-primary btn-capsule ml-2" style="font-weight:400;color:#fff;">
+                            Book A Demo
+                        </a>
+                        <a id="demo-request-btn" data-fancybox data-type="ajax" data-src="https://www.rentecdirect.com/misc/schedule-demo" href="javascript:" style="display:none;"></a>
+                    </li>
+
+                    <li class="mobile-action-btn">
+                        <a class="nav-link ml-2" href="https://www.rentecdirect.com/login" id="btn-login-mobile" style="font-weight:400;color:#fff;font-size:18px;">Login</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="overlay"></div>
+            <!-- END MOBILE NAV -->
+
+        </div>
+    </div>
+</header>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        const closeBtn = document.querySelector('.close-btn');
+        const overlay = document.querySelector('.overlay');
+        const menuLinks = document.querySelectorAll('.menu-link');
+
+        function toggleMenu() {
+            navMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+            document.body.classList.toggle('menu-open')
+        }
+
+        hamburger.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+
+        menuLinks.forEach(link => {
+            if(link.nextElementSibling && link.nextElementSibling.classList.contains('mobile-submenu')) {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const submenu = link.nextElementSibling;
+                    const isActive = submenu.classList.contains('active');
+
+                    // Close all other submenus
+                    document.querySelectorAll('.mobile-submenu.active').forEach(menu => {
+                        if(menu !== submenu) {
+                            menu.classList.remove('active');
+                            menu.previousElementSibling.classList.remove('active');
+                        }
+                    });
+
+                    // Toggle current submenu
+                    submenu.classList.toggle('active');
+                    link.classList.toggle('active');
+                });
+            }
+        });
+    });
+
+    function open2(){
+        $('#demo-request-btn').trigger('click');
+    }
+</script>
+
+
+<div class="outer-wrapper" xmlns="http://www.w3.org/1999/xhtml">
+    <!--Rentec banner section-->
+    <section class="rd-hero d-flex align-items-center">
+        <div class="rd-hero--img"></div>
+        <div class="rd-hero--triangle"></div>
+        <div class="rd-hero--content">
+            <div class="container">
+                <div class="row">
+                    <div class="lg-box">
+                        <div class="" id="hero-text-2"></div>
+                        <div class="" id="hero-text"></div>
+                        <h1 class="subtitle">Highest-ranked software by thousands of landlords and property managers.</h1>
+                        <div class="hero-rating-block" id="hero-rating">
+                            <img src="assets/images/reviews/4_8_stars.svg"><br>
+                            <span style="font-size:1.0rem;">
+                                4.9 /5.0
+                                <span class="ml-2" style="font-size:1.0rem;">
+                                    <!-- do not separate the line below, keep it all on one line to ensure spaces don't end up between a href tags, that wrecks formatting -->
+                                    (<a href="reviews" style="color:inherit;font-size:0.9rem;text-decoration:underline !important;margin:0 2px">14,752 reviews</a>)
+                                </span>
+                            </span>
+                        </div>
+                        <div class="btn-wrapper">
+                            <div class="btn-wrapper--btn1">
+                                <button class="btn1" data-fancybox data-type="ajax" data-src="misc/product-demo" onclick="trackModalLink('/misc/product-demo')">Watch a demo</button>
+                            </div>
+                            <div class="btn-wrapper--btn2">
+                                <button class="btn2" onclick="window.location.href='/signup/getstarted';">Start your free trial</button>
+                            </div>
+                        </div>
+                        <div class="downarrow bounce"><a href="#pcards" style="color:#fff;">Discover our products <img src="assets/images/icons/arrow-open-down-2.svg" alt="Discover products" style="width:30px;" width="30" height="19"></a></div>
+                    </div>
+                    <div class="sm-box">
+                        <div class="phone-bg">
+                            <div class="" id="anim-phone-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <section class="carousel1-wrapper">
+        <h5 class="award-title">AS SEEN IN</h5>
+        <div class="carousel1 featured-logos">
+            <div><img class="lazyload" data-src="./assets/images/awards/entreprenur_logo_grey.png" style="width:150px;margin-top:5px;" alt="Entreprenur Logo" width="150" height="30"></div>
+            <div><img class="lazyload" data-src="./assets/images/awards/bigger_pockets_logo_grey.png" style="width:175px;margin-top:5px;" alt="Bigger Pockets Logo" width="175" height="26"></div>
+            <div><img class="lazyload" data-src="./assets/images/awards/yahoo_finance_logo_grey.png" style="width:75px;margin-top:2px;" alt="Yahoo Finance Logo" width="75" height="28"></div>
+            <div><img class="lazyload" data-src="./assets/images/awards/realtor.com_logo_3_wide_grey.png" style="width:175px;margin-top:1px;" alt="Realtor.com Logo" width="175" height="31"></div>
+            <div><img class="lazyload" data-src="./assets/images/awards/new_york_times_logo_grey.png" style="width:155px;margin-top:10px;" alt="New York Times Logo" width="155" height="22"></div>
+            <div><img class="lazyload" data-src="./assets/images/awards/forbes-logo_grey.png" style="width:90px;" alt="Forbes Logo" width="90" height="34"></div>
+            <div><img class="lazyload" data-src="./assets/images/awards/realtor_magazine_logo_grey.png" style="width:125px;margin-top:5px;" alt="Realtor Magazine Logo" width="125" height="25"></div>
+            <div><img class="lazyload" data-src="./assets/images/awards/nbc_news_logo_wide_grey.png" style="width:155px;margin-top:5px;" alt="NBC News Logo" width="155" height="22"></div>
+            <div><img class="lazyload" data-src="./assets/images/awards/inman_logo_grey.png" style="width:90px;margin-top:1px;" alt="Inman Logo" width="90" height="27"></div>
+        </div>
+    </section>
+
+    <!--Rentec products section-->
+    <section class="product-cards">
+        <div id="pcards"></div>
+        <div class="container">
+            <div class="row">
+                <div class="left-card">
+                    <div class="icon">
+                        <a href="/landlord-software">
+                            <div class="justify-content-center align-items-center feature-icon ls-1 anim-icon" id="anim-house-white"></div>
+                        </a>
+                    </div>
+                    <div class="prod-title"><a href="/landlord-software" style="color:inherit;">Landlords</a></div>
+                    <div class="prod-text">All the tools for landlords to easily manage properties and tenants</div>
+
+                    <div class="prod-price">$2 / unit</div>
+                    <div class="prod-button">
+                        <button class="btn" onclick="window.location.href='/signup?product=PRO'">Free Trial</button>
+                    </div>
+                    <a class="prod-learn" href="/landlord-software" style="color:#fff;">Learn More <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+                <div class="right-card">
+                    <div class="icon">
+                        <a href="/property-managers">
+                            <div class="justify-content-center align-items-center feature-icon ls-1 anim-icon" id="anim-apartment"></div>
+                        </a>
+                    </div>
+                    <div class="prod-title"><a href="/property-managers" style="color:inherit;">Property Managers</a></div>
+                    <div class="prod-text">A complete management solution for professional property managers</div>
+                    <div class="prod-price">$2.50 / unit</div>
+                    <div class="prod-button">
+                        <button class="btn" onclick="window.location.href='/signup?product=PM'">Free Trial</button>
+                    </div>
+                    <a class="prod-learn" href="/property-managers">Learn More <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="text-align:center;margin-top:16px;">* Plans start at $50 (<a href="/pricing">see full pricing</a>).</div>
+        <div class="cta-button-wrapper">
+            <a class="cta-button-blue" href="/pricing">Compare Plans</a>
+        </div>
+    </section>
+
+
+    <h2 class="section-title features">
+        <span class="highlight">Rentec Direct</span> <br>property management software gives you...
+    </h2>
+
+    <!--Rentec features section-->
+    <section class="product-features">
+        <div class="container feature-container">
+            <div class="row" style="position:relative;">
+                <div class="feature-wrapper" style="padding-left:0;">
+                    <svg id="featureWheel" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 445.97 445.51">
+                        <g id="feature_wheel">
+                            <path class="fw-1 feat-slice feat-reporting-slice" data-element="feat-reporting" d="M437.51,262.39c2.57.59,5.11-1.12,5.53-3.72,1.92-11.77,2.93-23.84,2.93-36.15,0-47.65-14.96-91.81-40.42-128.04-1.51-2.16-4.53-2.59-6.59-.95l-109.61,87.41c-1.75,1.4-2.21,3.85-1.13,5.82,5.83,10.61,9.15,22.8,9.15,35.76,0,1.32-.03,2.62-.1,3.92-.12,2.24,1.35,4.25,3.54,4.74l136.71,31.2Z"/>
+                            <path class="fw-2 feat-slice feat-acct-slice" data-element="feat-acct" d="M173.89,166.65c10-8.79,22.37-14.94,36.03-17.36,2.44-.43,4.19-2.59,4.19-5.07V5.17c0-2.98-2.51-5.35-5.49-5.16-59.62,3.79-112.88,30.99-150.66,72.54-2.01,2.21-1.73,5.66.61,7.52l108.73,86.71c1.94,1.55,4.72,1.51,6.59-.13Z"/>
+                            <path class="fw-3 feat-slice feat-screening-slice" data-element="feat-screening" d="M47.61,94.01c-2.38-1.9-5.88-1.4-7.62,1.09C14.79,131.22,0,175.14,0,222.52c0,12.05.97,23.87,2.81,35.4.48,3.01,3.42,4.98,6.39,4.3l135.38-30.9c2.48-.57,4.21-2.82,4.1-5.36-.05-1.14-.08-2.29-.08-3.44,0-12.8,3.23-24.84,8.93-35.35,1.21-2.23.61-5.02-1.37-6.6L47.61,94.01Z"/>
+                            <path class="fw-4 feat-slice feat-vacancies-slice" data-element="feat-vacancies" d="M248.98,296.94c-1.08-2.24-3.61-3.42-6-2.75-6.36,1.77-13.07,2.72-19.99,2.72s-13.63-.95-19.99-2.72c-2.4-.67-4.92.51-6,2.75l-60.34,125.29c-1.3,2.69-.05,5.93,2.72,7.05,25.82,10.45,54.04,16.22,83.61,16.22s57.79-5.77,83.61-16.22c2.77-1.12,4.02-4.36,2.72-7.05l-60.34-125.29Z"/>
+                            <path class="fw-5 feat-slice feat-file-slice" data-element="feat-file" d="M291.52,251.46c-5.34,12.64-14.08,23.5-25.08,31.43-1.96,1.42-2.59,4.06-1.54,6.24l60.45,125.52c1.26,2.62,4.48,3.64,7.01,2.21,49.9-28.15,87.87-74.95,104.44-130.95.83-2.79-.89-5.69-3.72-6.34l-135.83-31c-2.36-.54-4.8.66-5.74,2.89Z"/>
+                            <path class="fw-6 feat-slice feat-payments-slice" data-element="feat-payments" d="M179.78,283.08c-11.2-8.01-20.09-19.04-25.46-31.92-.85-2.04-3.02-3.19-5.17-2.7l-136.84,31.23c-2.53.58-4.05,3.17-3.32,5.66,16.55,56.43,54.8,103.58,105.11,131.78,2.26,1.27,5.13.36,6.26-1.98l60.9-126.45c.96-1.99.32-4.36-1.48-5.64Z"/>
+                            <path class="fw-7 feat-slice feat-web-slice" data-element="feat-web" d="M236.66,149.4c13.2,2.45,25.18,8.4,34.94,16.83,2.15,1.86,5.33,1.92,7.55.15l107.6-85.81c2.68-2.13,3-6.1.69-8.62C349.88,30.93,297.15,4.02,238.14.06c-3.41-.23-6.29,2.5-6.29,5.91v137.61c0,2.84,2.02,5.29,4.81,5.81Z"/>
+                        </g>
+                    </svg>
+                    <div class="top-div">
+                        <div class="feat-img feat-web-img"><svg id="rdIconDesktop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.22 25.98">
+    <defs>
+        <style>.rd-icon-desktop{fill:#fff;}</style>
+    </defs>
+    <g id="rdIconDesktop-g1" data-name="rdIconDesktop-g1">
+        <g id="rdIconDesktop-g2" data-name="rdIconDesktop-g2">
+            <path class="rd-icon-desktop" d="M14.65,0c3.94,0,7.88,0,11.81,0a2.62,2.62,0,0,1,2.76,2.74q-.11,7,0,14.08a2.6,2.6,0,0,1-2.74,2.71c-2.91-.06-5.83,0-8.74,0-.49,0-.64.12-.51.62.33,1.23.64,2.47.94,3.71a.54.54,0,0,0,.64.48c1,0,1.94,0,2.91,0,.67,0,1,.33,1,.85s-.37.81-1,.81q-7.12,0-14.25,0c-.63,0-1-.3-1-.81s.36-.84,1-.85c1,0,2,0,3,0a.54.54,0,0,0,.63-.49Q11.51,22,12,20.1c.13-.47,0-.6-.47-.59H2.78A2.49,2.49,0,0,1,0,16.76v-14A2.48,2.48,0,0,1,2.72,0ZM14.6,13H26.68c.84,0,.84,0,.84-.81V2.94c0-1.06-.17-1.23-1.22-1.23H2.89c-1,0-1.21.21-1.21,1.19v9.28c0,.78,0,.79.78.79Zm0,1.69H2.29c-.44,0-.63.16-.62.6s0,1.08,0,1.62.28.91.92.94H26.72c.54,0,.78-.28.79-.82s0-1,0-1.51c0-.81,0-.82-.79-.82Zm0,9.64c.5,0,1,0,1.51,0,.33,0,.46-.1.37-.45-.21-.75-.39-1.5-.57-2.25a.53.53,0,0,0-.6-.48c-.44,0-.89,0-1.34,0a.49.49,0,0,0-.57.44c-.18.77-.37,1.53-.57,2.3-.1.36,0,.45.37.44S14.09,24.3,14.56,24.3Z"/>
+        </g>
+    </g>
+</svg></div>  <!-- #2075bc -->
+                        <div class="feat-img feat-reporting-img"><svg id="rdIconChart2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218.07 199.13">
+    <defs>
+        <style>.rd-icon-chart-2{fill:#fff;}</style>
+    </defs>
+    <g id="rdIconChart2-g">
+        <path class="rd-icon-chart-2" d="m175.97,85.64V8.03c0-1.81.15-3.58,1.26-5.12,1.46-2.05,3.55-2.87,5.95-2.88,9.08-.03,18.16-.05,27.25.02,3.94.03,6.47,1.9,7.1,5.03.2,1.01.29,2.07.29,3.1,0,51.49,0,102.98,0,154.47,0,1.08-.09,2.17-.23,3.24-.4,2.98-3.16,5.18-6.56,5.19-6.46.02-12.91,0-19.37,0-2.83,0-5.67,0-8.5,0-4.42-.02-7.17-2.76-7.17-7.21v-78.24h-.02Zm29.09.04h0v-44.74c0-8.87-.02-17.74,0-26.62,0-.9-.09-1.49-1.26-1.48-4.58.05-9.16.03-13.75,0-.96,0-1.27.38-1.2,1.26.03.37,0,.75,0,1.12v136.59c0,1.79.03,3.58,0,5.37,0,.72.27,1.04,1.01,1.09,4.7.33,9.41.14,14.11.17.72,0,1.09-.31,1.08-1.05v-71.73l.02.02Z"/>
+        <path class="rd-icon-chart-2" d="m58.97,109.62c0-17.91.08-35.82-.05-53.74-.03-4.5,2.4-7.55,7.27-7.55,9.45,0,18.91-.21,28.36.16,3.48.14,6.05,3,6.06,6.69.02,10.79.01,21.58.01,32.37v75.86c0,2.18-.23,4.23-2,5.81-1.33,1.19-2.85,1.88-4.63,1.88-9.46,0-18.91.03-28.37-.02-4.09-.02-6.64-2.71-6.64-6.84v-54.61h-.01Zm29,.18c0-15.71-.01-31.41.03-47.12,0-1.21-.37-1.58-1.55-1.57-4.42.05-8.83.04-13.25,0-1.15,0-1.6.34-1.6,1.58.03,31.37.03,62.75,0,94.12,0,1.19.45,1.43,1.53,1.5,4.16.27,8.33.11,12.49.15,2.35.02,2.35,0,2.35-2.3v-46.37h0Z"/>
+        <path class="rd-icon-chart-2" d="m108.93,186.48h101.1c.87,0,1.76-.04,2.62.1,3.17.49,5.64,3.48,5.41,6.49-.25,3.39-2.9,5.98-6.33,6.03-4.62.06-9.25.02-13.87.02-39.28,0-78.57-.02-117.85-.02H7.15c-3.74,0-6.23-1.84-7.01-5.14-.81-3.45,2.03-7.3,5.57-7.46,1.75-.08,3.5-.02,5.25-.02h97.98-.01Z"/>
+        <path class="rd-icon-chart-2" d="m117.48,127.17c0-12.21.02-24.41-.02-36.62,0-2.14.65-3.91,2.25-5.33,1.07-.94,2.29-1.5,3.74-1.5,9.92,0,19.83-.02,29.75,0,3.09,0,5.74,2.67,5.92,5.83.03.46,0,.92,0,1.37v72.74c0,4.94-2.51,7.44-7.48,7.43-8.96,0-17.91-.02-26.87,0-.96,0-1.92-.07-2.84-.33-2.76-.81-4.41-3.02-4.43-6.1-.04-4.58-.02-9.17-.02-13.75v-23.75.02Zm12.65,0c0,9.91,0,19.82-.02,29.74,0,.96.22,1.54,1.27,1.54,4.58,0,9.16,0,13.74-.02.95,0,1.37-.4,1.37-1.45-.03-19.7-.03-39.4,0-59.1,0-1.13-.35-1.54-1.5-1.53-4.41.05-8.83,0-13.24,0-1.61,0-1.62,0-1.62,1.69v29.11h0Z"/>
+        <path class="rd-icon-chart-2" d="m42.13,142.29v21.24c0,1.52-.15,3.01-.97,4.33-1.28,2.08-3.21,3.2-5.61,3.21-9.66.05-19.32.05-28.99,0-3.42-.02-5.86-2.5-6.11-5.88-.35-4.78-.14-9.57-.16-14.36-.04-9.41-.02-18.82,0-28.24,0-.96.08-1.91.12-2.87.21-4.43,3.35-6.13,6.73-6.19,2.58-.05,5.16,0,7.75,0h19.37c5.32,0,7.87,2.56,7.87,7.92v20.87h0Zm-12.86.15h-.01c0-4.83-.03-9.66.02-14.49.01-1.2-.41-1.61-1.6-1.6-4.33.04-8.66.02-12.99.02-1.8,0-1.81,0-1.8,1.78.04,9.7.09,19.4.11,29.1,0,.89.47,1.03,1.16,1.07,4.49.31,8.99.08,13.48.13,1.52,0,1.62-.11,1.62-1.65v-14.37h.01Z"/>
+    </g>
+</svg></div>
+                        <div class="feat-img feat-file-img"><svg id="rsIconFileStack" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86.19 105.09">
+    <defs>
+        <style>.rd-icon-file-stack{fill:#fff;}</style>
+    </defs>
+    <g id="rsIconFileStack-g1">
+        <g id="rsIconFileStack-g2">
+            <g id="rsIconFileStack-g3">
+                <path class="rd-icon-file-stack" d="M22.72,42.23V8.76C22.32,4.34,25.58.43,30,.03c.49-.04.98-.04,1.47,0h32.06c2.66-.06,5.22,1,7.06,2.91,4.14,4.18,8.3,8.36,12.48,12.52,2.04,1.93,3.16,4.64,3.07,7.45v52.72c.39,4.46-2.92,8.39-7.38,8.77-.51.04-1.03.04-1.55-.01H31.48c-4.36.47-8.28-2.68-8.75-7.04-.06-.55-.06-1.1,0-1.66v-33.47ZM28.14,42.23v33.6c0,2.39.92,3.27,3.27,3.27h46.02c2.26,0,3.04-.82,3.04-3.07V28.73c0-1.54-.52-1.99-2.03-1.96h-14.02c-3.27,0-4.9-1.54-4.94-4.9v-13.86c0-1.8-.59-2.29-2.32-2.26h-25.07c-3.27,0-3.99.62-3.99,3.95.03,10.65.07,21.54.03,32.39v.13ZM72.59,21.25h6.14c.36,0,.88,0,1.11-.29s-.16-.75-.46-1.05c-4.36-4.36-8.72-8.72-13.07-13.07-.26-.29-.59-.72-1.01-.52s-.33.72-.33,1.11v12.26c0,1.21.52,1.63,1.7,1.6l5.92-.03Z"/>
+                <path class="rd-icon-file-stack" d="M54.29,52.82h-12.78c-2.22,0-2.94-.62-3.04-2.48s.56-2.78,2.71-3.07c.75-.05,1.5-.05,2.26,0h21.77c.75-.05,1.5-.05,2.26,0,2.52.29,3.27,1.67,2.68,4.12-.39,1.37-1.57,1.44-2.68,1.44h-13.17Z"/>
+                <path class="rd-icon-file-stack" d="M54.42,42.26h-13.07c-2.12,0-2.81-.69-2.81-2.68s.69-2.71,2.78-2.71h26.15c2.12,0,2.78.65,2.75,2.68s-.59,2.71-2.71,2.71h-13.07Z"/>
+                <path class="rd-icon-file-stack" d="M54.32,63.34h-13.07c-2.12,0-2.84-.69-2.88-2.61s.65-2.81,2.88-2.81h26.15c2.32,0,2.91.75,2.84,2.97s-.69,2.45-2.97,2.48l-12.94-.03Z"/>
+            </g>
+        </g>
+        <path class="rd-icon-file-stack" d="M69.47,86.53c-.14,1.8-.97,2.48-3.01,2.48H20.44c-2.35,0-3.27-.88-3.27-3.27v-33.73c.03-10.85,0-21.73-.03-32.39,0-3.1.62-3.85,3.33-3.94v-5.73c-.48-.04-.96-.04-1.44,0-4.42.4-7.68,4.31-7.29,8.73v66.93c-.06.55-.05,1.11,0,1.66.47,4.36,4.39,7.51,8.75,7.04h45.76c.51.05,1.03.06,1.55.01,4.13-.36,7.26-3.75,7.4-7.79h-5.74Z"/>
+        <path class="rd-icon-file-stack" d="M57.76,97.27c-.14,1.8-.97,2.48-3.01,2.48H8.73c-2.35,0-3.27-.88-3.27-3.27v-33.73c.03-10.85,0-21.73-.03-32.39,0-3.1.62-3.85,3.33-3.94v-5.73c-.48-.04-.96-.04-1.44,0C2.9,21.08-.36,24.99.04,29.41v66.93c-.06.55-.05,1.11,0,1.66.47,4.36,4.39,7.51,8.75,7.04h45.76c.51.05,1.03.06,1.55.01,4.13-.36,7.26-3.75,7.4-7.79h-5.74Z"/>
+    </g>
+</svg></div>
+                        <div class="feat-img feat-acct-img"><svg id="rdIconOnlineAccounting" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 193.72 193.73">
+    <defs>
+        <style>.rd-icon-online-accounting{fill:#fff;}</style>
+    </defs>
+    <g id="rdIconOnlineAccounting-g1" data-name="rdIconOnlineAccounting-g1">
+        <g id="rdIconOnlineAccounting-g2" data-name="rdIconOnlineAccounting-g2">
+            <path class="rd-icon-online-accounting" d="M97.11,0q41.76,0,83.53,0c9.21,0,13.06,3.79,13.07,12.89q0,63.65,0,127.29c0,9.25-4.29,13.51-13.79,13.55-17.57.07-35.14.12-52.71-.05-4.22,0-5.47,1.14-3.71,5.11a33,33,0,0,1,1.7,5.18c1.45,5.7,3.08,10.24,10.91,9.73,5.79-.38,9.59,5.24,9.16,10.82s-4.4,9.14-10.39,9.15q-38,.09-76.07,0c-6,0-10-3.68-10.39-9.16s3.4-11.2,9.18-10.82c7.83.52,9.22-4.1,10.95-9.7,3.17-10.28,3.32-10.24-7.52-10.24q-23.12,0-46.24,0C4,153.73,0,149.84,0,139.2Q0,76.55,0,13.9C0,3.44,3.48,0,14.08,0ZM96.9,123.42h82.54c7,0,7,0,7-6.74q0-50.73,0-101.44c0-7.45-.53-8-7.85-8H15c-7.12,0-7.78.64-7.78,7.58,0,34.14.06,68.29-.1,102.43,0,4.72,1.38,6.3,6.21,6.26C41.21,123.31,69.05,123.42,96.9,123.42Zm.48,7.44q-41.77,0-83.54,0c-1.94,0-4.59-.83-5.61,1-2,3.62-1.33,7.78-.41,11.61.74,3.07,3.7,2.79,6.2,2.79q82.8,0,165.6,0c6.21,0,6.9-1,6.84-9.11,0-6.13-.19-6.31-6.53-6.31Q138.66,130.84,97.38,130.86Zm-.56,42.39c6.29,0,12.58-.19,18.86.07,4.25.17,4.83-1.4,3.42-5A82.58,82.58,0,0,1,115.66,158c-.86-3.4-2.81-4.41-6.11-4.28-5,.19-9.93,0-14.89,0-15.74,0-15.74,0-20.15,15-.05.16-.09.32-.15.47-1.3,3.14,0,4.11,3.1,4C83.91,173.16,90.37,173.25,96.82,173.25Zm.08,13.21c11.41,0,22.82,0,34.23,0a30.08,30.08,0,0,0,4.92-.43,2.33,2.33,0,0,0,1.87-2.09,2.4,2.4,0,0,0-1.74-2.69,13.35,13.35,0,0,0-3.89-.49q-35.47,0-70.95,0c-2.27,0-5.34-.39-5.43,2.78s3.05,2.88,5.26,2.89C73.08,186.49,85,186.46,96.9,186.46Z"/>
+            <path class="rd-icon-online-accounting" d="M95.53,66.12c0-12.77,0-25.54,0-38.3,0-7.22,2.67-9.86,9.95-9.87q29.36-.06,58.7,0c7.19,0,10.32,3,10.35,10.29q.15,37.82,0,75.62c0,7.45-3,10.23-10.29,10.24q-29.59,0-59.2,0c-7,0-9.48-2.55-9.51-9.67C95.5,91.66,95.53,78.89,95.53,66.12Zm7.31-.6c0,11.77.13,23.54-.07,35.31-.07,4.19,1.12,5.9,5.61,5.85,17.9-.2,35.81-.17,53.71,0,3.87,0,5.19-1.22,5.16-5.15Q167,66,167.26,30.4c0-4-1.45-5.14-5.24-5.11-18.24.13-36.47.16-54.7,0-3.93,0-4.64,1.41-4.57,5C103,42,102.83,53.75,102.84,65.52Z"/>
+            <path class="rd-icon-online-accounting" d="M51.4,17.82c18.05.25,31.13,14.07,30.86,32.48C82,65.62,68.43,81.35,48.82,80.38,32.74,79.59,18.86,65.48,19,49,19.15,31.31,33.41,17.57,51.4,17.82ZM26.48,49.41c0,12.18,8.47,21.86,21,24,10.36,1.79,21.83-5.06,25.84-15.28C74.63,54.69,74.36,52.88,70,53c-5.63.19-11.27,0-16.9,0-4.28,0-6.35-2-6.23-6.45.15-5.46.08-10.93,0-16.4-.06-4.76-.82-5.2-5.29-3.4A24.86,24.86,0,0,0,26.48,49.41Zm38-3.63c2,0,4-.13,6,0,4,.32,4.48-1.46,3.23-4.77A23.6,23.6,0,0,0,61.81,27.55c-6.57-3.26-7.43-2.7-7.44,4.74,0,1.16,0,2.32,0,3.48C54.51,47.27,53,45.62,64.44,45.78Z"/>
+            <path class="rd-icon-online-accounting" d="M51.14,90.59c5.62,0,11.25,0,16.87,0,2.44,0,4.9.3,5.1,3.4s-2.24,3.87-4.66,3.89c-11.74.1-23.48.09-35.22,0-2.48,0-4.9-.86-4.9-3.79s2.44-3.54,5-3.54Z"/>
+            <path class="rd-icon-online-accounting" d="M51,103.54c5.8,0,11.59,0,17.38,0,2.29,0,4.49.45,4.71,3.27.24,3.13-2.07,4-4.53,4q-17.87.14-35.74,0c-2.32,0-4.48-1-4.53-3.64-.05-3,2.31-3.67,4.84-3.67Q42.1,103.53,51,103.54Z"/>
+            <path class="rd-icon-online-accounting" d="M95.39,141.91c-2.8,0-5.61.05-8.42,0-2.22,0-4-.93-4-3.4a3.42,3.42,0,0,1,3.4-3.59,110.84,110.84,0,0,1,19.28,0c2.13.17,3.75,1.44,3.5,4-.23,2.25-1.8,3-3.81,3.06C102,141.94,98.69,141.91,95.39,141.91Z"/>
+            <path class="rd-icon-online-accounting" d="M135,29.87c7.11,0,14.23.08,21.34,0,3.8-.06,5.46,1.65,5.42,5.37-.06,5,0,9.93,0,14.89,0,3.43-1.82,5.2-5.25,5.21-14.4,0-28.79,0-43.19,0-3.48,0-5.29-1.81-5.4-5.12-.16-5.12-.14-10.25-.06-15.38.05-3.39,1.77-5.05,5.33-5C120.46,30,127.75,29.87,135,29.87Zm-.57,18c5.3,0,10.6-.11,15.89,0,3.55.1,4.13-1.88,4-4.74s.71-6-3.76-6H118.79c-4.51,0-3.52,3.37-3.7,6-.19,2.88.44,4.81,4,4.7C124.2,47.72,129.33,47.84,134.46,47.84Z"/>
+            <path class="rd-icon-online-accounting" d="M149.4,65.89a51.73,51.73,0,0,1,5.43,0,3.59,3.59,0,0,1,3.55,3.49A3.36,3.36,0,0,1,155,73a103.71,103.71,0,0,1-10.87.09c-2.2-.1-3.76-1.32-3.65-3.79s1.83-3.33,4-3.45c1.65-.09,3.3,0,5,0Z"/>
+            <path class="rd-icon-online-accounting" d="M119.78,65.89a51.73,51.73,0,0,1,5.43,0,3.59,3.59,0,0,1,3.55,3.49A3.36,3.36,0,0,1,125.34,73a103.71,103.71,0,0,1-10.87.09c-2.2-.1-3.76-1.32-3.65-3.79s1.83-3.33,4-3.45c1.65-.09,3.3,0,5,0Z"/>
+            <path class="rd-icon-online-accounting" d="M123.36,69.45c0,1.81.14,3.64,0,5.43a3.59,3.59,0,0,1-3.5,3.55A3.37,3.37,0,0,1,116.28,75a101.05,101.05,0,0,1-.08-10.87c.09-2.2,1.31-3.76,3.78-3.66s3.34,1.84,3.45,4c.09,1.64,0,3.3,0,5Z"/>
+            <path class="rd-icon-online-accounting" d="M122.19,89.43a53.76,53.76,0,0,1,4,3.7,3.6,3.6,0,0,1,.25,5,3.37,3.37,0,0,1-4.92.29,104.62,104.62,0,0,1-8.06-7.28c-1.56-1.56-1.88-3.51-.13-5.27s3.61-1.21,5.29.18c1.27,1,2.44,2.21,3.66,3.33Z"/>
+            <path class="rd-icon-online-accounting" d="M122.42,94.47a51.7,51.7,0,0,1-3.7,4,3.59,3.59,0,0,1-5,.25,3.36,3.36,0,0,1-.3-4.92,104.82,104.82,0,0,1,7.28-8.06c1.56-1.56,3.52-1.88,5.27-.13s1.21,3.61-.17,5.29c-1,1.27-2.22,2.44-3.34,3.66Z"/>
+            <path class="rd-icon-online-accounting" d="M149.39,92.07c-1.81-.11-3.63-.07-5.41-.35-2.14-.33-3.74-1.4-3.53-3.91.19-2.24,1.7-3.09,3.72-3.13,3.29-.07,6.58-.06,9.87,0,2.44,0,4.33,1.1,4.34,3.68,0,2.4-2,3.29-4.06,3.5a47.67,47.67,0,0,1-4.93,0Z"/>
+            <path class="rd-icon-online-accounting" d="M149.16,102.06c-1.81,0-3.62.08-5.43,0a3.15,3.15,0,0,1-3.28-3A3.1,3.1,0,0,1,143,95.32a29,29,0,0,1,12.72.08,3.34,3.34,0,0,1-.63,6.63C153.12,102.15,151.14,102.06,149.16,102.06Z"/>
+        </g>
+    </g>
+</svg></div>
+                        <div class="feat-img feat-vacancies-img"><svg id="rdIconSyndicate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36.05 39.55">
+    <defs>
+        <style>.rd-icon-syndicate{fill:#fff;}</style>
+    </defs>
+    <g id="rdIconSyndicate-g1" data-name="rdIconSyndicate-g1">
+        <g id="rdIconSyndicate-g2" data-name="rdIconSyndicate-g2">
+            <path class="rd-icon-syndicate" d="M32.56,32.24c-2.09-4.16-7.39-7-13.58-7.32V22.77H28a2,2,0,0,0,.35,0,.84.84,0,0,0,.77-.78,2.44,2.44,0,0,0,0-.29V8.43l2.2,1.26.68.38a.92.92,0,0,0,.43.11.84.84,0,0,0,.74-.43.86.86,0,0,0-.32-1.16l-.17-.1L22,2.36,18.58.42a.92.92,0,0,0-.49-.14,1.06,1.06,0,0,0-.52.15l-1.8,1c-.47.27-.94.54-1.4.82,0-.45,0-.9,0-1.34A.86.86,0,0,0,13.41,0H9.6a.88.88,0,0,0-1,1V2.11c0,1,0,2,0,2.94a.69.69,0,0,1-.44.75C7,6.45,5.82,7.13,4.67,7.8L3.4,8.52A.87.87,0,0,0,3,9.75a.78.78,0,0,0,.7.42A1.18,1.18,0,0,0,4.25,10l1.47-.84c.44-.25.88-.5,1.3-.76V21.78a.89.89,0,0,0,1,1h9.08v2.14c-6.31.26-11.7,3.19-13.77,7.43a3.63,3.63,0,1,0,2,.4c1.9-3.36,6.5-5.69,11.77-5.93v5.67a3.61,3.61,0,1,0,1.91,0V26.82c5.21.27,9.74,2.59,11.62,5.91a3.63,3.63,0,1,0,2-.49ZM3.62,37.94a2,2,0,1,1,2-2A2,2,0,0,1,3.62,37.94ZM10.33,1.7h2.31c0,.52,0,1,0,1.55L10.33,4.57V1.7Zm17.1,16.76v2.59H22c0-1.46,0-2.91,0-4.37v-1.1a.86.86,0,0,0-.94-.95h-6a.88.88,0,0,0-.95.93v5.49H8.73V7.51c0-.06,0-.06,0-.09L18,2.18a.34.34,0,0,1,.14-.05.37.37,0,0,1,.15.06Q22.8,4.8,27.37,7.4c.06,0,.07,0,.07.11Q27.42,13,27.43,18.46ZM15.85,16.35h4.48v4.7H15.85C15.86,19.5,15.86,17.94,15.85,16.35Zm4.26,19.58a2,2,0,1,1-2-2A2,2,0,0,1,20.11,35.93Zm12.32,1.92a2,2,0,0,1-.16-4h.31a2,2,0,0,1-.15,4Z"/>
+        </g>
+    </g>
+</svg></div>
+                        <div class="feat-img feat-payments-img"><svg id="rdIconMobilePay" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220.39 225">
+    <defs>
+        <style>.rd-icon-mobile-pay{fill:#fff;}</style>
+    </defs>
+    <g id="rdIconMobilePay-g">
+        <path class="rd-icon-mobile-pay" d="M124.98,0c11.91,4.35,17.12,12.91,16.46,25.49-.16,3.13-1.12,4.57-4.21,4.82-2.15.17-4.28.64-6.4,1.06-2.38.48-3.52-.21-4.2-2.78-1.65-6.28-5.18-9.02-11.96-9.11-9.78-.13-19.56.2-29.34.2-15.93,0-31.86-.14-47.78-.12-4.49,0-8.99.14-13.45.54-5.85.53-8.95,4.36-9,11.14-.1,14.32-.05,28.64-.05,42.96,0,34.8,0,69.61.02,104.41,0,10.08,3.29,13.37,13.51,13.38,28.31.02,56.62.02,84.93,0,10.03,0,13.29-3.37,13.34-13.6.02-4.5.17-9-.03-13.49-.15-3.45,1.2-5.11,4.61-5.81,9.82-2.02,9.8-2.12,9.8,7.87,0,10.66-.49,21.34.12,31.97.74,12.88-4.48,21.42-16.37,26.08H16.98C4.49,220.6-.02,211.24,0,198.62.1,140.86.06,83.1.03,25.33.02,13.05,4.93,4.16,16.98,0h108ZM70.8,212.94s0-.02,0-.03c3.64,0,7.29.14,10.93-.04,2.96-.15,5.01-1.6,5.2-4.88.21-3.55-1.83-5.43-5-5.53-7.28-.24-14.57-.22-21.85-.02-3.13.09-5.4,1.81-5.28,5.34.12,3.48,2.43,4.97,5.57,5.13,3.47.18,6.95.04,10.43.04Z"/>
+        <path class="rd-icon-mobile-pay" d="M72.72,91.75c0-2.17,0-4.33,0-6.5.01-9.02-1.12-7.48,7.35-9,36.55-6.53,73.14-12.86,109.68-19.45,3.12-.56,8.63,1.15,7.76-5.5-1.19-9.16-4.64-12.91-11.37-11.89-7.9,1.2-15.76,2.67-23.63,4.07-28.2,5.01-56.39,10.05-84.6,15.03-2.08.37-5.58,1.81-5.3-1.88.23-3.04-2.77-7.99,3.67-9.1,23.96-4.1,47.88-8.43,71.82-12.65,12.13-2.14,24.26-4.31,36.41-6.34,10.92-1.82,20.54,4.35,22.68,15.31,3.95,20.27,7.36,40.64,10.99,60.96.7,3.93,1.5,7.86,1.98,11.82,1.51,12.54-4.46,20.91-17.04,23.32-15.04,2.88-30.15,5.41-45.24,8.07-25.58,4.51-51.16,9-76.74,13.5-.66.12-1.36.5-1.95.35-2.17-.53-5.54,2.93-6.48-1.59-1.27-6.12.28-8.62,5.35-9.51,40.01-7.04,80.01-14.09,120.02-21.12,10.23-1.8,12.35-4.83,10.53-14.97-1.35-7.54-2.69-15.08-3.85-22.65-.52-3.43-1.65-4.81-5.55-4.1-26.04,4.76-52.12,9.28-78.19,13.86-14.76,2.59-29.55,5.02-44.28,7.75-3.2.59-4.24-.11-4.13-3.32.16-4.81.04-9.63.04-14.45.02,0,.04,0,.06,0Z"/>
+        <path class="rd-icon-mobile-pay" d="M58.03,105.03c0-19.65-.02-39.3,0-58.94.01-8.92,2.37-11.26,11.29-11.2,3.14.02,6.37-.56,9.4.63,2.29.9,4.37,2.51,3.79,5.16-.49,2.27-2.99,1.62-4.71,1.64q-11.77.11-11.77,11.9c0,35.63,0,71.27,0,106.9,0,7.59.03,7.6,7.4,7.62,1.67,0,3.33-.06,4.99.03,1.43.08,3.36-.45,3.97,1.27.72,2.02-.75,3.78-2.31,4.52-5.68,2.69-11.78,2.32-17.48.53-4.88-1.53-4.55-6.45-4.56-10.62-.04-19.81-.02-39.63-.02-59.44h-.02Z"/>
+    </g>
+</svg></div>
+                        <div class="feat-img feat-screening-img"><svg id="rdIconCreditReport-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.95 110.39">
+    <defs>
+        <style>.rd-icon-credit-report{fill:#fff;}</style>
+    </defs>
+    <g id="rdIconCreditReport-g">
+        <path class="rd-icon-credit-report" d="m44.17,45.45h-7.62c-1.27.2-2.46-.66-2.67-1.93-.03-.18-.04-.37-.02-.55-.19-4.4-.36-8.78,3.45-12.07,1.22-1.05.38-2.03,0-3.03-1.52-3.49-.27-7.57,2.93-9.62,3.31-2.09,7.66-1.34,10.09,1.72,1.85,2.2,2.23,5.28.97,7.86-.79,1.16-.56,2.74.53,3.62,3.24,3.28,3.45,7.45,2.97,11.71-.07,1.34-1.21,2.37-2.55,2.31-.06,0-.12,0-.18-.02h-7.9Zm.26-3.95h4.43c.86.09,1.63-.54,1.72-1.41,0-.05,0-.1,0-.15.33-3.53-2.06-6.73-5.54-7.41-3.26-.28-6.19,1.96-6.78,5.17-.5,3.24,0,3.83,3.29,3.85l2.86-.05Zm-.05-20.02c-1.76-.14-3.3,1.16-3.44,2.92,0,.1-.01.19-.01.29-.25,1.64.88,3.17,2.52,3.42.19.03.38.04.57.03,1.72.24,3.3-.95,3.55-2.67.03-.22.04-.45.02-.68.08-1.75-1.28-3.23-3.03-3.31-.06,0-.12,0-.18,0Z"/>
+        <path class="rd-icon-credit-report" d="m7.01,110.39c-.52,0-1.04-.01-1.55-.04-1.68-.06-3.23-.73-4.26-1.85-.82-.89-1.24-2-1.19-3.13,0-.08,0-.15.02-.23l.13-50.15V6.15C.16,1.85,2.2.1,7.2.1h74.73c.36-.07.73-.1,1.1-.1,2.85,0,5.28,1.73,5.79,4.1.07.35.1.72.09,1.07v.06s0,.06,0,.06c.06.88.06,1.77,0,2.65v95.12c0,5.58-2.02,7.28-8.63,7.28H8.61c-.57.03-1.09.04-1.6.04ZM8.95,3.89c-3.45,0-4.12.29-4.12,3.67v94.94c0,3.4.61,3.67,4.04,3.67h70.85c3.57,0,4.21-.28,4.21-3.75V7.86c0-3.68-.68-3.97-4.51-3.97H8.95Z"/>
+        <path class="rd-icon-credit-report" d="m13.88,82.42c.15.26.01.57.19.86.13-2.4.7-4.67,1.43-6.9,1.11-3.42,2.92-6.46,5.19-9.24,1.79-2.19,3.81-4.15,6.16-5.75.38-.26.76-.5,1.13-.77.26-.19.4-.15.56.13.8,1.41,1.62,2.8,2.42,4.2,1.14,1.97,2.27,3.94,3.42,5.91.18.3.13.43-.15.62-4.36,2.93-7.06,6.97-8,12.15-.13.73-.19,1.48-.19,2.22,0,.36-.14.46-.51.46-3.68-.02-7.36-.01-11.03-.02-.2,0-.4-.01-.61-.02,0-1.29,0-2.58,0-3.87Z"/>
+        <path class="rd-icon-credit-report" d="m68.48,86.33c-1.88,0-3.77-.01-5.65,0-.38,0-.34-.18-.36-.44-.12-2.44-.71-4.75-1.75-6.97-1.46-3.12-3.7-5.52-6.51-7.43-.25-.17-.39-.3-.2-.63,1.96-3.35,3.91-6.7,5.85-10.06.18-.3.3-.35.61-.15,2.42,1.51,4.57,3.34,6.45,5.48,3.8,4.32,6.22,9.3,7.21,14.97.28,1.57.46,3.15.47,4.74,0,.36-.11.48-.48.48-1.88-.01-3.77,0-5.65,0,0,0,0,0,0,.01Z"/>
+        <path class="rd-icon-credit-report" d="m43.43,55.9c5.64.02,10.14,1.16,14.42,3.25.61.3.6.3.27.88-1.89,3.3-3.79,6.6-5.67,9.9-.17.3-.33.36-.66.21-2.48-1.18-5.11-1.62-7.84-1.61-2.56,0-4.99.55-7.3,1.62-.3.14-.46.11-.64-.19-1.54-2.67-3.09-5.34-4.64-8.01-.42-.72-.81-1.46-1.24-2.18-.14-.23-.09-.34.14-.47,2.74-1.48,5.68-2.36,8.73-2.93,1.74-.32,3.5-.52,4.41-.48Z"/>
+        <path class="rd-icon-credit-report" d="m56.34,77.6c.04.16-.07.21-.14.27-2.67,2.59-5.44,5.06-8.05,7.7-.68.69-1.41,1.34-2.13,1.99-.85.76-1.84.96-2.88.46-1.09-.52-1.73-1.4-1.67-2.65.05-1.12.63-1.92,1.67-2.37,4.16-1.77,8.34-3.49,12.54-5.16.21-.09.41-.23.66-.25Z"/>
+    </g>
+</svg></div>
+                        <div class="feat-rd-logo"><img src="assets/images/rentec_logo_RD_only.svg" alt="Rentec Direct Logo" width="125" height="86"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="feat-title feat-reporting-title">Reporting System</div>
+            <div class="feat-box feat-reporting-box" data-path="fw-1">Create your own custom rentals website for tenants to discover vacancies and attract owners to your business online.</div>
+
+            <div class="feat-title feat-acct-title">Complete Accounting System</div>
+            <div class="feat-box feat-acct-box" data-path="fw-2">Full bank, property, and tenant accounting features including general ledger accounting to keep your records simple and accurate. </div>
+
+            <div class="feat-title feat-screening-title">Tenant Screening</div>
+            <div class="feat-box feat-screening-box" data-path="fw-3">Discover the security of knowing the history of each tenant with access to instantly returned credit, criminal, and eviction reports. </div>
+
+            <div class="feat-title feat-vacancies-title"><span></span>Publish Vacancies Online</div>
+            <div class="feat-box feat-vacancies-box" data-path="fw-4">Instantly expand your reach and find the best renters quickly. Automatically publish listing to 20+ popular rental websites. </div>
+
+            <div class="feat-title feat-file-title">Online File Management</div>
+            <div class="feat-box feat-file-box" data-path="fw-5">Securely store and share important files such as lease agreements, photos, and other documents with your renters and owners. </div>
+
+            <div class="feat-title feat-payments-title">Free Online Tenant Payments</div>
+            <div class="feat-box feat-payments-box" data-path="fw-6">Automate your rent collection process with free online rent payments for your tenants with eCheck/ACH.  </div>
+
+            <div class="feat-title feat-web-title">A Professional Website</div>
+            <div class="feat-box feat-web-box" data-path="fw-7">Create your own custom rentals website for tenants to discover vacancies and attract owners to your business online.</div>
+        </div>
+
+        <div class="cta-button-wrapper double-button features">
+            <a href="/features" class="cta-button-blue cta-button">Discover more features</a>
+            <a href="/video-demo" class="cta-button-yellow cta-button">Watch a video tour</a>
+        </div>
+    </section>
+
+
+
+    <section class="video-section bg-gray">
+        <div class="container">
+            <div class="row mt-4 ndx-video-wrapper">
+                <div class="ndx-video-title">
+                    <h2 class="section-title video-title">
+                        See what <span class="highlight">Rentec Direct clients</span> have to say...
+                    </h2>
+                </div>
+
+<!--                <div class="ndx-video-vid video-responsive">-->
+<!--                    <iframe src="https://player.vimeo.com/video/841013704?h=3f48fcbb10&color=006798"  allow="autoplay; fullscreen; picture-in-picture" allowfullscreen class="vimeo-iframe video-responsive-item"></iframe>-->
+<!--                </div>-->
+
+                <div class="" id="vidCont" tabindex="0" style="width:100%;position:relative;">
+                    <div class="" id="vidCont" tabindex="0" style="width:100%;position:relative;">
+                        <img id="video-thumbnail" src="assets/images/video/Scott_Davis_thumb.webp" data-video-id="841013704?h=3f48fcbb10" data-video-player="vimeo" class="w-100 lazyload" >
+                        <button type="button" id="video-tn-button" class="lty-playbtn"><span class="lyt-visually-hidden">Play</span></button>
+                        <div id="player"></div>
+                    </div>
+                </div>
+
+                <div class="ndx-video-text">
+                    <strong>Scott Davis</strong><br> <span style="font-size:.9rem;">Rentec Direct client since 2013</span>
+                    <br><br>
+                    <blockquote>&quot;I started off just using an excel spreadsheet and found that that was not working as I was expanding.
+                        [I] then found Rentec and have been able to expand drastically based on the time savings it created.&quot;
+                        <br><br>
+                        - Scott<br>
+                        <span style="font-size:.9rem;">Owner Property Management Group of Oregon</span>
+                    </blockquote>
+                    <img data-src="assets/images/scott_story.png" alt="Scott text" class="scottImg1 lazyload" width="326" height="64">
+                    <img data-src="assets/images/scotts_story_2.png" class="scottImg2 lazyload" alt="Scott text 2" width="350" height="76">
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-button-wrapper double-button video">
+            <a class="left-text"><img data-src="assets/images/icons/dont-take-our-word.svg" class="lazyload img-large" alt="Dont take our word text" width="350" height="106"></a>
+            <a class="left-text"><img data-src="assets/images/icons/dont-take-our-word-sm.svg" class="lazyload img-small" alt="Dont take our word text" width="300" height="86"></a>
+            <a href="/reviews" class="cta-button-blue cta-button">See more testimonials</a>
+        </div>
+    </section>
+
+
+    <section class="partner-mobile">
+        <h2 class="section-title partner">
+            <span class="highlight">Integrate Features</span> <br>from leading industry services
+        </h2>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="carousel-box">
+                    <div class="carousel-grid">
+                        <div class="car-img">
+                            <img class="lazyload" data-src="./assets/images/partners/sure_icon.webp" alt="Sure Logo" width="24" height="31">
+                        </div>
+                        <div class="car-title">Sure</div>
+                        <div class="car-desc">Renters Insurance</div>
+                    </div>
+                </div>
+
+                <div class="carousel-box">
+                    <div class="carousel-grid">
+                        <div class="car-img">
+                            <img class="lazyload" data-src="./assets/images/partners/dropbox_icon.webp" alt="Dropbox Logo" width="28" height="31">
+                        </div>
+                        <div class="car-title">Dropbox Sign</div>
+                        <div class="car-desc">Electronic Signatures</div>
+                    </div>
+                </div>
+
+                <div class="carousel-box">
+                    <div class="carousel-grid">
+                        <div class="car-img">
+                            <img class="lazyload" data-src="./assets/images/partners/dwellsy_icon.webp" alt="Dwellsy Logo" width="31" height="31">
+                        </div>
+                        <div class="car-title">Dwellsy</div>
+                        <div class="car-desc">Rental Search</div>
+                    </div>
+                </div>
+
+                <div class="carousel-box">
+                    <div class="carousel-grid">
+                        <div class="car-img">
+                            <img class="lazyload" data-src="./assets/images/partners/petscreening_icon.webp" alt="Pet Screening Logo" width="35" height="31">
+                        </div>
+                        <div class="car-title">PetScreening</div>
+                        <div class="car-desc">Pet Screening</div>
+                    </div>
+                </div>
+
+                <div class="carousel-box">
+                    <div class="carousel-grid">
+                        <div class="car-img">
+                            <img class="lazyload" data-src="./assets/images/partners/paynearme_icon.webp" alt="Paynearme Logo" width="31" height="31">
+                        </div>
+                        <div class="car-title">PayNearMe</div>
+                        <div class="car-desc">Cash Payments</div>
+                    </div>
+                </div>
+
+                <div class="carousel-box">
+                    <div class="carousel-grid">
+                        <div class="car-img">
+                            <img class="lazyload" data-src="./assets/images/partners/payscore_icon.webp" alt="Payscore Logo" width="31" height="31">
+                        </div>
+                        <div class="car-title">Payscore</div>
+                        <div class="car-desc">Income Verification</div>
+                    </div>
+                </div>
+
+                <div class="carousel-box">
+                    <div class="carousel-grid">
+                        <div class="car-img">
+                            <img class="lazyload" data-src="./assets/images/partners/zinspector_icon.webp" alt="ZInspector Logo" width="31" height="31">
+                        </div>
+                        <div class="car-title">ZInspector</div>
+                        <div class="car-desc">Rental Inspections</div>
+                    </div>
+                </div>
+
+                <div class="carousel-box">
+                    <div class="carousel-grid">
+                        <div class="car-img">
+                            <img class="lazyload" data-src="./assets/images/partners/twilio_icon.webp" alt="Twilio Logo" width="31" height="31">
+                        </div>
+                        <div class="car-title">Twillio</div>
+                        <div class="car-desc">Communication</div>
+                    </div>
+                </div>
+
+                <div class="carousel-box">
+                    <div class="carousel-grid">
+                        <div class="car-img">
+                            <img class="lazyload" data-src="./assets/images/partners/plaid_icon.webp" alt="Plaid Logo" width="31" height="31">
+                        </div>
+                        <div class="car-title">Plaid</div>
+                        <div class="car-desc">Secure Bank Sync</div>
+                    </div>
+                </div>
+
+                <div class="carousel-box">
+                    <div class="carousel-grid">
+                        <div class="car-img">
+                            <img class="lazyload" data-src="./assets/images/partners/csgforte_icon.webp" alt="CSG Forte Logo" width="31" height="31">
+                        </div>
+                        <div class="car-title">CSGForte</div>
+                        <div class="car-desc">Online Payments</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cta-button-wrapper partner">
+            <a class="cta-button-blue">View all integrations</a>
+        </div>
+    </section>
+
+
+    <section class="partner-carousel">
+        <h2 class="section-title partner">
+            <span class="highlight">Integrate Features</span> <br>from leading industry services
+        </h2>
+
+        <div style="text-align: center;max-width:750px;margin:0 auto 50px auto;">
+            You will be able to provide outstanding service to your renters, clients, and employees through these strategic partnerships provided by Rentec Direct.
+        </div>
+
+        <div class="carousel2 partner-logos">
+            <div class="carousel-box">
+                <div class="carousel-grid">
+                    <div class="car-img">
+                        <img class="lazyload" data-src="./assets/images/partners/dropbox_icon.webp" alt="Dropbox Logo" width="28" height="31">
+                    </div>
+                    <div class="car-title">Dropbox Sign</div>
+                    <div class="car-desc">Electronic Signatures</div>
+                </div>
+            </div>
+            <div class="carousel-box">
+                <div class="carousel-grid">
+                    <div class="car-img">
+                        <img class="lazyload" data-src="./assets/images/partners/sure_icon.webp" alt="Sure Logo" width="24" height="31">
+                    </div>
+                    <div class="car-title">Sure</div>
+                    <div class="car-desc">Renters Insurance</div>
+                </div>
+            </div>
+            <div class="carousel-box">
+                <div class="carousel-grid">
+                    <div class="car-img">
+                        <img class="lazyload" data-src="./assets/images/partners/bluemoon_icon.webp" alt="Bluemoon Logo" width="33" height="31">
+                    </div>
+                    <div class="car-title">Bluemoon</div>
+                    <div class="car-desc">Lease Agreements</div>
+                </div>
+            </div>
+            <div class="carousel-box">
+                <div class="carousel-grid">
+                    <div class="car-img">
+                        <img class="lazyload" data-src="./assets/images/partners/petscreening_icon.webp" alt="Petscreening Logo" width="35" height="31">
+                    </div>
+                    <div class="car-title">PetScreening</div>
+                    <div class="car-desc">Pet Screening</div>
+                </div>
+            </div>
+            <div class="carousel-box">
+                <div class="carousel-grid">
+                    <div class="car-img">
+                        <img class="lazyload" data-src="./assets/images/partners/paynearme_icon.webp" alt="Paynearme Logo" width="31" height="31">
+                    </div>
+                    <div class="car-title">PayNearMe</div>
+                    <div class="car-desc">Cash Payments</div>
+                </div>
+            </div>
+            <div class="carousel-box">
+                <div class="carousel-grid">
+                    <div class="car-img">
+                        <img class="lazyload" data-src="./assets/images/partners/payscore_icon.webp" alt="Payscore Logo" width="31" height="31">
+                    </div>
+                    <div class="car-title">Payscore</div>
+                    <div class="car-desc">Income Verification</div>
+                </div>
+            </div>
+            <div class="carousel-box">
+                <div class="carousel-grid">
+                    <div class="car-img">
+                        <img class="lazyload" data-src="./assets/images/partners/zinspector_icon.webp" alt="ZInspector Logo" width="31" height="31">
+                    </div>
+                    <div class="car-title">ZInspector</div>
+                    <div class="car-desc">Rental Inspections</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel3 partner-logos" dir="rtl">
+            <div class="carousel-box">
+                <div class="carousel-grid">
+                    <div class="car-img">
+                        <img class="lazyload" data-src="./assets/images/partners/twilio_icon.webp" alt="Twilio Logo" width="31" height="31">
+                    </div>
+                    <div class="car-title">Twillio</div>
+                    <div class="car-desc">Communication</div>
+                </div>
+            </div>
+            <div class="carousel-box">
+                <div class="carousel-grid">
+                    <div class="car-img">
+                        <img class="lazyload" data-src="./assets/images/partners/plaid_icon.webp" alt="Plaid Logo" width="31" height="31">
+                    </div>
+                    <div class="car-title">Plaid</div>
+                    <div class="car-desc">Secure Bank Sync</div>
+                </div>
+            </div>
+            <div class="carousel-box">
+                <div class="carousel-grid">
+                    <div class="car-img">
+                        <img class="lazyload" data-src="./assets/images/partners/csgforte_icon.webp" alt="CSG Forte Logo" width="31" height="31">
+                    </div>
+                    <div class="car-title">CSGForte</div>
+                    <div class="car-desc">Online Payments</div>
+                </div>
+            </div>
+            <div class="carousel-box">
+                <div class="carousel-grid">
+                    <div class="car-img">
+                        <img class="lazyload" data-src="./assets/images/partners/intellicorp_icon.webp" alt="Intellicorp Logo" width="18" height="31">
+                    </div>
+                    <div class="car-title">Intellicorp</div>
+                    <div class="car-desc">SSN Verification</div>
+                </div>
+            </div>
+            <div class="carousel-box">
+                <div class="carousel-grid">
+                    <div class="car-img">
+                        <img class="lazyload" data-src="./assets/images/partners/cloudconvert_icon.webp" alt="Cloudconvert Logo" width="31" height="20">
+                    </div>
+                    <div class="car-title">CloudConvert</div>
+                    <div class="car-desc">File Converter</div>
+                </div>
+            </div>
+
+            <div class="carousel-box">
+                <div class="carousel-grid">
+                    <div class="car-img">
+                        <img class="lazyload" data-src="./assets/images/partners/cevado_icon.webp" alt="Cevado Logo" width="18" height="31">
+                    </div>
+                    <div class="car-title">Cevado</div>
+                    <div class="car-desc">PM Websites</div>
+                </div>
+            </div>
+            <div class="carousel-box">
+                <div class="carousel-grid">
+                    <div class="car-img">
+                        <img class="lazyload" data-src="./assets/images/partners/showmojo_icon.webp" alt="Showmojo Logo" width="31" height="22">
+                    </div>
+                    <div class="car-title">ShowMojo</div>
+                    <div class="car-desc">Leasing Automation</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel4 partner-logos">
+            <div class="carousel-box">
+                <div class="carousel-grid">
+                    <div class="car-img">
+                        <img class="lazyload" data-src="./assets/images/partners/aptlist_icon.webp" alt="Apartment List Logo" width="26" height="31">
+                    </div>
+                    <div class="car-title">Apartment List</div>
+                    <div class="car-desc">Rental Search</div>
+                </div>
+            </div>
+            <div class="carousel-box">
+                <div class="carousel-grid">
+                    <div class="car-img">
+                        <img class="lazyload" data-src="./assets/images/partners/dwellsy_icon.webp" alt="Dwellsy Logo" width="31" height="31">
+                    </div>
+                    <div class="car-title">Dwellsy</div>
+                    <div class="car-desc">Rental Search</div>
+                </div>
+            </div>
+            <div class="carousel-box">
+                <div class="carousel-grid">
+                    <div class="car-img">
+                        <img class="lazyload" data-src="./assets/images/partners/realtor.com_icon.webp" alt="Realtor Logo" width="32" height="31">
+                    </div>
+                    <div class="car-title">Realtor.com</div>
+                    <div class="car-desc">Rental Search</div>
+                </div>
+            </div>
+            <div class="carousel-box">
+                <div class="carousel-grid">
+                    <div class="car-img">
+                        <img class="lazyload" data-src="./assets/images/partners/trovit_icon.webp" alt="Trovit Logo" width="28" height="31">
+                    </div>
+                    <div class="car-title">Trovit</div>
+                    <div class="car-desc">Rental Search</div>
+                </div>
+            </div>
+            <div class="carousel-box">
+                <div class="carousel-grid">
+                    <div class="car-img">
+                        <img class="lazyload" data-src="./assets/images/partners/zumper_icon.webp" alt="Zumper Logo" width="31" height="31">
+                    </div>
+                    <div class="car-title">Zumper</div>
+                    <div class="car-desc">Rental Search</div>
+                </div>
+            </div>
+            <div class="carousel-box">
+                <div class="carousel-grid">
+                    <div class="car-img">
+                        <img class="lazyload" data-src="./assets/images/partners/rentalbeast_icon.webp" alt="Rentalbeast Logo" width="35" height="31">
+                    </div>
+                    <div class="car-title">Rental Beast</div>
+                    <div class="car-desc">Rental Search</div>
+                </div>
+            </div>
+            <div class="carousel-box">
+                <div class="carousel-grid">
+                    <div class="car-img">
+                        <img class="lazyload" data-src="./assets/images/partners/rentalsource_icon.webp" alt="Rental Source Logo" width="39" height="31">
+                    </div>
+                    <div class="car-title">RentalSource</div>
+                    <div class="car-desc">Rental Search</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-button-wrapper partner">
+            <a href="/integration-partners" class="cta-button-blue">View all integrations</a>
+        </div>
+    </section>
+
+
+    <section class="product-categories">
+        <div class="container">
+            <div class="row">
+                <h2 class="section-title category">
+                    <span class="highlight">Made for all portfolios.</span> <br>No matter what you manage
+                </h2>
+
+                <div  class="category-grid">
+                    <div class="cat-container cat1">
+                        <div class="cat-img-wrapper" style="--cat-img-width:150px;--cat-img-top-pad:100px;">
+                            <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129.69 65.57"><defs><style>.build-single-fam-1{fill:#77bdd8;}.build-single-fam-1,.build-single-fam-2,.build-single-fam-3{stroke:#231f20;stroke-linecap:round;stroke-linejoin:round;}.build-single-fam-2{fill:#157eb2;}.build-single-fam-3{fill:#fff;}</style></defs><g id="Layer_1-2"><polygon class="build-single-fam-3" points="67.81 65.07 10.97 65.07 10.97 32.87 39.39 10.22 67.81 32.87 67.81 65.07"/><rect class="build-single-fam-3" x="30.63" y="38.14" width="16.67" height="26.92"/><rect class="build-single-fam-3" x="67.81" y="33.01" width="36.32" height="32.06"/><rect class="build-single-fam-3" x="77.42" y="38.14" width="17.67" height="13.46"/><polygon class="build-single-fam-2" points="77.42 30.6 43.59 3.8 39.43 .5 32.89 5.68 .5 31.34 5.54 37.7 39.43 10.86 72.38 36.96 77.42 30.6"/><polygon class="build-single-fam-2" points="47.5 6.89 99.51 6.89 109.52 27.48 73.77 27.48 47.5 6.89"/><line class="build-single-fam-3" x1=".59" y1="65.07" x2="129.19" y2="65.07"/><polygon class="build-single-fam-2" points="75.52 33.01 109.03 33.01 109.03 27.48 73.77 27.48 77.42 30.6 75.52 33.01"/><path class="build-single-fam-2" d="M126.66,44.88c1.65,16.54-3.46,16.62-7.72,16.62s-9.23-.07-7.72-16.62c.88-9.68,3.49-14.86,7.72-16.62.84-.35,6.73,6.72,7.72,16.62Z"/><line class="build-single-fam-1" x1="118.96" y1="53.94" x2="118.96" y2="65.07"/></g></svg>                        </div>
+                        Single Family
+                    </div>
+                    <div class="cat-container cat2">
+                        <div class="cat-img-wrapper">
+                            <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84.05 105.81"><defs><style>.build-multi-1{fill:#77bdd8;}.build-multi-1,.build-multi-2,.build-multi-3,.build-multi-4,.build-multi-5,.build-multi-6{stroke:#231f20;}.build-multi-1,.build-multi-2,.build-multi-4,.build-multi-5,.build-multi-6{stroke-linecap:round;}.build-multi-1,.build-multi-2,.build-multi-5,.build-multi-6{stroke-linejoin:round;}.build-multi-2{fill:#157eb2;}.build-multi-3,.build-multi-4{stroke-miterlimit:10;}.build-multi-3,.build-multi-4,.build-multi-6{fill:#fff;}.build-multi-5{fill:none;}</style></defs><g id="Layer_1-2"><rect class="build-multi-3" x="7.41" y="10" width="67.51" height="95.31"/><polygon class="build-multi-2" points="78.03 21.91 50.92 21.91 41.33 12.24 32.44 21.91 4.64 21.91 9.65 .5 73.54 .5 78.03 21.91"/><path class="build-multi-6" d="M35.98,79.67v-45.91c0-2.54,2.32-4.59,5.18-4.59h0c2.86,0,5.18,2.06,5.18,4.59v45.91"/><rect class="build-multi-5" x="14.87" y="81.65" width="12.95" height="23.65"/><rect class="build-multi-6" x="14.87" y="58.47" width="12.95" height="12.95"/><rect class="build-multi-6" x="14.87" y="35.29" width="12.95" height="12.95"/><rect class="build-multi-5" x="53.51" y="81.65" width="12.95" height="23.65"/><rect class="build-multi-6" x="53.51" y="58.47" width="12.95" height="12.95"/><rect class="build-multi-6" x="53.51" y="35.29" width="12.95" height="12.95"/><line class="build-multi-4" x1=".5" y1="105.31" x2="83.55" y2="105.31"/><path class="build-multi-2" d="M44.7,91.15c.76,5.45-1.6,5.48-3.57,5.48s-4.27-.02-3.57-5.48c.41-3.19,1.61-4.89,3.57-5.48.39-.11,3.11,2.21,3.57,5.48Z"/><line class="build-multi-1" x1="41.14" y1="93.48" x2="41.14" y2="98.66"/><polygon class="build-multi-5" points="43.18 105.3 38.94 105.3 37.56 99.39 44.73 99.39 43.18 105.3"/></g></svg>                        </div>
+                        Small Multi-Family
+                    </div>
+                    <div class="cat-container cat3">
+                        <div class="cat-img-wrapper" style="--cat-img-width:125px;--cat-img-top-pad:50px;">
+                            <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.16 101.42"><defs><style>.build-apt-1{fill:#77bdd8;}.build-apt-1,.build-apt-2,.build-apt-3,.build-apt-4{stroke:#231f20;stroke-linecap:round;stroke-linejoin:round;}.build-apt-2{fill:#157eb2;}.build-apt-3{fill:none;}.build-apt-4{fill:#fff;}</style></defs><g id="Layer_1-2"><rect class="build-apt-4" x="16.66" y="5.61" width="67.51" height="95.31"/><rect class="build-apt-2" x="13.25" y=".5" width="74.33" height="5.45"/><rect class="build-apt-3" x="43.51" y="74.94" width="12.95" height="23.02"/><rect class="build-apt-3" x="42.07" y="97.96" width="15.82" height="2.95"/><rect class="build-apt-4" x="24.19" y="53.87" width="12.95" height="12.95"/><rect class="build-apt-4" x="24.19" y="32.46" width="12.95" height="12.95"/><rect class="build-apt-4" x="24.19" y="75.28" width="12.95" height="12.95"/><rect class="build-apt-4" x="24.19" y="11.05" width="12.95" height="12.95"/><rect class="build-apt-4" x="62.14" y="53.87" width="12.95" height="12.95"/><rect class="build-apt-4" x="62.14" y="32.46" width="12.95" height="12.95"/><rect class="build-apt-4" x="62.14" y="75.28" width="12.95" height="12.95"/><rect class="build-apt-4" x="62.14" y="11.05" width="12.95" height="12.95"/><rect class="build-apt-4" x="43.51" y="53.87" width="12.95" height="12.95"/><rect class="build-apt-4" x="43.51" y="32.46" width="12.95" height="12.95"/><rect class="build-apt-4" x="43.51" y="11.05" width="12.95" height="12.95"/><line class="build-apt-4" x1=".5" y1="100.92" x2="98.66" y2="100.92"/><path class="build-apt-2" d="M98.43,87.64c1.19,8.5-2.49,8.54-5.57,8.54s-6.66-.04-5.57-8.54c.64-4.98,2.52-7.64,5.57-8.54.6-.18,4.86,3.45,5.57,8.54Z"/><line class="build-apt-2" x1="92.87" y1="89.12" x2="92.87" y2="100.92"/><path class="build-apt-2" d="M13.18,87.64c1.19,8.5-2.49,8.54-5.57,8.54s-6.66-.04-5.57-8.54c.64-4.98,2.52-7.64,5.57-8.54.6-.18,4.86,3.45,5.57,8.54Z"/><line class="build-apt-1" x1="7.62" y1="89.12" x2="7.62" y2="100.92"/></g></svg>                        </div>
+                        Apartments
+                    </div>
+                    <div class="cat-container cat4">
+                        <div class="cat-img-wrapper" style="--cat-img-width:110px;--cat-img-top-pad-sm:86px;">
+                            <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.9 102.35"><defs><style>.build-student-1{fill:#157eb2;}.build-student-1,.build-student-2{stroke:#231f20;stroke-linecap:round;stroke-linejoin:round;}.build-student-2{fill:#fff;}</style></defs><g id="Layer_1-2"><rect class="build-student-1" x="95.46" y="22.21" width="23.05" height="5.57"/><rect class="build-student-1" x="4.9" y="22.21" width="23.05" height="5.57"/><polygon class="build-student-2" points="95.46 101.85 27.95 101.85 27.95 17.08 61.71 .5 95.46 17.08 95.46 101.85"/><rect class="build-student-2" x="8.13" y="27.78" width="19.82" height="74.07"/><rect class="build-student-2" x="95.46" y="27.78" width="19.82" height="74.07"/><rect class="build-student-2" x="35.41" y="76.62" width="12.95" height="18.02"/><rect class="build-student-2" x="35.41" y="52.61" width="12.95" height="18.02"/><rect class="build-student-2" x="35.41" y="28.6" width="12.95" height="18.02"/><rect class="build-student-2" x="18.04" y="77" width="9.63" height="12.59"/><rect class="build-student-2" x="18.04" y="56.19" width="9.63" height="12.59"/><rect class="build-student-2" x="18.04" y="35.38" width="9.63" height="12.59"/><rect class="build-student-2" x="95.46" y="77" width="9.63" height="12.59"/><rect class="build-student-2" x="95.46" y="56.19" width="9.63" height="12.59"/><rect class="build-student-2" x="95.46" y="35.38" width="9.63" height="12.59"/><rect class="build-student-2" x="73.36" y="76.62" width="12.95" height="18.02"/><rect class="build-student-2" x="73.36" y="52.61" width="12.95" height="18.02"/><rect class="build-student-2" x="73.36" y="28.6" width="12.95" height="18.02"/><rect class="build-student-2" x="54.73" y="76.62" width="12.95" height="18.02"/><rect class="build-student-2" x="54.73" y="52.61" width="12.95" height="18.02"/><rect class="build-student-2" x="54.73" y="28.6" width="12.95" height="18.02"/><line class="build-student-2" x1=".5" y1="101.85" x2="122.4" y2="101.85"/><circle class="build-student-1" cx="61.71" cy="15.51" r="7.12"/></g></svg>                        </div>
+                        Student Housing
+                    </div>
+                    <div class="cat-container cat5">
+                        <div class="cat-img-wrapper" style="--cat-img-top-pad:67px;">
+                            <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84.05 65.35"><defs><style>.build-comm-1{fill:#157eb2;}.build-comm-1,.build-comm-2,.build-comm-3,.build-comm-4,.build-comm-5{stroke:#231f20;}.build-comm-1,.build-comm-3,.build-comm-4,.build-comm-5{stroke-linecap:round;}.build-comm-1,.build-comm-4,.build-comm-5{stroke-linejoin:round;}.build-comm-2,.build-comm-3{stroke-miterlimit:10;}.build-comm-2,.build-comm-3,.build-comm-5{fill:#fff;}.build-comm-4{fill:none;}</style></defs><g id="Layer_1-2"><rect class="build-comm-2" x="7.41" y="17.19" width="67.51" height="47.65"/><rect class="build-comm-4" x="17.13" y="35.54" width="16.16" height="29.31"/><rect class="build-comm-5" x="42.03" y="35.59" width="27.62" height="19.25"/><line class="build-comm-3" x1=".5" y1="64.85" x2="83.55" y2="64.85"/><path class="build-comm-1" d="M31.9,27.58h0c-5.58,0-10.1-2.4-10.1-5.37L27.16.5h14.83v21.71c0,2.96-4.52,5.37-10.1,5.37Z"/><path class="build-comm-1" d="M11.26,27.58h0c-5.58,0-10.1-2.4-10.1-5.37L12.36.5h14.83l-5.84,21.71c0,2.96-4.52,5.37-10.1,5.37Z"/><path class="build-comm-1" d="M72.57,27.58h0c5.58,0,10.1-2.4,10.1-5.37L71.46.5h-14.83s5.84,21.71,5.84,21.71c0,2.96,4.52,5.37,10.1,5.37Z"/><path class="build-comm-1" d="M52.1,27.58h0c-5.58,0-10.1-2.4-10.1-5.37V.5h14.63l5.57,21.71c0,2.96-4.52,5.37-10.1,5.37Z"/></g></svg>                        </div>
+                        Commercial
+                    </div>
+                    <div class="cat-container cat6">
+                        <div class="cat-img-wrapper" style="--cat-img-width:110px;">
+                            <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78.83 68.06"><defs><style>.build-house-1{fill:#157eb2;}.build-house-1,.build-house-2,.build-house-3{stroke:#231f20;stroke-linecap:round;}.build-house-1,.build-house-3{stroke-linejoin:round;}.build-house-2{stroke-miterlimit:10;}.build-house-2,.build-house-3{fill:#fff;}</style></defs><g id="Layer_1-2"><polygon class="build-house-3" points="67.81 67.43 10.97 67.43 10.97 30.65 39.39 10.22 67.81 30.65 67.81 67.43"/><rect class="build-house-3" x="31.63" y="40.51" width="16.67" height="26.92"/><polygon class="build-house-1" points="43.59 3.8 39.43 .5 32.89 5.68 18.13 17.37 18.13 8.45 9.8 8.45 9.8 23.97 .5 31.34 5.54 37.7 39.43 10.86 72.38 36.96 77.42 30.6 43.59 3.8"/><line class="build-house-2" x1=".5" y1="67.56" x2="78.33" y2="67.56"/></g></svg>                        </div>
+                        Affordable Housing
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cta-button-wrapper double-button category">
+            <a class="cta-button-blue cta-button" id="demo-request-btn" data-fancybox="" data-type="ajax" data-src="/misc/schedule-demo" href="javascript:">Get a 1-on-1 product demo</a>
+            <!--			<a class="cta-button-outline cta-button" data-fancybox="" data-type="ajax" data-src="misc/product-demo" onclick="trackModalLink('/misc/product-demo')">Get a 1-on-1 product demo</a>-->
+            <a href="/signup/getstarted" class="cta-button-yellow cta-button">Start a free trial</a>
+        </div>
+    </section>
+
+
+    <section class="customer-service">
+        <div class="container">
+            <div class="row">
+
+                <h2 class="section-title customer-service-title">
+                    Our outstanding <span class="highlight">customer service guarantee!</span>
+                </h2>
+
+                <div  class="cs-grid">
+                    <div class="cs1">
+                        <span>Award winning customer service department</span>
+                        The American Business Awards keep awarding our <a href="/customer-service">customer service</a> team
+                        the <a href="/awards">Customer Service Department of the Year</a> award
+                        year after year.
+                        <br><br>
+                        <span>Help from start to finish:</span>
+                        Whether you are contacting us to help with managing
+                        maintenance requests, or need help getting your
+                        tenants on-board with the free online tenant payments
+                        offered by Rentec Direct, our US-based staff will help
+                        you from A to Z.
+                        <br><br>
+                        <span>Easy to reach:</span>
+                        You can always expect A+ service from Rentec Direct,
+                        and we are easily accessible by <a href="contact.php">phone, email, or chat</a>.
+                    </div>
+                    <div class="cs2">
+                        <div class="cs-award-1">
+                            <img class="lazyload" data-src="assets/images/awards/award_BIB_no-date.webp" alt="Best in Business Most Customer Friendly award">
+                        </div>
+                        <div class="cs-award-2">
+                            <img class="lazyload" data-src="assets/images/awards/award_ABA_no-date.webp" alt="American Business Awards Customer Service Dept of the Year award">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-button-wrapper double-button cservice" id="pm-software">
+            <a href="/customer-service" class="cta-button-blue cta-button cta-button-wide">Learn about customer service</a>
+            <a class="cta-button-blue cta-button" data-fancybox="" data-type="ajax" data-src="misc/product-demo" onclick="trackModalLink('/misc/product-demo')">Watch a video software tour</a>
+        </div>
+    </section>
+
+
+    <section class="whyrentec">
+        <div class="container">
+            <div class="row">
+                <h2 class="section-title section-title-dark whyrentec-title">
+                    Why use <span class="highlight">property management software</span> from Rentec Direct?
+                </h2>
+
+                <div class="whyrentec-grid">
+                    <div class="wr1">
+                        <div class="phone">
+                            <img src="assets/images/home-whyuser-img-3.png" style="width:255px;height:auto;margin:10px;" class="lazyload">
+                        </div>
+                    </div>
+                    <div class="wr2">
+                        For starters, we're a pretty fun group of people to work with! <a href="/about-us">Learn
+                            more about our staff here.</a>
+                        <br><br>
+                        When you choose Rentec Direct for your real estate management
+                        software, not only will you be getting a state-of-the-art system with
+                        all the tools needed to manage your business, but we'll also be
+                        helping you as much as needed to become familiar and productive
+                        within the system. You'll receive unlimited access to our US-based
+                        client support. To best serve you, most of our onboarding and
+                        client support team have backgrounds in accounting and property
+                        management. You get unlimited access to the team by phone,
+                        email, and live chat.
+                        <br><br>
+                        Rentec Direct ranks highest in customer satisfaction and our clients
+                        recommend us more than any other real estate management platform.
+                        We don’t just make this up, it comes from certified third-party
+                        reviews where we have remained one of the most recommended
+                        software applications for landlords, property managers, and real
+                        estate professionals year after year.
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-button-wrapper double-button cta-button-wrapper-dark whyrentec-btn">
+                <a href="/signup/getstarted" class="cta-button-outline cta-button">Try for free</a>
+                <a class="cta-button-yellow cta-button" data-fancybox="" data-type="ajax" data-src="/misc/schedule-demo" href="javascript:">Schedule a demo</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="faq">
+        <div class="container">
+            <div class="row">
+                <h2 class="section-title faq-title">
+                    <span class="highlight">Frequently</span>  Asked Questions
+                </h2>
+
+                <div class="faq-grid">
+                    <div class="faq1">
+                        Can't find what you're looking for?<br>
+                        <span>We would love to chat with you.</span>
+                        <div class="faq-img-wrapper">
+                            <img src="assets/images/icons/chat-circle.png" alt="chat with us" class="faq-chat remote-beacon" >
+                            <img src="assets/images/icons/arrow-1-handdrawn.png" alt="chat arrow" class="faq-arrow">
+                        </div>
+                    </div>
+                    <div class="faq2">
+
+                        <div class="faq-content pricing-wrapper">
+                            <div class="faq-articles">
+                                
+    
+    <article class="faq-accordion">
+        <input type="checkbox" class="tgg-title" id="tgg-title-1">
+        <div class="faq-accordion-title">
+            <label for="tgg-title-1">
+                <p class="faq-question">What is Rentec Direct?</p>
+                <span class="faq-arrow-icon">
+                    <i class="fa-regular fa-chevron-down"></i>
+                </span>
+            </label>
+        </div>
+        <div class="faq-accordion-content">
+            <p>
+                Rentec Direct is a popular software platform used by landlords and property managers to handle all aspects of managing properties, tenants, and owners. Rentec Direct is a cloud-based software that can be accessed from anywhere with an internet connection and on any device which enables property managers, along with their tenants and owners, to access their information from anywhere. Rentec Direct has been used by tens of thousands of landlords and property managers who manage over $200 billion in real estate assets.
+            </p>
+        </div>
+    </article>
+    
+    <article class="faq-accordion">
+        <input type="checkbox" class="tgg-title" id="tgg-title-2">
+        <div class="faq-accordion-title">
+            <label for="tgg-title-2">
+                <p class="faq-question">How can I reach Rentec Direct?</p>
+                <span class="faq-arrow-icon">
+                    <i class="fa-regular fa-chevron-down"></i>
+                </span>
+            </label>
+        </div>
+        <div class="faq-accordion-content">
+            <p>
+                For general inquiries, Rentec Direct is available by both phone and email. You can reach Rentec Direct by phone at <a href='tel:8008815139'>800-881-5139</a> or by email at <a href="/cdn-cgi/l/email-protection#ee87808881ae9c8b809a8b8d8a879c8b8d9ac08d8183"><span class="__cf_email__" data-cfemail="4e272028210e3c2b203a2b2d2a273c2b2d3a602d2123">[email&#160;protected]</span></a>. Rentec Direct customers get unlimited free US-based support available by phone, email and live chat.
+            </p>
+        </div>
+    </article>
+    
+    <article class="faq-accordion">
+        <input type="checkbox" class="tgg-title" id="tgg-title-3">
+        <div class="faq-accordion-title">
+            <label for="tgg-title-3">
+                <p class="faq-question">How can I contact customer support?</p>
+                <span class="faq-arrow-icon">
+                    <i class="fa-regular fa-chevron-down"></i>
+                </span>
+            </label>
+        </div>
+        <div class="faq-accordion-content">
+            <p>
+                All Rentec Direct customers get unlimited and free US-based support available by phone, email and live chat. Once logged in, you can click the help button in the top right corner of your Rentec Direct account to access all live support options. You can also reach Rentec Direct by phone at <a href='tel:8008815139'>800-881-5139</a> or by email at <a href="/cdn-cgi/l/email-protection#4c3f392f2f293f3f0c3e292238292f28253e292f38622f2321"><span class="__cf_email__" data-cfemail="cfbcbaacacaabcbc8fbdaaa1bbaaacaba6bdaaacbbe1aca0a2">[email&#160;protected]</span></a>. Rentec Direct also offers 24x7 support with our <a href='https://help.rentecdirect.com'>knowledge base</a> and <a href='https://help.rentecdirect.com/article/511-training-videos-getting-started'>video tutorials</a>.
+            </p>
+        </div>
+    </article>
+    
+    <article class="faq-accordion">
+        <input type="checkbox" class="tgg-title" id="tgg-title-4">
+        <div class="faq-accordion-title">
+            <label for="tgg-title-4">
+                <p class="faq-question">Why choose Rentec Direct over a competing solution?</p>
+                <span class="faq-arrow-icon">
+                    <i class="fa-regular fa-chevron-down"></i>
+                </span>
+            </label>
+        </div>
+        <div class="faq-accordion-content">
+            <p>
+                Each property management software solution has its own unique benefits; however, Rentec Direct shines as the top option in many ways. Rentec Direct was founded in 2007 which makes Rentec Direct one of the most mature options available, which means Rentec Direct is going to be better tested and more feature complete than most other options. Rentec Direct is privately owned and entirely debt-free, so they remain laser focused on their customer's experience and will continue to be around for the long term to support their customers. Rentec Direct consistently outperforms other solutions in customer satisfaction as indicated by their many <a href='https://www.rentecdirect.com/awards'>industry awards</a> and <a href='https://www.rentecdirect.com/reviews/'>raving customer reviews</a> and remains one of the most recommended solution by landlords and property managers.
+            </p>
+        </div>
+    </article>
+    
+    <article class="faq-accordion">
+        <input type="checkbox" class="tgg-title" id="tgg-title-5">
+        <div class="faq-accordion-title">
+            <label for="tgg-title-5">
+                <p class="faq-question">Where is Rentec Direct located?</p>
+                <span class="faq-arrow-icon">
+                    <i class="fa-regular fa-chevron-down"></i>
+                </span>
+            </label>
+        </div>
+        <div class="faq-accordion-content">
+            <p>
+                Rentec Direct is a US-based company and all of their employees are located in the United States. Their headquarters located at 231 SW I St, Grants Pass, Oregon. Rentec Direct is unique in that all of their staff, including customer service remains entirely US-based which fulfills one of Rentec Direct's core principals of always delivering the most outstanding service and support in the industry.
+            </p>
+        </div>
+    </article>
+    
+    <article class="faq-accordion">
+        <input type="checkbox" class="tgg-title" id="tgg-title-6">
+        <div class="faq-accordion-title">
+            <label for="tgg-title-6">
+                <p class="faq-question">What do customers say about Rentec Direct?</p>
+                <span class="faq-arrow-icon">
+                    <i class="fa-regular fa-chevron-down"></i>
+                </span>
+            </label>
+        </div>
+        <div class="faq-accordion-content">
+            <p>
+                Rentec Direct is one of the highest ranked software in the property management industry and is currently ranked 4.9 of 5 stars on <a href='https://maps.app.goo.gl/F9LUF6rgh1KxkKuC7'>Google Reviews</a>. To see real-time unfiltered customer statements and reviews about Rentec Direct, visit our <a href='https://www.rentecdirect.com/reviews/'>property management software reviews</a> page. Rentec Direct has maintained this excellent level of customer satisfaction for nearly two decades - the longest in the industry.
+            </p>
+        </div>
+    </article>
+    
+    <article class="faq-accordion">
+        <input type="checkbox" class="tgg-title" id="tgg-title-7">
+        <div class="faq-accordion-title">
+            <label for="tgg-title-7">
+                <p class="faq-question">Is Rentec Direct truly the highest-rated property management software?</p>
+                <span class="faq-arrow-icon">
+                    <i class="fa-regular fa-chevron-down"></i>
+                </span>
+            </label>
+        </div>
+        <div class="faq-accordion-content">
+            <p>
+                Yes, Rentec Direct is consistently one of the highest-ranked property management software options available today and has been for nearly two decades. With over 14,000 reviews from multiple sources including Capterra, Google, Trustpilot, Software Advice, and real Rentec Direct users, Rentec Direct consistently maintains a superior rating. These reviews have been submitted by actual Rentec Direct clients over two decades, providing a long-term track record of excellence. Rentec Direct also has vetted third-party validation of excellence with dozens of <a href='https://www.rentecdirect.com/awards'>awards</a> related to property management software and customer service excellence. Other solutions with similar 'highest rated' claims do not have the history or quantity of reviews and often base their claims on a small or insignificant sample size.
+            </p>
+        </div>
+    </article>
+    
+    <article class="faq-accordion">
+        <input type="checkbox" class="tgg-title" id="tgg-title-8">
+        <div class="faq-accordion-title">
+            <label for="tgg-title-8">
+                <p class="faq-question">What is Rentec Direct's ideal customer?</p>
+                <span class="faq-arrow-icon">
+                    <i class="fa-regular fa-chevron-down"></i>
+                </span>
+            </label>
+        </div>
+        <div class="faq-accordion-content">
+            <p>
+                Rentec Direct is ideal for any landlord or property manager who manages residential or commercial properties. Although Rentec Direct includes all major features and functionality available in other software options, Rentec Direct purposefully maintains a lower price point than many competitors because Rentec Direct believes that all landlords and property managers should have access to the best software available regardless of their portfolio size. Rentec Direct is able to accomplish this because we are wholly owned, debt free, and as such do not have revenue requirements from investors. Our roots started with smaller landlords who generally cannot afford the premium prices and minimums found elsewhere and we're committed to all of our customers regardless of size. Rentec Direct works extremely well for both the startup DIY landlord as well as the professional property manager actively growing their portfolio into many thousands of units.
+            </p>
+        </div>
+    </article>
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is Rentec Direct?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Rentec Direct is a popular software platform used by landlords and property managers to handle all aspects of managing properties, tenants, and owners. Rentec Direct is a cloud-based software that can be accessed from anywhere with an internet connection and on any device which enables property managers, along with their tenants and owners, to access their information from anywhere. Rentec Direct has been used by tens of thousands of landlords and property managers who manage over $200 billion in real estate assets."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How can I reach Rentec Direct?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "For general inquiries, Rentec Direct is available by both phone and email. You can reach Rentec Direct by phone at <a href='tel:8008815139'>800-881-5139</a> or by email at <a href='mailto:info@rentecdirect.com'>info@rentecdirect.com</a>. Rentec Direct customers get unlimited free US-based support available by phone, email and live chat."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How can I contact customer support?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "All Rentec Direct customers get unlimited and free US-based support available by phone, email and live chat. Once logged in, you can click the help button in the top right corner of your Rentec Direct account to access all live support options. You can also reach Rentec Direct by phone at <a href='tel:8008815139'>800-881-5139</a> or by email at <a href='mailto:success@rentecdirect.com'>success@rentecdirect.com</a>. Rentec Direct also offers 24x7 support with our <a href='https://help.rentecdirect.com'>knowledge base</a> and <a href='https://help.rentecdirect.com/article/511-training-videos-getting-started'>video tutorials</a>."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why choose Rentec Direct over a competing solution?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Each property management software solution has its own unique benefits; however, Rentec Direct shines as the top option in many ways. Rentec Direct was founded in 2007 which makes Rentec Direct one of the most mature options available, which means Rentec Direct is going to be better tested and more feature complete than most other options. Rentec Direct is privately owned and entirely debt-free, so they remain laser focused on their customer's experience and will continue to be around for the long term to support their customers. Rentec Direct consistently outperforms other solutions in customer satisfaction as indicated by their many <a href='https://www.rentecdirect.com/awards'>industry awards</a> and <a href='https://www.rentecdirect.com/reviews/'>raving customer reviews</a> and remains one of the most recommended solution by landlords and property managers."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Where is Rentec Direct located?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Rentec Direct is a US-based company and all of their employees are located in the United States. Their headquarters located at 231 SW I St, Grants Pass, Oregon. Rentec Direct is unique in that all of their staff, including customer service remains entirely US-based which fulfills one of Rentec Direct's core principals of always delivering the most outstanding service and support in the industry."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What do customers say about Rentec Direct?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Rentec Direct is one of the highest ranked software in the property management industry and is currently ranked 4.9 of 5 stars on <a href='https://maps.app.goo.gl/F9LUF6rgh1KxkKuC7'>Google Reviews</a>. To see real-time unfiltered customer statements and reviews about Rentec Direct, visit our <a href='https://www.rentecdirect.com/reviews/'>property management software reviews</a> page. Rentec Direct has maintained this excellent level of customer satisfaction for nearly two decades - the longest in the industry."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is Rentec Direct truly the highest-rated property management software?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, Rentec Direct is consistently one of the highest-ranked property management software options available today and has been for nearly two decades. With over 14,000 reviews from multiple sources including Capterra, Google, Trustpilot, Software Advice, and real Rentec Direct users, Rentec Direct consistently maintains a superior rating. These reviews have been submitted by actual Rentec Direct clients over two decades, providing a long-term track record of excellence. Rentec Direct also has vetted third-party validation of excellence with dozens of <a href='https://www.rentecdirect.com/awards'>awards</a> related to property management software and customer service excellence. Other solutions with similar 'highest rated' claims do not have the history or quantity of reviews and often base their claims on a small or insignificant sample size."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is Rentec Direct's ideal customer?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Rentec Direct is ideal for any landlord or property manager who manages residential or commercial properties. Although Rentec Direct includes all major features and functionality available in other software options, Rentec Direct purposefully maintains a lower price point than many competitors because Rentec Direct believes that all landlords and property managers should have access to the best software available regardless of their portfolio size. Rentec Direct is able to accomplish this because we are wholly owned, debt free, and as such do not have revenue requirements from investors. Our roots started with smaller landlords who generally cannot afford the premium prices and minimums found elsewhere and we're committed to all of our customers regardless of size. Rentec Direct works extremely well for both the startup DIY landlord as well as the professional property manager actively growing their portfolio into many thousands of units."
+                }
+            }
+        ]
+   }
+   </script>                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="awards">
+        <div class="container">
+            <div class="row">
+                <h2 class="section-title" style="margin-top:100px;" >
+                    <span class="highlight">Awards</span>  and Accolades
+                </h2>
+                <p>
+                    Thanks to our amazing team, our company continues to lead the industry year after year. We work hard every day
+                    to bring value to our clients by providing excellent products and quality of service. By being recognized for our
+                    work by esteemed organizations, we are confident that we are on the right path.
+                </p>
+                <div style="display:block;width:100%;">
+                    <div class="container award-container">
+    <h5 class="mt-2 mb-4 award-title" style="display:none;">AWARDS &amp; ACCOLADES</h5>
+    <div class="row">
+        <div class="col-6 col-sm-4 col-md-2 my-2 award-wrapper award-6-1">
+            <img data-src="/assets/images/awards/award_CCAS_2025.svg" src="/assets/images/awards/award_CCAS_2025.svg" class="lazyload" width="190" height="187" alt="cloud computing and SaaS" loading="lazy"/>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 my-2 award-wrapper award-6-2">
+            <img data-src="/assets/images/awards/award_CSDOY_2025.svg" src="/assets/images/awards/award_CSDOY_2025.svg" class="lazyload" width="190" height="187" alt="customer service department of the year award" loading="lazy"/>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 my-2 award-wrapper award-6-3">
+            <img data-src="/assets/images/awards/award_inc_5k_2025.svg" src="/assets/images/awards/award_inc_5k_2025.svg" class="lazyload" width="190" height="187" alt="fastest growing private company award" loading="lazy" style="width:110%;margin-left:-3px;"/>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 my-2 award-wrapper award-6-4">
+            <img data-src="/assets/images/awards/award_BGWIO_2025.svg" src="/assets/images/awards/award_BGWIO_2025.svg" class="lazyload" width="180" height="167" alt="Best Green Company in Oregon" loading="lazy" style="width:80%;margin-left:20px;"/>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 my-2 award-wrapper award-6-5">
+            <img data-src="/assets/images/awards/award_REEDOY_2025.svg" src="/assets/images/awards/award_REEDOY_2025.svg" class="lazyload" width="190" height="187" alt="Real Estate Entrepreneur of the year award" loading="lazy"/>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 my-2 award-wrapper award-6-6">
+            <img data-src="/assets/images/awards/award_BCWFIO_2025.svg" src="/assets/images/awards/award_BCWFIO_2025.svg" class="lazyload" width="190" height="187" alt="Best Company to work for in Oregon" loading="lazy"/>
+        </div>
+    </div>
+</div>
+
+<!--  4 awards
+<div class="container award-container">
+    <h5 class="mt-2 mb-4 award-title">AWARDS &amp; ACCOLADES</h5>
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-3 my-2 award-wrapper award-inc5k">
+            <img src="assets/images/awards/awards_CFCOY_2022.svg" alt="fastest growing private company award"/>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 my-2 award-wrapper award-bib">
+            <img src="assets/images/awards/awards_CSDOY_2022.svg" alt="most customer friendly company award"/>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 my-2 award-wrapper award-aba">
+            <img src="assets/images/awards/awards_inc_5k_2022.svg" alt="customer service department of the year award"/>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 my-2 award-wrapper award-e360">
+            <img src="assets/images/awards/awards_RECOY_2022.svg" alt="best entreprenurial company award"/>
+        </div>
+    </div>
+</div>
+-->                </div>
+
+                <div class="cta-button-wrapper double-button awards-btn" style="width:100%;" >
+                    <a class="left-text text1"><img data-src="assets/images/icons/text-impressive-2.png" class="lazyload" alt="Think thats impressive" width="280" height="70"></a>
+                    <a class="left-text text2"><img data-src="assets/images/icons/text-impressive-3.png" class="lazyload" alt="arrow" width="261" height="82"></a>
+                    <a href="/awards" class="cta-button-blue cta-button">See all awards</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bottom-cta">
+        <div class="container">
+            <div class="row">
+                <h2 class="section-title section-title-dark">
+                    Ready to take the next step?
+                </h2>
+
+                <div class="bottom-cta-grid">
+                    <div class="cta-box1">
+                        <div class="innerbox">
+                            <strong>Get a live demo</strong>
+
+                            <span>We’ll work with you to better understand your
+							business and recommend a solution to solve your
+							needs.</span>
+
+                            <button data-fancybox="" data-type="ajax" data-src="/misc/schedule-demo" href="javascript:">Book Demo</button>
+                        </div>
+                    </div>
+                    <div class="cta-box2">
+                        <div class="innerbox">
+                            <strong>Start a no-cost trial</strong>
+
+                            <span>Get started today and try out all the features Rentec
+							Direct property management software has to offer.</span>
+
+                            <button onclick="window.location.href='/signup/getstarted'">Start Free Trial</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Organization",
+                    "@id": "https://www.rentecdirect.com/#organization",
+                    "name": "Rentec Direct",
+                    "legalName": "Rentec Direct LLC",
+                    "url": "https://www.rentecdirect.com/",
+                    "mainEntityOfPage": "https://www.rentecdirect.com/",
+                    "description": "Rentec Direct is a US-based software company that offers cloud-based property management software to landlords and property managers.  The company was founded in 2007 by Nathan Miller and has their headquarters in Grants Pass, OR.",
+                    "logo": "https://www.rentecdirect.com/assets/images/rentec-direct-kg-logo.png",
+                    "image": "https://www.rentecdirect.com/assets/images/rentec-og-image.png",
+                    "foundingDate": "2007",
+                    "foundingLocation": {
+                        "@type": "City",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": "Grants Pass",
+                            "postalCode": "97526",
+                            "addressCountry": "USA"
+                        }
+                    },
+                    "hasMap": "https://g.page/rentec",
+                    "disambiguatingDescription": "Rentec Direct: Software Company.  The legal name for Rentec Direct is Rentec Direct LLC. Rentec Direct was founded on 12 Mar 2007 in Grants Pass, USA.",
+                    "founder": {
+                        "@id": "https://nathanmiller.info/#person",
+                        "@type": "Person",
+                        "name": "Nathan Miller",
+                        "sameAs": [
+                            "https://www.linkedin.com/in/nathan-miller-9087458/",
+                            "https://twitter.com/hitechlandlord",
+                            "https://profiles.forbes.com/members/business/profile/Nathan-Miller-Founder-CEO-Rentec-Direct/01436bc5-5624-4c33-b39c-673f8ba7af95",
+                            "https://www.entrepreneur.com/author/nathan-miller",
+                            "https://www.wikihow.com/Author/Nathan-Miller"
+                        ]
+                    },
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "231 SW I St",
+                        "addressLocality": "Grants Pass",
+                        "addressRegion": "OR",
+                        "postalCode": "97526",
+                        "addressCountry": "USA"
+                    },
+                    "telephone" : "+1-800-881-5139",
+                    "faxNumber" : "+1-888-882-1062",
+                    "contactPoint" : [
+                        { "@type" : "ContactPoint",
+                            "telephone" : "+1-800-881-5139",
+                            "faxNumber" : "+1-888-882-1062",
+                            "contactType" : "Customer Service",
+                            "contactOption" : "TollFree",
+                            "areaServed" : "US"
+                        },
+                        {
+                            "@type" : "ContactPoint",
+                            "telephone" : "+1-800-881-5139",
+                            "faxNumber" : "+1-888-882-1062",
+                            "contactOption" : "TollFree",
+                            "contactType" : "Sales",
+                            "areaServed" : "US"
+                        }
+                    ],
+                    "sameAs": [
+                        "https://facebook.com/rentecdirect",
+                        "https://youtube.com/rentecdirect",
+                        "https://twitter.com/rentec",
+                        "https://www.linkedin.com/company/rentec-direct",
+                        "https://www.youtube.com/rentecdirect",
+                        "https://www.softwareadvice.com/property/rentec-direct-property-management-profile/",
+                        "https://www.capterra.com/p/120753/Rentec-Direct/",
+                        "https://www.getapp.com/real-estate-property-software/a/rentec-direct/",
+                        "https://www.bbb.org/us/or/grants-pass/profile/computer-software-developers/rentec-direct-llc-1296-22660187",
+                        "https://www.crunchbase.com/organization/rentec-direct",
+                        "https://www.pinterest.com/RentecDirect/",
+                        "https://business.grantspasschamber.org/list/member/rentec-direct-13312",
+                        "https://www.dnb.com/business-directory/company-profiles.rentec_direct_llc.56ec64609bb056c3ebb56eea14adb8c5.html",
+                        "https://www.g2.com/products/rentec-direct/reviews",
+                        "https://www.google.com/search?kgmid=/g/11g9mx8628"
+                    ],
+                    "subjectOf": [
+                        "https://southernoregonbusiness.com/rentec-direct-celebrates-significant-milestones-and-13-years-of-advancing-the-property-management-industry/"
+                    ],
+                    "alternateName": [
+                        "Rentec"
+                    ],
+                    "memberOf": [
+                        {
+                            "@type": "Organization",
+                            "name": "National Association of Residential Property Managers",
+                            "url": "https://www.narpm.org"
+                        },
+                        {
+                            "@type": "Organization",
+                            "name": "Better Business Bureau",
+                            "url": "https://www.bbb.org"
+                        },
+                        {
+                            "@type": "Organization",
+                            "name": "SOREDI",
+                            "url": "https://soredi.org/"
+                        },
+                        {
+                            "@type": "Organization",
+                            "name": "Grants Pass &amp; Josephine County Chamber of Commerce",
+                            "url": "https://www.grantspasschamber.org/"
+                        }
+                    ]
+                },
+                {
+                    "@context": "https://schema.org",
+                    "@type": "WebSite",
+                    "@id": "https://www.rentecdirect.com/#website",
+                    "url": "https://www.rentecdirect.com",
+                    "name": "Rentec Direct",
+                    "potentialAction": {
+                        "@type": "SearchAction",
+                        "target": {
+                            "@type": "EntryPoint",
+                            "urlTemplate": "https://www.rentecdirect.com/search?q={search_term_string}"
+                        },
+                        "query-input": "required name=search_term_string"
+                    }
+                }
+            ]
+        }
+    </script>
+
+        <!-- begin portable footer -->
+<footer>
+    <link rel="stylesheet" href="/assets/css/blocks/footer.css?v=2026061808&cf_cache=true">
+<div class="container-fluid rd-footer">
+    <div class="row rd-footer-container">
+        <div class="fg1">
+            <a href="/"><img src="/assets/images/rentec_direct_logo_white.svg" alt="rentec direct logo" width="225" height="23" loading="lazy"></a>
+            <div id='footer-address' class="rd-footer-mt-4">
+                <div id="rd-footer-phone" class="rd-footer-mb-3 rd-footer-address">
+                    <div class="footer-contact">
+                        <i class="fa-light fa-phone rd-footer-mr-2" title="phone number"></i>
+                        <a href="tel:8008815139" style="color:inherit;">(800) 881-5139</a>
+                    </div>
+                    <div class="footer-contact">
+                        <i class="fa-light fa-envelope rd-footer-mr-2" title="email address"></i>
+                        <a href="/cdn-cgi/l/email-protection#d8b1b6beb798aabdb6acbdbbbcb1aabdbbacf6bbb7b5" style="color:inherit;"><span class="__cf_email__" data-cfemail="325b5c545d7240575c465751565b405751461c515d5f">[email&#160;protected]</span></a>
+                    </div>
+                </div>
+
+                <div id="rd-footer-physical-address" class="rd-footer-mb-2 rd-footer-address">
+                    <div style="font-weight:500;color:#fff;">US Headquarters</div>
+                    <div>
+                        231 SW I St<br>
+                        Grants Pass, OR 97526
+                    </div>
+                </div>
+            </div>
+            <div class="rd-footer-mt-4 tag">
+                                <a data-fancybox data-type="ajax" data-src="/details/_box/fair-housing" href="javascript:" class="fair-housing">We are
+                    committed to fair housing</a>
+                            </div>
+
+        </div>
+
+        <div class="fg2 accreditations">
+            <a href="https://www.bbb.org/us/or/grants-pass/profile/computer-software-developers/rentec-direct-llc-1296-22660187"
+               target="_blank"><img src="/assets/images/bbb_rating.svg" class="bbb" alt="better business bureau logo" loading="lazy"></a>
+            <a href="https://www.narpm.org" target="_blank"><img src="/assets/images/narpm_logo.svg" class="narpm" alt="narpm logo" loading="lazy"></a>
+        </div>
+
+        <div class="fg3">
+            <a href="https://x.com/rentec" class="social-color" aria-label="X twitter"><i class="fa-brands fa-square-x-twitter rd-footer-social-icon"></i></a>
+            <a href="https://facebook.com/rentecdirect" class="social-color" aria-label="facebook"><i class="fa-brands fa-square-facebook rd-footer-social-icon"></i></a>
+            <a href="https://www.linkedin.com/company/rentec-direct" class="social-color" aria-label="linkedin"><i class="fa-brands fa-linkedin rd-footer-social-icon"></i></a>
+            <a href="https://youtube.com/rentecdirect" class="social-color" aria-label="youtube"><i class="fa-brands fa-youtube rd-footer-social-icon"></i></a>
+            <a href="https://vimeo.com/rentec" class="social-color" aria-label="vimeo"><i class="fa-brands fa-vimeo rd-footer-social-icon"></i></a>
+        </div>
+
+        <div class="fg4">
+            &copy; 2026 Rentec Direct
+        </div>
+
+        <div class="fg5">
+            <span class="rd-footer-menu-header">Solutions <i class="fa fa-angle-down d-sm-none"></i></span>
+            <ul class="rd-footer-menu">
+                <li><a href="/property-managers">Property Managers</a></li>
+                <li><a href="/landlord-software">DIY Landlords</a></li>
+                <li><a href="/features">All Features</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a href="/tenant-screening">Tenant Screening</a></li>
+                <li><a href="/pdemo">Video Demos</a></li>
+                <li><a href="/learn">Learning Center</a></li>
+            </ul>
+        </div>
+
+        <div class="fg6">
+            <span class="rd-footer-menu-header">Features <i class="fa fa-angle-down d-sm-none"></i></span>
+            <ul class="rd-footer-menu">
+                <li><a href="/details/tenant-portal">Tenant Portal</a></li>
+                <li><a href="/details/property-management-website">Professional Website</a></li>
+                <li><a href="/details/online-payments">Online Tenant Payments</a></li>
+                <li><a href="/details/property-tenant-accounting">Property & Tenant Accounting</a></li>
+                <li><a href="/details/publish-vacancies">Publish Vacancies Online</a></li>
+                <li><a href="/integration-partners">Integrations</a></li>
+            </ul>
+        </div>
+
+        <div class="fg7">
+            <span class="rd-footer-menu-header">Company <i class="fa fa-angle-down d-sm-none"></i></span>
+            <ul class="rd-footer-menu">
+                <li><a href="/about-us">About Us</a></li>
+
+                <li><a href="/blog/">Rentec Blog</a></li>
+                <li><a href="/press">Press</a></li>
+                <li><a href="/awards">Awards</a></li>
+                <li><a href="/reviews">Reviews</a></li>
+                <li><a href="/jobs">Careers</a></li>
+                <li><a href="https://www.rentecdirect.com/blog/announcing-the-upgraded-rentec-direct-affiliate-program/">Affiliate Program</a></li>
+            </ul>
+        </div>
+
+        <div class="fg8">
+            <span class="rd-footer-menu-header">Get Help <i class="fa fa-angle-down d-sm-none"></i></span>
+            <ul class="rd-footer-menu">
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="https://help.rentecdirect.com/">Knowledge Base</a></li>
+                <li><a href="/faq">FAQs</a></li>
+
+                <li><a href="/sitemap">Sitemap</a></li>
+                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/terms">Terms of Service</a></li>
+                <li><a href="/legal/">Legal</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    /* expands and collapses footer menus in pure JS for portability */
+    document.addEventListener("DOMContentLoaded", function() {
+        let menuHeaders = document.querySelectorAll('.rd-footer-menu-header');
+
+        menuHeaders.forEach(function(menuHeader) {
+            menuHeader.addEventListener('click', function (e) {
+                var fasvg = menuHeader.querySelector('.svg-inline--fa')
+                if(menuHeader.nextElementSibling.classList.contains('active')){
+                    menuHeader.nextElementSibling.classList.toggle('active')
+                    if(menuHeader.nextElementSibling.classList.contains('active')) {
+                        fasvg.classList.remove('fa-angle-down')
+                        fasvg.classList.add('fa-angle-up')
+                    }else{
+                        fasvg.classList.remove('fa-angle-up')
+                        fasvg.classList.add('fa-angle-down')
+                    }
+                }else{
+                    menuHeader.nextElementSibling.classList.add('active')
+                    fasvg.classList.remove('fa-angle-down')
+                    fasvg.classList.add('fa-angle-up')
+                }
+            })
+        })
+    });
+
+</script>
+<!-- end portable footer (ie.. wordpress) -->
+
+
+
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="/js/lazysizes.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<!-- rentec analytics -->
+<div id="rt-analytics" style="display:none;"></div>
+<script async src="/js/rentec_analytics.min.js?v=1754326112&cf_cache=true"></script>
+<!-- .rentec analytics -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+		crossorigin="anonymous" async defer></script>
+
+<!-- fancybox 3 - https://fancyapps.com/fancybox/3/ -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js" async defer></script>
+<!-- .fancybox 3 -->
+
+<script>
+    (function() {
+        var mmapiws = window.__mmapiws = window.__mmapiws || {};
+        mmapiws.accountId = "30211";
+        var loadDeviceJs = function() {
+            var element = document.createElement('script');
+            element.async = true;
+            element.src = 'https://device.maxmind.com/js/device.js';
+            document.body.appendChild(element);
+        };
+        if (window.addEventListener) {
+            window.addEventListener('load', loadDeviceJs, false);
+        } else if (window.attachEvent) {
+            window.attachEvent('onload', loadDeviceJs);
+        }
+    })();
+</script>
+<script>
+	var script = document.createElement("script");
+	script.async = true; script.type = "text/javascript";
+	var target = 'https://www.clickcease.com/monitor/stat.js';
+	script.src = target;
+	var elem = document.head;
+	elem.appendChild(script);
+</script>
+<noscript><a href="https://www.clickcease.com" rel="nofollow"><img src="https://monitor.clickcease.com/stats/stats.aspx"  alt="ClickCease"/></a></noscript>
+
+<!-- begin google analytics code -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9BBSQJXTZL"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-9BBSQJXTZL');
+    gtag('config', 'AW-11327796775');
+</script>
+
+<script>
+	if (typeof gtag === 'function') {
+	   /**
+		* Send actions to google analytics
+		*/
+
+	   var trackModalLink = function (url) {
+           gtag('event', 'modal_link', {
+               'event_category': 'click',
+               'event_label': url
+           });
+
+	   }
+	   var trackHubspotScheduler = function (url) {
+           gtag('event', 'generate_lead', {
+               'event_label': 'hubspot-demo-request',
+		'value': 1
+           });
+
+	   }
+       var trackLoginLink = function (type) {
+           gtag('event', 'login', {
+               'event_label': type
+           });
+       }
+   }
+</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '262446440613284');  // RD account
+fbq('init', '4163728703846896'); // NM account
+fbq('track', "PageView");</script>
+<noscript>
+    <img height="1" width="1" src="https://www.facebook.com/tr?id=262446440613284&ev=PageView&noscript=1"/>
+    <img height="1" width="1" src="https://www.facebook.com/tr?id=4163728703846896&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+<!-- Bing Code -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5562331"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><noscript><img src="//bat.bing.com/action/0?ti=5562331&Ver=2" alt="bing pixel" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+<!-- End Bing Code -->
+<!-- linkedin -->
+<script>
+	_linkedin_partner_id = "1111452";
+	window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+	window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script>
+<script>
+	(function(){var s = document.getElementsByTagName("script")[0];
+		var b = document.createElement("script");
+		b.type = "text/javascript";b.async = true;
+		b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+		s.parentNode.insertBefore(b, s);})();
+</script>
+<noscript>
+	<img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=1111452&fmt=gif" />
+</noscript>
+<!-- .linkedin -->
+<!-- outbrain no longer in use
+<script data-obct>
+    /** DO NOT MODIFY THIS CODE**/
+    !function(_window, _document) {
+        var OB_ADV_ID = '00bc03f4658eea821de6b95fa1eea20939';
+        if (_window.obApi) {
+            var toArray = function(object) {
+                return Object.prototype.toString.call(object) === '[object Array]' ? object : [object];
+            };
+            _window.obApi.marketerId = toArray(_window.obApi.marketerId).concat(toArray(OB_ADV_ID));
+            return;
+        }
+        var api = _window.obApi = function() {
+            api.dispatch ? api.dispatch.apply(api, arguments) : api.queue.push(arguments);
+        };
+        api.version = '1.1';
+        api.loaded = true;
+        api.marketerId = OB_ADV_ID;
+        api.queue = [];
+        var tag = _document.createElement('script');
+        tag.async = true;
+        tag.src = '//amplify.outbrain.com/cp/obtp.js';
+        tag.type = 'text/javascript';
+        var script = _document.getElementsByTagName('script')[0];
+        script.parentNode.insertBefore(tag, script);
+    }(window, document);
+
+    obApi('track', 'PAGE_VIEW');
+</script>
+-->
+<!-- .outbrain -->
+<!-- Reddit Pixel -->
+<script>
+    !function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','a2_h97saiz5tkxb');rdt('track', 'PageVisit');
+</script>
+<!-- DO NOT MODIFY UNLESS TO REPLACE A USER IDENTIFIER -->
+<!-- End Reddit Pixel -->
+<!-- chatgpt -->
+<script>
+    !function(w, d, s, u) {if (w.oaiq) return;var q = function() {q.q.push(arguments);};q.q = [];w.oaiq = q;var j = d.createElement(s);j.async = 1;j.src = u;var f = d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j, f);}(window, document, "script", "https://bzrcdn.openai.com/sdk/oaiq.min.js");
+    oaiq("init", {
+        pixelId: "LRS8DHQ5K7eN1Bx1caYVDH",
+        debug: true
+    });
+</script>
+<!-- end chatgpt -->    <!-- svg version (faster) -->
+    <script defer src="https://kit.fontawesome.com/be7432e886.js" crossorigin="anonymous"></script>
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "fd4g4x0sud");
+</script>
+<!-- Nextdoor Pixel Code -->
+<script>
+    (function(win, doc, sdk_url){
+        if(win.ndp) return;
+        var tr=win.ndp=function(){
+            tr.handleRequest? tr.handleRequest.apply(tr, arguments):tr.queue.push(arguments);
+        };
+        tr.queue = [];
+        var s='script';
+        var new_script_section=doc.createElement(s);
+        new_script_section.async=!0;
+        new_script_section.src=sdk_url;
+        var insert_pos=doc.getElementsByTagName(s)[0];
+        insert_pos.parentNode.insertBefore(new_script_section, insert_pos);
+    })(window, document, 'https://ads.nextdoor.com/public/pixel/ndp.js');
+    ndp('init','ea5d20ab-8a1d-4199-a99b-d8bbace42f25', {})
+    ndp('track','PAGE_VIEW');
+</script>
+<noscript>
+    <img height="1" width="1" style="display:none" alt="nextdoor pixel"
+         src="https://flask.nextdoor.com/pixel?pid=ea5d20ab-8a1d-4199-a99b-d8bbace42f25&ev=PAGE_VIEW&noscript=1"/>
+</noscript>
+<!-- End Nextdoor Pixel Code -->
+<script src="./plugins/slick-1.8.1/slick/slick.min.js"></script>
+<script src="./plugins/lottie-5.12.2/lottie.min.js"></script>
+<script src="./assets/js/pages/index.js" async></script>
+<script src="./plugins/vimeo/player.js"></script>
+<script>
+    var elementsArr = ['anim-house-white', 'anim-apartment'];
+    var $container = $('.anim-icon');
+    var anim = [];
+
+    for(var i=0; i<elementsArr.length; i++){
+        var params = {
+            container: document.getElementById(elementsArr[i]),
+            autoplay: true,
+            loop: false,
+            renderer: 'svg',
+            path: 'assets/images/animations/'+ elementsArr[i] +'.json'
+        };
+        anim[elementsArr[i]] = bodymovin.loadAnimation(params);
+    }
+
+    $container.mouseenter(function(){
+        anim[$(this).attr('id')].goToAndPlay(0, true)
+    });
+
+    var animText = bodymovin.loadAnimation({
+        container: document.getElementById('hero-text'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'assets/images/animations/hero-text.json'
+    })
+
+    var animText = bodymovin.loadAnimation({
+        container: document.getElementById('hero-text-2'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'assets/images/animations/hero-text-2.json'
+    })
+
+    var animPhone = bodymovin.loadAnimation({
+        container: document.getElementById('anim-phone-2'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'assets/images/animations/anim-phone-2.json'
+    })
+
+
+    $(function () {
+        $(document).on('click', '#video-thumbnail', function () {
+            console.log('clicked image')
+            var id = $(this).attr('data-video-id')
+            var type = $(this).attr('data-video-player')
+            if (type == 'vimeo') {
+                loadVimeo(id)
+                $('#vidCont').removeClass('yt').addClass('vimeo')
+            }
+        })
+    })
+
+    var player;
+    function loadVimeo(id) {
+        var options = {
+            url: "https://player.vimeo.com/video/" + id,
+            // width: 630,
+            // height: 350,
+            autoplay: true,
+            responsive: true
+        };
+
+        var videoPlayer = new Vimeo.Player('player', options);
+        // setTimeout(function(){
+        $('#video-thumbnail').addClass('hidden')
+        $('#video-tn-button').addClass('hidden')
+        // },1000)
+
+
+        videoPlayer.on('play', function () {
+            console.log('Played the first video');
+        });
+    }
+</script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0db3c6c0dbe1461',t:'MTc4MTc5NTU4NQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

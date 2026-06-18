@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content=".view-row { display:none !important; } .util-bios { display:flex; justify-content:flex-start; align-items:flex-start; align-content:space-between; flex-wrap: none; gap:0px; margin: 20px 0% 10px 0%; } .utilcol-a { flex-grow:1; flex-shrink:2; width:200px; padding:0px; margin:0px 5% 0px 0px; } .utilcol-b { flex-shrink:1; width:70%; padding:0px 2% 0px 0px; } .utilcol-c { flex-grow:1; flex-shrink:2; width:49%; padding:0px; margin:0px 5% 0px 0px; } .utilcol-d { flex-shrink:1; width:49%; padding:0px 2% 0px 0px; } ol.parenthesis { counter-reset: list-in-thm; margin-left: 0; padding" />
+<link rel="mask-icon" href="/themes/custom/altagas/site_icons/safari-pinned-tab.svg" color="#063c6d" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<meta name="theme-color" content="#ffffff" />
+<link rel="manifest" href="/themes/custom/altagas/site_icons/site.webmanifest" crossorigin="use-credentials" />
+<meta name="msapplication-config" content="/themes/custom/altagas/site_icons/browserconfig.xml" />
+<meta name="msapplication-square150x150logo" content="/themes/custom/altagas/site_icons/mstile-150x150.png" />
+<meta name="msapplication-square310x310logo" content="/themes/custom/altagas/site_icons/mstile-310x310.png" />
+<meta name="msapplication-square70x70logo" content="/themes/custom/altagas/site_icons/mstile-70x70.png" />
+<meta name="msapplication-wide310x150logo" content="/themes/custom/altagas/site_icons/mstile-310x150.png" />
+<meta name="msapplication-tilecolor" content="#ffffff" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="canonical" href="https://www.altagas.ca/infrastructure/utilities" />
+<link rel="shortlink" href="https://www.altagas.ca/node/928" />
+<script src="/sites/default/files/google_tag/altagas/google_tag.script.js?tgkvfq" defer></script>
+
+    <title>Utilities | AltaGas</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_ym0-KrOrx1FIwVcKIFO5qgGaeuHz6TjWVzs_gKDU5yM.css?delta=0&amp;language=en&amp;theme=altagas&amp;include=eJxNjOsKwjAUg1-os4800i50w9MeaHZhPr2iTvwT8iUksBUFisU8wYYsBXyj5r3ClgdD6mh5Jsdknu_xwpAN0hkT9POVEgp1cfPp1Xnn351Orayf2b7wUHzrrfq0GZ8iizhk" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_LYEYSlU2SIE1JmhAE1I_E3ywYlFGW2petAhY1iIQtRY.css?delta=1&amp;language=en&amp;theme=altagas&amp;include=eJxNjOsKwjAUg1-os4800i50w9MeaHZhPr2iTvwT8iUksBUFisU8wYYsBXyj5r3ClgdD6mh5Jsdknu_xwpAN0hkT9POVEgp1cfPp1Xnn351Orayf2b7wUHzrrfq0GZ8iizhk" />
+
+    
+    <!--[if IE]>
+      <link rel="stylesheet" type="text/css" href="/themes/custom/altagas/css/ie-only.css" />
+    <![endif]-->
+  </head>
+  <body class="path-node node--type-page">
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5X4CZFQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="layout-container" >
+  <header role="banner">
+	
+	
+	  <div class="region region-header">
+    <div id="block-altagas-branding" class="block block-system block-system-branding-block" style="background-color: ">
+  
+    
+  	<div class="edge-gutter">
+  	    <div class="logo">
+		    <a href="/" title="Home" rel="home">
+		      <img src="/sites/default/files/1.0-AGW008-logox3_0_0.png" alt="Home" />
+		    </a>
+		</div>
+    	</div>
+</div>
+<nav role="navigation" aria-labelledby="block-altagas-main-menu-menu" id="block-altagas-main-menu" class="block block-menu navigation menu--main">
+            
+  <h2 class="visually-hidden" id="block-altagas-main-menu-menu">Main navigation</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item menu-item--collapsed">
+        <a href="/about" data-drupal-link-system-path="node/11">About</a>
+              </li>
+                <li class="menu-item menu-item--collapsed menu-item--active-trail menu-item--current-page">
+        <a href="/infrastructure" data-drupal-link-system-path="node/2440">Infrastructure</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/invest" data-drupal-link-system-path="node/2397">Invest</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/newsroom" data-drupal-link-system-path="node/1015">Newsroom</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/responsibility" data-drupal-link-system-path="node/59">Responsibility</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/careers" data-drupal-link-system-path="node/67">Careers</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+<div id="block-searchcustom" class="block-basic block block-block-content block-block-contentdea530cf-a68d-4eee-b600-b622937ba2a4" style="background-color: ">
+  
+    
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="search">
+    <div id="sb-search" class="sb-search">
+        <form action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8" data-drupal-form-fields="edit-keys,edit-submit">
+            <input class="sb-search-input form-search" placeholder="Enter your search term..." data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128">
+            <input class="sb-search-submit" type="submit" value="" data-drupal-selector="edit-submit">
+            <span class="sb-icon-search"></span>
+        </form>
+    </div>
+</div></div>
+      
+  </div>
+<nav role="navigation" aria-labelledby="block-subnav-menu" id="block-subnav" class="block block-menu navigation menu--main block-subnav">
+            
+  <h2 class="visually-hidden" id="block-subnav-menu">Sub Navigation for Header</h2>
+  
+
+        <div class="desktop-subnavigation">
+      
+              <ul class="menu">
+                    <li class="menu-item menu-item--collapsed">
+        <a href="/infrastructure/operations" data-drupal-link-system-path="node/2430">Midstream</a>
+              </li>
+                <li class="menu-item menu-item--active-trail menu-item--current-page">
+        <a href="/infrastructure/utilities" data-drupal-link-system-path="node/928" class="is-active" aria-current="page">Utilities</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/corporate-other" data-drupal-link-system-path="node/2433">Corporate/Other</a>
+              </li>
+        </ul>
+  
+
+
+    </div>
+  </nav>
+<div id="block-brancheemenublock" class="block block-branchee-block block-branchee-menu-block" style="background-color: ">
+  
+    
+      <div class="menu--mobile-toggle">
+  <a class="branchee-toggle-menu branchee-theme-minimal icon-menu" href="#menu--mobile"></a>
+</div>
+<div id="menu--mobile" class="branchee-theme-minimal">
+<div class="branchee-menu">
+      
+              <ul class="menu">
+                    <li class="branchee-level-1 menu-item menu-item--expanded">
+        <a href="/about" data-drupal-link-system-path="node/11">About</a>
+                                <ul class="menu">
+                    <li class="branchee-level-2 menu-item menu-item--expanded">
+        <a href="/about/overview-altagas" data-drupal-link-system-path="node/13">Overview of AltaGas</a>
+                                <ul class="menu">
+                    <li class="branchee-level-3 menu-item">
+        <a href="/about/overview-altagas/history" data-drupal-link-system-path="node/19">History</a>
+              </li>
+                <li class="branchee-level-3 menu-item">
+        <a href="/about/overview-altagas/vision-mission-values" data-drupal-link-system-path="node/21">Vision, Mission &amp; Values</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="branchee-level-2 menu-item">
+        <a href="/about/leadership" data-drupal-link-system-path="node/15">Leadership</a>
+              </li>
+                <li class="branchee-level-2 menu-item menu-item--expanded">
+        <a href="/about/governance" data-drupal-link-system-path="node/17">Governance</a>
+                                <ul class="menu">
+                    <li class="branchee-level-3 menu-item">
+        <a href="/about/governance/board-directors" title="Board of Directors" data-drupal-link-system-path="node/9">Board of Directors</a>
+              </li>
+                <li class="branchee-level-3 menu-item">
+        <a href="/about/governance/corporate-structure" title="Corporate Structure" data-drupal-link-system-path="node/23">Corporate Structure</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+              </li>
+                <li class="branchee-level-1 menu-item menu-item--expanded">
+        <a href="/infrastructure" data-drupal-link-system-path="node/2440">Infrastructure</a>
+                                <ul class="menu">
+                    <li class="branchee-level-2 menu-item menu-item--expanded">
+        <a href="/infrastructure/operations" data-drupal-link-system-path="node/2430">Midstream</a>
+                                <ul class="menu">
+                    <li class="branchee-level-3 menu-item">
+        <a href="/infrastructure/operations/ridley-island-energy-export-facility" data-drupal-link-system-path="node/2414">Ridley Island Energy Export Facility</a>
+              </li>
+                <li class="branchee-level-3 menu-item">
+        <a href="/infrastructure/operations/ridley-island-propane-export-terminal" title="Ridley Island Propane Export Terminal" data-drupal-link-system-path="node/605">Ridley Island Propane Export Terminal</a>
+              </li>
+                <li class="branchee-level-3 menu-item">
+        <a href="/infrastructure/operations/ala-energy-ferndale-terminal" data-drupal-link-system-path="node/2279">ALA Energy Ferndale Terminal</a>
+              </li>
+                <li class="branchee-level-3 menu-item">
+        <a href="/infrastructure/operations/townsend-complex" data-drupal-link-system-path="node/127">Townsend Facility</a>
+              </li>
+                <li class="branchee-level-3 menu-item">
+        <a href="/infrastructure/operations/harmattan-gas-processing-complex" data-drupal-link-system-path="node/101">Harmattan Gas Processing Complex</a>
+              </li>
+                <li class="branchee-level-3 menu-item">
+        <a href="/infrastructure/operations/pipestone-i" data-drupal-link-system-path="node/2411">Pipestone Natural Gas Processing Plant</a>
+              </li>
+                <li class="branchee-level-3 menu-item">
+        <a href="/infrastructure/operations/pipestone-ii-project" data-drupal-link-system-path="node/2412">Pipestone II Project</a>
+              </li>
+                <li class="branchee-level-3 menu-item">
+        <a href="/infrastructure/operations/gordondale-gas-plant" data-drupal-link-system-path="node/99">Gordondale Gas Plant</a>
+              </li>
+                <li class="branchee-level-3 menu-item">
+        <a href="/infrastructure/operations/blair-creek" data-drupal-link-system-path="node/97">Blair Creek</a>
+              </li>
+                <li class="branchee-level-3 menu-item">
+        <a href="/infrastructure/operations/younger-extraction-plant" data-drupal-link-system-path="node/105">Younger Extraction Plant</a>
+              </li>
+                <li class="branchee-level-3 menu-item">
+        <a href="/infrastructure/operations/edmonton-ethane-extraction-plant" data-drupal-link-system-path="node/95">Edmonton Ethane Extraction Plant</a>
+              </li>
+                <li class="branchee-level-3 menu-item">
+        <a href="/infrastructure/operations/joffre-ethane-extraction-plant" data-drupal-link-system-path="node/107">Joffre Ethane Extraction Plant</a>
+              </li>
+                <li class="branchee-level-3 menu-item">
+        <a href="/infrastructure/operations/dimsdale" data-drupal-link-system-path="node/2413">Dimsdale</a>
+              </li>
+                <li class="branchee-level-3 menu-item">
+        <a href="/infrastructure/operations/north-pine-liquids-separation-facility" title="North Pine Liquids Separation Facility" data-drupal-link-system-path="node/701">North Pine Liquids Separation Facility</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="branchee-level-2 active menu-item">
+        <a href="/infrastructure/utilities" data-drupal-link-system-path="node/928" class="is-active" aria-current="page">Utilities</a>
+              </li>
+                <li class="branchee-level-2 menu-item menu-item--expanded">
+        <a href="/corporate-other" data-drupal-link-system-path="node/2433">Corporate/Other</a>
+                                <ul class="menu">
+                    <li class="branchee-level-3 menu-item">
+        <a href="/infrastructure/operations/blythe-energy-center" data-drupal-link-system-path="node/93">Blythe Energy Center</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+              </li>
+                <li class="branchee-level-1 menu-item menu-item--expanded">
+        <a href="/invest" data-drupal-link-system-path="node/2397">Invest</a>
+                                <ul class="menu">
+                    <li class="branchee-level-2 menu-item menu-item--expanded">
+        <a href="/invest/events-and-presentations" data-drupal-link-system-path="invest/events-and-presentations">Events &amp; Presentations</a>
+              </li>
+                <li class="branchee-level-2 menu-item">
+        <a href="/invest/why-invest" data-drupal-link-system-path="node/2400">Why Invest</a>
+              </li>
+                <li class="branchee-level-2 menu-item menu-item--expanded">
+        <a href="/invest/financials" data-drupal-link-system-path="node/39">Financials &amp; Reports</a>
+                                <ul class="menu">
+                    <li class="branchee-level-3 menu-item">
+        <a href="/invest/financials-reports/operational-quarterly-summary" title="Operational - Quarterly Summary" data-drupal-link-system-path="node/349">Operational - Quarterly Summary</a>
+              </li>
+                <li class="branchee-level-3 menu-item">
+        <a href="/invest/financials-reports/financial-highlights" data-drupal-link-system-path="node/351">Financial Highlights</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="branchee-level-2 menu-item menu-item--expanded">
+        <a href="/invest/share-information" data-drupal-link-system-path="node/43">Share Information</a>
+                                <ul class="menu">
+                    <li class="branchee-level-3 menu-item">
+        <a href="/invest/share-information/dividends" data-drupal-link-system-path="node/45">Dividends</a>
+              </li>
+                <li class="branchee-level-3 menu-item">
+        <a href="/invest/share-information/preferred-shares" data-drupal-link-system-path="node/49">Preferred Shares</a>
+              </li>
+                <li class="branchee-level-3 menu-item">
+        <a href="/invest/share-information/analyst-coverage" data-drupal-link-system-path="node/53">Analyst Coverage</a>
+              </li>
+                <li class="branchee-level-3 menu-item">
+        <a href="/invest/share-information/tax-information" data-drupal-link-system-path="node/55">Tax Information</a>
+              </li>
+                <li class="branchee-level-3 menu-item menu-item--expanded">
+        <a href="/invest/share-information/drip-history" data-drupal-link-system-path="node/47">DRIP History</a>
+                                <ul class="menu">
+                    <li class="branchee-level-4 menu-item">
+        <a href="/invest/share-information/drip-summary" title="DRIP Summary" data-drupal-link-system-path="node/555">DRIP Summary</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="branchee-level-3 menu-item">
+        <a href="/invest/share-information/noticeandaccess" data-drupal-link-system-path="node/2247">2026 Annual Meeting of Shareholders</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="branchee-level-2 menu-item">
+        <a href="/invest/investor-contact" data-drupal-link-system-path="node/57">Investor Contact</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="branchee-level-1 menu-item menu-item--expanded">
+        <a href="/newsroom" data-drupal-link-system-path="node/1015">Newsroom</a>
+                                <ul class="menu">
+                    <li class="branchee-level-2 menu-item menu-item--expanded">
+        <a href="/newsroom/news-releases" data-drupal-link-system-path="node/1301">Press Releases</a>
+                                <ul class="menu">
+                    <li class="branchee-level-3 menu-item">
+        <a href="/newsroom/news-releases/subscribe" data-drupal-link-system-path="node/1460">Subscribe</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="branchee-level-2 menu-item menu-item--expanded">
+        <a href="/newsroom/stories" data-drupal-link-system-path="node/1017">Stories</a>
+                                <ul class="menu">
+                    <li class="branchee-level-3 menu-item">
+        <a href="/newsroom/stories/altagas-stories" data-drupal-link-system-path="node/1019">AltaGas Stories</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="branchee-level-2 menu-item menu-item--expanded">
+        <a href="/newsroom/media-library" data-drupal-link-system-path="node/1016">Media Library</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="branchee-level-1 menu-item menu-item--expanded">
+        <a href="/responsibility" data-drupal-link-system-path="node/59">Responsibility</a>
+                                <ul class="menu">
+                    <li class="branchee-level-2 menu-item menu-item--expanded">
+        <a href="/responsibility/community-investment" data-drupal-link-system-path="node/2453">Community Investment</a>
+                                <ul class="menu">
+                    <li class="branchee-level-3 menu-item">
+        <a href="/responsibility/community-investment/whatcom-county-food-banks" title="Whatcom County food banks" data-drupal-link-system-path="node/2483">Whatcom County food banks</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="branchee-level-2 menu-item">
+        <a href="/responsibility/altagas-pipeline-damage-prevention" data-drupal-link-system-path="node/2111">Pipeline Damage Prevention</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="branchee-level-1 menu-item menu-item--expanded">
+        <a href="/careers" data-drupal-link-system-path="node/67">Careers</a>
+                                <ul class="menu">
+                    <li class="branchee-level-2 menu-item">
+        <a href="/careers/rewarding-workplace" data-drupal-link-system-path="node/75">A Rewarding Workplace</a>
+              </li>
+                <li class="branchee-level-2 menu-item">
+        <a href="/careers/scholarships" data-drupal-link-system-path="node/547">Scholarships</a>
+              </li>
+                <li class="branchee-level-2 menu-item">
+        <a href="https://wgl.wd5.myworkdayjobs.com/AltaGas" title="View Opportunities">View Opportunities</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+
+    </div>
+</div>
+
+  </div>
+
+  </div>
+
+
+
+	<div class="banner">
+			  <div class="region region-banner">
+    <div id="block-header-image" class="block block-zu-field-block block-expose-field" style="background-color: ">
+  
+    
+      
+<div class="field field--name-field-header-image field--type-image field--label-hidden field__items">
+  <div class="field__item">
+    <div class="background-image" style="background-image:url('https://www.altagas.ca/sites/default/files/styles/header_banner/public/2018-11/Utilities%20Landing%20page_Hero.jpg?itok=k0lqZkJ8');"></div>
+  </div>
+</div>
+
+  </div>
+
+  </div>
+
+		</div>
+
+  </header>
+
+  
+  
+
+  
+
+  
+  
+
+
+    
+  <main role="main"
+  	 class="two-column-right"
+			>
+	<a id="main-content" tabindex="-1"></a>
+	      <div class="region region-above-content">
+    <div data-drupal-messages-fallback class="hidden"></div>
+<div id="block-altagas-breadcrumbs" class="block block-system block-system-breadcrumb-block" style="background-color: ">
+  
+    
+        <nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+    <ol>
+          <li>
+                  <a href="/">Home</a>
+              </li>
+          <li>
+                  <a href="/infrastructure">Infrastructure</a>
+              </li>
+          <li>
+                  Utilities
+              </li>
+        </ol>
+  </nav>
+
+  </div>
+<div id="block-altagas-sitewidecssoverrides" class="block-custom_css_and_html block block-block-content block-block-content3b8687ed-31cf-4660-898f-eaf38030bbf2" style="background-color: ">
+  
+    
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><style type="text/css">
+.breadcrumb {
+    margin-top: -4em;
+}
+@media (min-width: 992px) { 
+.homepage-hero h1, .homepage-hero p, .homepage-hero div {
+margin-top: 40px; max-width: 400px; display: block!important; text-wrap: balance;
+}
+.homepage-hero .btn-normal {
+max-width: 200px;
+}
+}
+</style></div>
+      
+  </div>
+
+  </div>
+
+
+	<div class="layout-content">
+		
+		
+				
+
+		
+
+		
+		  <div class="region region-content">
+    <div id="block-altagas-content" class="block block-system block-system-main-block" style="background-color: ">
+  
+    
+      
+<article class="node node--type-page node--view-mode-full">
+
+  
+    
+
+  
+  <div class="node__content">
+    <h1>
+      <span class="field field--name-title field--type-string field--label-hidden">Utilities</span>
+
+    </h1>
+    
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><style>
+.view-row {
+display:none !important;
+}
+.util-bios {
+display:flex;
+justify-content:flex-start;
+align-items:flex-start;
+align-content:space-between;
+flex-wrap: none;
+gap:0px;
+margin: 20px 0% 10px 0%;
+}
+.utilcol-a {
+flex-grow:1;
+flex-shrink:2;
+width:200px;
+padding:0px;
+margin:0px 5% 0px 0px;
+}
+.utilcol-b {
+flex-shrink:1;
+width:70%;
+padding:0px 2% 0px 0px;
+}
+.utilcol-c {
+flex-grow:1;
+flex-shrink:2;
+width:49%;
+padding:0px;
+margin:0px 5% 0px 0px;
+}
+.utilcol-d {
+flex-shrink:1;
+width:49%;
+padding:0px 2% 0px 0px;
+}
+ol.parenthesis {
+    counter-reset: list-in-thm;
+    margin-left: 0;
+    padding-left: 0;
+}
+ol.parenthesis li {
+    list-style: none;
+    position: relative;
+    padding-left: 0;
+    margin-left: 2.2em;
+}
+ol.parenthesis li:before {
+    content: "(" counter(list-in-thm) ")";
+    counter-increment: list-in-thm;
+    position: absolute;
+    width: 3.0em;
+    left: -3.5em;
+    text-align: right;
+}
+.li-notes {
+font-size:80%;
+line-height: 120%;
+margin-bottom: 4px;
+}
+@media screen and (max-width: 600px) {
+.util-bios {
+flex-wrap: wrap;
+}
+.utilcol-b {
+flex-shrink:1;
+width:100%;
+padding:0px 2% 0px 2%;
+}
+}
+</style><div class="util-bios"><div class="utilcol-a"><img src="/sites/default/files/inline-files/2026_03_03_new%20icon%20style_Utilities_0.svg" data-entity-uuid data-entity-type="file" alt width="150" height="150" loading="lazy"></div><div class="utilcol-b"><p>Our Utilities business operates rate-regulated natural gas distribution and storage infrastructure. We are committed to delivering safe, reliable, and affordable energy to our <strong>1.6 million</strong> residential, commercial, and industrial customers<sup>1</sup>. With a substantial rate base of approximately <strong>US$5.4 billion</strong>, our Utilities include Washington Gas and SEMCO Energy, serving customers across Virginia, Maryland, the District of Columbia (D.C.), and Michigan.</p></div></div><div style="border-top-color:#efefef;border-top-style:solid;margin:20px 0px 20px 0px;">&nbsp;</div><div class="util-bios"><div class="utilcol-c"><p><img src="/sites/default/files/inline-images/SEMCO%20horizontal_4C%20_0.png" data-entity-uuid="89800253-e7b9-47c8-a130-28b29be3c55a" data-entity-type="file" alt width="78%" height="78%" margin-bottom="20px" loading="lazy"></p><p><br>Headquartered in Port Huron, Michigan, <a href="https://www.semcoenergygas.com/">SEMCO</a><sup>2</sup> is a regulated public utility that delivers natural gas to approximately <strong>330,000 residential, commercial, and industrial customers</strong> in service territories in Michigan, covering portions of the southern half of the state's Lower and in the central, eastern and western parts of the state's Upper Peninsula.</p></div><div class="utilcol-c"><p><img src="/sites/default/files/inline-images/Washington%20Gas%20Logo_HZ-RGB.png" data-entity-uuid="45c8f0ea-d5f0-44f0-9699-81439a1bc114" data-entity-type="file" alt width="67%" height="67%" loading="lazy"></p><p><a href="https://www.washingtongas.com/">Washington Gas</a> is a regulated natural gas utility providing safe, reliable and affordable natural gas for more than 175 years. Today, Washington Gas serves over <strong>1.2 million customers</strong> in the District of Columbia, Maryland and Virginia with energy they rely on every day. Washington Gas was chartered by the U.S. Congress in 1848 and has been providing energy to residential, commercial and industrial customers ever since.</p></div><div class="utilcol-c"><p><img src="/sites/default/files/inline-images/Hampshire-Gas_Logo_rgb.png" data-entity-uuid="9da12d3f-f73c-48f2-8668-7cb7a6245725" data-entity-type="file" alt width="67%" height="67%" loading="lazy"></p><p>Hampshire Gas owns and operates interests in natural gas storage facilities in and around Hampshire County, West Virginia. A wholly-owned subsidiary of WGL Holdings, Hampshire Gas is regulated by the Federal Energy Regulatory Commission (FERC) and provides exclusive storage services to Washington Gas, another WGL subsidiary.</p></div></div><ol class="parenthesis"><li class="li-notes">Including transportation and non-regulated business lines.</li><li class="li-notes">SEMCO Energy Gas Company is a division of SEMCO Energy, Inc.</li></ol><div style="border-top-color:#efefef;border-top-style:solid;margin:20px 0px 20px 0px;">&nbsp;</div><div class="util-bios"><div class="utilcol-a"><p><img src="/sites/default/files/inline-images/2025_09_30_new%20icon%20style_NG%20Gathering_0.svg" data-entity-uuid="aa374040-568c-4c47-ba2c-2f878202a8f1" data-entity-type="file" alt width="150" height="150" loading="lazy"></p></div><div class="utilcol-b"><h3>Storage Infrastructure</h3><p><a href="https://wgl.com/hampshiregas">Hampshire Gas</a> is a subsidiary of WGL that provides regulated interstate natural gas storage services to Washington Gas under a FERC approved interstate storage service tariff.</p></div></div><div class="util-bios"><div class="utilcol-a"><p><img src="/sites/default/files/inline-images/2025_09_30_new%20icon%20style_Retail%20energy_0.svg" data-entity-uuid="9a683b17-4afa-475e-a287-e8e820c1cb1d" data-entity-type="file" alt width="150" height="150" loading="lazy"></p></div><div class="utilcol-b"><h3>Retail Energy Marketing</h3><p><a href="https://www.wglenergy.com/">WGL Energy Services</a> is a subsidiary of Washington Gas Resources that sells natural gas and electricity to retail customers on an unregulated basis in Maryland, Virginia, Delaware, Pennsylvania, Ohio, D.C. and New Jersey.</p></div></div><div style="border-top-color:#ffffff;border-top-style:solid;margin:20px 0px 20px 0px;">&nbsp;</div></div>
+      
+<div class="field field--name-field-inline-view field--type-viewfield field--label-hidden">
+  
+    
+      <div class="field__items">
+        
+<div class="field__item field__item-label-hidden">
+  
+    
+      <div class="views-element-container"><div class="view view-utility-businesses view-id-utility_businesses view-display-id-block_1 js-view-dom-id-8591d4f5c56aa04b0c9db9625fe31c02946a03bcebfcacae7d076a67f09262e5">
+  
+    
+      
+      <div class="view-content">
+      
+<div class="view-row">
+    <article class="node node--type-utility-business node--view-mode-full">
+
+  <div class="node__content">
+    <div class="business-logo">
+            <div class="field field--name-field-business-logo field--type-image field--label-hidden field__item">  <img loading="lazy" src="/sites/default/files/2017-05/SEMCO-stacked.jpg" width="627" height="310" alt="SEMCO logo" />
+
+</div>
+      </div>
+    <div class="business-info">
+      <h3><span class="field field--name-title field--type-string field--label-hidden">SEMCO</span>
+</h3>
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Headquartered in Port Huron, Michigan, <a href="http://www.semcoenergygas.com/main/Default">SEMCO</a><sup>2</sup> is a regulated public utility that delivers natural gas to approximately 300,000 residential, commercial, and industrial customers in service territories in Michigan, covering portions of the southern half of the state's Lower and in the central, eastern and western parts of the state's Upper Peninsula.</p>
+</div>
+      
+    </div>
+  </div>
+
+</article>
+
+    <article class="node node--type-utility-business node--view-mode-full">
+
+  <div class="node__content">
+    <div class="business-logo">
+            <div class="field field--name-field-business-logo field--type-image field--label-hidden field__item">  <img loading="lazy" src="/sites/default/files/2018-07/WGL_logo%5B1%5D.png" width="356" height="194" alt="WGL" />
+
+</div>
+      </div>
+    <div class="business-info">
+      <h3><span class="field field--name-title field--type-string field--label-hidden">WGL</span>
+</h3>
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p><span><span><a href="https://www.washingtongas.com/">Washington Gas</a> is a regulated natural gas utility providing safe, reliable and affordable natural gas to more than 1.2 million customers in the District of Columbia, Maryland and Virginia. Washington Gas was chartered by the U.S. Congress in 1848 and has been providing energy to residential, commercial and industrial customers for 175 years.</span></span></p></div>
+      
+    </div>
+  </div>
+
+</article>
+
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+  </div>
+
+        </div>
+  </div>
+
+
+  </div>
+
+</article>
+
+  </div>
+
+  </div>
+
+	</div>
+    <div class="below-content">
+      
+    </div>
+
+	
+		  <aside class="layout-sidebar-second" role="complementary">
+		  <div class="region region-sidebar-second">
+    <div id="block-exposefield" class="block block-zu-field-block block-expose-field" style="background-color: ">
+  
+    
+      
+  </div>
+<div id="block-exposefield-3" class="block block-zu-field-block block-expose-field" style="background-color: ">
+  
+    
+      
+<div class="field field--name-field-links field--type-link field--label-above links">
+    <h4 class="field__label">Links</h4>
+          <ul class="field__items">
+              <li class="field__item"><a href="https://www.altagas.ca/newsroom/stories/awards/2016-corporate-safety-award">2016 Corporate Safety Award</a></li>
+          <li class="field__item"><a href="https://www.altagas.ca/newsroom/stories/awards/2016-safety-achievement-award-0">2016 Safety Achievement Award</a></li>
+          <li class="field__item"><a href="https://www.altagas.ca/newsroom/stories/awards/2017-public-safety-award-altagas-utilities">2017 Public Safety Award AltaGas Utilities</a></li>
+          <li class="field__item"><a href="https://www.altagas.ca/newsroom/stories/awards/2017-corporate-safety-award-employee-safety">2017 Corporate Safety Award for Employee Safety</a></li>
+          <li class="field__item"><a href="https://www.altagas.ca/newsroom/stories/awards/2018-public-safety-award-altagas-utilities">2018 Public Safety Award AltaGas Utilities</a></li>
+              </ul>
+    </div>
+
+  </div>
+<div id="block-exposefield-2" class="block block-zu-field-block block-expose-field" style="background-color: ">
+  
+    
+      
+  </div>
+
+  </div>
+
+	  </aside>
+	
+  </main>
+
+  	<div class="stock-price">
+	    <div class="region region-stock-price">
+    <div id="block-stockwatchfeed" class="block block-altagas-stockwatch block-stockwatch-feed-data" style="background-color: ">
+  
+    
+      <section class="stockwatch">
+  <div class="summary">
+    <span class="symbol">ALA</span>
+    <span>53.44</span>
+            <span class="icon-chevron-thin-down"> </span>
+        <span>-0.37</span>
+  </div>
+  <div class="day-price">
+    <span>Open:</span> 53.59
+    <span>High:</span> 53.76
+    <span>Low:</span> 53.17
+  </div>
+  <div class="week-price">
+    <span>52 Week High:</span> 56.74
+    <span>Low:</span> 37.8
+  </div>
+</section>
+  </div>
+
+  </div>
+
+	</div>
+  
+  	<footer role="contentinfo">
+	    <div class="region region-footer">
+    <div id="block-altagas-callbeforeyoudiglinkfooter" class="block-custom_css_and_html block block-block-content block-block-content507a74df-c5f0-49ed-946d-d67a4c3508d9" style="background-color: ">
+  
+    
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><script src="https://code.jquery.com/jquery-3.6.0.min.js"></script><script>
+        $(document).ready(function() {
+            // Add an href attribute to the div with class "footer__call-before-you-dig"
+            $('.footer__call-before-you-dig').wrap('<a href="https://altagas.ca/responsibility/safety/altagas-pipeline-damage-prevention"></a>');
+        });
+</script></div>
+      
+  </div>
+<div id="block-footerlogo" class="block-basic block block-block-content block-block-content7293e9f1-cfaa-4859-9029-41385e386fbf" style="background-color: ">
+  
+    
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="logo">
+	<a href="/" title="Home" rel="home">
+		<img src="/themes/custom/altagas/images/altagas-logo-white.png" alt="Home">
+	</a>
+</div></div>
+      
+  </div>
+<nav role="navigation" aria-labelledby="block-altagas-footer-menu" id="block-altagas-footer" class="block block-menu navigation menu--footer">
+            
+  <h2 class="visually-hidden" id="block-altagas-footer-menu">Footer menu</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/new-suppliers" data-drupal-link-system-path="node/69">Suppliers</a>
+              </li>
+                <li class="menu-item">
+        <a href="/contact" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+                <li class="menu-item">
+        <a href="/legal" data-drupal-link-system-path="node/73">Legal</a>
+              </li>
+                <li class="menu-item">
+        <a href="/sitemap" data-drupal-link-system-path="sitemap">Sitemap</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+<div class="footer__toll-free">
+  <p>
+    <img src="/themes/custom/altagas/images/Phone_icon.svg" alt="">
+    <span>24 Hour Toll-free Emergency Numbers:<br />
+      AltaGas: 1.866.826.3830<br />
+      Petrogas: 1.866.975.1011</span>
+  </p>
+</div>
+<div class="footer__call-before-you-dig">
+  <p>
+    <img src="/themes/custom/altagas/images/Dig_icon.svg" alt="">
+    <span>Pipeline Damage Prevention:<br />
+      Call Before You Dig.</span>
+  </p>
+</div>
+<div id="block-copyright" class="block block-block-content">
+  <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>2026 AltaGas Ltd. All Rights Reserved</p></div>
+</div>
+
+  </div>
+
+	</footer>
+  
+</div>
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/928","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"f1cacd1c6a434363491c02d0365dc4f6f2bc8a296f9f5d453aba81f55af37d67"}}</script>
+<script src="/sites/default/files/js/js_DabWejSZ7Jlt4d5gHlir8cW_gugBpn2PBGVLsQQCP8A.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=altagas&amp;include=eJxLzClJTE8s1k_PyU9KzNHNKtZJKkrMS85ITY1PyslPztaHcXVzU_NKAZ1rEZ8"></script>
+
+  </body>
+</html>
