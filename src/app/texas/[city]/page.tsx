@@ -61,7 +61,7 @@ const getCityData = cache(async (slug: string) => {
     .select("id,slug,name,address,city,zip_code,county,rating,review_count,price_1br,price_2br,photo_url,category", { count: "exact", head: false })
     .eq("city", city)
     .order("rating", { ascending: false })
-    .limit(50);
+    .limit(24);
 
   if (error || !places || places.length === 0) return null;
 
@@ -194,6 +194,7 @@ export default async function CityPage({
             {data.avg1br && (
               <> Average 1-bedroom rent: <span className="font-semibold text-emerald-600">${data.avg1br.toLocaleString()}/mo</span>.</>
             )}
+            {data.total > 24 && <> Showing top 24 by rating.</>}
           </p>
         </div>
 
@@ -280,6 +281,17 @@ export default async function CityPage({
           <div className="text-center py-16 text-gray-500">
             <p className="text-lg mb-2">No listings found for {cityName}.</p>
             <Link href="/" className="text-emerald-600 hover:underline">Browse all Texas apartments</Link>
+          </div>
+        )}
+
+        {data.places.length > 0 && data.total > 24 && (
+          <div className="mt-8 text-center">
+            <Link
+              href={`/?city=${encodeURIComponent(cityName)}`}
+              className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 text-white font-medium rounded-xl hover:bg-emerald-700 transition-colors"
+            >
+              View All {data.total.toLocaleString()} Listings in {cityName}
+            </Link>
           </div>
         )}
 

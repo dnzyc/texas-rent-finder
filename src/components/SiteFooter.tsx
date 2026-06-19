@@ -28,6 +28,7 @@ export function SiteFooter() {
             <h4 className="text-white font-medium mb-3">For Owners</h4>
             <ul className="space-y-2 text-sm">
               <li><Link href="/list-property" className="text-gray-300 hover:text-white transition-colors">List Your Property</Link></li>
+              <li><Link href="/partner" className="text-gray-300 hover:text-white transition-colors">Partner with Us</Link></li>
               <li><Link href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link></li>
             </ul>
           </div>

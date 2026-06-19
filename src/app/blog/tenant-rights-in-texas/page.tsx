@@ -4,6 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Texas Tenant Rights Guide 2026",
   description: "Know your rights as a Texas renter — security deposits, repairs, lease termination, landlord obligations under Texas Property Code.",
+  alternates: { canonical: "/blog/tenant-rights-in-texas" },
 };
 
 export default function TenantRightsPage() {

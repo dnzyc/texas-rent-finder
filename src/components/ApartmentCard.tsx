@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Place } from "@/types";
 import { cn } from "@/lib/utils";
 import { FavoritesButton } from "./FavoritesButton";
+import { CompareButton } from "./CompareButton";
 
 export function ApartmentCard({ place, isActive = false }: { place: Place; isActive?: boolean }) {
   return (
@@ -39,7 +40,8 @@ export function ApartmentCard({ place, isActive = false }: { place: Place; isAct
             <p className="text-sm font-semibold text-gray-900 dark:text-white leading-snug line-clamp-2 group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors">
               {place.name}
             </p>
-            <div className="flex items-center gap-2 flex-shrink-0">
+            <div className="flex items-center gap-1.5 flex-shrink-0">
+              <CompareButton place={place} />
               <FavoritesButton placeId={place.id} />
               {place.rating && (
                 <span className="text-xs font-medium text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-950 px-1.5 py-0.5 rounded-md">

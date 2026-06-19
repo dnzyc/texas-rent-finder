@@ -4,6 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "San Antonio Apartment Guide 2026 — Best Areas & Prices",
   description: "Find the best apartments in San Antonio, TX. Compare neighborhoods, average rents, and see why San Antonio is Texas' most affordable major city.",
+  alternates: { canonical: "/blog/renting-in-san-antonio" },
 };
 
 export default function SanAntonioGuidePage() {

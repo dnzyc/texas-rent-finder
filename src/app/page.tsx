@@ -1,8 +1,13 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { InteractiveList } from "@/components/InteractiveList";
 import { FilterState } from "@/types";
 import { Building2, Star, Target, Map, Zap, Banknote, ArrowRight, ChevronDown, CheckCircle2 } from "lucide-react";
 import { supabase } from "@/lib/supabase";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 async function getTopRated() {
   const { data } = await supabase
@@ -332,6 +337,66 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ [
               Rated <span className="font-semibold text-gray-600 dark:text-gray-300">3.94 / 5</span> based on{' '}
               {topRated.reduce((sum, p) => sum + (p.review_count || 0), 0).toLocaleString()}+ verified tenant reviews
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Renter Guides — Internal Blog Links for SEO */}
+      <section className="py-20 bg-gray-50 dark:bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl mb-12">
+            <span className="inline-block text-xs font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest mb-4">Renter Guides</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white tracking-tight mb-4">
+              Expert guides for Texas renters
+            </h2>
+            <p className="text-lg text-gray-500 dark:text-gray-400">
+              Data-driven insights to help you find the best apartment at the right price
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Link href="/blog/average-rent-in-texas" className="group p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 hover:border-emerald-200 dark:hover:border-emerald-700 transition-all">
+              <span className="text-xs font-medium text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">Market Data</span>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mt-2 mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Average Rent in Texas (2026)</h3>
+              <p className="text-sm text-gray-500 dark:text-gray-400">Compare rent prices across 30+ Texas cities with real data</p>
+            </Link>
+
+            <Link href="/blog/austin-vs-dallas-vs-houston" className="group p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 hover:border-emerald-200 dark:hover:border-emerald-700 transition-all">
+              <span className="text-xs font-medium text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">City Comparison</span>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mt-2 mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Austin vs Dallas vs Houston</h3>
+              <p className="text-sm text-gray-500 dark:text-gray-400">Which major Texas city offers the best value for your budget?</p>
+            </Link>
+
+            <Link href="/blog/texas-cities-rent-ranking" className="group p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 hover:border-emerald-200 dark:hover:border-emerald-700 transition-all">
+              <span className="text-xs font-medium text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">Rankings</span>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mt-2 mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">25 Cities Rent Ranking</h3>
+              <p className="text-sm text-gray-500 dark:text-gray-400">All 25 largest Texas cities ranked by average rent</p>
+            </Link>
+
+            <Link href="/blog/student-housing-in-texas" className="group p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 hover:border-emerald-200 dark:hover:border-emerald-700 transition-all">
+              <span className="text-xs font-medium text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">Student Guide</span>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mt-2 mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Student Housing Guide</h3>
+              <p className="text-sm text-gray-500 dark:text-gray-400">Affordable apartments near Texas universities</p>
+            </Link>
+
+            <Link href="/blog/tenant-rights-in-texas" className="group p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 hover:border-emerald-200 dark:hover:border-emerald-700 transition-all">
+              <span className="text-xs font-medium text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">Legal</span>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mt-2 mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Texas Tenant Rights</h3>
+              <p className="text-sm text-gray-500 dark:text-gray-400">Know your rights as a Texas renter</p>
+            </Link>
+
+            <Link href="/blog/cheapest-cities-to-rent-in-texas" className="group p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 hover:border-emerald-200 dark:hover:border-emerald-700 transition-all">
+              <span className="text-xs font-medium text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">Budget</span>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mt-2 mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">10 Cheapest Cities in Texas</h3>
+              <p className="text-sm text-gray-500 dark:text-gray-400">Budget-friendly cities with rent under $1,000/month</p>
+            </Link>
+          </div>
+
+          <div className="text-center mt-10">
+            <Link href="/blog" className="inline-flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-medium hover:underline">
+              View all 19 guides
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>

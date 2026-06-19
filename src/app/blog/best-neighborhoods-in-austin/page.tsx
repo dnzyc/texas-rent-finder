@@ -4,6 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Best Neighborhoods in Austin for Renters (2026)",
   description: "Compare Austin's best neighborhoods for renters — rent prices, walkability, commute times, and lifestyle. Find your ideal Austin neighborhood.",
+  alternates: { canonical: "/blog/best-neighborhoods-in-austin" },
 };
 
 export default function AustinNeighborhoodsPage() {

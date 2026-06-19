@@ -4,6 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Fort Worth Apartments Guide 2026 — Best Areas for Renters",
   description: "Find the best apartments in Fort Worth, TX. Compare neighborhoods from Downtown to TCU area with average rents and lifestyle tips.",
+  alternates: { canonical: "/blog/fort-worth-apartments" },
 };
 
 export default function FortWorthGuidePage() {

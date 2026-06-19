@@ -4,6 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Moving to Dallas? Complete Rental Guide 2026",
   description: "Everything you need to know about renting in Dallas, TX. Average rents by neighborhood, best areas for young professionals, families, and budget renters.",
+  alternates: { canonical: "/blog/moving-to-dallas" },
 };
 
 export default function DallasGuidePage() {

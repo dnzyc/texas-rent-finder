@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   },
   description: "Browse 5,600+ verified apartments across Texas with real photos, ratings & prices. Find your rental in Houston, Dallas, Austin, San Antonio & more.",
   openGraph: {
-    title: "Texas Rent Finder — 5,600+ TX Apartments | Real Photos & Ratings",
-    description: "Browse 5,600+ verified apartments across Texas with real photos, ratings & prices. Your complete Texas rental search.",
+    title: "Texas Rent Finder — 5,600+ TX Apartments | Prices & Ratings",
+    description: "Browse 5,600+ verified apartments across Texas with real photos, ratings & prices. Find your rental in Houston, Dallas, Austin, San Antonio & more.",
     type: "website",
     url: "https://texasrentfinder.com",
     siteName: "Texas Rent Finder",
@@ -32,14 +32,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Texas Rent Finder — 5,600+ TX Apartments | Real Photos & Ratings",
+    title: "Texas Rent Finder — 5,600+ TX Apartments | Prices & Ratings",
     description: "Browse 5,600+ verified apartments across Texas with real photos, ratings & prices.",
     images: ["/og-image.png"]
   },
-  metadataBase: new URL("https://texasrentfinder.com"),
-  alternates: {
-    canonical: "https://texasrentfinder.com"
-  }
+  metadataBase: new URL("https://texasrentfinder.com")
 };
 
 export const viewport = {
@@ -85,6 +82,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 urlTemplate: "https://texasrentfinder.com/?q={search_term_string}"
               },
               "query-input": "required name=search_term_string"
+            }
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "Texas Rent Finder",
+            speakable: {
+              "@type": "SpeakableSpecification",
+              cssSelector: ["h1", ".speakable"]
             }
           })}
         </script>
