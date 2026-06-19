@@ -107,22 +107,22 @@ export function InteractiveList({ initialFilters }: { initialFilters?: FilterSta
   }, [filters, currentPage, fetchPlaces]);
 
   return (
-    <div className="flex flex-col bg-gray-50/50" style={{ height: "calc(100vh - 56px)", overflow: "hidden" }}>
-      <header className="flex-shrink-0 px-6 py-5 border-b border-gray-100 bg-white">
+    <div className="flex flex-col bg-gray-50/50 dark:bg-gray-950" style={{ height: "calc(100vh - 56px)", overflow: "hidden" }}>
+      <header className="flex-shrink-0 px-6 py-5 border-b border-gray-100 bg-white dark:bg-gray-950 dark:border-gray-800">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <h1 className="text-lg font-semibold text-gray-900">Texas Apartments</h1>
-            <span className="text-sm text-gray-400 bg-gray-100 px-2.5 py-0.5 rounded-full">{total.toLocaleString()} listings</span>
+            <h1 className="text-lg font-semibold text-gray-900 dark:text-white">Texas Rent Finder</h1>
+            <span className="text-sm text-gray-400 bg-gray-100 dark:bg-gray-800 dark:text-gray-500 px-2.5 py-0.5 rounded-full">{total.toLocaleString()} listings</span>
           </div>
         </div>
       </header>
 
-      <div className="flex-shrink-0 border-b border-gray-100">
+      <div className="flex-shrink-0 border-b border-gray-100 dark:border-gray-800">
         <FilterBar onFilterChange={handleFilterChange} initialFilters={initialFilters} />
       </div>
 
       <div className="flex-1 grid grid-cols-1 md:grid-cols-[30%_70%]" style={{ minHeight: 0, overflow: "hidden" }}>
-        <div className="overflow-y-auto bg-white" style={{ minHeight: 0 }}>
+        <div className="overflow-y-auto bg-white dark:bg-gray-950" style={{ minHeight: 0 }}>
           {error ? (
             <div className="p-10 text-center">
               <p className="text-red-600 font-medium mb-2">Failed to load listings</p>
@@ -135,16 +135,16 @@ export function InteractiveList({ initialFilters }: { initialFilters?: FilterSta
             <ApartmentListComponent places={places} activeSlug={activeSlug} loading={loading} />
           )}
         </div>
-        <div className="hidden md:block relative border-l border-gray-200" style={{ minHeight: 0, overflow: "hidden" }}>
+        <div className="hidden md:block relative border-l border-gray-200 dark:border-gray-800" style={{ minHeight: 0, overflow: "hidden" }}>
           <MapView places={mapPlaces.length > 0 ? mapPlaces : places} onPlaceClick={handlePlaceClick} />
         </div>
       </div>
 
-      <div className="flex-shrink-0 border-t border-gray-200 bg-white">
+      <div className="flex-shrink-0 border-t border-gray-200 bg-white dark:bg-gray-950 dark:border-gray-800">
         <Pagination page={currentPage} pages={pages} onPageChange={handlePageChange} />
       </div>
 
-      <NewsletterModal onClose={() => {}} />
+      <NewsletterModal onClose={() => { /* handled internally by modal */ }} />
     </div>
   );
 }

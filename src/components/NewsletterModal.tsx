@@ -57,7 +57,16 @@ export function NewsletterModal({ onClose }: NewsletterModalProps) {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 p-4">
-      <div className="mx-auto max-w-lg rounded-xl border border-border bg-card p-4 shadow-lg">
+      <div className="mx-auto max-w-lg rounded-xl border border-border bg-card p-4 shadow-lg relative">
+        <button
+          onClick={() => setIsClosed(true)}
+          className="absolute top-2 right-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 p-1"
+          aria-label="Close newsletter"
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
         {!isSubscribed ? (
           <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row">
             <Input

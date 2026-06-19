@@ -13,12 +13,12 @@ export function ApartmentCard({ place, isActive = false }: { place: Place; isAct
       className={cn(
         "block group focus:outline-none rounded-xl",
         "transition-all duration-300",
-        "hover:bg-gray-50",
-        isActive && "bg-amber-50/60 ring-1 ring-amber-300/50"
+        "hover:bg-gray-50 dark:hover:bg-gray-900",
+        isActive && "bg-amber-50/60 dark:bg-amber-950/30 ring-1 ring-amber-300/50 dark:ring-amber-700/50"
       )}
     >
       <div className="flex gap-4 p-4">
-        <div className="relative w-20 h-20 sm:w-28 sm:h-24 flex-shrink-0 rounded-xl overflow-hidden bg-gray-100">
+        <div className="relative w-20 h-20 sm:w-28 sm:h-24 flex-shrink-0 rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800">
           {place.photo_url ? (
             <Image
               src={place.photo_url}
@@ -36,13 +36,13 @@ export function ApartmentCard({ place, isActive = false }: { place: Place; isAct
 
         <div className="flex-1 min-w-0">
           <div className="flex items-start justify-between gap-2">
-            <p className="text-sm font-semibold text-gray-900 leading-snug line-clamp-2 group-hover:text-emerald-700 transition-colors">
+            <p className="text-sm font-semibold text-gray-900 dark:text-white leading-snug line-clamp-2 group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors">
               {place.name}
             </p>
             <div className="flex items-center gap-2 flex-shrink-0">
               <FavoritesButton placeId={place.id} />
               {place.rating && (
-                <span className="text-xs font-medium text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded-md">
+                <span className="text-xs font-medium text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-950 px-1.5 py-0.5 rounded-md">
                   {place.rating.toFixed(1)}
                 </span>
               )}
@@ -50,10 +50,10 @@ export function ApartmentCard({ place, isActive = false }: { place: Place; isAct
           </div>
 
           {place.address && (
-            <p className="text-xs text-gray-400 truncate mt-1">{place.address}</p>
+            <p className="text-xs text-gray-400 dark:text-gray-500 truncate mt-1">{place.address}</p>
           )}
 
-          <div className="flex items-center gap-1.5 text-xs text-gray-400 mt-1">
+          <div className="flex items-center gap-1.5 text-xs text-gray-400 dark:text-gray-500 mt-1">
             {place.city && <span>{place.city}</span>}
             {place.zip_code && <span>· {place.zip_code}</span>}
             {place.county && <span>· {place.county}</span>}
@@ -62,11 +62,11 @@ export function ApartmentCard({ place, isActive = false }: { place: Place; isAct
           <div className="flex items-center gap-4 mt-2">
             {place.price_1br && (
               <p className="text-sm font-semibold text-emerald-600">
-                ${place.price_1br.toLocaleString()}<span className="text-xs font-normal text-gray-400">/mo</span>
+                ${place.price_1br.toLocaleString()}<span className="text-xs font-normal text-gray-400 dark:text-gray-500">/mo</span>
               </p>
             )}
             {place.category && (
-              <span className="text-xs text-gray-400">{place.category}</span>
+              <span className="text-xs text-gray-400 dark:text-gray-500">{place.category}</span>
             )}
           </div>
         </div>

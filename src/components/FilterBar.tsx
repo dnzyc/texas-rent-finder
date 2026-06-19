@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { FilterOptions, FilterState } from "@/types";
-import { cn } from "@/lib/utils";
 
 export function FilterBar({ onFilterChange, initialFilters }: { onFilterChange: (filters: FilterState) => void; initialFilters?: FilterState }) {
   const [options, setOptions] = useState<FilterOptions>({ counties: [], cities: {}, zips: {} });
@@ -30,12 +29,14 @@ export function FilterBar({ onFilterChange, initialFilters }: { onFilterChange: 
 
   const state: FilterState = { county, city, zip, minRating, query };
 
+  const selectClass = "h-9 rounded-lg border border-gray-200 bg-white px-3 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:focus:ring-emerald-400/20 dark:focus:border-emerald-400 disabled:opacity-40 disabled:cursor-not-allowed";
+
   return (
     <div className="flex flex-wrap items-center gap-2 px-6 py-3">
       <select
         value={county}
         onChange={(e) => { setCounty(e.target.value); emit({ ...state, county: e.target.value, city: "", zip: "" }); }}
-        className="h-9 rounded-lg border border-gray-200 bg-white px-3 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
+        className={selectClass}
       >
         <option value="">All Counties</option>
         {options.counties.map((c) => <option key={c} value={c}>{c}</option>)}
@@ -45,7 +46,7 @@ export function FilterBar({ onFilterChange, initialFilters }: { onFilterChange: 
         value={city}
         onChange={(e) => { setCity(e.target.value); emit({ ...state, city: e.target.value, zip: "" }); }}
         disabled={!county}
-        className="h-9 rounded-lg border border-gray-200 bg-white px-3 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 disabled:opacity-40 disabled:cursor-not-allowed"
+        className={selectClass}
       >
         <option value="">All Cities</option>
         {(options.cities[county] || []).map((c) => <option key={c} value={c}>{c}</option>)}
@@ -55,18 +56,18 @@ export function FilterBar({ onFilterChange, initialFilters }: { onFilterChange: 
         value={zip}
         onChange={(e) => { setZip(e.target.value); emit({ ...state, zip: e.target.value }); }}
         disabled={!city}
-        className="h-9 rounded-lg border border-gray-200 bg-white px-3 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 disabled:opacity-40 disabled:cursor-not-allowed"
+        className={selectClass}
       >
         <option value="">All ZIPs</option>
         {(options.zips[city] || []).map((z) => <option key={z} value={z}>{z}</option>)}
       </select>
 
-      <div className="flex items-center gap-1.5 bg-white border border-gray-200 rounded-lg px-2 h-9">
+      <div className="flex items-center gap-1.5 bg-white border border-gray-200 rounded-lg px-2 h-9 dark:bg-gray-900 dark:border-gray-700">
         <span className="text-xs text-gray-400">≥</span>
         <select
           value={minRating}
           onChange={(e) => { const v = parseFloat(e.target.value); setMinRating(v); emit({ ...state, minRating: v }); }}
-          className="text-sm text-gray-700 bg-transparent focus:outline-none"
+          className="text-sm text-gray-700 bg-transparent focus:outline-none dark:text-gray-300"
         >
           <option value="0">Any rating</option>
           <option value="3">3.0+</option>
@@ -83,7 +84,7 @@ export function FilterBar({ onFilterChange, initialFilters }: { onFilterChange: 
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={(e) => { if (e.key === "Enter") emit(); }}
-          className="w-full h-9 rounded-lg border border-gray-200 bg-white px-3 text-sm text-gray-700 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
+          className="w-full h-9 rounded-lg border border-gray-200 bg-white px-3 text-sm text-gray-700 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:placeholder:text-gray-500 dark:focus:ring-emerald-400/20 dark:focus:border-emerald-400"
         />
       </div>
     </div>

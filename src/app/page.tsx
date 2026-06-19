@@ -31,12 +31,15 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ [
         <section className="relative pt-16 pb-32 bg-gradient-to-br from-blue-50 via-white to-emerald-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto">
-              <p className="text-sm font-medium text-emerald-600 uppercase tracking-wider mb-4">Trusted by thousands of Texas renters</p>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-emerald-50 border border-emerald-200 rounded-full mb-6 dark:bg-emerald-950 dark:border-emerald-800">
+                <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
+                <span className="text-sm font-medium text-emerald-700 dark:text-emerald-300">Trusted by thousands of Texas renters</span>
+              </div>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white tracking-tight mb-6">
                 Find Your Perfect<br /><span className="text-emerald-600">Texas Home</span>
               </h1>
-              <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-                Explore 5,000+ verified listings across Texas. Transparent pricing, verified ratings, and dedicated support for your home journey.
+              <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
+                Explore 5,058 verified listings across Texas. Transparent pricing, verified ratings, and dedicated support for your home journey.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link href="#listings" className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 text-white font-medium rounded-xl hover:bg-emerald-700 transition-colors shadow-lg shadow-emerald-200">
@@ -49,18 +52,18 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ [
               </div>
             </div>
           </div>
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-400 text-sm motion-safe:animate-bounce flex items-center gap-2">
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-500 dark:text-gray-400 text-sm motion-safe:animate-bounce flex items-center gap-2">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
             Scroll to explore
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-white dark:bg-gray-950">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Texas Rent Finder?</h2>
-              <p className="text-lg text-gray-600">The smartest way to find your perfect apartment in Texas</p>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Why Texas Rent Finder?</h2>
+              <p className="text-lg text-gray-600 dark:text-gray-400">The smartest way to find your perfect apartment in Texas</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
@@ -73,12 +76,12 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ [
               ].map((feature, i) => {
                 const Icon = feature.icon;
                 return (
-                  <div key={i} className="p-6 rounded-xl border border-gray-100 hover:border-emerald-200 hover:shadow-lg hover:shadow-emerald-50 transition-all duration-300 bg-white">
-                    <div className="text-emerald-600 mb-4">
+                  <div key={i} className="p-6 rounded-xl border border-gray-100 dark:border-gray-800 hover:border-emerald-200 dark:hover:border-emerald-800 hover:shadow-lg hover:shadow-emerald-50 dark:hover:shadow-emerald-950/50 transition-all duration-300 bg-white dark:bg-gray-900">
+                    <div className="text-emerald-600 dark:text-emerald-400 mb-4">
                       <Icon className="w-7 h-7" />
                     </div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">{feature.desc}</p>
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{feature.title}</h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{feature.desc}</p>
                   </div>
                 );
               })}
@@ -91,7 +94,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ [
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
               {[
-                { value: "5,000+", label: "Active Rentals" },
+                { value: "5,058", label: "Active Rentals" },
                 { value: "10K+", label: "Happy Tenants" },
                 { value: "254", label: "Counties Covered" },
                 { value: "< 2h", label: "Avg Response" },
@@ -106,11 +109,11 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ [
         </section>
 
         {/* Market Data Section */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-gray-50 dark:bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Texas Apartment Market Data (2026)</h2>
-              <p className="text-lg text-gray-600">Real statistics from 5,058 verified apartment listings across Texas</p>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Texas Apartment Market Data (2026)</h2>
+              <p className="text-lg text-gray-600 dark:text-gray-400">Real statistics from 5,058 verified apartment listings across Texas</p>
             </div>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               {[
@@ -119,15 +122,15 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ [
                 { value: "254", label: "Counties", sub: "All Texas counties" },
                 { value: "3.94/5", label: "Avg Rating", sub: "Tenant verified" },
               ].map((item, i) => (
-                <div key={i} className="p-6 bg-white rounded-xl border border-gray-100 text-center">
-                  <p className="text-2xl font-bold text-emerald-600 mb-1">{item.value}</p>
-                  <p className="text-sm font-medium text-gray-900">{item.label}</p>
-                  <p className="text-xs text-gray-500 mt-1">{item.sub}</p>
+                <div key={i} className="p-6 bg-white dark:bg-gray-950 rounded-xl border border-gray-100 dark:border-gray-800 text-center">
+                  <p className="text-2xl font-bold text-emerald-600 dark:text-emerald-400 mb-1">{item.value}</p>
+                  <p className="text-sm font-medium text-gray-900 dark:text-white">{item.label}</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">{item.sub}</p>
                 </div>
               ))}
             </div>
             <div className="max-w-2xl mx-auto">
-              <h3 className="text-xl font-semibold text-gray-900 mb-6 text-center">Average Rent by City (1BR)</h3>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6 text-center">Average Rent by City (1BR)</h3>
               <div className="space-y-3">
                 {[
                   { city: "Austin", price: "$1,624", label: "Most Expensive", pct: 100 },
@@ -136,13 +139,13 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ [
                   { city: "San Antonio", price: "$1,050", label: "Affordable", pct: 65 },
                   { city: "Four Corners", price: "$833", label: "Most Affordable", pct: 51 },
                 ].map((city, i) => (
-                  <div key={i} className="flex items-center gap-4 p-3 bg-white rounded-lg border border-gray-100">
-                    <div className="w-24 text-sm font-medium text-gray-900">{city.city}</div>
-                    <div className="flex-1 bg-gray-100 rounded-full h-3 overflow-hidden">
+                  <div key={i} className="flex items-center gap-4 p-3 bg-white dark:bg-gray-950 rounded-lg border border-gray-100 dark:border-gray-800">
+                    <div className="w-24 text-sm font-medium text-gray-900 dark:text-white">{city.city}</div>
+                    <div className="flex-1 bg-gray-100 dark:bg-gray-800 rounded-full h-3 overflow-hidden">
                       <div className="h-full bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full" style={{ width: `${city.pct}%` }} />
                     </div>
                     <div className="w-24 text-right">
-                      <p className="text-sm font-bold text-gray-900">{city.price}</p>
+                      <p className="text-sm font-bold text-gray-900 dark:text-white">{city.price}</p>
                       <p className="text-xs text-gray-500">{city.label}</p>
                     </div>
                   </div>
@@ -153,9 +156,9 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ [
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-white dark:bg-gray-950">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-10 text-center">Frequently Asked Questions</h2>
             <div className="space-y-3">
               {[
                 { q: "How many apartments are listed on Texas Rent Finder?", a: "We currently list over 5,058 verified apartment complexes across all 254 Texas counties, with new listings added daily from Houston, Dallas, San Antonio, Austin, and every major Texas city." },
@@ -164,52 +167,54 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ [
                 { q: "How are apartment ratings calculated?", a: "Ratings are based on verified tenant reviews, property amenities, location quality, and management responsiveness. All ratings are validated to ensure authenticity and accuracy." },
                 { q: "Which Texas cities have the most apartments?", a: "Houston has the largest inventory with over 2,000 listings, followed by Dallas-Fort Worth (~1,500), San Antonio (~800), and Austin (~600). These four metro areas contain over 75% of all Texas apartment listings." },
               ].map((faq, i) => (
-                <details key={i} className="group p-5 bg-gray-50 rounded-xl border border-gray-100 cursor-pointer">
-                  <summary className="flex items-center justify-between text-lg font-medium text-gray-900 list-none">
+                <details key={i} className="group p-5 bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 cursor-pointer [&_summary::-webkit-details-marker]:hidden">
+                  <summary className="flex items-center justify-between text-lg font-medium text-gray-900 dark:text-white list-none marker:hidden">
                     {faq.q}
-                    <svg className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                    <svg className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                   </summary>
-                  <p className="mt-3 text-gray-600 leading-relaxed">{faq.a}</p>
+                  <p className="mt-3 text-gray-600 dark:text-gray-400 leading-relaxed">{faq.a}</p>
                 </details>
               ))}
             </div>
-            <div className="mt-12 p-6 bg-gradient-to-r from-emerald-50 to-blue-50 rounded-xl">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">What is Texas Rent Finder?</h3>
-              <p className="text-gray-600 leading-relaxed">Texas Rent Finder is a free apartment search platform that lists 5,058+ verified apartment complexes across all 254 Texas counties. We provide transparent pricing, verified tenant ratings, and direct contact information for every listing. Our platform covers Houston, Dallas, San Antonio, Austin, Fort Worth, and all major Texas cities.</p>
+            <div className="mt-12 p-6 bg-gradient-to-r from-emerald-50 to-blue-50 dark:from-emerald-950 dark:to-blue-950 rounded-xl border border-emerald-100 dark:border-emerald-900">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">What is Texas Rent Finder?</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">Texas Rent Finder is a free apartment search platform that lists 5,058+ verified apartment complexes across all 254 Texas counties. We provide transparent pricing, verified tenant ratings, and direct contact information for every listing. Our platform covers Houston, Dallas, San Antonio, Austin, Fort Worth, and all major Texas cities.</p>
             </div>
           </div>
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-white dark:bg-gray-950">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Top Rated Apartments</h2>
-              <p className="text-lg text-gray-600">Our highest-rated properties based on verified tenant reviews</p>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Top Rated Apartments</h2>
+              <p className="text-lg text-gray-600 dark:text-gray-400">Our highest-rated properties based on verified tenant reviews</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {topRated.slice(0, 3).map((place, i) => (
-                <div key={i} className="p-6 bg-gray-50 rounded-xl border border-gray-100">
+                <div key={i} className="relative p-6 bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800">
+                  <div className="absolute -top-3 left-6 text-4xl text-emerald-200 dark:text-emerald-800 font-serif leading-none">&ldquo;</div>
                   <div className="flex items-center gap-1 mb-3">
                     {[...Array(5)].map((_, j) => (
-                      <svg key={j} className={`w-4 h-4 ${j < Math.round(place.rating || 0) ? "text-amber-400" : "text-gray-200"}`} fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                      <svg key={j} className={`w-4 h-4 ${j < Math.round(place.rating || 0) ? "text-amber-400" : "text-gray-200 dark:text-gray-700"}`} fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
                     ))}
+                    <span className="text-xs text-gray-400 ml-1">{place.rating?.toFixed(1)}</span>
                   </div>
-                  <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
                     {place.name} is one of the highest-rated properties in {place.city || "Texas"}, with{' '}
-                    <span className="font-semibold">{place.review_count}+ verified reviews</span>{' '}
+                    <span className="font-semibold text-gray-900 dark:text-white">{place.review_count}+ verified reviews</span>{' '}
                     and a {place.rating?.toFixed(1)} average rating.
                   </p>
-                  <div>
-                    <p className="text-sm font-semibold text-gray-900">{place.name}</p>
-                    <p className="text-xs text-gray-400">{place.city}, TX &middot; {place.review_count} reviews &middot; {place.rating?.toFixed(1)} / 5</p>
+                  <div className="pt-3 border-t border-gray-100 dark:border-gray-800">
+                    <p className="text-sm font-semibold text-gray-900 dark:text-white">{place.name}</p>
+                    <p className="text-xs text-gray-400">{place.city}, TX &middot; {place.review_count} reviews</p>
                   </div>
                 </div>
               ))}
             </div>
             <div className="text-center mt-8">
-              <p className="text-sm text-gray-500">
-                Rated <span className="font-semibold text-gray-700">3.94 / 5</span> based on{' '}
+              <p className="text-sm text-gray-500 dark:text-gray-500">
+                Rated <span className="font-semibold text-gray-700 dark:text-gray-300">3.94 / 5</span> based on{' '}
                 {topRated.reduce((sum, p) => sum + (p.review_count || 0), 0).toLocaleString()}+ verified tenant reviews across Google Maps
               </p>
             </div>
