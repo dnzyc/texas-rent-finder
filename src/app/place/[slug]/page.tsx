@@ -8,9 +8,7 @@ import { PriceDisplay } from "@/components/PriceDisplay";
 import { ApartmentCard } from "@/components/ApartmentCard";
 import { ContactButton } from "@/components/ContactButton";
 import { PlaceWithNearby, Place } from "@/types";
-import { logPageView } from "@/lib/analytics";
 import { supabase } from "@/lib/supabase";
-
 import { parseLocation, SupabasePlaceRow } from "@/lib/parseLocation";
 
 async function getPlace(slug: string): Promise<PlaceWithNearby | null> {
@@ -22,21 +20,26 @@ async function getPlace(slug: string): Promise<PlaceWithNearby | null> {
 
   if (error || !place) return null;
 
-  const parsed = { ...place, location: parseLocation(place as SupabasePlaceRow) } as PlaceWithNearby;
+  const location = parseLocation(place as SupabasePlaceRow);
+  const parsed = { ...place, location } as PlaceWithNearby;
 
-  if (parsed.location) {
-    const { data: nearby } = await supabase
-      .rpc("nearby_places", {
-        lat: parsed.location.lat,
-        lng: parsed.location.lng,
-        radius_m: 5000,
-        exclude_id: parsed.id,
-        limit_count: 4,
-      });
+  if (location) {
+    try {
+      const { data: nearby, error: nearbyError } = await supabase
+        .rpc("nearby_places", {
+          lat: location.lat,
+          lng: location.lng,
+          radius_m: 5000,
+          exclude_id: parsed.id,
+          limit_count: 4,
+        });
 
-    if (nearby) {
-      parsed.nearby = (nearby as any[])
-        .map((p) => ({ ...p, location: parseLocation(p as SupabasePlaceRow) })) as Place[];
+      if (!nearbyError && nearby) {
+        parsed.nearby = (nearby as any[])
+          .map((p) => ({ ...p, location: parseLocation(p as SupabasePlaceRow) })) as Place[];
+      }
+    } catch {
+      // nearby_places RPC not available, skip
     }
   }
 
@@ -48,33 +51,23 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const place = await getPlace(slug);
 
   if (!place) {
-    return {
-      title: "Apartment Not Found - Texas Rent Finder"
-    };
+    return { title: "Apartment Not Found - Texas Rent Finder" };
   }
 
   const price1brFormatted = place.price_1br ? `$${place.price_1br}/mo` : "N/A";
   const price2brFormatted = place.price_2br ? `$${place.price_2br}/mo` : "N/A";
   const city = place.city || "Texas";
-  const state = "TX";
 
   return {
-    title: `${place.name} - ${city}, ${state} Apartments`,
-    description: `Explore ${place.name} apartments in ${city}, ${state}. Prices from ${price1brFormatted} (1BR) to ${price2brFormatted} (2BR). Ratings, amenities, and more.`,
+    title: `${place.name} - ${city}, TX Apartments`,
+    description: `Explore ${place.name} apartments in ${city}, TX. Prices from ${price1brFormatted} (1BR) to ${price2brFormatted} (2BR). Ratings, amenities, and more.`,
     openGraph: {
       title: `${place.name} - ${city}, TX Apartments`,
       description: `Ratings, prices from ${price1brFormatted} to ${price2brFormatted}. Find your perfect rental home today.`,
       type: "article",
       url: `https://texasrentfinder.com/place/${slug}`,
       images: place.photo_url
-        ? [
-            {
-              url: place.photo_url,
-              width: 800,
-              height: 600,
-              alt: `${place.name} apartment photo`
-            }
-          ]
+        ? [{ url: place.photo_url, width: 800, height: 600, alt: `${place.name} apartment photo` }]
         : undefined
     },
     twitter: {
@@ -91,8 +84,6 @@ export default async function PlacePage({ params }: { params: Promise<{ slug: st
   const place = await getPlace(slug);
 
   if (!place) notFound();
-
-  logPageView(`/place/${slug}`);
 
   const breadcrumbJson = {
     "@context": "https://schema.org",
@@ -147,34 +138,33 @@ export default async function PlacePage({ params }: { params: Promise<{ slug: st
       <div className="mt-4">
         {place.photo_url && (
           <div className="relative w-full aspect-[16/9] overflow-hidden rounded-lg mb-6">
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src={place.photo_url}
               alt={place.name}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 768px"
-              priority
+              className="absolute inset-0 w-full h-full object-cover"
+              loading="eager"
             />
           </div>
         )}
         <div className="flex justify-between items-start gap-4">
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">{place.name}</h1>
-            {place.category && <p className="text-sm text-gray-500 mt-1">{place.category}</p>}
+            <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">{place.name}</h1>
+            {place.category && <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{place.category}</p>}
           </div>
           <RatingStars rating={place.rating} />
         </div>
 
         {place.address && (
-          <p className="text-gray-600 mt-3">
+          <p className="text-gray-600 dark:text-gray-300 mt-3">
             {place.address}{place.city ? `, ${place.city}` : ""}{place.zip_code ? `, TX ${place.zip_code}` : ""}
           </p>
         )}
 
-        <div className="mt-4 p-4 bg-gray-50 rounded-lg">
+        <div className="mt-4 p-4 bg-gray-50 dark:bg-gray-900 rounded-lg">
           <PriceDisplay price1br={place.price_1br} price2br={place.price_2br} />
           {(place.price_1br == null && place.price_2br == null) && (
-            <span className="text-sm text-gray-400">Prices not available yet</span>
+            <span className="text-sm text-gray-400 dark:text-gray-500">Prices not available yet</span>
           )}
         </div>
 
@@ -188,7 +178,7 @@ export default async function PlacePage({ params }: { params: Promise<{ slug: st
           {place.location && (
             <a href={`https://www.google.com/maps/dir/?api=1&destination=${place.location.lat},${place.location.lng}`}
               target="_blank" rel="noopener noreferrer"
-              className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 text-sm font-medium">
+              className="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 text-sm font-medium">
               Get Directions
             </a>
           )}
@@ -197,21 +187,21 @@ export default async function PlacePage({ params }: { params: Promise<{ slug: st
 
         {place.hours && (
           <div className="mt-4">
-            <h3 className="text-sm font-medium text-gray-700">Hours</h3>
-            <p className="text-sm text-gray-500 mt-1 whitespace-pre-line">{place.hours}</p>
+            <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300">Hours</h3>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-1 whitespace-pre-line">{place.hours}</p>
           </div>
         )}
 
         {place.phone && (
           <div className="mt-3">
-            <h3 className="text-sm font-medium text-gray-700">Phone</h3>
-            <a href={`tel:${place.phone}`} className="text-sm text-blue-600">{place.phone}</a>
+            <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300">Phone</h3>
+            <a href={`tel:${place.phone}`} className="text-sm text-blue-600 dark:text-blue-400">{place.phone}</a>
           </div>
         )}
 
         {place.nearby && place.nearby.length > 0 && (
-          <div className="mt-8 border-t pt-6">
-            <h2 className="text-lg font-semibold mb-4">Nearby Apartments</h2>
+          <div className="mt-8 border-t dark:border-gray-800 pt-6">
+            <h2 className="text-lg font-semibold mb-4 dark:text-gray-100">Nearby Apartments</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {place.nearby.map((p: Place) => <ApartmentCard key={p.id} place={p} />)}
             </div>
