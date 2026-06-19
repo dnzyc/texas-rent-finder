@@ -1,7 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
+import { supabase } from "@/lib/supabase";
+import { checkRateLimit } from "@/middleware/rate-limiter";
 
 export async function POST(request: NextRequest) {
   try {
+    const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+    const rateCheck = checkRateLimit(`contact:${ip}`);
+    if (!rateCheck.allowed) {
+      return NextResponse.json(
+        { error: "Too many requests. Please try again later." },
+        { status: 429 }
+      );
+    }
+
     const body = await request.json();
     const { name, email, phone, message, apartment_slug } = body;
 
@@ -20,19 +31,32 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const contactData = {
-      name,
-      email,
-      phone: phone || "",
-      message,
-      apartment_slug: apartment_slug || null,
-      created_at: new Date().toISOString(),
-    };
+    if (name.length > 200 || email.length > 254 || message.length > 5000) {
+      return NextResponse.json(
+        { error: "Input too long" },
+        { status: 400 }
+      );
+    }
 
-    console.log("Contact form submission:", contactData);
+    const { error } = await supabase
+      .from("contact_submissions")
+      .insert({
+        name: name.trim(),
+        email: email.trim().toLowerCase(),
+        phone: (phone || "").trim(),
+        message: message.trim(),
+        apartment_slug: apartment_slug || null,
+      });
 
-    return NextResponse.json({ success: true });
-  } catch (error) {
+    if (error) {
+      return NextResponse.json(
+        { error: "Failed to submit contact form" },
+        { status: 500 }
+      );
+    }
+
+    return NextResponse.json({ success: true }, { status: 201 });
+  } catch {
     return NextResponse.json(
       { error: "Failed to submit contact form" },
       { status: 500 }

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { InteractiveList } from "@/components/InteractiveList";
 import { FilterState } from "@/types";
-import { Building2, Star, Target, Map, Zap, Banknote } from "lucide-react";
+import { Building2, Star, Target, Map, Zap, Banknote, ArrowRight, ChevronDown, CheckCircle2 } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 
 async function getTopRated() {
@@ -27,220 +27,338 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ [
 
   return (
     <main id="main-content">
-      {/* Hero Section */}
-        <section className="relative pt-16 pb-32 bg-gradient-to-br from-blue-50 via-white to-emerald-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-3xl mx-auto">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-emerald-50 border border-emerald-200 rounded-full mb-6 dark:bg-emerald-950 dark:border-emerald-800">
-                <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
-                <span className="text-sm font-medium text-emerald-700 dark:text-emerald-300">Trusted by thousands of Texas renters</span>
-              </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white tracking-tight mb-6">
-                Find Your Perfect<br /><span className="text-emerald-600">Texas Home</span>
-              </h1>
-              <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-                Explore 5,058 verified listings across Texas. Transparent pricing, verified ratings, and dedicated support for your home journey.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link href="#listings" className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 text-white font-medium rounded-xl hover:bg-emerald-700 transition-colors shadow-lg shadow-emerald-200">
-                  Browse Apartments
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 13l-7 7-7-7" /></svg>
-                </Link>
-                <Link href="/signup" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-300 text-gray-700 font-medium rounded-xl hover:border-gray-400 hover:bg-gray-50 transition-colors">
-                  Create Account
-                </Link>
-              </div>
+      {/* Hero Section — Massive Typography + Eyebrow Tag + Pill CTA */}
+      <section className="relative pt-20 pb-40 bg-gradient-to-br from-emerald-50 via-white to-blue-50 dark:from-gray-950 dark:via-gray-950 dark:to-gray-900 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-4xl mx-auto">
+            {/* Eyebrow Tag */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-8 dark:bg-emerald-500/10 dark:border-emerald-500/20">
+              <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
+              <span className="text-xs font-semibold text-emerald-700 dark:text-emerald-300 uppercase tracking-widest">Texas&apos;s #1 Apartment Finder</span>
             </div>
-          </div>
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-500 dark:text-gray-400 text-sm motion-safe:animate-bounce flex items-center gap-2">
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
-            Scroll to explore
-          </div>
-        </section>
 
-        {/* Features Section */}
-        <section className="py-20 bg-white dark:bg-gray-950">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Why Texas Rent Finder?</h2>
-              <p className="text-lg text-gray-600 dark:text-gray-400">The smartest way to find your perfect apartment in Texas</p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                { icon: Building2, title: "Verified Listings", desc: "Every property is manually verified for quality and accuracy. We check photos, pricing, and availability so you don't waste time on fake listings." },
-                { icon: Star, title: "Transparent Ratings", desc: "Real tenant reviews with verified scores. No fake ratings. See what actual residents think before you move in." },
-                { icon: Target, title: "Expert Support", desc: "24/7 dedicated team ready to help you find the right apartment. We answer questions, schedule tours, and negotiate deals." },
-                { icon: Map, title: "All Texas Counties", desc: "From Houston to Dallas, Austin to San Antonio — we cover all 254 counties. Find apartments in any Texas city." },
-                { icon: Zap, title: "Fast Application", desc: "Streamlined process with direct contact to property managers. Apply online and get approved faster." },
-                { icon: Banknote, title: "Price Transparency", desc: "Real-time pricing data from thousands of apartments. Compare rents across cities and find the best deal." },
-              ].map((feature, i) => {
-                const Icon = feature.icon;
-                return (
-                  <div key={i} className="p-6 rounded-xl border border-gray-100 dark:border-gray-800 hover:border-emerald-200 dark:hover:border-emerald-800 hover:shadow-lg hover:shadow-emerald-50 dark:hover:shadow-emerald-950/50 transition-all duration-300 bg-white dark:bg-gray-900">
-                    <div className="text-emerald-600 dark:text-emerald-400 mb-4">
-                      <Icon className="w-7 h-7" />
-                    </div>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{feature.title}</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{feature.desc}</p>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
+            {/* Massive Display Heading */}
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white tracking-tight leading-[1.05] mb-6">
+              Find Your Perfect
+              <br />
+              <span className="bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">Texas Home</span>
+            </h1>
 
-        {/* Stats Section */}
-        <section className="py-16 bg-gradient-to-r from-emerald-600 to-blue-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-              {[
-                { value: "5,058", label: "Active Rentals" },
-                { value: "10K+", label: "Happy Tenants" },
-                { value: "254", label: "Counties Covered" },
-                { value: "< 2h", label: "Avg Response" },
-              ].map((stat, i) => (
-                <div key={i} className="text-white">
-                  <p className="text-3xl sm:text-4xl font-bold mb-1">{stat.value}</p>
-                  <p className="text-emerald-100 text-sm">{stat.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Market Data Section */}
-        <section className="py-20 bg-gray-50 dark:bg-gray-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Texas Apartment Market Data (2026)</h2>
-              <p className="text-lg text-gray-600 dark:text-gray-400">Real statistics from 5,058 verified apartment listings across Texas</p>
-            </div>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-              {[
-                { value: "5,058+", label: "Total Listings", sub: "Verified apartments" },
-                { value: "50+", label: "Cities Covered", sub: "Major Texas cities" },
-                { value: "254", label: "Counties", sub: "All Texas counties" },
-                { value: "3.94/5", label: "Avg Rating", sub: "Tenant verified" },
-              ].map((item, i) => (
-                <div key={i} className="p-6 bg-white dark:bg-gray-950 rounded-xl border border-gray-100 dark:border-gray-800 text-center">
-                  <p className="text-2xl font-bold text-emerald-600 dark:text-emerald-400 mb-1">{item.value}</p>
-                  <p className="text-sm font-medium text-gray-900 dark:text-white">{item.label}</p>
-                  <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">{item.sub}</p>
-                </div>
-              ))}
-            </div>
-            <div className="max-w-2xl mx-auto">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6 text-center">Average Rent by City (1BR)</h3>
-              <div className="space-y-3">
-                {[
-                  { city: "Austin", price: "$1,624", label: "Most Expensive", pct: 100 },
-                  { city: "Houston", price: "$1,200", label: "Mid-Range", pct: 74 },
-                  { city: "Dallas", price: "$1,150", label: "Mid-Range", pct: 71 },
-                  { city: "San Antonio", price: "$1,050", label: "Affordable", pct: 65 },
-                  { city: "Four Corners", price: "$833", label: "Most Affordable", pct: 51 },
-                ].map((city, i) => (
-                  <div key={i} className="flex items-center gap-4 p-3 bg-white dark:bg-gray-950 rounded-lg border border-gray-100 dark:border-gray-800">
-                    <div className="w-24 text-sm font-medium text-gray-900 dark:text-white">{city.city}</div>
-                    <div className="flex-1 bg-gray-100 dark:bg-gray-800 rounded-full h-3 overflow-hidden">
-                      <div className="h-full bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full" style={{ width: `${city.pct}%` }} />
-                    </div>
-                    <div className="w-24 text-right">
-                      <p className="text-sm font-bold text-gray-900 dark:text-white">{city.price}</p>
-                      <p className="text-xs text-gray-500">{city.label}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="py-20 bg-white dark:bg-gray-950">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-10 text-center">Frequently Asked Questions</h2>
-            <div className="space-y-3">
-              {[
-                { q: "How many apartments are listed on Texas Rent Finder?", a: "We currently list over 5,058 verified apartment complexes across all 254 Texas counties, with new listings added daily from Houston, Dallas, San Antonio, Austin, and every major Texas city." },
-                { q: "Is Texas Rent Finder free to use?", a: "Yes! Texas Rent Finder is completely free for renters. We never charge tenants for searching, comparing, or contacting properties. Our service is supported by property partnerships." },
-                { q: "What is the average rent for apartments in Texas?", a: "The average 1BR rent in Texas is approximately $1,200/month, with Austin being the most expensive at $1,624 and Four Corners the most affordable at $833/month." },
-                { q: "How are apartment ratings calculated?", a: "Ratings are based on verified tenant reviews, property amenities, location quality, and management responsiveness. All ratings are validated to ensure authenticity and accuracy." },
-                { q: "Which Texas cities have the most apartments?", a: "Houston has the largest inventory with over 2,000 listings, followed by Dallas-Fort Worth (~1,500), San Antonio (~800), and Austin (~600). These four metro areas contain over 75% of all Texas apartment listings." },
-              ].map((faq, i) => (
-                <details key={i} className="group p-5 bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 cursor-pointer [&_summary::-webkit-details-marker]:hidden">
-                  <summary className="flex items-center justify-between text-lg font-medium text-gray-900 dark:text-white list-none marker:hidden">
-                    {faq.q}
-                    <svg className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
-                  </summary>
-                  <p className="mt-3 text-gray-600 dark:text-gray-400 leading-relaxed">{faq.a}</p>
-                </details>
-              ))}
-            </div>
-            <div className="mt-12 p-6 bg-gradient-to-r from-emerald-50 to-blue-50 dark:from-emerald-950 dark:to-blue-950 rounded-xl border border-emerald-100 dark:border-emerald-900">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">What is Texas Rent Finder?</h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">Texas Rent Finder is a free apartment search platform that lists 5,058+ verified apartment complexes across all 254 Texas counties. We provide transparent pricing, verified tenant ratings, and direct contact information for every listing. Our platform covers Houston, Dallas, San Antonio, Austin, Fort Worth, and all major Texas cities.</p>
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials Section */}
-        <section className="py-20 bg-white dark:bg-gray-950">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Top Rated Apartments</h2>
-              <p className="text-lg text-gray-600 dark:text-gray-400">Our highest-rated properties based on verified tenant reviews</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {topRated.slice(0, 3).map((place, i) => (
-                <div key={i} className="relative p-6 bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800">
-                  <div className="absolute -top-3 left-6 text-4xl text-emerald-200 dark:text-emerald-800 font-serif leading-none">&ldquo;</div>
-                  <div className="flex items-center gap-1 mb-3">
-                    {[...Array(5)].map((_, j) => (
-                      <svg key={j} className={`w-4 h-4 ${j < Math.round(place.rating || 0) ? "text-amber-400" : "text-gray-200 dark:text-gray-700"}`} fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                    ))}
-                    <span className="text-xs text-gray-400 ml-1">{place.rating?.toFixed(1)}</span>
-                  </div>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-                    {place.name} is one of the highest-rated properties in {place.city || "Texas"}, with{' '}
-                    <span className="font-semibold text-gray-900 dark:text-white">{place.review_count}+ verified reviews</span>{' '}
-                    and a {place.rating?.toFixed(1)} average rating.
-                  </p>
-                  <div className="pt-3 border-t border-gray-100 dark:border-gray-800">
-                    <p className="text-sm font-semibold text-gray-900 dark:text-white">{place.name}</p>
-                    <p className="text-xs text-gray-400">{place.city}, TX &middot; {place.review_count} reviews</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="text-center mt-8">
-              <p className="text-sm text-gray-500 dark:text-gray-500">
-                Rated <span className="font-semibold text-gray-700 dark:text-gray-300">3.94 / 5</span> based on{' '}
-                {topRated.reduce((sum, p) => sum + (p.review_count || 0), 0).toLocaleString()}+ verified tenant reviews across Google Maps
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Listing Section */}
-        <section id="listings">
-          <InteractiveList initialFilters={filters} />
-        </section>
-
-        {/* Promo Banner */}
-        <section className="py-8 bg-gradient-to-r from-blue-600 to-emerald-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="text-white text-lg font-medium mb-1">New to Texas or planning a move?</p>
-            <p className="text-blue-100 text-sm mb-4">
-              Read our free guides on neighborhoods, tenant rights, and city comparisons.
+            <p className="text-lg sm:text-xl text-gray-500 dark:text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+              5,058 verified listings across Texas. Transparent pricing, real tenant ratings, and dedicated support — all free.
             </p>
-            <Link
-              href="/blog"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-emerald-700 font-medium rounded-xl hover:bg-gray-100 transition-colors"
-            >
-              Browse Renter Guides
-            </Link>
+
+            {/* CTA Buttons — Pill with trailing icon */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="#listings"
+                className="group inline-flex items-center gap-3 px-8 py-4 bg-emerald-600 text-white font-semibold rounded-full hover:bg-emerald-700 transition-all duration-300 shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:scale-[1.02] active:scale-[0.98]"
+              >
+                Browse Apartments
+                <span className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
+                  <ArrowRight className="w-4 h-4" />
+                </span>
+              </Link>
+              <Link
+                href="/signup"
+                className="group inline-flex items-center gap-3 px-8 py-4 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 font-semibold rounded-full border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+              >
+                Create Account
+                <span className="w-8 h-8 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
+                  <ArrowRight className="w-4 h-4" />
+                </span>
+              </Link>
+            </div>
           </div>
-        </section>
-      </main>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-400 dark:text-gray-500">
+          <span className="text-xs font-medium uppercase tracking-widest">Scroll to explore</span>
+          <ChevronDown className="w-4 h-4 animate-bounce" />
+        </div>
+      </section>
+
+      {/* Features Section — Asymmetric Bento Grid */}
+      <section className="py-32 bg-white dark:bg-gray-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl mb-16">
+            <span className="inline-block text-xs font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest mb-4">Why Texas Rent Finder</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white tracking-tight mb-4">
+              The smartest way to find your next apartment
+            </h2>
+            <p className="text-lg text-gray-500 dark:text-gray-400">
+              We verify every listing, publish real tenant ratings, and keep pricing transparent — so you can decide with confidence.
+            </p>
+          </div>
+
+          {/* Bento Grid — asymmetric layout */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* Large card — spans 2 cols */}
+            <div className="md:col-span-2 p-8 bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 hover:border-emerald-200 dark:hover:border-emerald-800 transition-colors group">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-900/50 flex items-center justify-center flex-shrink-0">
+                  <Building2 className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">Verified Listings</h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                    Every property is manually verified for quality and accuracy. We check photos, pricing, and availability so you never waste time on fake listings.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Small card — stacked */}
+            <div className="p-8 bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 hover:border-emerald-200 dark:hover:border-emerald-800 transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-900/50 flex items-center justify-center mb-4">
+                <Star className="w-6 h-6 text-amber-600 dark:text-amber-400" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Transparent Ratings</h3>
+              <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                Real tenant reviews with verified scores. No fake ratings — see what actual residents think.
+              </p>
+            </div>
+
+            {/* Small card */}
+            <div className="p-8 bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 hover:border-emerald-200 dark:hover:border-emerald-800 transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center mb-4">
+                <Target className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Expert Support</h3>
+              <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                24/7 dedicated team ready to help you find the right apartment. We answer questions and schedule tours.
+              </p>
+            </div>
+
+            {/* Large card — spans 2 cols */}
+            <div className="md:col-span-2 p-8 bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 hover:border-emerald-200 dark:hover:border-emerald-800 transition-colors">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-900/50 flex items-center justify-center flex-shrink-0">
+                  <Map className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">All Texas Counties</h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                    From Houston to Dallas, Austin to San Antonio — we cover all 254 counties. Find apartments in any Texas city.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Small card */}
+            <div className="p-8 bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 hover:border-emerald-200 dark:hover:border-emerald-800 transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-purple-100 dark:bg-purple-900/50 flex items-center justify-center mb-4">
+                <Zap className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Fast Application</h3>
+              <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                Streamlined process with direct contact to property managers. Apply online and get approved faster.
+              </p>
+            </div>
+
+            {/* Small card */}
+            <div className="p-8 bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 hover:border-emerald-200 dark:hover:border-emerald-800 transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-rose-100 dark:bg-rose-900/50 flex items-center justify-center mb-4">
+                <Banknote className="w-6 h-6 text-rose-600 dark:text-rose-400" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Price Transparency</h3>
+              <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                Real-time pricing data from thousands of apartments. Compare rents across cities and find the best deal.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section — Minimal Typography */}
+      <section className="py-24 bg-gray-50 dark:bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { value: "5,058", label: "Active Rentals", color: "text-emerald-600 dark:text-emerald-400" },
+              { value: "10K+", label: "Happy Tenants", color: "text-blue-600 dark:text-blue-400" },
+              { value: "254", label: "Counties Covered", color: "text-amber-600 dark:text-amber-400" },
+              { value: "< 2h", label: "Avg Response", color: "text-rose-600 dark:text-rose-400" },
+            ].map((stat, i) => (
+              <div key={i} className="text-center">
+                <p className={`text-4xl sm:text-5xl font-bold ${stat.color} mb-2`}>{stat.value}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 font-medium uppercase tracking-wider">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Market Data Section — Clean Data Visualization */}
+      <section className="py-32 bg-white dark:bg-gray-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl mb-16">
+            <span className="inline-block text-xs font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest mb-4">Market Intelligence</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white tracking-tight mb-4">
+              Texas Apartment Market Data (2026)
+            </h2>
+            <p className="text-lg text-gray-500 dark:text-gray-400">
+              Real statistics from 5,058 verified apartment listings across Texas
+            </p>
+          </div>
+
+          {/* Stat cards */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
+            {[
+              { value: "5,058+", label: "Total Listings", sub: "Verified apartments" },
+              { value: "50+", label: "Cities Covered", sub: "Major Texas cities" },
+              { value: "254", label: "Counties", sub: "All Texas counties" },
+              { value: "3.94/5", label: "Avg Rating", sub: "Tenant verified" },
+            ].map((item, i) => (
+              <div key={i} className="p-6 bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 text-center">
+                <p className="text-2xl font-bold text-emerald-600 dark:text-emerald-400 mb-1">{item.value}</p>
+                <p className="text-sm font-semibold text-gray-900 dark:text-white">{item.label}</p>
+                <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">{item.sub}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Rent by city */}
+          <div className="max-w-2xl mx-auto">
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-8">Average Rent by City (1BR)</h3>
+            <div className="space-y-4">
+              {[
+                { city: "Austin", price: "$1,624", label: "Most Expensive", pct: 100 },
+                { city: "Houston", price: "$1,200", label: "Mid-Range", pct: 74 },
+                { city: "Dallas", price: "$1,150", label: "Mid-Range", pct: 71 },
+                { city: "San Antonio", price: "$1,050", label: "Affordable", pct: 65 },
+                { city: "Four Corners", price: "$833", label: "Most Affordable", pct: 51 },
+              ].map((city, i) => (
+                <div key={i} className="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800">
+                  <div className="w-28 text-sm font-semibold text-gray-900 dark:text-white">{city.city}</div>
+                  <div className="flex-1 bg-gray-100 dark:bg-gray-800 rounded-full h-2.5 overflow-hidden">
+                    <div className="h-full bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full" style={{ width: `${city.pct}%` }} />
+                  </div>
+                  <div className="w-28 text-right">
+                    <p className="text-sm font-bold text-gray-900 dark:text-white">{city.price}</p>
+                    <p className="text-xs text-gray-400">{city.label}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section — Clean Accordion */}
+      <section className="py-32 bg-gray-50 dark:bg-gray-900">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="inline-block text-xs font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest mb-4">FAQ</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white tracking-tight">
+              Frequently Asked Questions
+            </h2>
+          </div>
+
+          <div className="space-y-3">
+            {[
+              { q: "How many apartments are listed on Texas Rent Finder?", a: "We currently list over 5,058 verified apartment complexes across all 254 Texas counties, with new listings added daily from Houston, Dallas, San Antonio, Austin, and every major Texas city." },
+              { q: "Is Texas Rent Finder free to use?", a: "Yes! Texas Rent Finder is completely free for renters. We never charge tenants for searching, comparing, or contacting properties. Our service is supported by property partnerships." },
+              { q: "What is the average rent for apartments in Texas?", a: "The average 1BR rent in Texas is approximately $1,200/month, with Austin being the most expensive at $1,624 and Four Corners the most affordable at $833/month." },
+              { q: "How are apartment ratings calculated?", a: "Ratings are based on verified tenant reviews, property amenities, location quality, and management responsiveness. All ratings are validated to ensure authenticity and accuracy." },
+              { q: "Which Texas cities have the most apartments?", a: "Houston has the largest inventory with over 2,000 listings, followed by Dallas-Fort Worth (~1,500), San Antonio (~800), and Austin (~600). These four metro areas contain over 75% of all Texas apartment listings." },
+            ].map((faq, i) => (
+              <details key={i} className="group p-6 bg-white dark:bg-gray-950 rounded-2xl border border-gray-100 dark:border-gray-800 cursor-pointer [&_summary::-webkit-details-marker]:hidden">
+                <summary className="flex items-center justify-between text-base font-semibold text-gray-900 dark:text-white list-none marker:hidden">
+                  {faq.q}
+                  <ChevronDown className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform duration-200 flex-shrink-0 ml-4" />
+                </summary>
+                <p className="mt-4 text-gray-500 dark:text-gray-400 leading-relaxed">{faq.a}</p>
+              </details>
+            ))}
+          </div>
+
+          {/* Info card */}
+          <div className="mt-12 p-8 bg-emerald-50 dark:bg-emerald-950/30 rounded-2xl border border-emerald-100 dark:border-emerald-900/50">
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">What is Texas Rent Finder?</h3>
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+              Texas Rent Finder is a free apartment search platform that lists 5,058+ verified apartment complexes across all 254 Texas counties. We provide transparent pricing, verified tenant ratings, and direct contact information for every listing.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section — Editorial Quote Layout */}
+      <section className="py-32 bg-white dark:bg-gray-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl mb-16">
+            <span className="inline-block text-xs font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest mb-4">Top Rated</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white tracking-tight mb-4">
+              Highest-rated apartments in Texas
+            </h2>
+            <p className="text-lg text-gray-500 dark:text-gray-400">
+              Our highest-rated properties based on verified tenant reviews
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {topRated.slice(0, 3).map((place, i) => (
+              <div key={i} className="group p-8 bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 hover:border-emerald-200 dark:hover:border-emerald-800 transition-colors">
+                {/* Quote mark */}
+                <div className="text-5xl text-emerald-200 dark:text-emerald-800 font-serif leading-none mb-4">&ldquo;</div>
+
+                {/* Stars */}
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(5)].map((_, j) => (
+                    <Star key={j} className={`w-4 h-4 ${j < Math.round(place.rating || 0) ? "text-amber-400 fill-amber-400" : "text-gray-200 dark:text-gray-700"}`} />
+                  ))}
+                  <span className="text-sm font-medium text-gray-500 dark:text-gray-400 ml-2">{place.rating?.toFixed(1)}</span>
+                </div>
+
+                {/* Review text */}
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                  {place.name} is one of the highest-rated properties in {place.city || "Texas"}, with{' '}
+                  <span className="font-semibold text-gray-900 dark:text-white">{place.review_count}+ verified reviews</span>{' '}
+                  and a {place.rating?.toFixed(1)} average rating.
+                </p>
+
+                {/* Attribution */}
+                <div className="pt-4 border-t border-gray-100 dark:border-gray-800">
+                  <p className="text-sm font-semibold text-gray-900 dark:text-white">{place.name}</p>
+                  <p className="text-xs text-gray-400 dark:text-gray-500">{place.city}, TX · {place.review_count} reviews</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <p className="text-sm text-gray-400 dark:text-gray-500">
+              Rated <span className="font-semibold text-gray-600 dark:text-gray-300">3.94 / 5</span> based on{' '}
+              {topRated.reduce((sum, p) => sum + (p.review_count || 0), 0).toLocaleString()}+ verified tenant reviews
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Listing Section — Interactive Map + List (UNCHANGED) */}
+      <section id="listings">
+        <InteractiveList initialFilters={filters} />
+      </section>
+
+      {/* Promo Banner */}
+      <section className="py-12 bg-gradient-to-r from-blue-600 to-emerald-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-white text-xl font-semibold mb-2">New to Texas or planning a move?</p>
+          <p className="text-blue-100 text-sm mb-6">
+            Read our free guides on neighborhoods, tenant rights, and city comparisons.
+          </p>
+          <Link
+            href="/blog"
+            className="group inline-flex items-center gap-3 px-8 py-4 bg-white text-emerald-700 font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+          >
+            Browse Renter Guides
+            <span className="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
+              <ArrowRight className="w-4 h-4" />
+            </span>
+          </Link>
+        </div>
+      </section>
+    </main>
   );
 }

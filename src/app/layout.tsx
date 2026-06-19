@@ -54,6 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={cn("font-sans", geist.variable)}>
       <head>
         <meta name="google-site-verification" content="12UogC2fhWpPl6q169t94hQIFRjlgMTkJ-87PTBzdBA" />
+        <link rel="preconnect" href="https://nzqywomdcgjnxwtndipk.supabase.co" />
         <link rel="preconnect" href="https://tile.openstreetmap.org" crossOrigin="anonymous" />
       </head>
       <body className="bg-gray-50 text-gray-900 antialiased">

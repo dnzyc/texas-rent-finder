@@ -8,10 +8,10 @@ export function PriceDisplay({ price1br, price2br }: { price1br: number | null; 
   return (
     <div className="flex gap-3 text-sm">
       {price1br != null && (
-        <span className="text-green-700 font-medium">1BR from {formatPrice(price1br)}</span>
+        <span className="text-green-700 dark:text-green-400 font-medium">1BR from {formatPrice(price1br)}</span>
       )}
       {price2br != null && (
-        <span className="text-green-700 font-medium">2BR from {formatPrice(price2br)}</span>
+        <span className="text-green-700 dark:text-green-400 font-medium">2BR from {formatPrice(price2br)}</span>
       )}
     </div>
   );

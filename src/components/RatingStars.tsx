@@ -16,9 +16,9 @@ export function RatingStars({ rating }: { rating: number | null }) {
       ))}
       {hasHalf && <span key="h" className="text-yellow-400 text-sm">★</span>}
       {Array.from({ length: empty }).map((_, i) => (
-        <span key={`e-${i}`} className="text-gray-300 text-sm">★</span>
+        <span key={`e-${i}`} className="text-gray-300 dark:text-gray-600 text-sm">★</span>
       ))}
-      <span className="text-xs text-gray-500 ml-1">{rating.toFixed(1)}</span>
+      <span className="text-xs text-gray-500 dark:text-gray-400 ml-1">{rating.toFixed(1)}</span>
     </span>
   );
 }

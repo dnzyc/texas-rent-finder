@@ -25,7 +25,7 @@ export default function FavoritesPage() {
         }
 
         const data = await response.json();
-        const apartmentIds = data.data.map((fav: Favorite) => fav.apartment_id);
+        const apartmentIds = (data.data || []).map((fav: Favorite) => fav.apartment_id);
 
         if (apartmentIds.length > 0) {
           const placesResponse = await fetch(
@@ -51,7 +51,7 @@ export default function FavoritesPage() {
     return (
       <div className="container mx-auto px-4 py-8">
         <div className="flex items-center justify-center min-h-[400px]">
-          <p className="text-stone-500">Loading your favorites...</p>
+          <p className="text-stone-500 dark:text-gray-400">Loading your favorites...</p>
         </div>
       </div>
     );
@@ -61,7 +61,7 @@ export default function FavoritesPage() {
     return (
       <div className="container mx-auto px-4 py-8">
         <div className="flex items-center justify-center min-h-[400px] flex-col gap-4">
-          <p className="text-red-500">{error}</p>
+          <p className="text-red-500 dark:text-red-400">{error}</p>
           <Link href="/">
             <Button>Back to Home</Button>
           </Link>
@@ -74,8 +74,8 @@ export default function FavoritesPage() {
     return (
       <div className="container mx-auto px-4 py-8 min-h-[400px] flex flex-col items-center justify-center">
         <div className="text-center max-w-md space-y-6">
-          <h1 className="text-3xl font-bold text-stone-900 tracking-tight">Your Favorites</h1>
-          <p className="text-stone-500">
+          <h1 className="text-3xl font-bold text-stone-900 dark:text-white tracking-tight">Your Favorites</h1>
+          <p className="text-stone-500 dark:text-gray-400">
             Save places you want to revisit by clicking the heart icon.
           </p>
           <Link href="/">
@@ -89,7 +89,7 @@ export default function FavoritesPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="flex items-center justify-between mb-8">
-        <h1 className="text-3xl font-bold text-stone-900 tracking-tight">Your Favorites</h1>
+        <h1 className="text-3xl font-bold text-stone-900 dark:text-white tracking-tight">Your Favorites</h1>
         <Link href="/">
           <Button variant="outline">Back to Home</Button>
         </Link>
