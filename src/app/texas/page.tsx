@@ -14,17 +14,24 @@ function cityToSlug(city: string): string {
 }
 
 export default async function TexasCitiesPage() {
-  const { data: citiesData } = await supabase
-    .from("places")
-    .select("city")
-    .not("city", "is", null);
-
+  // Paginate to get all 9000+ rows
   const cityCounts = new Map<string, number>();
-  (citiesData || []).forEach((p: any) => {
-    if (p.city) {
-      cityCounts.set(p.city, (cityCounts.get(p.city) || 0) + 1);
-    }
-  });
+  let offset = 0;
+  while (true) {
+    const { data } = await supabase
+      .from("places")
+      .select("city")
+      .not("city", "is", null)
+      .range(offset, offset + 999);
+    if (!data || data.length === 0) break;
+    data.forEach((p: any) => {
+      if (p.city) {
+        cityCounts.set(p.city, (cityCounts.get(p.city) || 0) + 1);
+      }
+    });
+    if (data.length < 1000) break;
+    offset += 1000;
+  }
 
   const cities = [...cityCounts.entries()]
     .sort((a, b) => b[1] - a[1]);
