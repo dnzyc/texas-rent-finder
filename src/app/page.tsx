@@ -31,7 +31,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ [
   };
 
   return (
-    <main id="main-content">
+    <main id="main-content" tabIndex={-1}>
       {/* Hero Section — Massive Typography + Eyebrow Tag + Pill CTA */}
       <section className="relative pt-20 pb-40 bg-gradient-to-br from-emerald-50 via-white to-blue-50 dark:from-gray-950 dark:via-gray-950 dark:to-gray-900 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,7 +50,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ [
             </h1>
 
             <p className="text-lg sm:text-xl text-gray-500 dark:text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-              5,058 verified listings across Texas. Transparent pricing, real tenant ratings, and dedicated support — all free.
+              5,573 verified listings across Texas. Transparent pricing, real tenant ratings, and dedicated support — all free.
             </p>
 
             {/* CTA Buttons — Pill with trailing icon */}
@@ -80,7 +80,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ [
         {/* Scroll indicator */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-400 dark:text-gray-500">
           <span className="text-xs font-medium uppercase tracking-widest">Scroll to explore</span>
-          <ChevronDown className="w-4 h-4 animate-bounce" />
+          <ChevronDown className="w-4 h-4 motion-safe:animate-bounce" />
         </div>
       </section>
 
@@ -181,7 +181,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ [
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { value: "5,058", label: "Active Rentals", color: "text-emerald-600 dark:text-emerald-400" },
+              { value: "5,573", label: "Active Rentals", color: "text-emerald-600 dark:text-emerald-400" },
               { value: "10K+", label: "Happy Tenants", color: "text-blue-600 dark:text-blue-400" },
               { value: "254", label: "Counties Covered", color: "text-amber-600 dark:text-amber-400" },
               { value: "< 2h", label: "Avg Response", color: "text-rose-600 dark:text-rose-400" },
@@ -204,14 +204,14 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ [
               Texas Apartment Market Data (2026)
             </h2>
             <p className="text-lg text-gray-500 dark:text-gray-400">
-              Real statistics from 5,058 verified apartment listings across Texas
+              Real statistics from 5,573 verified apartment listings across Texas
             </p>
           </div>
 
           {/* Stat cards */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
             {[
-              { value: "5,058+", label: "Total Listings", sub: "Verified apartments" },
+              { value: "5,573+", label: "Total Listings", sub: "Verified apartments" },
               { value: "50+", label: "Cities Covered", sub: "Major Texas cities" },
               { value: "254", label: "Counties", sub: "All Texas counties" },
               { value: "3.94/5", label: "Avg Rating", sub: "Tenant verified" },
@@ -263,7 +263,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ [
 
           <div className="space-y-3">
             {[
-              { q: "How many apartments are listed on Texas Rent Finder?", a: "We currently list over 5,058 verified apartment complexes across all 254 Texas counties, with new listings added daily from Houston, Dallas, San Antonio, Austin, and every major Texas city." },
+              { q: "How many apartments are listed on Texas Rent Finder?", a: "We currently list over 5,573 verified apartment complexes across all 254 Texas counties, with new listings added daily from Houston, Dallas, San Antonio, Austin, and every major Texas city." },
               { q: "Is Texas Rent Finder free to use?", a: "Yes! Texas Rent Finder is completely free for renters. We never charge tenants for searching, comparing, or contacting properties. Our service is supported by property partnerships." },
               { q: "What is the average rent for apartments in Texas?", a: "The average 1BR rent in Texas is approximately $1,200/month, with Austin being the most expensive at $1,624 and Four Corners the most affordable at $833/month." },
               { q: "How are apartment ratings calculated?", a: "Ratings are based on verified tenant reviews, property amenities, location quality, and management responsiveness. All ratings are validated to ensure authenticity and accuracy." },
@@ -283,7 +283,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ [
           <div className="mt-12 p-8 bg-emerald-50 dark:bg-emerald-950/30 rounded-2xl border border-emerald-100 dark:border-emerald-900/50">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">What is Texas Rent Finder?</h3>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-              Texas Rent Finder is a free apartment search platform that lists 5,058+ verified apartment complexes across all 254 Texas counties. We provide transparent pricing, verified tenant ratings, and direct contact information for every listing.
+              Texas Rent Finder is a free apartment search platform that lists 5,573+ verified apartment complexes across all 254 Texas counties. We provide transparent pricing, verified tenant ratings, and direct contact information for every listing.
             </p>
           </div>
         </div>

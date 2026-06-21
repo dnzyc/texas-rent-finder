@@ -11,13 +11,13 @@ const geist = Geist({ subsets: ["latin"], variable: "--font-sans", display: "swa
 
 export const metadata: Metadata = {
   title: {
-    default: "Texas Rent Finder — 5,600+ TX Apartments | Prices & Ratings",
+    default: "Texas Rent Finder — 5,573 TX Apartments | Prices & Ratings",
     template: "%s | Texas Rent Finder"
   },
-  description: "Browse 5,600+ verified apartments across Texas with real photos, ratings & prices. Find your rental in Houston, Dallas, Austin, San Antonio & more.",
+  description: "Browse 5,573+ verified apartments across Texas with real photos, ratings & prices. Find your rental in Houston, Dallas, Austin, San Antonio & more.",
   openGraph: {
-    title: "Texas Rent Finder — 5,600+ TX Apartments | Prices & Ratings",
-    description: "Browse 5,600+ verified apartments across Texas with real photos, ratings & prices. Find your rental in Houston, Dallas, Austin, San Antonio & more.",
+    title: "Texas Rent Finder — 5,573+ TX Apartments | Prices & Ratings",
+    description: "Browse 5,573+ verified apartments across Texas with real photos, ratings & prices. Find your rental in Houston, Dallas, Austin, San Antonio & more.",
     type: "website",
     url: "https://texasrentfinder.com",
     siteName: "Texas Rent Finder",
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Texas Rent Finder — 5,600+ TX Apartments | Prices & Ratings",
-    description: "Browse 5,600+ verified apartments across Texas with real photos, ratings & prices.",
+    title: "Texas Rent Finder — 5,573+ TX Apartments | Prices & Ratings",
+    description: "Browse 5,573+ verified apartments across Texas with real photos, ratings & prices.",
     images: ["/og-image.png"]
   },
   metadataBase: new URL("https://texasrentfinder.com")
@@ -66,7 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             name: "Texas Rent Finder",
             url: "https://texasrentfinder.com",
             logo: "https://texasrentfinder.com/og-image.png",
-            description: "Search 5,600+ apartment complexes across Texas with real photos, ratings, prices, and websites."
+            description: "Search 5,573+ apartment complexes across Texas with real photos, ratings, prices, and websites."
           })}
         </script>
         <script type="application/ld+json">
