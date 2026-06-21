@@ -69,7 +69,7 @@ npm run dev -- -p 3000
 - Temizlik öncesi: 6,609 → Sonrası: 6,559
 
 ### Google Places API — 10 Bolge Taraması
-- **API:** Legacy Places API, Key: `AIzaSyCRyPst9P2JA6B-7A3GC84L-zi0E_3M2dE`
+- **API:** Legacy Places API, Key: `[REDACTED]`
 - **Script:** `scripts/fetch-from-places-api.ts` (projede: /Users/dnzyc/projects/texas-apartments/scripts/)
 - **Metod:** textSearch (3 sayfa/sehir) → place/details → Supabase upsert
 
@@ -215,3 +215,104 @@ npm run dev -- -p 3000
 ### Production
 - URL: https://texasrentfinder.com
 - 64 sayfa, 451 şehir, %91 gerçek fotolu
+
+---
+
+## 20 Haziran 2026 — Proje Yapısı Düzeltmesi ✅
+
+### Sorun
+- 2 ayrı proje aynı Vercel'e deploy ediyordu:
+  - `/Users/dnzyc/projects/texas-apartments` — eski, eksik (4 sayfa)
+  - `/Users/dnzyc/texas-apartments-platform` — doğru (64 sayfa)
+- Yanlış klasörden deploy edilince eski versiyon yükleniyordu
+- Git detached HEAD durumunda çalışılıyordu (v1.0-production-backup tag)
+
+### Çözüm
+
+| İşlem | Sonuç |
+|-------|-------|
+| `main` branch'te commit (`09cacc0`) | Tüm kod tek branch'te, devamlılık sağlandı |
+| Eski projede `vercel.json` → `vercel.json.disabled` | Yanlış deploy engellendi |
+| Eski projede `.vercel/` → `.vercel.disabled/` | Vercel bağlantısı koptu |
+
+### Çalışma Düzeni
+- **Tek proje:** `~/texas-apartments-platform`
+- **Branch:** `main`
+- **Deploy:** `npx vercel deploy --prod --yes`
+- **Eski proje:** `/Users/dnzyc/projects/texas-apartments` — deploy edilemez (Vercel config yok)
+
+### Git Durumu
+```
+09cacc0 (HEAD -> main) fix: WKB location parser + image domains + city pagination + duplicate cleanup + website photo scraper
+```
+
+---
+
+## 20 Haziran 2026 (4. Oturum) — %100 Gerçek Foto + Excel Export ✅
+
+### Websitesiz İlan Temizliği
+- 963 websitesiz ilan silindi → 6,692 kaldı (%100 websitesi var)
+
+### Son Fotoğraf Batch'i
+- **Script:** `scripts/fetch-remaining-photos.js`
+- 3 aşamalı: kendi websitesi → Google Places Photo → apartments.com
+- 590 placeholder işlendi → 494 başarılı (%84)
+
+### İnatçı Temizliği
+- 96 ilan hiçbir kaynakta fotoğraf bulunamadı
+- %92'si kırsal/küçük şehirlerde (Kerrville, Texarkana, Sulphur Springs...)
+- Tamamı silindi
+
+### Excel Export
+- **Script:** `scripts/export-all-cities.js`
+- 437 şehir, tek Excel dosyası (451 sheet)
+- `~/Desktop/texas-apartments-all.xlsx` (4.0 MB)
+
+### Final Durum
+
+| Metrik | Değer |
+|--------|-------|
+| Toplam ilan | **6,596** |
+| Gerçek foto | **6,596 (%100)** |
+| Placeholder | **0** |
+| Website var | **6,596 (%100)** |
+| Ratingli | **%86** |
+| Telefonlu | **%96** |
+
+### Masaüstü Dosyaları
+- `texas-apartments-all.xlsx` — 437 şehir, tüm ilanlar
+- `fotosuz-apartmanlar.md` — boş (0 ilan)
+- `inatci-fotosuz-apartmanlar.md` — 96 silinen
+- `texas-apartment-photos/` — 4,323 lokal fotoğraf
+- `texas-apartments-platform-archive-20260619.tar.gz` — proje arşivi
+- `texas-apartment-photos-20260619.tar.gz` — fotoğraf arşivi
+
+---
+
+## Web Quality Audit Fixes ✅
+
+### Fixed
+| # | Fix | Dosya |
+|---|-----|-------|
+| 1 | İstatistikler 5,058/5,600 → 6,596 | `page.tsx`, `layout.tsx` (12 yer) |
+| 2 | CSP + X-Frame + nosniff + Referrer-Policy | `vercel.json` |
+| 3 | `animate-bounce` → `motion-safe:animate-bounce` | `page.tsx` |
+| 4 | Skip link `tabIndex={-1}` | `page.tsx` |
+| 5 | Title 63 → 53 chars | `layout.tsx` |
+| 6 | CSP'ye GA4 domain eklendi (2. deploy) | `vercel.json` |
+| 7 | Sitemap city query pagination (27 → 437 şehir) | `sitemap.ts` |
+| 8 | Sitemap apartment limit 5,000 | `sitemap.ts` |
+
+### Verified
+- `curl -I` → CSP header served ✅
+- `curl -I` → X-Frame-Options: DENY ✅
+- `curl -I` → X-Content-Type-Options: nosniff ✅
+- `curl -I` → Referrer-Policy: strict-origin ✅
+- `curl sitemap.xml` → 79 URL, blog + city pages ✅
+
+### Known Debt (Technical Debt)
+- Blog sayfalarında boş `title`/`description` metadata'ları (2-3 blog post)
+- Blog postlarına Article JSON-LD schema eklenmemiş
+- "10K+ Happy Tenants" ve "< 2h Avg Response" iddiaları doğrulanamaz
+- InteractiveList hala full JS-bağımlı (SEO için SSR initial load ideal)
+- Place detail sayfaları ISR değil `force-dynamic`
