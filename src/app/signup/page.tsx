@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useAuth } from "@/components/SessionProvider";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { signupSchema } from "@/lib/validation";
 
 export default function SignupPage() {
   const [email, setEmail] = useState("");
@@ -29,8 +30,15 @@ export default function SignupPage() {
     setLoading(true);
 
     try {
-      if (!email || !password) {
-        setError("Email and password are required");
+      const result = signupSchema.safeParse({
+        email,
+        password,
+        name,
+      });
+
+      if (!result.success) {
+        setError(result.error.format()._errors[0] || "Validation failed");
+        setLoading(false);
         return;
       }
 
@@ -39,7 +47,7 @@ export default function SignupPage() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, password, name: name || undefined }),
+        body: JSON.stringify(result.data),
       });
 
       const data = await response.json();
