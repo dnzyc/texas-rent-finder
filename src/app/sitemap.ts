@@ -4,23 +4,43 @@ import { supabase } from "@/lib/supabase";
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://texasrentfinder.com";
 
-  const { data: places } = await supabase
-    .from("places")
-    .select("slug, updated_at, created_at");
+  // Paginate to get all place slugs (limit 1000 per query)
+  const allPlaces: any[] = [];
+  let pOffset = 0;
+  while (true) {
+    const { data: batch } = await supabase
+      .from("places")
+      .select("slug, created_at")
+      .range(pOffset, pOffset + 999);
+    if (!batch || batch.length === 0) break;
+    allPlaces.push(...batch);
+    if (batch.length < 1000) break;
+    pOffset += 1000;
+  }
 
-  const apartmentUrls = (places || []).map((place) => ({
+  const apartmentUrls = allPlaces.map((place) => ({
     url: `${baseUrl}/place/${place.slug}`,
-    lastModified: place.updated_at ? new Date(place.updated_at) : new Date(place.created_at),
+    lastModified: new Date(place.created_at),
     changeFrequency: "weekly" as const,
     priority: 0.7,
   }));
 
-  const { data: cities } = await supabase
-    .from("places")
-    .select("city")
-    .not("city", "is", null);
+  // Paginate to get all cities (>1000 rows)
+  const citySet = new Set<string>();
+  let offset = 0;
+  while (true) {
+    const { data: cities } = await supabase
+      .from("places")
+      .select("city")
+      .not("city", "is", null)
+      .range(offset, offset + 999);
+    if (!cities || cities.length === 0) break;
+    cities.forEach((c: any) => { if (c.city) citySet.add(c.city); });
+    if (cities.length < 1000) break;
+    offset += 1000;
+  }
 
-  const uniqueCities = [...new Set((cities || []).map((c) => c.city).filter(Boolean))] as string[];
+  const uniqueCities = [...citySet] as string[];
 
   const cityUrls = uniqueCities.map((city) => ({
     url: `${baseUrl}/texas/${city.toLowerCase().replace(/\s+/g, "-")}`,

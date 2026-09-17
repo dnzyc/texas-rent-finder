@@ -20,7 +20,7 @@ export default function ListPropertyPage() {
         {[
           { value: "5,000+", label: "Active Renters Monthly" },
           { value: "50+", label: "Texas Cities Covered" },
-          { value: "24/7", label: "Tenant Inquiries" },
+          { value: "5,573", label: "Total Listings" },
         ].map((stat, i) => (
           <div key={i} className="p-6 bg-emerald-50 rounded-xl border border-emerald-100 text-center">
             <p className="text-2xl font-bold text-emerald-600">{stat.value}</p>

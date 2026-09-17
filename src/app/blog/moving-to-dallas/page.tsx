@@ -10,6 +10,27 @@ export const metadata: Metadata = {
 export default function DallasGuidePage() {
   return (
     <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: "Moving to Dallas? Complete Rental Guide 2026",
+        description: "Everything you need to know about renting in Dallas, TX. Average rents by neighborhood, best areas for young professionals, families, and budget renters.",
+        datePublished: "2026-06-15",
+        dateModified: "2026-06-15",
+        author: { "@type": "Organization", name: "Texas Rent Finder" },
+        publisher: { "@type": "Organization", name: "Texas Rent Finder", url: "https://texasrentfinder.com" },
+        mainEntityOfPage: "https://texasrentfinder.com/blog/moving-to-dallas",
+      })}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://texasrentfinder.com" },
+          { "@type": "ListItem", position: 2, name: "Blog", item: "https://texasrentfinder.com/blog" },
+          { "@type": "ListItem", position: 3, name: "Moving to Dallas" },
+        ],
+      })}} />
+
       <Link href="/blog" className="text-emerald-600 hover:text-emerald-700 text-sm font-medium mb-8 inline-block">&larr; Back to Blog</Link>
       <span className="text-xs font-medium text-emerald-600 uppercase tracking-wider">City Guide</span>
       <h1 className="text-3xl font-bold text-gray-900 mt-2 mb-2">Moving to Dallas? Complete Rental Guide 2026</h1>

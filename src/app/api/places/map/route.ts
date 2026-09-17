@@ -1,47 +1,63 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { supabase } from "@/lib/supabase";
-
-function parseWKBHex(hex: string): { lat: number; lng: number } | null {
-  if (!hex || hex.length < 50) return null;
-  try {
-    const buf = Buffer.from(hex, "hex");
-    const lng = buf.readDoubleLE(9);
-    const lat = buf.readDoubleLE(17);
-    if (isNaN(lat) || isNaN(lng) || Math.abs(lat) > 90 || Math.abs(lng) > 180) return null;
-    return { lat, lng };
-  } catch {
-    return null;
-  }
-}
-
-function parseLocation(row: any): { lat: number; lng: number } | null {
-  const loc = row.location;
-  if (!loc) return null;
-  if (typeof loc === "string") return parseWKBHex(loc);
-  if (loc.lat !== undefined && loc.lng !== undefined) return { lat: loc.lat, lng: loc.lng };
-  if (loc.coordinates) return { lat: loc.coordinates[1], lng: loc.coordinates[0] };
-  return null;
-}
+import { parseLocation } from "@/lib/geo";
+import { checkRateLimit } from "@/middleware/rate-limiter";
 
 const BATCH_SIZE = 1000;
+const MAX_ITEMS = 5000;
 
-export async function GET() {
+export async function GET(request: NextRequest) {
+  const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+  const rateLimitResult = checkRateLimit(ip, 10, 60_000);
+  if (!rateLimitResult.allowed) {
+    return NextResponse.json({ error: "Rate limit exceeded" }, { status: 429 });
+  }
+
+  const params = request.nextUrl.searchParams;
+  const county = params.get("county");
+  const city = params.get("city");
+  const zip = params.get("zip");
+  const minRating = parseInt(params.get("min_rating") || "0");
+  const q = params.get("q");
+  const swLat = params.get("swLat") ? parseFloat(params.get("swLat")!) : null;
+  const swLng = params.get("swLng") ? parseFloat(params.get("swLng")!) : null;
+  const neLat = params.get("neLat") ? parseFloat(params.get("neLat")!) : null;
+  const neLng = params.get("neLng") ? parseFloat(params.get("neLng")!) : null;
+
   const allItems: { id: number; slug: string; name: string; address: string | null; rating: number | null; location: { lat: number; lng: number } }[] = [];
   let offset = 0;
   let hasMore = true;
 
-  while (hasMore) {
-    const { data, error } = await supabase
+  const baseQuery = () => {
+    let query = supabase
       .from("places")
-      .select("id, slug, name, address, rating, location")
-      .range(offset, offset + BATCH_SIZE - 1);
+      .select("id, slug, name, address, rating, location");
+    if (county) query = query.eq("county", county);
+    if (city) query = query.eq("city", city);
+    if (zip) query = query.eq("zip_code", zip);
+    if (minRating > 0) query = query.gte("rating", minRating);
+    if (q) query = query.ilike("name", `%${q}%`);
+    return query;
+  };
 
-    if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+  while (hasMore && allItems.length < MAX_ITEMS) {
+    const { data, error } = await baseQuery().range(offset, offset + BATCH_SIZE - 1);
+
+    if (error) {
+      if (error.message?.includes("storage_size_quota") || error.message?.includes("restricted")) {
+        return NextResponse.json({ error: "Database temporarily unavailable", items: [], total: 0 }, { status: 503 });
+      }
+      return NextResponse.json({ error: error.message }, { status: 500 });
+    }
 
     const rows = data || [];
     for (const row of rows) {
       const location = parseLocation(row);
       if (location) {
+        if (swLat !== null && swLng !== null && neLat !== null && neLng !== null) {
+          const inBounds = location.lat >= swLat && location.lat <= neLat && location.lng >= swLng && location.lng <= neLng;
+          if (!inBounds) continue;
+        }
         allItems.push({
           id: row.id,
           slug: row.slug,

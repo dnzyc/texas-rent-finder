@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import dynamic from "next/dynamic";
 import { FilterBar } from "@/components/FilterBar";
@@ -39,26 +39,43 @@ function paramsFromFilters(filters: FilterState, page: number): URLSearchParams 
   return params;
 }
 
-export function InteractiveList({ initialFilters }: { initialFilters?: FilterState }) {
+export function InteractiveList({
+  initialFilters,
+  initialData,
+}: {
+  initialFilters?: FilterState;
+  initialData?: { items: Place[]; total: number; page: number; pages: number };
+}) {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const [places, setPlaces] = useState<Place[]>([]);
-  const [mapPlaces, setMapPlaces] = useState<Place[]>([]);
-  const [total, setTotal] = useState(0);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [pages, setPages] = useState(0);
-  const [loading, setLoading] = useState(true);
+  const [allPlaces, setAllPlaces] = useState<Place[]>(initialData?.items || []);
+  const [places, setPlaces] = useState<Place[]>(initialData?.items || []);
+  const [total, setTotal] = useState(initialData?.total || 0);
+  const [currentPage, setCurrentPage] = useState(initialData?.page || 1);
+  const [pages, setPages] = useState(initialData?.pages || 0);
+  const [loading, setLoading] = useState(!initialData);
   const [error, setError] = useState<string | null>(null);
   const [activeSlug, setActiveSlug] = useState<string | null>(null);
+  const [mapBounds, setMapBounds] = useState<{ south: number; north: number; west: number; east: number } | null>(null);
+  const boundsRef = useRef(mapBounds);
+  boundsRef.current = mapBounds;
+  const hasHydrated = useRef(!!initialData);
 
   const filters = filtersFromParams(searchParams);
 
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    fetch("/api/places/map")
-      .then((res) => res.json())
-      .then((data) => setMapPlaces(data.items || []))
-      .catch(() => {});
+  const mapKey = useMemo(
+    () => `${filters.city || "all"}-${filters.county || "all"}-${filters.zip || "all"}`,
+    [filters.city, filters.county, filters.zip]
+  );
+
+  const filterByBounds = useCallback((items: Place[]) => {
+    const b = boundsRef.current;
+    if (!b) return items;
+    return items.filter(p => {
+      if (!p.location) return false;
+      return p.location.lat >= b.south && p.location.lat <= b.north &&
+             p.location.lng >= b.west && p.location.lng <= b.east;
+    });
   }, []);
 
   const fetchPlaces = useCallback(async (f: FilterState, page: number) => {
@@ -66,22 +83,46 @@ export function InteractiveList({ initialFilters }: { initialFilters?: FilterSta
     setError(null);
     try {
       const res = await fetch(`/api/places?${paramsFromFilters(f, page).toString()}`);
-      if (!res.ok) throw new Error("Failed to load listings");
+      if (!res.ok) {
+        const errorData = await res.json().catch(() => ({}));
+        throw new Error(errorData.error || "Failed to load listings");
+      }
       const data = await res.json();
-      setPlaces(data.items || []);
+      setAllPlaces(data.items || []);
+      const filtered = filterByBounds(data.items || []);
+      setPlaces(filtered);
       setTotal(data.total || 0);
       setPages(Math.ceil((data.total || 0) / 20));
       setCurrentPage(data.page || page);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+      const message = err instanceof Error ? err.message : "Something went wrong. Please try again.";
+      setError(message.includes("temporarily unavailable") ? "Service temporarily unavailable. Please try again later." : message);
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [filterByBounds]);
 
   useEffect(() => {
-    fetchPlaces(filters, parseInt(searchParams.get("page") || "1"));
-  }, [searchParams]);
+    const page = parseInt(searchParams.get("page") || "1");
+    if (hasHydrated.current && !searchParams.toString()) {
+      hasHydrated.current = false;
+      setLoading(false);
+      return;
+    }
+    hasHydrated.current = false;
+    fetchPlaces(filters, page);
+  }, [searchParams, fetchPlaces, filters]);
+
+  useEffect(() => {
+    if (allPlaces.length > 0) {
+      const filtered = filterByBounds(allPlaces);
+      setPlaces(filtered);
+    }
+  }, [mapBounds, allPlaces, filterByBounds]);
+
+  const handleBoundsChange = useCallback((bounds: { south: number; north: number; west: number; east: number }) => {
+    setMapBounds(bounds);
+  }, []);
 
   const handleFilterChange = useCallback(
     (f: FilterState) => {
@@ -125,7 +166,12 @@ export function InteractiveList({ initialFilters }: { initialFilters?: FilterSta
         <div className="overflow-y-auto bg-white dark:bg-gray-950" style={{ minHeight: 0 }}>
           {error ? (
             <div className="p-10 text-center">
-              <p className="text-red-600 font-medium mb-2">Failed to load listings</p>
+              <div className="w-12 h-12 mx-auto mb-4 bg-amber-100 rounded-full flex items-center justify-center">
+                <svg className="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                </svg>
+              </div>
+              <p className="text-gray-900 font-medium mb-2">Unable to load listings</p>
               <p className="text-sm text-gray-500 mb-4">{error}</p>
               <button onClick={handleRetry} className="px-4 py-2 bg-emerald-600 text-white text-sm rounded-lg hover:bg-emerald-700 transition-colors">
                 Try Again
@@ -136,7 +182,7 @@ export function InteractiveList({ initialFilters }: { initialFilters?: FilterSta
           )}
         </div>
         <div className="hidden md:block relative border-l border-gray-200 dark:border-gray-800" style={{ minHeight: 0, overflow: "hidden" }}>
-          <MapView places={mapPlaces.length > 0 ? mapPlaces : places} onPlaceClick={handlePlaceClick} />
+          <MapView key={mapKey} places={allPlaces} onPlaceClick={handlePlaceClick} onMapBoundsChange={handleBoundsChange} currentFilters={filters} />
         </div>
       </div>
 

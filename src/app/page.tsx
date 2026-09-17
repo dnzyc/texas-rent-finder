@@ -10,13 +10,48 @@ export const metadata: Metadata = {
 };
 
 async function getTopRated() {
-  const { data } = await supabase
-    .from("places")
-    .select("name, city, rating, review_count")
-    .gt("review_count", 10)
-    .order("rating", { ascending: false })
-    .limit(6);
-  return data || [];
+  try {
+    const { data } = await supabase
+      .from("places")
+      .select("name, city, rating, review_count")
+      .gt("review_count", 10)
+      .order("rating", { ascending: false })
+      .limit(6);
+    return data || [];
+  } catch {
+    return [];
+  }
+}
+
+async function getInitialListings(filters: FilterState) {
+  try {
+    let query = supabase.from("places").select("*", { count: "exact" });
+    if (filters.city) query = query.eq("city", filters.city);
+    if (filters.county) query = query.eq("county", filters.county);
+    if (filters.zip) query = query.eq("zip_code", filters.zip);
+    if (filters.minRating > 0) query = query.gte("rating", filters.minRating);
+    if (filters.query) query = query.ilike("name", `%${filters.query}%`);
+    query = query.order("rating", { ascending: false, nullsFirst: false });
+    query = query.range(0, 19);
+    const { data, error, count } = await query;
+    if (error) return null;
+    const items = (data || []).map((row: any) => {
+      const loc = row.location;
+      let location = null;
+      if (typeof loc === "string" && loc.length >= 50) {
+        try {
+          const buf = Buffer.from(loc, "hex");
+          const lng = buf.readDoubleLE(9);
+          const lat = buf.readDoubleLE(17);
+          if (!isNaN(lat) && !isNaN(lng) && Math.abs(lat) <= 90 && Math.abs(lng) <= 180) location = { lat, lng };
+        } catch {}
+      }
+      return { ...row, location };
+    });
+    return { items, total: count || 0, page: 1, pages: Math.ceil((count || 0) / 20) };
+  } catch {
+    return null;
+  }
 }
 
 export default async function Home({ searchParams }: { searchParams: Promise<{ [key: string]: string | string[] | undefined }> }) {
@@ -29,6 +64,8 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ [
     minRating: typeof params.min_rating === "string" ? Number(params.min_rating) || 0 : 0,
     query: typeof params.q === "string" ? params.q : "",
   };
+  const hasFilters = filters.city || filters.county || filters.zip || filters.minRating || filters.query;
+  const initialData = hasFilters ? null : await getInitialListings(filters);
 
   return (
     <main id="main-content" tabIndex={-1}>
@@ -132,7 +169,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ [
               </div>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Expert Support</h3>
               <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-                24/7 dedicated team ready to help you find the right apartment. We answer questions and schedule tours.
+                Dedicated team ready to help you find the right apartment. We answer questions and schedule tours during business hours.
               </p>
             </div>
 
@@ -182,9 +219,9 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ [
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { value: "5,573", label: "Active Rentals", color: "text-emerald-600 dark:text-emerald-400" },
-              { value: "10K+", label: "Happy Tenants", color: "text-blue-600 dark:text-blue-400" },
+              { value: "3.94/5", label: "Avg Rating", color: "text-blue-600 dark:text-blue-400" },
               { value: "254", label: "Counties Covered", color: "text-amber-600 dark:text-amber-400" },
-              { value: "< 2h", label: "Avg Response", color: "text-rose-600 dark:text-rose-400" },
+              { value: "19", label: "Renter Guides", color: "text-rose-600 dark:text-rose-400" },
             ].map((stat, i) => (
               <div key={i} className="text-center">
                 <p className={`text-4xl sm:text-5xl font-bold ${stat.color} mb-2`}>{stat.value}</p>
@@ -403,7 +440,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ [
 
       {/* Listing Section — Interactive Map + List (UNCHANGED) */}
       <section id="listings">
-        <InteractiveList initialFilters={filters} />
+        <InteractiveList initialFilters={filters} initialData={initialData || undefined} />
       </section>
 
       {/* Promo Banner */}

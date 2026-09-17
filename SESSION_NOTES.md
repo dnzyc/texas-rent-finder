@@ -316,3 +316,57 @@ npm run dev -- -p 3000
 - "10K+ Happy Tenants" ve "< 2h Avg Response" iddiaları doğrulanamaz
 - InteractiveList hala full JS-bağımlı (SEO için SSR initial load ideal)
 - Place detail sayfaları ISR değil `force-dynamic`
+
+---
+
+## 5 Temmuz 2026 — Complete Price Verification Run ✅
+
+### Yapılan İşlemler
+
+**Amaç:** Excel'deki tüm 6,358 apartman için fiyat bilgisi kontrol etme ve güncelleme
+
+#### First Pass - Own Website Scraping
+- Script: `scrape_all.py` (Playwright + BeautifulSoup)
+- Her apartment için websitesine git ve fiyat pattern'leri arama:
+  - "$X - $Y" (price ranges)
+  - "Studio/1BR $X", "2BR $Y"
+  - Floor plans sayfalarını kontrol et
+
+### Sonuçlar
+
+| Metrik | Değer |
+|--------|-------|
+| **Total apartments** | **6,358** |
+| **Prices from website** | **420/6,358** (%6.6) |
+| **No prices on website (no-prices)** | 3,322/6,358 (%) |
+| **Timeout (site unreachable)** | 2,616/6,358 (%) |
+
+### Sample Prices Found
+
+```
+French Place Apartments (San Antonio):   1BR=$1352, 2BR=$1864
+The Atlee (San Antonio):                 1BR=$1739, 2BR=$2062  
+Park on Wurzbach (San Antonio):          1BR=$2399, 2BR=$2599
+Vantage at Helotes (San Antonio):        1BR=$1325, 2BR=$1470
+Austin Woods Apartments (San Antonio):   1BR=$855, 2BR=$875
+```
+
+### Output Files
+
+| File | Status |
+|------|--------|
+| `texas-apartments-all-prices-v3.xlsx` | ✅ Completed |
+| `texas-apartments-all-prices-fallback.xlsx` | ⚠️ apartments.com fallback (0 success) |
+
+### Fallback Effort -Apartments.com
+
+**apartments.com fallback attempt:**
+- Script: `scrape_apartments_dot_com.py`
+- Result: **0success**
+- Reason: Site anti-bot protection, JavaScript dynamic rendering
+- **Sonuç:** Own website'den fiyat bulamayanları için otomasyon işe yaramadı
+
+### Kalan İşler
+
+- Manually verify apartments without prices (örn. Google Maps API kullanarak)
+- Supabase'deki eski fiyat verilerini güncelleme

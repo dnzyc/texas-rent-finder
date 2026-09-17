@@ -10,6 +10,27 @@ export const metadata: Metadata = {
 export default function SanAntonioGuidePage() {
   return (
     <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: "San Antonio Apartment Guide 2026 — Best Areas & Prices",
+        description: "Find the best apartments in San Antonio, TX. Compare neighborhoods, average rents, and see why San Antonio is Texas' most affordable major city.",
+        datePublished: "2026-06-14",
+        dateModified: "2026-06-14",
+        author: { "@type": "Organization", name: "Texas Rent Finder" },
+        publisher: { "@type": "Organization", name: "Texas Rent Finder", url: "https://texasrentfinder.com" },
+        mainEntityOfPage: "https://texasrentfinder.com/blog/renting-in-san-antonio",
+      })}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://texasrentfinder.com" },
+          { "@type": "ListItem", position: 2, name: "Blog", item: "https://texasrentfinder.com/blog" },
+          { "@type": "ListItem", position: 3, name: "San Antonio Apartment Guide" },
+        ],
+      })}} />
+
       <Link href="/blog" className="text-emerald-600 hover:text-emerald-700 text-sm font-medium mb-8 inline-block">&larr; Back to Blog</Link>
       <span className="text-xs font-medium text-emerald-600 uppercase tracking-wider">City Guide</span>
       <h1 className="text-3xl font-bold text-gray-900 mt-2 mb-2">San Antonio Apartment Guide 2026 — Best Areas & Prices</h1>

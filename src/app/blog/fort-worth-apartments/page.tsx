@@ -10,6 +10,27 @@ export const metadata: Metadata = {
 export default function FortWorthGuidePage() {
   return (
     <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: "Fort Worth Apartments Guide 2026 — Best Areas for Renters",
+        description: "Find the best apartments in Fort Worth, TX. Compare neighborhoods from Downtown to TCU area with average rents and lifestyle tips.",
+        datePublished: "2026-06-18",
+        dateModified: "2026-06-18",
+        author: { "@type": "Organization", name: "Texas Rent Finder" },
+        publisher: { "@type": "Organization", name: "Texas Rent Finder", url: "https://texasrentfinder.com" },
+        mainEntityOfPage: "https://texasrentfinder.com/blog/fort-worth-apartments",
+      })}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://texasrentfinder.com" },
+          { "@type": "ListItem", position: 2, name: "Blog", item: "https://texasrentfinder.com/blog" },
+          { "@type": "ListItem", position: 3, name: "Fort Worth Apartments Guide" },
+        ],
+      })}} />
+
       <Link href="/blog" className="text-emerald-600 hover:text-emerald-700 text-sm font-medium mb-8 inline-block">&larr; Back to Blog</Link>
       <span className="text-xs font-medium text-emerald-600 uppercase tracking-wider">City Guide</span>
       <h1 className="text-3xl font-bold text-gray-900 mt-2 mb-2">Fort Worth Apartments Guide 2026 — Best Areas for Renters</h1>
